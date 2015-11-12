@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.paypal.credit</groupId>
+    <artifactId>cella-parent</artifactId>
+    <name>${project.artifactId}</name>
+    <version>0.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>cella-api</module>
+        <!--
+        <module>cella-common</module>
+        <module>cella-core</module>
+        <module>cella-tomcat-adapter</module>
+        -->
+    </modules>
+
+    <properties>
+        <fortify.project.name>cella-parent</fortify.project.name>
+
+        <!-- Sonar -->
+        <sonar.skippedModules/>
+    </properties>
+
+    <scm>
+        <!-- TODO identify which repo this should be moved to... -->
+        <connection>scm:git:git@github.paypal.com:CreditArchitecture/cella.git</connection>
+        <developerConnection>scm:git:git@github.paypal.com:CreditArchitecture/cella.git</developerConnection>
+        <url>https://github.paypal.com/CreditArchitecture/cella</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.8.21</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>1.7.5</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.ning.maven.plugins</groupId>
+                    <artifactId>maven-duplicate-finder-plugin</artifactId>
+                    <version>1.0.9</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
