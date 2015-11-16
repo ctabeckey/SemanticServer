@@ -1,6 +1,7 @@
-package com.paypal.credit.test;
+package com.paypal.credit.core.processorbridge;
 
 import com.paypal.credit.core.commandprocessor.RoutingToken;
+import com.paypal.credit.core.utility.ParameterCheckUtility;
 
 import java.util.Objects;
 
@@ -12,7 +13,12 @@ implements RoutingToken {
     private final String productType;
 
     public ProductTypeRoutingToken(final String productType) {
+        ParameterCheckUtility.checkParameterNotNull(productType, "productType");
         this.productType = productType;
+    }
+
+    public String getProductType() {
+        return productType;
     }
 
     @Override

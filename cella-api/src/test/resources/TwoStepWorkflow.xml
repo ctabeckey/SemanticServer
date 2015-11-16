@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workflow:workflow xmlns:workflow="http://credit.paypal.com/v1/schema/workflow">
+    <workflow:start>
+        <workflow:processor id="One" impl="com.paypal.credit.processors.ProcessorOne"/>
+        <workflow:processor id="Two" impl="com.paypal.credit.processors.ProcessorTwo"/>
+    </workflow:start>
+</workflow:workflow>

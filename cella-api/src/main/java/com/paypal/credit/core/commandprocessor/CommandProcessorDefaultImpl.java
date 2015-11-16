@@ -137,6 +137,7 @@ implements CommandProcessor
     
     @Override
     public <T extends Object> T doSynchronously(Command<T> command)
+            throws Throwable
     {
         ParameterCheckUtility.checkParameterNotNull(command, "command");
 
@@ -163,9 +164,9 @@ implements CommandProcessor
             T result = command.invoke();
             return result;
 
-        } catch (Exception x) {
+        } catch (Throwable t) {
             LOGGER.error("{} caught in CommandProcessor", command.getClass().getSimpleName());
-            throw x;
+            throw t;
         }
     }
     

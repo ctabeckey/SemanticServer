@@ -30,6 +30,6 @@ public interface Command<R>
 	 * 
 	 * @return
 	 */
-	public R invoke();
+	public R invoke() throws Throwable;
 	
 }

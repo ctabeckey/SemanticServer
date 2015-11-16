@@ -5,10 +5,12 @@ import com.paypal.credit.core.semantics.ApplicationSemantics;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.semantics.ProcessorBridgeMethodSemantics;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.test.ProductTypeRoutingToken;
+import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
+import com.paypal.credit.core.utility.URLFactory;
 import com.paypal.credit.test.model.Authorization;
 import com.paypal.credit.test.model.AuthorizationId;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -18,6 +20,11 @@ import org.testng.annotations.Test;
 public class CommandProviderTest {
     private ApplicationSemantics applicationSemantics;
     private RootCommandProvider rootCommandProvider;
+
+    @BeforeClass
+    public static void initializeHandlers() {
+        URLFactory.registerHandlers();
+    }
 
     @BeforeTest
     public void b4Test() throws CoreRouterSemanticsException {
@@ -32,11 +39,9 @@ public class CommandProviderTest {
 
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
 
-        ConstructorRankingList.CommandConstructorRank commandRank = rootCommandProvider.findCommand(rt, ccs, new Class[]{Authorization.class}, AuthorizationId.class);
+        CommandInstantiationToken commandRank =
+                rootCommandProvider.findMostApplicableCommand(rt, ccs, new Class[]{Authorization.class}, AuthorizationId.class);
         Assert.assertNotNull(commandRank);
-        Assert.assertNotNull(commandRank.getCommand());
-        Assert.assertNotNull(commandRank.getCtor());
-        Assert.assertNotNull(commandRank.getDistance());
-        Assert.assertNotNull(commandRank.getRoutingToken());
+        Assert.assertNotNull(commandRank.getCommandProvider());
     }
 }

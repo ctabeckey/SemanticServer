@@ -18,6 +18,9 @@ public class UnmappableCommandException extends Exception {
     private static String createMessage(final Method method, final AbstractBaseSemantics abs) {
         return String.format("Method '%s' could not be mapped to a command (%s)", method.getName(), abs.toString());
     }
+    private static String createMessage(final CommandMapping commandMapping) {
+        return String.format("Unable to find a command explicitly named as '%s'", commandMapping.commandClass());
+    }
 
 
     public UnmappableCommandException(final Method bridgeMethod) {
@@ -42,5 +45,13 @@ public class UnmappableCommandException extends Exception {
 
     public UnmappableCommandException(final AbstractBaseSemantics semantics, final Throwable cause) {
         super(createMessage(semantics), cause);
+    }
+
+    public UnmappableCommandException(final CommandMapping commandMapping) {
+        super(createMessage(commandMapping));
+    }
+
+    public UnmappableCommandException(final CommandMapping commandMapping, Throwable cause) {
+        super(createMessage(commandMapping), cause);
     }
 }

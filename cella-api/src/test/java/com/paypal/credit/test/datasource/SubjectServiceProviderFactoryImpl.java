@@ -2,7 +2,7 @@ package com.paypal.credit.test.datasource;
 
 import com.paypal.credit.core.serviceprovider.RootServiceProviderFactory;
 import com.paypal.credit.core.serviceprovider.ServiceProviderFactory;
-import com.paypal.credit.test.ProductTypeRoutingToken;
+import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 
 import java.util.HashSet;
 import java.util.Set;

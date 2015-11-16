@@ -2,9 +2,11 @@ package com.paypal.credit.core.commandprovider;
 
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
+import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
+import com.paypal.credit.core.utility.ParameterCheckUtility;
+import com.paypal.credit.core.utility.TypeAndInstanceUtility;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.ServiceLoader;
@@ -63,30 +65,36 @@ implements CommandProvider {
     /**
      */
     public RootCommandProvider(final ClassLoader classLoader) {
+        ParameterCheckUtility.checkParameterNotNull(classLoader, "classLoader");
+
         this.classLoader = classLoader;
-        this.commandProviderLoader = ServiceLoader.load(CommandProvider.class);
+        this.commandProviderLoader = ServiceLoader.load(CommandProvider.class, this.classLoader);
     }
 
-    public ConstructorRankingList.CommandConstructorRank findCommand(
+    public CommandInstantiationToken findMostApplicableCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Object[] parameters,
             final Class<?> resultType) {
-        return findCommand(routingToken, commandClassSemantics, getTypes(parameters), resultType);
+        return findMostApplicableCommand(
+                routingToken,
+                commandClassSemantics,
+                TypeAndInstanceUtility.getTypes(parameters),
+                resultType);
     }
 
     /**
      *
      */
-    public ConstructorRankingList.CommandConstructorRank findCommand(
+    public CommandInstantiationToken findMostApplicableCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameterTypes,
             final Class<?> resultType) {
-        ConstructorRankingList commandRanking =
+        CommandLocationTokenRankedSet commandRanking =
                 findCommands(routingToken, commandClassSemantics, parameterTypes, resultType);
 
-        return commandRanking.size() > 0 ? commandRanking.get(0) : null;
+        return commandRanking.size() > 0 ? commandRanking.first() : null;
     }
 
     /**
@@ -96,41 +104,34 @@ implements CommandProvider {
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Object[] parameters,
-            final Class<?> resultType) {
-        final Class<?>[] parameterTypes = getTypes(parameters);
+            final Class<?> resultType)
+            throws CommandInstantiationException {
+        final Class<?>[] parameterTypes = TypeAndInstanceUtility.getTypes(parameters);
 
-        ConstructorRankingList.CommandConstructorRank commandConstructorRank =
-                findCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
-        if (commandConstructorRank != null) {
-            try {
-                Object command = commandConstructorRank.getCtor().newInstance(parameters);
-                return (C) command;
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
-            } catch (ClassCastException ccX) {
-                ccX.printStackTrace();
-            }
+        CommandInstantiationToken commandInstantiationToken =
+                findMostApplicableCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
+        if (commandInstantiationToken != null) {
+            return (C) createCommand(routingToken, commandInstantiationToken, parameters);
         }
 
         return null;
     }
 
-    /**
-     *
-     * @param parameters
-     * @return
-     */
-    private static Class<?>[] getTypes(final Object[] parameters) {
-        final Class<?>[] parameterTypes = new Class<?>[parameters.length];
-
-        for(int index = 0; index < parameters.length; ++index) {
-            parameterTypes[index] = parameters[index].getClass();
+    private boolean isKnownProvider(final CommandProvider commandProvider) {
+        for (Iterator<CommandProvider> iter = this.commandProviderLoader.iterator(); iter.hasNext(); ) {
+            // reference equality is intentional, this MUST be the instance that this root manages
+            if (commandProvider == iter.next()) {
+                return true;
+            }
         }
-        return parameterTypes;
+        return false;
+    }
+
+    /**
+     * Reload the service factories.
+     */
+    public final void reload() {
+        this.commandProviderLoader.reload();
     }
 
     // ============================================================================
@@ -145,18 +146,21 @@ implements CommandProvider {
      * @return
      */
     @Override
-    public ConstructorRankingList findCommands(
+    public CommandLocationTokenRankedSet findCommands(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameters,
             final Class<?> resultType) {
-        ConstructorRankingList commandRanking =
-                new ConstructorRankingList(routingToken, commandClassSemantics.toString(), parameters, resultType);
+        ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
+        ParameterCheckUtility.checkParameterNotNull(commandClassSemantics, "commandClassSemantics");
+
+        CommandLocationTokenRankedSet commandRanking =
+                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics.toString(), parameters, resultType);
 
         for (Iterator<CommandProvider> iter = this.commandProviderLoader.iterator(); iter.hasNext(); ) {
             CommandProvider commandProvider = iter.next();
 
-            ConstructorRankingList providerCommands =
+            CommandLocationTokenRankedSet providerCommands =
                     commandProvider.findCommands(routingToken, commandClassSemantics, parameters, resultType);
             if (providerCommands != null) {
                 commandRanking.addAll(providerCommands);
@@ -166,10 +170,18 @@ implements CommandProvider {
         return commandRanking;
     }
 
-    /**
-     * Reload the service factories.
-     */
-    public final void reload() {
-        this.commandProviderLoader.reload();
+    @Override
+    public Command<?> createCommand(
+            final RoutingToken routingToken,
+            final CommandInstantiationToken commandInstantiationToken,
+            final Object[] parameters)
+            throws CommandInstantiationException {
+        ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
+
+        if (isKnownProvider(commandInstantiationToken.getCommandProvider())) {
+            return commandInstantiationToken.getCommandProvider().createCommand(routingToken, commandInstantiationToken, parameters);
+        }
+
+        return null;
     }
 }

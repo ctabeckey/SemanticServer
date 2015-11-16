@@ -80,9 +80,10 @@ extends AbstractBaseSemantics
     }
 
     /**
-	 * return the name of the Command Class
+	 * return the name of the Command Class (e.g. getAuthorizationCommand)
 	 * @return
      */
+    @Override
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder(super.toString());
@@ -94,4 +95,13 @@ extends AbstractBaseSemantics
             return "";
         }
 	}
+
+    /**
+     * return the logical name of the Command (e.g. GetAuthorization)
+     * @return
+     */
+    public String toBaseString()
+    {
+        return super.toString();
+    }
 }

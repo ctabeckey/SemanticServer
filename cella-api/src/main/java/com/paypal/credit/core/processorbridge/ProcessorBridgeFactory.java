@@ -7,7 +7,7 @@ import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstant
  * a factory that creates a realization of the ProcessorBridge.
  * A ProcessorBridge is an interface that defines the contract between a facade and an application.
  * A ProcessorBridge (interface) consists of semantically constrained methods that map to
- * available Application commands.
+ * available Application workflowcommand.
  */
 public interface ProcessorBridgeFactory {
     /**

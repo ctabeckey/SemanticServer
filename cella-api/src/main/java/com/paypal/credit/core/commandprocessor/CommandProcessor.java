@@ -32,7 +32,7 @@ public interface CommandProcessor
 	 * @throws Exception if any exception occurs in executing the commandprovider
 	 */
     <T> T doSynchronously(Command<T> command)
-	throws Exception;
+	throws Exception, Throwable;
 
     /**
      * Submit a commandprovider for asynchronous execution.

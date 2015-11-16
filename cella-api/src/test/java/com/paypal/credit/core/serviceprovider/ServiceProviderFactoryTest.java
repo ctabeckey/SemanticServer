@@ -3,7 +3,7 @@ package com.paypal.credit.core.serviceprovider;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.serviceprovider.exceptions.UnableToCreateServiceProviderImplementation;
 import com.paypal.credit.core.serviceprovider.exceptions.UnableToFindServiceProviderImplementation;
-import com.paypal.credit.test.ProductTypeRoutingToken;
+import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.test.datasource.SubjectAuthorizationDataProvider;
 import com.paypal.credit.test.model.Authorization;
 import com.paypal.credit.test.model.AuthorizationId;

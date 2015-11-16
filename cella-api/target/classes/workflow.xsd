@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:workspace="http://credit.paypal.com/v1/schema/workflow"
+           targetNamespace="http://credit.paypal.com/v1/schema/workflow">
+
+    <xs:element name="workflow" type="workspace:workflowType"/>
+
+    <xs:complexType name="workflowType">
+        <xs:sequence>
+            <xs:element type="workspace:startType" name="start" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="baseProcessorType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="parallel" type="workspace:parallelType"/>
+            <xs:element name="serial" type="workspace:serialType"/>
+            <xs:element name="conditional" type="workspace:conditionalType"/>
+            <xs:element name="processor" type="workspace:processorType"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="startType">
+        <xs:complexContent>
+            <xs:extension base="workspace:baseProcessorType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="processorType">
+        <xs:sequence>
+            <xs:element type="workspace:optionsType" name="options" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="id" use="required"/>
+        <xs:attribute type="xs:string" name="impl" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="optionsType">
+        <xs:sequence>
+            <xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="parallelType">
+        <xs:complexContent>
+            <xs:extension base="workspace:baseProcessorType">
+                <xs:attribute type="xs:string" name="id" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="serialType">
+        <xs:complexContent>
+            <xs:extension base="workspace:baseProcessorType">
+                <xs:attribute type="xs:string" name="id" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="conditionalType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:element name="parallel" type="workspace:parallelType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="serial" type="workspace:serialType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="conditional" type="workspace:conditionalType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="processor" type="workspace:processorType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="id" use="required"/>
+        <xs:attribute type="xs:string" name="contextField" use="required"/>
+        <xs:attribute type="xs:string" name="fieldValue" use="required"/>
+    </xs:complexType>
+</xs:schema>
