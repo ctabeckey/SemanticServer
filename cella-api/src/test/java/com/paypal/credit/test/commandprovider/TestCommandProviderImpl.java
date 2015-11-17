@@ -39,7 +39,7 @@ implements CommandProvider {
             final Class<?>[] parameters,
             final Class<?> resultType) {
         CommandLocationTokenRankedSet commandList =
-                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics.toString(), parameters, resultType);
+                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics, parameters, resultType);
 
         for (Class<? extends Command<?>> commandClass : availableCommands) {
             try {

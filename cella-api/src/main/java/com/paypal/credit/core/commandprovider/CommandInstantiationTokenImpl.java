@@ -4,6 +4,7 @@ import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 
 import java.lang.reflect.Constructor;
+import java.util.Objects;
 
 /**
  * A default implementation of the CommandInstantiationToken interface.
@@ -51,5 +52,26 @@ public class CommandInstantiationTokenImpl
 
     public CommandFactory getFactory() {
         return factory;
+    }
+
+    //==========================================================================================
+    // .equals() and .hashCode() must be correctly implemented, this class may be used
+    // as a Set element or a Map key
+    //==========================================================================================
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CommandInstantiationTokenImpl that = (CommandInstantiationTokenImpl) o;
+        return Objects.equals(getCommandProvider(), that.getCommandProvider()) &&
+                Objects.equals(getCommand(), that.getCommand()) &&
+                Objects.equals(getCtor(), that.getCtor()) &&
+                Objects.equals(getFactory(), that.getFactory());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCommandProvider(), getCommand(), getCtor(), getFactory());
     }
 }

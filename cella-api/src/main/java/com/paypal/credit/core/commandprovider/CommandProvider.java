@@ -3,6 +3,7 @@ package com.paypal.credit.core.commandprovider;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
+import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 
 /**
@@ -20,6 +21,6 @@ public interface CommandProvider {
             final RoutingToken routingToken,
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters)
-            throws CommandInstantiationException;
+            throws CommandInstantiationException, InvalidTokenException;
 
 }

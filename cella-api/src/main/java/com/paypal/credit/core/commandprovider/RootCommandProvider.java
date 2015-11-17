@@ -3,6 +3,7 @@ package com.paypal.credit.core.commandprovider;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
+import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.core.utility.TypeAndInstanceUtility;
@@ -105,7 +106,7 @@ implements CommandProvider {
             final CommandClassSemantics commandClassSemantics,
             final Object[] parameters,
             final Class<?> resultType)
-            throws CommandInstantiationException {
+            throws CommandInstantiationException, InvalidTokenException {
         final Class<?>[] parameterTypes = TypeAndInstanceUtility.getTypes(parameters);
 
         CommandInstantiationToken commandInstantiationToken =
@@ -155,7 +156,7 @@ implements CommandProvider {
         ParameterCheckUtility.checkParameterNotNull(commandClassSemantics, "commandClassSemantics");
 
         CommandLocationTokenRankedSet commandRanking =
-                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics.toString(), parameters, resultType);
+                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics, parameters, resultType);
 
         for (Iterator<CommandProvider> iter = this.commandProviderLoader.iterator(); iter.hasNext(); ) {
             CommandProvider commandProvider = iter.next();
@@ -175,7 +176,7 @@ implements CommandProvider {
             final RoutingToken routingToken,
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters)
-            throws CommandInstantiationException {
+            throws CommandInstantiationException, InvalidTokenException {
         ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
 
         if (isKnownProvider(commandInstantiationToken.getCommandProvider())) {

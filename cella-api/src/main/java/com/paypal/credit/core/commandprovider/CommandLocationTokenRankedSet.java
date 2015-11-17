@@ -2,6 +2,7 @@ package com.paypal.credit.core.commandprovider;
 
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
+import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 
 import java.lang.reflect.Constructor;
@@ -17,24 +18,24 @@ import java.util.TreeSet;
  */
 public class CommandLocationTokenRankedSet {
     private final RoutingToken routingToken;
-    private final String commandClassSimpleName;
+    private final CommandClassSemantics commandClassSemantics;
     private final Class<?>[] parameters;
     private final Class<?> resultType;
     private final SortedSet<CommandInstantiationToken> candidates;
 
     public CommandLocationTokenRankedSet(
             final RoutingToken routingToken,
-            final String commandClassSimpleName,
+            final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameters,
             final Class<?> resultType) {
 
         ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
-        ParameterCheckUtility.checkParameterNotNull(commandClassSimpleName, "commandClassSimpleName");
+        ParameterCheckUtility.checkParameterNotNull(commandClassSemantics, "commandClassSemantics");
         ParameterCheckUtility.checkParameterNotNull(parameters, "parameters");
         ParameterCheckUtility.checkParameterNotNull(resultType, "resultType");
 
         this.routingToken = routingToken;
-        this.commandClassSimpleName = commandClassSimpleName;
+        this.commandClassSemantics = commandClassSemantics;
         this.parameters = parameters;
         this.resultType = resultType;
 
@@ -59,10 +60,9 @@ public class CommandLocationTokenRankedSet {
         ParameterCheckUtility.checkParameterNotNull(clazz, "clazz");
         ParameterCheckUtility.checkParameterNotNull(ctor, "ctor");
 
-        if (this.commandClassSimpleName.equals(clazz.getSimpleName())) {
-            Class<?>[] ctorParameters = ctor.getParameterTypes();
+        if (getCommandClassSimpleName().equals(clazz.getSimpleName())) {
             // if the ctor is applicable then add it to the list ordered by distance
-            candidates.add(new CommandInstantiationTokenImpl(commandProvider, clazz, ctor));
+            add(new CommandInstantiationTokenImpl(commandProvider, clazz, ctor));
         }
     }
 
@@ -77,7 +77,17 @@ public class CommandLocationTokenRankedSet {
         ParameterCheckUtility.checkParameterNotNull(commandProvider, "commandProvider");
         ParameterCheckUtility.checkParameterNotNull(commandFactory, "commandFactory");
 
-        candidates.add(new CommandInstantiationTokenImpl(commandProvider, commandFactory));
+        add(new CommandInstantiationTokenImpl(commandProvider, commandFactory));
+    }
+
+    /**
+     *
+     * @param token
+     */
+    public void add(CommandInstantiationTokenImpl token) {
+        ParameterCheckUtility.checkParameterNotNull(token, "token");
+
+        candidates.add(token);
     }
 
     /**
@@ -114,8 +124,12 @@ public class CommandLocationTokenRankedSet {
         return routingToken;
     }
 
+    public CommandClassSemantics getCommandClassSemantics() {
+        return commandClassSemantics;
+    }
+
     public String getCommandClassSimpleName() {
-        return commandClassSimpleName;
+        return commandClassSemantics.toString();
     }
 
     public Class<?>[] getParameters() {
