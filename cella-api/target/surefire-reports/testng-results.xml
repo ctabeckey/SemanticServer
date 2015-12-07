@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="24" passed="24">
+<testng-results skipped="0" failed="0" total="32" passed="32">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="61" started-at="2015-11-12T20:02:47Z" finished-at="2015-11-12T20:02:47Z">
+  <suite name="Command line suite" duration-ms="468" started-at="2015-12-07T21:43:45Z" finished-at="2015-12-07T21:43:46Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="61" started-at="2015-11-12T20:02:47Z" finished-at="2015-11-12T20:02:47Z">
+    <test name="Command line test" duration-ms="468" started-at="2015-12-07T21:43:45Z" finished-at="2015-12-07T21:43:46Z">
       <class name="com.paypal.credit.core.semantics.LogicalNameParserTest">
-        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testInvalidLogicalNames" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="invalidLogicalNames" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="invalidLogicalNames" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -63,119 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidLogicalNames -->
-        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="invalidLogicalNames" finished-at="2015-11-12T15:02:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Get]]>
-              </value>
-            </param>
-          </params>
-          <exception class="com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException">
-            <message>
-              <![CDATA[Logical commandprovider name Get does not include a subject.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException: Logical commandprovider name Get does not include a subject.
-	at com.paypal.credit.core.semantics.LogicalNameParser.<init>(LogicalNameParser.java:80)
-	at com.paypal.credit.core.semantics.LogicalNameParserTest.testInvalidLogicalNames(LogicalNameParserTest.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidLogicalNames -->
-        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="invalidLogicalNames" finished-at="2015-11-12T15:02:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Authorization]]>
-              </value>
-            </param>
-          </params>
-          <exception class="com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException">
-            <message>
-              <![CDATA[Logical commandprovider name Authorization does not include a valid action verb at at the start.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException: Logical commandprovider name Authorization does not include a valid action verb at at the start.
-	at com.paypal.credit.core.semantics.LogicalNameParser.<init>(LogicalNameParser.java:84)
-	at com.paypal.credit.core.semantics.LogicalNameParserTest.testInvalidLogicalNames(LogicalNameParserTest.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidLogicalNames -->
-        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="invalidLogicalNames" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="invalidLogicalNames" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -231,7 +119,119 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidLogicalNames -->
-        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="invalidLogicalNames" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="invalidLogicalNames" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Authorization]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException">
+            <message>
+              <![CDATA[Logical commandprovider name Authorization does not include a valid action verb at at the start.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException: Logical commandprovider name Authorization does not include a valid action verb at at the start.
+	at com.paypal.credit.core.semantics.LogicalNameParser.<init>(LogicalNameParser.java:84)
+	at com.paypal.credit.core.semantics.LogicalNameParserTest.testInvalidLogicalNames(LogicalNameParserTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogicalNames -->
+        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="invalidLogicalNames" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Get]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException">
+            <message>
+              <![CDATA[Logical commandprovider name Get does not include a subject.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException: Logical commandprovider name Get does not include a subject.
+	at com.paypal.credit.core.semantics.LogicalNameParser.<init>(LogicalNameParser.java:80)
+	at com.paypal.credit.core.semantics.LogicalNameParserTest.testInvalidLogicalNames(LogicalNameParserTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogicalNames -->
+        <test-method status="PASS" signature="testInvalidLogicalNames(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testInvalidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="invalidLogicalNames" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -287,7 +287,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidLogicalNames -->
-        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testValidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="validLogicalNames" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testValidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="validLogicalNames" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -317,7 +317,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogicalNames -->
-        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testValidLogicalNames" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="validLogicalNames" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testValidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="validLogicalNames" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[GetAuthorizationByAuthorizationId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Authorization]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[BY]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[AuthorizationId]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogicalNames -->
+        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testValidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="validLogicalNames" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -349,7 +383,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogicalNames -->
-        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testValidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="validLogicalNames" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@74d2e636]" name="testValidLogicalNames" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="validLogicalNames" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -385,63 +419,142 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogicalNames -->
-        <test-method status="PASS" signature="testValidLogicalNames(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.LogicalNameParserTest@2c72dc45]" name="testValidLogicalNames" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="validLogicalNames" finished-at="2015-11-12T15:02:47Z">
+      </class> <!-- com.paypal.credit.core.semantics.LogicalNameParserTest -->
+      <class name="com.paypal.credit.workflowcommand.WorkflowFactoryTest">
+        <test-method status="PASS" signature="initializeHandlers()[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowFactoryTest@62513bb5]" name="initializeHandlers" is-config="true" duration-ms="0" started-at="2015-12-07T16:43:46Z" finished-at="2015-12-07T16:43:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeHandlers -->
+        <test-method status="PASS" signature="test(java.net.URL)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowFactoryTest@62513bb5]" name="test" duration-ms="11" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GetAuthorizationByAuthorizationId]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[GET]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Authorization]]>
-              </value>
-            </param>
-            <param index="3">
-              <value is-null="true"/>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[BY]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[AuthorizationId]]>
+                <![CDATA[rsc:OneStepWorkflow.xml]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidLogicalNames -->
-      </class> <!-- com.paypal.credit.core.semantics.LogicalNameParserTest -->
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test(java.net.URL)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowFactoryTest@62513bb5]" name="test" duration-ms="9" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rsc:TwoStepWorkflow.xml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test(java.net.URL)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowFactoryTest@62513bb5]" name="test" duration-ms="11" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rsc:ParallelWorkflow.xml]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.paypal.credit.workflowcommand.WorkflowFactoryTest -->
+      <class name="com.paypal.credit.workflowcommand.WorkflowReaderTest">
+        <test-method status="PASS" signature="initializeHandlers()[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowReaderTest@2398724d]" name="initializeHandlers" is-config="true" duration-ms="1" started-at="2015-12-07T16:43:46Z" finished-at="2015-12-07T16:43:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeHandlers -->
+        <test-method status="PASS" signature="test(java.net.URL, int)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowReaderTest@2398724d]" name="test" duration-ms="8" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rsc:OneStepWorkflow.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test(java.net.URL, int)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowReaderTest@2398724d]" name="test" duration-ms="8" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rsc:TwoStepWorkflow.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test(java.net.URL, int)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowReaderTest@2398724d]" name="test" duration-ms="7" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rsc:ParallelWorkflow.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="test(java.net.URL, int)[pri:0, instance:com.paypal.credit.workflowcommand.WorkflowReaderTest@2398724d]" name="test" duration-ms="44" started-at="2015-12-07T16:43:46Z" data-provider="validWorkflowDataProvider" finished-at="2015-12-07T16:43:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rsc:workflow1.xml]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.paypal.credit.workflowcommand.WorkflowReaderTest -->
       <class name="com.paypal.credit.core.semantics.CommandClassSemanticsTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@42ac76c0]" name="beforeTest" is-config="true" duration-ms="7" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@4f22c960]" name="beforeTest" is-config="true" duration-ms="8" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@205749c6]" name="beforeTest" is-config="true" duration-ms="0" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@2334d801]" name="beforeTest" is-config="true" duration-ms="0" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="b4Test()[pri:0, instance:com.paypal.credit.core.commandprovider.CommandProviderTest@28db4ccf]" name="b4Test" is-config="true" duration-ms="1" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="b4Test()[pri:0, instance:com.paypal.credit.core.commandprovider.CommandProviderTest@6d782f7c]" name="b4Test" is-config="true" duration-ms="1" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- b4Test -->
-        <test-method status="PASS" signature="b4Test()[pri:0, instance:com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest@64ca8735]" name="b4Test" is-config="true" duration-ms="12" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="b4Test()[pri:0, instance:com.paypal.credit.workflowtest.FullStackTest@66c126b3]" name="b4Test" is-config="true" duration-ms="15" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- b4Test -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@4ccd32f4]" name="beforeTest" is-config="true" duration-ms="1" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="b4Test()[pri:0, instance:com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest@6d75ae09]" name="b4Test" is-config="true" duration-ms="1" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- b4Test -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@48f50903]" name="beforeTest" is-config="true" duration-ms="0" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testInvalidCommandClassName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@42ac76c0]" name="testInvalidCommandClassName" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="invalidCommandClassData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testInvalidCommandClassName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@4f22c960]" name="testInvalidCommandClassName" duration-ms="1" started-at="2015-12-07T16:43:45Z" data-provider="invalidCommandClassData" finished-at="2015-12-07T16:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -521,7 +634,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidCommandClassName -->
-        <test-method status="PASS" signature="testValidCommandClassName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@42ac76c0]" name="testValidCommandClassName" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="validCommandClassData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidCommandClassName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@4f22c960]" name="testValidCommandClassName" duration-ms="1" started-at="2015-12-07T16:43:45Z" data-provider="validCommandClassData" finished-at="2015-12-07T16:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -551,7 +664,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidCommandClassName -->
-        <test-method status="PASS" signature="testValidCommandClassName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@42ac76c0]" name="testValidCommandClassName" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="validCommandClassData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidCommandClassName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandClassSemanticsTest@4f22c960]" name="testValidCommandClassName" duration-ms="0" started-at="2015-12-07T16:43:45Z" data-provider="validCommandClassData" finished-at="2015-12-07T16:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -586,24 +699,38 @@
           </reporter-output>
         </test-method> <!-- testValidCommandClassName -->
       </class> <!-- com.paypal.credit.core.semantics.CommandClassSemanticsTest -->
+      <class name="com.paypal.credit.workflowtest.FullStackTest">
+        <test-method status="PASS" signature="initializeHandlers()[pri:0, instance:com.paypal.credit.workflowtest.FullStackTest@66c126b3]" name="initializeHandlers" is-config="true" duration-ms="1" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeHandlers -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.paypal.credit.workflowtest.FullStackTest@66c126b3]" name="test" duration-ms="295" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- com.paypal.credit.workflowtest.FullStackTest -->
       <class name="com.paypal.credit.core.semantics.CollectionTypeVocabularyTest">
-        <test-method status="PASS" signature="testFindByObjectSuffix()[pri:0, instance:com.paypal.credit.core.semantics.CollectionTypeVocabularyTest@5043ffed]" name="testFindByObjectSuffix" duration-ms="2" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testFindByObjectSuffix()[pri:0, instance:com.paypal.credit.core.semantics.CollectionTypeVocabularyTest@5bc3a0dd]" name="testFindByObjectSuffix" duration-ms="2" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindByObjectSuffix -->
-        <test-method status="PASS" signature="testGetSimpleName()[pri:0, instance:com.paypal.credit.core.semantics.CollectionTypeVocabularyTest@5043ffed]" name="testGetSimpleName" duration-ms="0" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testGetSimpleName()[pri:0, instance:com.paypal.credit.core.semantics.CollectionTypeVocabularyTest@5bc3a0dd]" name="testGetSimpleName" duration-ms="0" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetSimpleName -->
       </class> <!-- com.paypal.credit.core.semantics.CollectionTypeVocabularyTest -->
       <class name="com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest">
-        <test-method status="PASS" signature="test()[pri:0, instance:com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest@64ca8735]" name="test" duration-ms="5" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="initializeHandlers()[pri:0, instance:com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest@6d75ae09]" name="initializeHandlers" is-config="true" duration-ms="0" started-at="2015-12-07T16:43:46Z" finished-at="2015-12-07T16:43:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeHandlers -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest@6d75ae09]" name="test" duration-ms="4" started-at="2015-12-07T16:43:46Z" finished-at="2015-12-07T16:43:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
       </class> <!-- com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest -->
       <class name="com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest">
-        <test-method status="PASS" signature="testKnownValidElements(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@205749c6]" name="testKnownValidElements" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="validElementsData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testKnownValidElements(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@2334d801]" name="testKnownValidElements" duration-ms="1" started-at="2015-12-07T16:43:45Z" data-provider="validElementsData" finished-at="2015-12-07T16:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -633,7 +760,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testKnownValidElements -->
-        <test-method status="PASS" signature="testKnownValidElements(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@205749c6]" name="testKnownValidElements" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="validElementsData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testKnownValidElements(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@2334d801]" name="testKnownValidElements" duration-ms="1" started-at="2015-12-07T16:43:45Z" data-provider="validElementsData" finished-at="2015-12-07T16:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -665,7 +792,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testKnownValidElements -->
-        <test-method status="PASS" signature="testKnownValidElements(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@205749c6]" name="testKnownValidElements" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="validElementsData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testKnownValidElements(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest@2334d801]" name="testKnownValidElements" duration-ms="0" started-at="2015-12-07T16:43:45Z" data-provider="validElementsData" finished-at="2015-12-07T16:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -696,8 +823,18 @@
           </reporter-output>
         </test-method> <!-- testKnownValidElements -->
       </class> <!-- com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest -->
+      <class name="com.paypal.credit.core.commandprovider.CommandProviderTest">
+        <test-method status="PASS" signature="initializeHandlers()[pri:0, instance:com.paypal.credit.core.commandprovider.CommandProviderTest@6d782f7c]" name="initializeHandlers" is-config="true" duration-ms="1" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeHandlers -->
+        <test-method status="PASS" signature="testFindCommand()[pri:0, instance:com.paypal.credit.core.commandprovider.CommandProviderTest@6d782f7c]" name="testFindCommand" duration-ms="6" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindCommand -->
+      </class> <!-- com.paypal.credit.core.commandprovider.CommandProviderTest -->
       <class name="com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest">
-        <test-method status="PASS" signature="testInvalidCommandClassName(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@4ccd32f4]" name="testInvalidCommandClassName" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="invalidRouterMethodData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testInvalidCommandClassName(java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@48f50903]" name="testInvalidCommandClassName" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="invalidRouterMethodData" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -756,7 +893,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidCommandClassName -->
-        <test-method status="PASS" signature="testValidRouterMethodName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@4ccd32f4]" name="testValidRouterMethodName" duration-ms="1" started-at="2015-11-12T15:02:47Z" data-provider="validRouterMethodData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidRouterMethodName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@48f50903]" name="testValidRouterMethodName" duration-ms="0" started-at="2015-12-07T16:43:46Z" data-provider="validRouterMethodData" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -796,7 +933,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidRouterMethodName -->
-        <test-method status="PASS" signature="testValidRouterMethodName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@4ccd32f4]" name="testValidRouterMethodName" duration-ms="0" started-at="2015-11-12T15:02:47Z" data-provider="validRouterMethodData" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testValidRouterMethodName(java.lang.String, com.paypal.credit.core.semantics.Action, java.lang.String, com.paypal.credit.core.semantics.CollectionType, com.paypal.credit.core.semantics.Preposition, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest@48f50903]" name="testValidRouterMethodName" duration-ms="1" started-at="2015-12-07T16:43:46Z" data-provider="validRouterMethodData" finished-at="2015-12-07T16:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -841,22 +978,16 @@
           </reporter-output>
         </test-method> <!-- testValidRouterMethodName -->
       </class> <!-- com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest -->
-      <class name="com.paypal.credit.core.commandprovider.CommandProviderTest">
-        <test-method status="PASS" signature="testFindCommand()[pri:0, instance:com.paypal.credit.core.commandprovider.CommandProviderTest@28db4ccf]" name="testFindCommand" duration-ms="4" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFindCommand -->
-      </class> <!-- com.paypal.credit.core.commandprovider.CommandProviderTest -->
-      <class name="com.paypal.credit.core.serviceprovider.ServiceProviderFactoryTest">
-        <test-method status="PASS" signature="testCreateDataSource()[pri:0, instance:com.paypal.credit.core.serviceprovider.ServiceProviderFactoryTest@558fbefd]" name="testCreateDataSource" duration-ms="3" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+      <class name="com.paypal.credit.core.datasourceprovider.DataSourceProviderFactoryTest">
+        <test-method status="PASS" signature="testCreateDataSource()[pri:0, instance:com.paypal.credit.core.datasourceprovider.DataSourceProviderFactoryTest@42081f25]" name="testCreateDataSource" duration-ms="4" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateDataSource -->
-        <test-method status="PASS" signature="testFindDataSource()[pri:0, instance:com.paypal.credit.core.serviceprovider.ServiceProviderFactoryTest@558fbefd]" name="testFindDataSource" duration-ms="0" started-at="2015-11-12T15:02:47Z" finished-at="2015-11-12T15:02:47Z">
+        <test-method status="PASS" signature="testFindDataSource()[pri:0, instance:com.paypal.credit.core.datasourceprovider.DataSourceProviderFactoryTest@42081f25]" name="testFindDataSource" duration-ms="0" started-at="2015-12-07T16:43:45Z" finished-at="2015-12-07T16:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindDataSource -->
-      </class> <!-- com.paypal.credit.core.serviceprovider.ServiceProviderFactoryTest -->
+      </class> <!-- com.paypal.credit.core.datasourceprovider.DataSourceProviderFactoryTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>

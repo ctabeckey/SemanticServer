@@ -3,7 +3,6 @@ package com.paypal.credit.workflowcommand;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
-import com.paypal.credit.core.commandprovider.CommandInstantiationTokenImpl;
 import com.paypal.credit.core.commandprovider.CommandProvider;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
@@ -103,7 +102,7 @@ implements CommandProvider {
 
         ParameterCheckUtility.checkParameterNotNull(instantiationToken, "instantiationToken");
         if (!(instantiationToken instanceof WorkflowCommandInstantiationToken)) {
-            throw new InvalidTokenException(instantiationToken.getClass(), CommandInstantiationTokenImpl.class);
+            throw new InvalidTokenException(instantiationToken.getClass(), WorkflowCommandInstantiationToken.class);
         }
         WorkflowCommandInstantiationToken token = (WorkflowCommandInstantiationToken)instantiationToken;
         Workflow workflow = workflowCache.get(token);
