@@ -65,7 +65,6 @@ implements CommandProvider {
 
     @Override
     public Command<?> createCommand(
-            final RoutingToken routingToken,
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters) {
         if (commandInstantiationToken instanceof TestCommandInstantiationToken) {

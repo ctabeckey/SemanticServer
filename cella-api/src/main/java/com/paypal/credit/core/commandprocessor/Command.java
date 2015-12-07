@@ -16,14 +16,6 @@ public interface Command<R>
 	public void setCommandContext(CommandContext commandContext);
 
 	/**
-	 * Make the routing token available so that the command
-	 * can direct the call.
-	 *
-	 * @return
-	 */
-	public void setRoutingToken(RoutingToken routingToken);
-
-	/**
 	 * A synchronous execution of this command.
 	 * Asynchronous execution is managed by the CommandProcessor, this is the
      * (only) invocation of the command.

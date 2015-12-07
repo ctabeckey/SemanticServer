@@ -27,24 +27,32 @@ import java.util.List;
  */
 public class WorkflowFactory {
 
-    public static <T extends RSProcessorContext> RSSerialController<T> create(
-            final Class<T> contextClass,
+    public static <C extends RSProcessorContext> Workflow create(
+            final Class<C> contextClass,
+            final WorkflowType workflowType,
+            final Class<?> resultType) throws InvalidWorkflowException {
+        RSSerialController<C> controller = create(contextClass, workflowType);
+        Workflow wf = new Workflow(controller, resultType);
+
+        return wf;
+    }
+
+    public static <C extends RSProcessorContext> RSSerialController<C> create(
+            final Class<C> contextClass,
             final WorkflowType workflow)
             throws InvalidWorkflowException {
         final RSThreadPoolExecutor parallelExecutor = RSThreadPoolExecutor.getBuilder().build();
         final StartType start = workflow.getStart();
 
-        List<RSProcessor<T>> serialProcessorList = new ArrayList<>();
+        List<RSProcessor<C>> serialProcessorList = new ArrayList<>();
         for (Object processorNode : start.getParallelOrSerialOrConditional()) {
-            RSProcessor<T> processor = createProcessor(processorNode, contextClass, parallelExecutor);
+            RSProcessor<C> processor = createProcessor(processorNode, contextClass, parallelExecutor);
             if (processor != null) {
                 serialProcessorList.add(processor);
             }
         }
 
-        RSSerialController<T> serialController =
-                new RSSerialController<>(serialProcessorList);
-
+        RSSerialController<C> serialController = new RSSerialController<>(serialProcessorList);
         return serialController;
     }
 

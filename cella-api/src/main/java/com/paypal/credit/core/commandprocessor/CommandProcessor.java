@@ -31,7 +31,7 @@ public interface CommandProcessor
 	 * @return the result of the commandprovider
 	 * @throws Exception if any exception occurs in executing the commandprovider
 	 */
-    <T> T doSynchronously(Command<T> command)
+    <T> T doSynchronously(final Command<T> command)
 	throws Exception, Throwable;
 
     /**
@@ -41,6 +41,6 @@ public interface CommandProcessor
      * @return the result of the commandprovider
      * @throws Exception
      */
-    <T> Future<T> doAsynchronously(Command<T> command);
+    <T> Future<T> doAsynchronously(final Command<T> command);
 
 }

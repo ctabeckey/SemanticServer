@@ -2,28 +2,33 @@ package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.CommandContext;
-import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.workflow.*;
-import com.paypal.credit.workflow.exceptions.RSWorkflowException;
+import com.paypal.credit.core.utility.ParameterCheckUtility;
+import com.paypal.credit.workflow.RSProcessorContext;
 
 /**
- * Created by cbeckey on 11/12/15.
+ * The WorkflowCommand is just a container of the Workflow and the
+ * parameters of the call.
+ *
+ * @param <C>
+ * @param <R>
  */
-public class WorkflowCommand<T extends RSProcessorContext, R>
+public class WorkflowCommand<C extends RSProcessorContext, R>
 implements Command<R> {
-    // ===========================================================================
-    // Instance Members
-    // ===========================================================================
-
-    private final RSSerialController<T> startController;
-    private final T context;
-
+    private final Workflow<C, R> workflow;
+    private final RSProcessorContext processorContext;
     private CommandContext commandContext;
-    private RoutingToken routingToken;
 
-    WorkflowCommand(final RSSerialController<T> startController, final T context) {
-        this.context = context;
-        this.startController = startController;
+    /**
+     *
+     * @param workflow
+     * @param processorContext
+     */
+    WorkflowCommand(final Workflow<C, R> workflow, final RSProcessorContext processorContext) {
+        ParameterCheckUtility.checkParameterNotNull(workflow, "workflow");
+        ParameterCheckUtility.checkParameterNotNull(processorContext, "processorContext");
+
+        this.workflow = workflow;
+        this.processorContext = processorContext;
     }
 
     /**
@@ -36,16 +41,8 @@ implements Command<R> {
         this.commandContext = commandContext;
     }
 
-    /**
-     * Make the routing token available so that the command
-     * can direct the call.
-     *
-     * @param routingToken
-     * @return
-     */
-    @Override
-    public void setRoutingToken(final RoutingToken routingToken) {
-        this.routingToken = routingToken;
+    public CommandContext getCommandContext() {
+        return commandContext;
     }
 
     /**
@@ -56,8 +53,22 @@ implements Command<R> {
      * @return
      */
     @Override
-    public R invoke() throws RSWorkflowException {
-        this.startController.process(this.context);
+    public R invoke() throws Throwable {
+
+        if (this.workflow.execute((C)this.processorContext)) {
+            return extractResultFromContext(processorContext);
+        }
+
+        return null;
+    }
+
+    /**
+     *
+     * @param processorContext
+     * @return
+     */
+    private R extractResultFromContext(final RSProcessorContext processorContext) {
+
         return null;
     }
 }

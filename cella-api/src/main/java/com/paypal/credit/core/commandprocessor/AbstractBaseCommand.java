@@ -18,18 +18,6 @@ implements Command<R> {
         this.commandContext = commandContext;
     }
 
-    /**
-     * Make the routing token available so that the command
-     * can direct the call.
-     *
-     * @param routingToken
-     * @return
-     */
-    @Override
-    public void setRoutingToken(final RoutingToken routingToken) {
-        this.routingToken = routingToken;
-    }
-
     public CommandContext getCommandContext() {
         return commandContext;
     }

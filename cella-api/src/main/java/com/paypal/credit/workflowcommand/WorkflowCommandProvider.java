@@ -5,19 +5,20 @@ import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationTokenImpl;
 import com.paypal.credit.core.commandprovider.CommandProvider;
-import com.paypal.credit.core.commandprovider.CommandLocationTokenRankedSet;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
+import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.core.utility.TwoMemberCompoundKey;
+import com.paypal.credit.workflow.RSProcessorContext;
+import com.paypal.credit.workflow.RSSerialController;
+import com.paypal.credit.workflowcommand.exceptions.InvalidWorkflowException;
 import com.paypal.credit.workflowcommand.workflow.WorkflowType;
 
 import javax.xml.bind.JAXBException;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -37,8 +38,7 @@ implements CommandProvider {
     /**
      * Cache the WorkflowCommand instances.
      */
-    private final Map<WorkflowCommandInstantiationToken, WorkflowCommand<?,?>>
-            commandCache = new ConcurrentHashMap<>();
+    private final Map<WorkflowCommandInstantiationToken, Workflow<?,?>> workflowCache = new ConcurrentHashMap<>();
 
     /**
      * The publisher can be used to select a specific CommandProvider if
@@ -70,12 +70,12 @@ implements CommandProvider {
         WorkflowCommandInstantiationToken token = tokenCache.get(key);
         if (token == null) {
             WorkflowType workflowType = null;
-            URL workflowUrl = findWorkflow(routingToken, commandClassSemantics);
+            URL workflowUrl = getWorkflowDefinitionLocation(routingToken, commandClassSemantics);
 
             if (workflowUrl != null) {
                 try {
                     workflowType = WorkflowReader.create(workflowUrl);
-                    token = new WorkflowCommandInstantiationToken(this, workflowType);
+                    token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
                     tokenCache.put(key, token);
                 } catch (JAXBException e) {
                     e.printStackTrace();
@@ -90,7 +90,6 @@ implements CommandProvider {
 
     /**
      *
-     * @param routingToken
      * @param instantiationToken
      * @param parameters
      * @return
@@ -98,33 +97,44 @@ implements CommandProvider {
      */
     @Override
     public Command<?> createCommand(
-            final RoutingToken routingToken,
             final CommandInstantiationToken instantiationToken,
             final Object[] parameters)
             throws CommandInstantiationException, InvalidTokenException {
 
-        WorkflowCommand command = null;
-
-        if (instantiationToken instanceof WorkflowCommandInstantiationToken) {
-            WorkflowCommandInstantiationToken token = (WorkflowCommandInstantiationToken)instantiationToken;
-
-            command = commandCache.get(token);
-
-            if (command == null) {
-                try {
-                    command = (WorkflowCommand) WorkflowCommandFactory.create(token.getWorkflowType(), routingToken, parameters);
-                    commandCache.put(token, command);
-                } catch (Exception e) {
-                    throw new CommandInstantiationException(
-                            String.format("%s(%s)", WorkflowCommandFactory.class.getSimpleName(), routingToken.toString()),
-                            e);
-                }
-            }
-        } else {
+        ParameterCheckUtility.checkParameterNotNull(instantiationToken, "instantiationToken");
+        if (!(instantiationToken instanceof WorkflowCommandInstantiationToken)) {
             throw new InvalidTokenException(instantiationToken.getClass(), CommandInstantiationTokenImpl.class);
         }
+        WorkflowCommandInstantiationToken token = (WorkflowCommandInstantiationToken)instantiationToken;
+        Workflow workflow = workflowCache.get(token);
 
-        return command;
+        String contextClassName = token.getWorkflowType().getContextClass();
+        if (contextClassName == null || contextClassName.isEmpty()) {
+            contextClassName = RSProcessorContext.class.getName();
+        }
+
+        RSProcessorContext processorContext = createContext(contextClassName, parameters);
+
+        if (workflow == null) {
+            try {
+                workflow = WorkflowFactory.create(
+                        processorContext.getClass(),
+                        token.getWorkflowType(),
+                        token.getResultType()
+                );
+                workflowCache.put(token, workflow);
+            } catch (Exception e) {
+                throw new CommandInstantiationException(
+                        String.format("%s", ((WorkflowCommandInstantiationToken) instantiationToken).getRoutingToken().toString()),
+                        e);
+            }
+        }
+
+        return new WorkflowCommand<>(workflow, processorContext);
+    }
+
+    private RSProcessorContext createContext(final String contextClassName, final Object[] parameters) {
+        return new RSProcessorContext();
     }
 
     /**
@@ -133,7 +143,7 @@ implements CommandProvider {
      * @param commandClassSemantics
      * @return
      */
-    private URL findWorkflow(
+    private URL getWorkflowDefinitionLocation(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics) {
         if (routingToken instanceof ProductTypeRoutingToken) {

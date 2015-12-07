@@ -99,7 +99,7 @@ implements CommandProvider {
         CommandInstantiationToken commandInstantiationToken =
                 findCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
         if (commandInstantiationToken != null) {
-            return (C) createCommand(routingToken, commandInstantiationToken, parameters);
+            return (C) createCommand(commandInstantiationToken, parameters);
         }
 
         return null;
@@ -165,16 +165,14 @@ implements CommandProvider {
 
     @Override
     public Command<?> createCommand(
-            final RoutingToken routingToken,
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters)
             throws CommandProviderException {
-        ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
         ParameterCheckUtility.checkParameterNotNull(commandInstantiationToken, "commandInstantiationToken");
 
         // Security check
         if (isKnownProvider(commandInstantiationToken.getCommandProvider())) {
-            return commandInstantiationToken.getCommandProvider().createCommand(routingToken, commandInstantiationToken, parameters);
+            return commandInstantiationToken.getCommandProvider().createCommand(commandInstantiationToken, parameters);
         }
 
         return null;
