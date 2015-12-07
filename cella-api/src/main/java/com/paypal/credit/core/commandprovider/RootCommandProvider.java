@@ -3,12 +3,16 @@ package com.paypal.credit.core.commandprovider;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
+import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
+import com.paypal.credit.core.commandprovider.exceptions.MultipleCommandImplementationsException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.core.utility.TypeAndInstanceUtility;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.concurrent.ConcurrentHashMap;
@@ -72,30 +76,13 @@ implements CommandProvider {
         this.commandProviderLoader = ServiceLoader.load(CommandProvider.class, this.classLoader);
     }
 
-    public CommandInstantiationToken findMostApplicableCommand(
-            final RoutingToken routingToken,
-            final CommandClassSemantics commandClassSemantics,
-            final Object[] parameters,
-            final Class<?> resultType) {
-        return findMostApplicableCommand(
-                routingToken,
-                commandClassSemantics,
-                TypeAndInstanceUtility.getTypes(parameters),
-                resultType);
-    }
-
     /**
-     *
+     * This (RootCommandProvider) is the ONLY CommandProvider that can return null
+     * as the publisher.
      */
-    public CommandInstantiationToken findMostApplicableCommand(
-            final RoutingToken routingToken,
-            final CommandClassSemantics commandClassSemantics,
-            final Class<?>[] parameterTypes,
-            final Class<?> resultType) {
-        CommandLocationTokenRankedSet commandRanking =
-                findCommands(routingToken, commandClassSemantics, parameterTypes, resultType);
-
-        return commandRanking.size() > 0 ? commandRanking.first() : null;
+    @Override
+    public String getPublisher() {
+        return null;
     }
 
     /**
@@ -106,11 +93,11 @@ implements CommandProvider {
             final CommandClassSemantics commandClassSemantics,
             final Object[] parameters,
             final Class<?> resultType)
-            throws CommandInstantiationException, InvalidTokenException {
+            throws CommandProviderException {
         final Class<?>[] parameterTypes = TypeAndInstanceUtility.getTypes(parameters);
 
         CommandInstantiationToken commandInstantiationToken =
-                findMostApplicableCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
+                findCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
         if (commandInstantiationToken != null) {
             return (C) createCommand(routingToken, commandInstantiationToken, parameters);
         }
@@ -147,28 +134,33 @@ implements CommandProvider {
      * @return
      */
     @Override
-    public CommandLocationTokenRankedSet findCommands(
+    public CommandInstantiationToken findCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameters,
-            final Class<?> resultType) {
+            final Class<?> resultType)
+            throws CommandProviderException {
         ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
         ParameterCheckUtility.checkParameterNotNull(commandClassSemantics, "commandClassSemantics");
 
-        CommandLocationTokenRankedSet commandRanking =
-                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics, parameters, resultType);
+        List<CommandInstantiationToken> commandInstantiationTokens = new ArrayList<>();
 
         for (Iterator<CommandProvider> iter = this.commandProviderLoader.iterator(); iter.hasNext(); ) {
             CommandProvider commandProvider = iter.next();
 
-            CommandLocationTokenRankedSet providerCommands =
-                    commandProvider.findCommands(routingToken, commandClassSemantics, parameters, resultType);
-            if (providerCommands != null) {
-                commandRanking.addAll(providerCommands);
+            CommandInstantiationToken providerToken =
+                    commandProvider.findCommand(routingToken, commandClassSemantics, parameters, resultType);
+            if (providerToken != null) {
+                commandInstantiationTokens.add(providerToken);
             }
         }
-
-        return commandRanking;
+        if (commandInstantiationTokens.size() == 1) {
+            return commandInstantiationTokens.get(0);
+        } else if (commandInstantiationTokens.size() == 0) {
+            return null;
+        } else {
+            throw new MultipleCommandImplementationsException(commandClassSemantics, commandInstantiationTokens);
+        }
     }
 
     @Override
@@ -176,9 +168,11 @@ implements CommandProvider {
             final RoutingToken routingToken,
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters)
-            throws CommandInstantiationException, InvalidTokenException {
+            throws CommandProviderException {
         ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
+        ParameterCheckUtility.checkParameterNotNull(commandInstantiationToken, "commandInstantiationToken");
 
+        // Security check
         if (isKnownProvider(commandInstantiationToken.getCommandProvider())) {
             return commandInstantiationToken.getCommandProvider().createCommand(routingToken, commandInstantiationToken, parameters);
         }

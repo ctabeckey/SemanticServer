@@ -5,6 +5,8 @@ import com.paypal.credit.core.ApplicationTransactionContext;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprocessor.exceptions.UnknownCommandException;
+import com.paypal.credit.core.processorbridge.exceptions.InvalidTransactionContextException;
+import com.paypal.credit.core.processorbridge.exceptions.UnmappableCommandException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.semantics.ProcessorBridgeMethodSemantics;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;

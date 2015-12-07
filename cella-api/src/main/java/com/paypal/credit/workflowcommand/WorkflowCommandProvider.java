@@ -31,14 +31,25 @@ implements CommandProvider {
      * Cache the token instances. WorkflowType instances may require a resource
      * file or network access and are therefore expensive to acquire.
      */
-    private final Map<TwoMemberCompoundKey<RoutingToken, CommandClassSemantics>, CommandInstantiationTokenImpl>
+    private final Map<TwoMemberCompoundKey<RoutingToken, CommandClassSemantics>, WorkflowCommandInstantiationToken>
             tokenCache = new ConcurrentHashMap<>();
 
     /**
      * Cache the WorkflowCommand instances.
      */
-    private final Map<CommandInstantiationTokenImpl, WorkflowCommand<?,?>>
+    private final Map<WorkflowCommandInstantiationToken, WorkflowCommand<?,?>>
             commandCache = new ConcurrentHashMap<>();
+
+    /**
+     * The publisher can be used to select a specific CommandProvider if
+     * there are multiple Command implementations available.
+     *
+     * @return
+     */
+    @Override
+    public String getPublisher() {
+        return "workflow";
+    }
 
     /**
      *
@@ -49,20 +60,14 @@ implements CommandProvider {
      * @return
      */
     @Override
-    public CommandLocationTokenRankedSet findCommands(
+    public CommandInstantiationToken findCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameters,
             final Class<?> resultType) {
-        final CommandLocationTokenRankedSet locationTokenRankedSet = new CommandLocationTokenRankedSet(
-                routingToken,
-                commandClassSemantics,
-                parameters,
-                resultType);
-
         TwoMemberCompoundKey key =
                 new TwoMemberCompoundKey<RoutingToken, CommandClassSemantics>(routingToken, commandClassSemantics);
-        CommandInstantiationTokenImpl token = tokenCache.get(key);
+        WorkflowCommandInstantiationToken token = tokenCache.get(key);
         if (token == null) {
             WorkflowType workflowType = null;
             URL workflowUrl = findWorkflow(routingToken, commandClassSemantics);
@@ -70,7 +75,7 @@ implements CommandProvider {
             if (workflowUrl != null) {
                 try {
                     workflowType = WorkflowReader.create(workflowUrl);
-                    token = new CommandInstantiationTokenImpl(this, new WorkflowCommandFactory(workflowType));
+                    token = new WorkflowCommandInstantiationToken(this, workflowType);
                     tokenCache.put(key, token);
                 } catch (JAXBException e) {
                     e.printStackTrace();
@@ -80,11 +85,7 @@ implements CommandProvider {
             }
         }
 
-        if (token != null) {
-            locationTokenRankedSet.add(token);
-        }
-
-        return locationTokenRankedSet;
+        return token;
     }
 
     /**
@@ -104,17 +105,19 @@ implements CommandProvider {
 
         WorkflowCommand command = null;
 
-        if (instantiationToken instanceof CommandInstantiationTokenImpl) {
-            CommandInstantiationTokenImpl token = (CommandInstantiationTokenImpl)instantiationToken;
+        if (instantiationToken instanceof WorkflowCommandInstantiationToken) {
+            WorkflowCommandInstantiationToken token = (WorkflowCommandInstantiationToken)instantiationToken;
 
             command = commandCache.get(token);
 
             if (command == null) {
                 try {
-                    command = (WorkflowCommand) token.getFactory().create(routingToken, parameters);
+                    command = (WorkflowCommand) WorkflowCommandFactory.create(token.getWorkflowType(), routingToken, parameters);
                     commandCache.put(token, command);
                 } catch (Exception e) {
-                    throw new CommandInstantiationException(token.getFactory().getClass().getName(), e);
+                    throw new CommandInstantiationException(
+                            String.format("%s(%s)", WorkflowCommandFactory.class.getSimpleName(), routingToken.toString()),
+                            e);
                 }
             }
         } else {
@@ -143,13 +146,11 @@ implements CommandProvider {
 
             try {
                 URL url = new URL("rsc:workflows/" + workflowIdentifier + ".xml");
-                URLConnection conn = url.openConnection();
-                conn.connect();
+                if (WorkflowReader.exists(url)) {
+                    return url;
+                }
             } catch (MalformedURLException e) {
                 e.printStackTrace();
-            } catch (IOException e) {
-                // the workflow definition is not available that implements the
-                // routing token and command requested
                 return null;
             }
         }

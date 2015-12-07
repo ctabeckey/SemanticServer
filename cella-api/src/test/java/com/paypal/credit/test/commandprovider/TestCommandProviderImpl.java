@@ -2,7 +2,6 @@ package com.paypal.credit.test.commandprovider;
 
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.core.commandprovider.CommandFactory;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationTokenImpl;
 import com.paypal.credit.core.commandprovider.CommandProvider;
@@ -12,7 +11,7 @@ import com.paypal.credit.test.commands.PostAuthorizationCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,24 +31,36 @@ implements CommandProvider {
     public TestCommandProviderImpl() {
     }
 
+    /**
+     * The publisher can be used to select a specific CommandProvider if
+     * there are multiple Command implementations available.
+     *
+     * @return
+     */
     @Override
-    public CommandLocationTokenRankedSet findCommands(
+    public String getPublisher() {
+        return "test";
+    }
+
+    @Override
+    public CommandInstantiationToken findCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameters,
             final Class<?> resultType) {
-        CommandLocationTokenRankedSet commandList =
-                new CommandLocationTokenRankedSet(routingToken, commandClassSemantics, parameters, resultType);
 
         for (Class<? extends Command<?>> commandClass : availableCommands) {
-            try {
-                commandList.add(this, routingToken, commandClass, commandClass.getConstructor(parameters));
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();
+            if (commandClassSemantics.describes(commandClass)) {
+                try {
+                    Constructor ctor = commandClass.getConstructor(parameters);
+                    return new TestCommandInstantiationToken(this, commandClass, ctor);
+                } catch (NoSuchMethodException e) {
+                    // just ignore and go on ...
+                }
             }
         }
 
-        return commandList;
+        return null;
     }
 
     @Override
@@ -57,22 +68,13 @@ implements CommandProvider {
             final RoutingToken routingToken,
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters) {
-        if (commandInstantiationToken instanceof CommandInstantiationTokenImpl) {
-            CommandInstantiationTokenImpl token = (CommandInstantiationTokenImpl)commandInstantiationToken;
-            if (token.getFactory() != null) {
-                try {
-                    return token.getFactory().create(routingToken, parameters);
-                } catch (Exception x) {
-                    x.printStackTrace();
-                    LOGGER.error("Failed to create a Command instance from CommandFactory, %s", x.getMessage());
-                }
-            } else if (token.getCtor() != null) {
-                try {
-                    return (Command<?>) token.getCtor().newInstance(parameters);
-                } catch (Exception x) {
-                    x.printStackTrace();
-                    LOGGER.error("Failed to create a Command instance from constructor, %s", x.getMessage());
-                }
+        if (commandInstantiationToken instanceof TestCommandInstantiationToken) {
+            TestCommandInstantiationToken token = (TestCommandInstantiationToken)commandInstantiationToken;
+            try {
+                return (Command<?>) token.getCtor().newInstance(parameters);
+            } catch (Exception x) {
+                x.printStackTrace();
+                LOGGER.error("Failed to create a Command instance from constructor, %s", x.getMessage());
             }
         } else {
             LOGGER.error("Invalid CommandInstantiationToken for this instance of CommandProvider");

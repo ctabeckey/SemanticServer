@@ -3,7 +3,7 @@ package com.paypal.credit.core.commandprovider.exceptions;
 /**
  * Created by cbeckey on 11/17/15.
  */
-public class InvalidTokenException extends Exception {
+public class InvalidTokenException extends CommandProviderException {
     private static String createMessage(Class<?> tokenClass, Class<?> expectedTokenClass) {
         return String.format("Invalid token type, actual type was %s, expected type is %s",
                 tokenClass == null ? "<null>" : tokenClass.getName(),

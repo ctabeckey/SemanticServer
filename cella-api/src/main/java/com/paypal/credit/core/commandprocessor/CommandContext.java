@@ -1,7 +1,7 @@
 package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.commandprovider.RootCommandProvider;
-import com.paypal.credit.core.serviceprovider.RootServiceProviderFactory;
+import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderFactory;
 
 /**
  * This interface defines the context available to a Command.
@@ -18,7 +18,7 @@ public interface CommandContext
 	/**
 	 * @return
 	 */
-	public abstract RootServiceProviderFactory getProviderFactory();
+	public abstract RootDataSourceProviderFactory getProviderFactory();
 
 	/**
 	 * @return the command provider

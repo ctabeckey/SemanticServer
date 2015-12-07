@@ -1,1 +1,2 @@
 com.paypal.credit.test.commandprovider.TestCommandProviderImpl    # Test CommandProvider
+com.paypal.credit.workflowcommand.WorkflowCommandProvider         # Command provider for runtime workflow creation

@@ -13,35 +13,28 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by cbeckey on 11/13/15.
  */
-public class WorkflowCommandFactory
-implements CommandFactory {
+public class WorkflowCommandFactory {
     private final static Logger LOGGER = LoggerFactory.getLogger(WorkflowCommandFactory.class);
-    private final WorkflowType workflow;
 
     /**
-     *
-     * @param workflow
-     */
-    WorkflowCommandFactory(final WorkflowType workflow) {
-        this.workflow = workflow;
-    }
-
-    /**
-     *
+     * @param workflowType
      * @param routingToken
      * @param parameters
      * @return
      * @throws Exception
      */
-    public Command<?> create(
+    static Command<?> create(
+            final WorkflowType workflowType,
             final RoutingToken routingToken,
-            final Object[] parameters) throws Exception {
-        return create(this.workflow, createProcessorContext(routingToken, parameters));
+            final Object[] parameters)
+            throws InvalidWorkflowException {
+        return create(workflowType, createProcessorContext(routingToken, parameters));
     }
 
-    private <R, T extends RSProcessorContext> WorkflowCommand<T, R> create(
+    private static <R, T extends RSProcessorContext> WorkflowCommand<T, R> create(
             final WorkflowType workflow,
-            final T processorContext) throws InvalidWorkflowException {
+            final T processorContext)
+            throws InvalidWorkflowException {
         // create the workflow command
         RSSerialController<T> controller = WorkflowFactory.create(
                 (Class<T>) processorContext.getClass(),
@@ -50,9 +43,9 @@ implements CommandFactory {
     }
 
     // TODO: code this
-    private RSProcessorContext createProcessorContext(
+    private static RSProcessorContext createProcessorContext(
             final RoutingToken routingToken,
-            final Object[] parameters) throws InvalidWorkflowException{
+            final Object[] parameters) {
         RSProcessorContext processorContext = new RSProcessorContext() {
 
         };

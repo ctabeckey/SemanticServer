@@ -5,7 +5,7 @@ import com.paypal.credit.core.commandprocessor.CommandProcessorDefaultImpl;
 import com.paypal.credit.core.commandprovider.RootCommandProvider;
 import com.paypal.credit.core.semantics.ApplicationSemantics;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.core.serviceprovider.RootServiceProviderFactory;
+import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderFactory;
 
 /**
  * The container for all application components.
@@ -16,7 +16,7 @@ public class Application {
     private final ClassLoader classLoader;
     private final ApplicationSemantics applicationSemantics;
     private final RootCommandProvider commandProvider;
-    private final RootServiceProviderFactory serviceProviderFactory;
+    private final RootDataSourceProviderFactory serviceProviderFactory;
     private final CommandProcessor commandProcessor;
 
     /**
@@ -48,7 +48,7 @@ public class Application {
 
         ApplicationSemantics semantics = new ApplicationSemantics(classLoader, modelPackage);
         RootCommandProvider commandProvider = new RootCommandProvider(classLoader);
-        RootServiceProviderFactory serviceProviderFactory = RootServiceProviderFactory.getOrCreate(classLoader);
+        RootDataSourceProviderFactory serviceProviderFactory = RootDataSourceProviderFactory.getOrCreate(classLoader);
         CommandProcessor commandProcessor = CommandProcessorDefaultImpl.create();
 
         Application application = new Application(classLoader, semantics, commandProvider, serviceProviderFactory, commandProcessor);
@@ -63,7 +63,7 @@ public class Application {
             final ClassLoader classLoader,
             final ApplicationSemantics applicationSemantics,
             final RootCommandProvider commandProvider,
-            final RootServiceProviderFactory serviceProviderFactory,
+            final RootDataSourceProviderFactory serviceProviderFactory,
             final CommandProcessor commandProcessor) {
         this.classLoader = classLoader;
         this.applicationSemantics = applicationSemantics;
@@ -84,7 +84,7 @@ public class Application {
         return commandProvider;
     }
 
-    public RootServiceProviderFactory getServiceProviderFactory() {
+    public RootDataSourceProviderFactory getServiceProviderFactory() {
         return serviceProviderFactory;
     }
 

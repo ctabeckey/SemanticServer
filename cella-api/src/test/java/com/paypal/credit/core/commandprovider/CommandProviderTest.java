@@ -1,6 +1,7 @@
 package com.paypal.credit.core.commandprovider;
 
 import com.paypal.credit.core.commandprocessor.RoutingToken;
+import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.semantics.ApplicationSemantics;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.semantics.ProcessorBridgeMethodSemantics;
@@ -33,14 +34,14 @@ public class CommandProviderTest {
     }
 
     @Test
-    public void testFindCommand() throws CoreRouterSemanticsException {
+    public void testFindCommand() throws CoreRouterSemanticsException, CommandProviderException {
         ProcessorBridgeMethodSemantics rms = applicationSemantics.createProcessorBridgeMethodSemantics("postAuthorization");
         CommandClassSemantics ccs = applicationSemantics.createCommandClassSemantic(rms);
 
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
 
         CommandInstantiationToken commandRank =
-                rootCommandProvider.findMostApplicableCommand(rt, ccs, new Class[]{Authorization.class}, AuthorizationId.class);
+                rootCommandProvider.findCommand(rt, ccs, new Class[]{Authorization.class}, AuthorizationId.class);
         Assert.assertNotNull(commandRank);
         Assert.assertNotNull(commandRank.getCommandProvider());
     }

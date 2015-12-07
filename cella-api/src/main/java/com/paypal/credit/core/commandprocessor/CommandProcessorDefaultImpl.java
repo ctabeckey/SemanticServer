@@ -2,7 +2,7 @@ package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprovider.RootCommandProvider;
-import com.paypal.credit.core.serviceprovider.RootServiceProviderFactory;
+import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderFactory;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -148,7 +148,7 @@ implements CommandProcessor
             }
 
             @Override
-            public RootServiceProviderFactory getProviderFactory() {
+            public RootDataSourceProviderFactory getProviderFactory() {
                 return application.getServiceProviderFactory();
             }
 

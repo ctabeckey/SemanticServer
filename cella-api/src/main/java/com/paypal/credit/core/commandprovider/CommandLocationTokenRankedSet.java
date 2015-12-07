@@ -84,7 +84,7 @@ public class CommandLocationTokenRankedSet {
      *
      * @param token
      */
-    public void add(CommandInstantiationTokenImpl token) {
+    public void add(CommandInstantiationToken token) {
         ParameterCheckUtility.checkParameterNotNull(token, "token");
 
         candidates.add(token);
