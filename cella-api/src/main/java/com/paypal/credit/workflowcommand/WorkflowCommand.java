@@ -1,7 +1,7 @@
 package com.paypal.credit.workflowcommand;
 
+import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.Command;
-import com.paypal.credit.core.commandprocessor.CommandContext;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
 
@@ -16,7 +16,7 @@ public class WorkflowCommand<C extends RSProcessorContext, R>
 implements Command<R> {
     private final Workflow<C, R> workflow;
     private final RSProcessorContext processorContext;
-    private CommandContext commandContext;
+    private Application application;
 
     /**
      *
@@ -34,15 +34,14 @@ implements Command<R> {
     /**
      * Provides environment access to the Command implementations.
      *
-     * @param commandContext
+     * @param application
      */
-    @Override
-    public void setCommandContext(final CommandContext commandContext) {
-        this.commandContext = commandContext;
+    public void setApplicationContext(final Application application) {
+        this.application = application;
     }
 
-    public CommandContext getCommandContext() {
-        return commandContext;
+    public Application getApplicationContext() {
+        return this.application;
     }
 
     /**
@@ -54,7 +53,6 @@ implements Command<R> {
      */
     @Override
     public R invoke() throws Throwable {
-
         if (this.workflow.execute((C)this.processorContext)) {
             return extractResultFromContext(processorContext);
         }

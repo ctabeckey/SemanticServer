@@ -10,6 +10,7 @@ import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.core.utility.TypeAndInstanceUtility;
 
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -64,6 +65,7 @@ implements CommandProvider {
 
     /** The ONLY ServiceLoader for the RootCommandProvider type */
     private final ServiceLoader<CommandProvider> commandProviderLoader;
+
     /** */
     private final ClassLoader classLoader;
 
@@ -77,7 +79,7 @@ implements CommandProvider {
     }
 
     /**
-     * This (RootCommandProvider) is the ONLY CommandProvider that can return null
+     * This (RootCommandProvider) is the ONLY CommandProvider that can and must return null
      * as the publisher.
      */
     @Override
@@ -92,14 +94,15 @@ implements CommandProvider {
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Object[] parameters,
+            final Annotation[][] parameterAnnotations,
             final Class<?> resultType)
             throws CommandProviderException {
         final Class<?>[] parameterTypes = TypeAndInstanceUtility.getTypes(parameters);
 
         CommandInstantiationToken commandInstantiationToken =
-                findCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
+                findCommand(routingToken, commandClassSemantics, parameterTypes, parameterAnnotations, resultType);
         if (commandInstantiationToken != null) {
-            return (C) createCommand(commandInstantiationToken, parameters);
+            return (C) createCommand(commandInstantiationToken, parameters, parameterAnnotations);
         }
 
         return null;
@@ -130,14 +133,18 @@ implements CommandProvider {
      *
      * @param routingToken
      * @param commandClassSemantics
-     * @param parameters
+     * @param parameterTypes
+     * @param parameterAnnotations
+     * @param resultType
      * @return
+     * @throws CommandProviderException
      */
     @Override
     public CommandInstantiationToken findCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
-            final Class<?>[] parameters,
+            final Class<?>[] parameterTypes,
+            final Annotation[][] parameterAnnotations,
             final Class<?> resultType)
             throws CommandProviderException {
         ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
@@ -149,7 +156,7 @@ implements CommandProvider {
             CommandProvider commandProvider = iter.next();
 
             CommandInstantiationToken providerToken =
-                    commandProvider.findCommand(routingToken, commandClassSemantics, parameters, resultType);
+                    commandProvider.findCommand(routingToken, commandClassSemantics, parameterTypes, parameterAnnotations, resultType);
             if (providerToken != null) {
                 commandInstantiationTokens.add(providerToken);
             }
@@ -163,16 +170,25 @@ implements CommandProvider {
         }
     }
 
+    /**
+     *
+     * @param commandInstantiationToken
+     * @param parameters
+     * @param parameterAnnotations
+     * @return
+     * @throws CommandProviderException
+     */
     @Override
     public Command<?> createCommand(
             final CommandInstantiationToken commandInstantiationToken,
-            final Object[] parameters)
+            final Object[] parameters,
+            final Annotation[][] parameterAnnotations)
             throws CommandProviderException {
         ParameterCheckUtility.checkParameterNotNull(commandInstantiationToken, "commandInstantiationToken");
 
         // Security check
         if (isKnownProvider(commandInstantiationToken.getCommandProvider())) {
-            return commandInstantiationToken.getCommandProvider().createCommand(commandInstantiationToken, parameters);
+            return commandInstantiationToken.getCommandProvider().createCommand(commandInstantiationToken, parameters, parameterAnnotations);
         }
 
         return null;

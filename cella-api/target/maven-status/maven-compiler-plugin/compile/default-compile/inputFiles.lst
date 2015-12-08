@@ -10,6 +10,7 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeDefinesUnmappableMethodException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactory.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/serverinterface/ServerLifecycleListener.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/FourMemberCompoundKey.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/Application.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java
@@ -20,8 +21,9 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessor.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/serverinterface/ServerLifecycleEvent.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/ParallelType.java
-/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationToken.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowReader.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationToken.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommandCallback.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/exceptions/UnableToCreateServiceProviderImplementation.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderInterface.java
@@ -30,7 +32,6 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/ObjectFactory.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java
-/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandContext.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousCommandListener.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/OptionsType.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/FacadeProcessorBridgeNotAnInterfaceException.java
@@ -40,6 +41,7 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/TypeAndInstanceUtility.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderExceptionHandler.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/CompoundKey.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/RoutingToken.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationException.java
@@ -47,6 +49,7 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/processorbridge/exceptions/UnmappableCommandException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/ParameterCheckUtility.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/package-info.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/semantics/Preposition.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.java
@@ -54,9 +57,11 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/IncompatibleRoutingTokenException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/exceptions/UnableToFindServiceProviderImplementation.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowContextMapping.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemantics.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommand.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/semantics/ApplicationSemantics.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/WorkflowType.java
@@ -82,3 +87,4 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/processorbridge/exceptions/InvalidTransactionContextException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/rsc/Handler.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationCompositeException.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/main/java/com/paypal/credit/core/utility/ThreeMemberCompoundKey.java

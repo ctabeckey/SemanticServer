@@ -141,24 +141,7 @@ implements CommandProcessor
     {
         ParameterCheckUtility.checkParameterNotNull(command, "command");
 
-        CommandContext commandContext = new CommandContext() {
-            @Override
-            public CommandProcessor getCommandProcessor() {
-                return application.getCommandProcessor();
-            }
-
-            @Override
-            public RootDataSourceProviderFactory getProviderFactory() {
-                return application.getServiceProviderFactory();
-            }
-
-            @Override
-            public RootCommandProvider getCommandProvider() {
-                return application.getCommandProvider();
-            }
-        };
-
-        command.setCommandContext(commandContext);
+        command.setApplicationContext(application);
 
         try {
             T result = command.invoke();

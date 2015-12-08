@@ -1,8 +1,5 @@
 package com.paypal.credit.workflowcommand;
 
-import com.paypal.credit.core.commandprocessor.Command;
-import com.paypal.credit.core.commandprocessor.CommandContext;
-import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.workflow.*;
 import com.paypal.credit.workflow.exceptions.RSWorkflowException;
 
@@ -17,9 +14,11 @@ public class Workflow<C extends RSProcessorContext, R> {
     private final RSSerialController<C> startController;
     private final Class<R> resultType;
 
-    private CommandContext commandContext;
-    private RoutingToken routingToken;
-
+    /**
+     *
+     * @param startController
+     * @param resultType
+     */
     Workflow(final RSSerialController<C> startController, final Class<R> resultType) {
         this.startController = startController;
         this.resultType = resultType;

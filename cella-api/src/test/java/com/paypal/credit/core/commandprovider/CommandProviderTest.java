@@ -15,6 +15,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.lang.annotation.Annotation;
+
 /**
  * Created by cbeckey on 11/11/15.
  */
@@ -41,7 +43,7 @@ public class CommandProviderTest {
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
 
         CommandInstantiationToken commandRank =
-                rootCommandProvider.findCommand(rt, ccs, new Class[]{Authorization.class}, AuthorizationId.class);
+                rootCommandProvider.findCommand(rt, ccs, new Class[]{Authorization.class}, new Annotation[0][0], AuthorizationId.class);
         Assert.assertNotNull(commandRank);
         Assert.assertNotNull(commandRank.getCommandProvider());
     }

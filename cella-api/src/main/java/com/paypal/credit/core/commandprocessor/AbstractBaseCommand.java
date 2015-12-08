@@ -1,25 +1,26 @@
 package com.paypal.credit.core.commandprocessor;
 
+import com.paypal.credit.core.Application;
+
 /**
  * Created by cbeckey on 11/11/15.
  */
 public abstract class AbstractBaseCommand<R>
 implements Command<R> {
-    private CommandContext commandContext;
+    private Application application;
     private RoutingToken routingToken;
 
     /**
      * Provides environment access to the Command implementations.
      *
-     * @param commandContext
+     * @param application
      */
-    @Override
-    public void setCommandContext(final CommandContext commandContext) {
-        this.commandContext = commandContext;
+    public void setApplicationContext(final Application application) {
+        this.application = application;
     }
 
-    public CommandContext getCommandContext() {
-        return commandContext;
+    protected Application getApplicationContext() {
+        return application;
     }
 
     public RoutingToken getRoutingToken() {

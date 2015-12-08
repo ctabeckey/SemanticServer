@@ -8,6 +8,8 @@ import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.commandprovider.exceptions.MultipleCommandImplementationsException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 
+import java.lang.annotation.Annotation;
+
 /**
  * THe definition of a CommandProvider
  */
@@ -25,7 +27,7 @@ public interface CommandProvider {
      * The RoutingToken may be used to select or initialize the Command implementation.
      * @param routingToken
      * @param commandClassSemantics
-     * @param parameters
+     * @param parameterTypes
      * @param resultType
      * @return
      * @throws CommandProviderException
@@ -33,7 +35,8 @@ public interface CommandProvider {
     CommandInstantiationToken findCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
-            final Class<?>[] parameters,
+            final Class<?>[] parameterTypes,
+            final Annotation[][] parameterAnnotations,
             final Class<?> resultType)
             throws CommandProviderException;
 
@@ -47,7 +50,8 @@ public interface CommandProvider {
      */
     Command<?> createCommand(
             final CommandInstantiationToken commandInstantiationToken,
-            final Object[] parameters)
+            final Object[] parameters,
+            final Annotation[][] parameterAnnotations)
             throws CommandProviderException;
 
 }

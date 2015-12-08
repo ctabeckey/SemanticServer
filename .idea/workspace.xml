@@ -2,19 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationTokenImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandLocationTokenRankedSet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandInstantiationTokenImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandLocationTokenRankedSet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandLocationTokenRankedSet$DistanceComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandLocationTokenRankedSet.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommandCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/CompoundKey.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/FourMemberCompoundKey.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/ThreeMemberCompoundKey.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowContextMapping.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandContext.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$4.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/Application.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/Application.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/Command.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/Command.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$2.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$3.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandProvider.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/RootCommandProvider.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/RootCommandProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory$1.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory$ClassToInstanceCacheMap.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory$ClassToInstanceCacheMap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CommandClassSemantics.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CommandClassSemantics.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/TwoMemberCompoundKey.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/TwoMemberCompoundKey.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/Workflow.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/Workflow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommand.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommand.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommandProvider.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommandProvider.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowFactory.class" afterPath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/commandprovider/CommandProviderTest.class" afterPath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/commandprovider/CommandProviderTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.class" afterPath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.class" afterPath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/FullStackTest.class" afterPath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/FullStackTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java" afterPath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java" afterPath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorOne.java" afterPath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorOne.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" afterPath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java" afterPath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java" afterPath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,15 +85,80 @@
     <favorites_list name="cella-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RootCommandProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractProcessorBridgeImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkflowCommandProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkflowCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Workflow.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.72824156">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkflowTestProcessorBridge.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -68,19 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/WorkflowReader.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/resources/OneStepWorkflow.xml" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/resources/workflow1.xml" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/resources/ParallelWorkflow.xml" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowcommand/WorkflowReaderTest.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowcommand/WorkflowFactoryTest.java" />
-        <option value="$PROJECT_DIR$/cella-api/target/classes/workflow.xsd" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/CommandClassSemantics.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/CompoundKey.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/exceptions/InvalidTransactionContextException.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/exceptions/UnmappableCommandException.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/RootServiceProviderFactory.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/ServiceProviderExceptionHandler.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderExceptionHandler.java" />
@@ -92,33 +184,46 @@
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/InvalidTokenException.java" />
         <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandInstantiationToken.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowReader.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.java" />
         <option value="$PROJECT_DIR$/cella-api/src/test/resources/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java" />
         <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/SubjectProcessorBridge.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java" />
         <option value="$PROJECT_DIR$/cella-api/src/test/resources/workflows/GetAuthorization_usains.xml" />
         <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandFactory.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/resources/workflow.xsd" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessor.java" />
-        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java" />
         <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commands/PostAuthorizationCommand.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandLocationTokenRankedSet.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationTokenImpl.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandContext.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/ApplicationContext.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/FourMemberCompoundKey.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/ThreeMemberCompoundKey.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/CompoundKey.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommandCallback.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommand.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" />
         <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/ContextMapping.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowContextMapping.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java" />
         <option value="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java" />
+        <option value="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorOne.java" />
       </list>
     </option>
   </component>
@@ -177,6 +282,150 @@
               <option name="myItemId" value="cella" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reflect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -261,6 +510,144 @@
               <option name="myItemId" value="credit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processorbridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowcommand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -343,6 +730,182 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processorbridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commandprovider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -540,7 +1103,191 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utility" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processorbridge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="commandprovider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commandprocessor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,7 +1307,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="extract.method.default.visibility" value="private" />
+    <property name="extract.method.default.visibility" value="protected" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -592,11 +1339,11 @@
       <recent name="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.paypal.credit.core.processorbridge" />
+      <recent name="com.paypal.credit.core.utility" />
       <recent name="com.paypal.credit.processors" />
       <recent name="com.paypal.credit.commands" />
       <recent name="com.paypal.credit.core.commandprocessor" />
-      <recent name="com.paypal.credit.core.semantics" />
-      <recent name="com.paypal.credit.core.commands" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.paypal.credit.commands" />
@@ -604,7 +1351,7 @@
       <recent name="com.paypal.credit.core.datasourceprovider" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.FullStackTest">
     <configuration default="false" name="&lt;default&gt;" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="cella-api" />
@@ -1170,8 +1917,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.FullStackTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.FullStackTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.DataSourceProviderFactoryTest" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.WorkflowReaderTest" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.CommandProviderTest" />
@@ -1196,44 +1943,44 @@
       <workItem from="1447253651971" duration="30446000" />
       <workItem from="1447357924543" duration="7095000" />
       <workItem from="1447366457946" duration="40051000" />
-      <workItem from="1449251001377" duration="11955000" />
+      <workItem from="1449251001377" duration="20468000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FullStackTest - 2015.12.07 at 07h 57m 27s.xml">
+    <history-entry file="FullStackTest - 2015.12.08 at 16h 58m 38s.xml">
       <configuration name="FullStackTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="FullStackTest - 2015.12.07 at 07h 57m 46s.xml">
+    <history-entry file="FullStackTest - 2015.12.08 at 16h 59m 28s.xml">
       <configuration name="FullStackTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="FullStackTest - 2015.12.07 at 07h 57m 49s.xml">
+    <history-entry file="FullStackTest - 2015.12.08 at 17h 00m 36s.xml">
       <configuration name="FullStackTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FullStackTest - 2015.12.07 at 07h 58m 09s.xml">
-      <configuration name="FullStackTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FullStackTest - 2015.12.07 at 11h 32m 20s.xml">
-      <configuration name="FullStackTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FullStackTest - 2015.12.07 at 14h 40m 13s.xml">
-      <configuration name="FullStackTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2015.12.07 at 11h 40m 25s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2015.12.07 at 11h 45m 31s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2015.12.07 at 16h 23m 36s.xml">
-      <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_default_ - 2015.12.07 at 16h 42m 32s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="_default_ - 2015.12.07 at 17h 02m 55s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2015.12.07 at 17h 15m 44s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2015.12.08 at 12h 35m 06s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2015.12.08 at 16h 42m 28s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2015.12.08 at 16h 48m 16s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2015.12.08 at 16h 49m 06s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157664000" />
+    <option name="totallyTimeSpent" value="166177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1246,7 +1993,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1255,16 +2002,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24611399" sideWeight="0.5029586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1626506" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2879518" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31759655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23676682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24698795" sideWeight="0.51849115" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24222799" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45301205" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1310,229 +2057,18 @@
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09222423">
-          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="163" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/InvalidTokenException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15370706">
-          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3074141">
-          <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandProviderException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21518987">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="46" />
-          <folding>
-            <element signature="e#277#278#0" expanded="false" />
-            <element signature="e#307#308#0" expanded="false" />
-            <element signature="e#391#392#0" expanded="false" />
-            <element signature="e#428#429#0" expanded="false" />
-            <element signature="e#490#491#0" expanded="false" />
-            <element signature="e#518#519#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandInstantiationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1124#1125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35559568">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#804#805#0" expanded="false" />
-            <element signature="e#843#844#0" expanded="false" />
-            <element signature="e#1201#1202#0" expanded="false" />
-            <element signature="e#1245#1246#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4296029">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14800996">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowcommand/WorkflowFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14800996">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/resources/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021144278">
-          <caret line="1" column="114" selection-start-line="1" selection-start-column="114" selection-end-line="1" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/resources/workflows/GetAuthorization_de_ins.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/FacadeTransactionContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19899665">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/FacadeTransactionContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19899665">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/model/AuthorizationId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14237855">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37458193">
-          <caret line="28" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/resources/ParallelWorkflow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27045456">
-          <caret line="7" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08798283">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/credit/workflow/1.0.1-SNAPSHOT/workflow-1.0.1-20150824.154833-9.jar!/com/paypal/credit/workflow/RSProcessorContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50246304">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30267063">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/test/resources/TwoStepWorkflow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cella-api/src/test/resources/workflows/GetAuthorization_usains.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -1548,14 +2084,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15292354">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1607,50 +2135,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3568216">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7196402">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5964912">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7763158">
           <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1564329">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5657895">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1663,22 +2151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3868066">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25487256">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandExecution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2293853">
@@ -1687,34 +2159,344 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/datasource/SubjectDataSourceProviderFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1784108">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/credit/workflow/1.0.1-SNAPSHOT/workflow-1.0.1-20150824.154833-9.jar!/com/paypal/credit/workflow/RSProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.159375">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/credit/workflow/1.0.1-SNAPSHOT/workflow-1.0.1-20150824.154833-9.jar!/com/paypal/credit/workflow/RSSerialController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.159375">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46633416">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#468#469#0" expanded="false" />
+            <element signature="e#514#515#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48425788">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54122937">
+          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousCommandListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12743628">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowcommand/WorkflowFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60134006">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.552764">
+          <caret line="215" column="12" selection-start-line="215" selection-start-column="12" selection-end-line="215" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19932999">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/FourMemberCompoundKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/ThreeMemberCompoundKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/CompoundKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2562814">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2562814">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3328336">
+          <caret line="621" column="19" selection-start-line="621" selection-start-column="19" selection-end-line="621" selection-end-column="19" />
+          <folding>
+            <element signature="e#22736#22737#0" expanded="true" />
+            <element signature="e#22776#22777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30584708">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/CommandClassSemantics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2293853">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/reflect/Executable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0452261">
+          <caret line="496" column="35" selection-start-line="496" selection-start-column="35" selection-end-line="496" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37353435">
+          <caret line="622" column="26" selection-start-line="622" selection-start-column="26" selection-end-line="622" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommandCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42713568">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42713568">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/CommandMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25487256">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.2847571">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37018424">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6109726">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+          <folding>
+            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7880299">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15292354">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6161919">
+          <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89205396">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <folding>
+            <element signature="e#1423#1424#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/annotation/Target.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82158923">
+          <caret line="86" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java">
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/ApplicationTransactionContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06733167">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.1784108">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/FacadeTransactionContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20389806">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowContextMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33133432">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10598504">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43896714">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.060390763">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72824156">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding />
         </state>
       </provider>

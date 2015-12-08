@@ -11,11 +11,10 @@ import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.core.utility.TwoMemberCompoundKey;
 import com.paypal.credit.workflow.RSProcessorContext;
-import com.paypal.credit.workflow.RSSerialController;
-import com.paypal.credit.workflowcommand.exceptions.InvalidWorkflowException;
 import com.paypal.credit.workflowcommand.workflow.WorkflowType;
 
 import javax.xml.bind.JAXBException;
+import java.lang.annotation.Annotation;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -54,7 +53,8 @@ implements CommandProvider {
      *
      * @param routingToken
      * @param commandClassSemantics
-     * @param parameters
+     * @param parameterTypes
+     * @param parameterAnnotations
      * @param resultType
      * @return
      */
@@ -62,10 +62,12 @@ implements CommandProvider {
     public CommandInstantiationToken findCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
-            final Class<?>[] parameters,
+            final Class<?>[] parameterTypes,
+            final Annotation[][] parameterAnnotations,
             final Class<?> resultType) {
-        TwoMemberCompoundKey key =
-                new TwoMemberCompoundKey<RoutingToken, CommandClassSemantics>(routingToken, commandClassSemantics);
+        TwoMemberCompoundKey key = new TwoMemberCompoundKey<RoutingToken, CommandClassSemantics>(
+                routingToken, commandClassSemantics
+        );
         WorkflowCommandInstantiationToken token = tokenCache.get(key);
         if (token == null) {
             WorkflowType workflowType = null;
@@ -91,13 +93,15 @@ implements CommandProvider {
      *
      * @param instantiationToken
      * @param parameters
+     * @param parameterAnnotations
      * @return
      * @throws CommandInstantiationException
      */
     @Override
     public Command<?> createCommand(
             final CommandInstantiationToken instantiationToken,
-            final Object[] parameters)
+            final Object[] parameters,
+            final Annotation[][] parameterAnnotations)
             throws CommandInstantiationException, InvalidTokenException {
 
         ParameterCheckUtility.checkParameterNotNull(instantiationToken, "instantiationToken");
@@ -112,7 +116,7 @@ implements CommandProvider {
             contextClassName = RSProcessorContext.class.getName();
         }
 
-        RSProcessorContext processorContext = createContext(contextClassName, parameters);
+        RSProcessorContext processorContext = createContext(contextClassName, parameters, parameterAnnotations);
 
         if (workflow == null) {
             try {
@@ -132,8 +136,54 @@ implements CommandProvider {
         return new WorkflowCommand<>(workflow, processorContext);
     }
 
-    private RSProcessorContext createContext(final String contextClassName, final Object[] parameters) {
-        return new RSProcessorContext();
+    /**
+     *
+     * @param contextClassName
+     * @param parameters
+     * @param parameterAnnotations
+     * @return
+     */
+    private RSProcessorContext createContext(final String contextClassName, final Object[] parameters, final Annotation[][] parameterAnnotations)
+            throws CommandInstantiationException {
+        RSProcessorContext result;
+
+        if (contextClassName != null && !contextClassName.isEmpty()) {
+            try {
+                result = (RSProcessorContext)(Class.forName(contextClassName)).newInstance();
+            } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | ClassCastException x) {
+                x.printStackTrace();
+                throw new CommandInstantiationException("WorkflowCommandProvider", x);
+            }
+
+        } else {
+            result = new RSProcessorContext();
+        }
+
+        for (int index=0; index < parameters.length; ++index) {
+            WorkflowContextMapping mapping = getWorkflowContextMapping(parameterAnnotations[index]);
+            String propertyName = mapping == null ? parameters[index].toString() : mapping.value();
+
+            result.put(propertyName, parameters[index]);
+        }
+
+        return result;
+    }
+
+    /**
+     *
+     * @param parameterAnnotations
+     * @return
+     */
+    private WorkflowContextMapping getWorkflowContextMapping(final Annotation[] parameterAnnotations) {
+        if(parameterAnnotations != null && parameterAnnotations.length > 0) {
+            for (Annotation parameterAnnotation : parameterAnnotations) {
+                if (parameterAnnotation instanceof WorkflowContextMapping) {
+                    return (WorkflowContextMapping)parameterAnnotation;
+                }
+            }
+        }
+
+        return null;
     }
 
     /**

@@ -27,6 +27,15 @@ import java.util.List;
  */
 public class WorkflowFactory {
 
+    /**
+     *
+     * @param contextClass
+     * @param workflowType
+     * @param resultType
+     * @param <C>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     public static <C extends RSProcessorContext> Workflow create(
             final Class<C> contextClass,
             final WorkflowType workflowType,
@@ -37,6 +46,14 @@ public class WorkflowFactory {
         return wf;
     }
 
+    /**
+     *
+     * @param contextClass
+     * @param workflow
+     * @param <C>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     public static <C extends RSProcessorContext> RSSerialController<C> create(
             final Class<C> contextClass,
             final WorkflowType workflow)
@@ -56,6 +73,15 @@ public class WorkflowFactory {
         return serialController;
     }
 
+    /**
+     *
+     * @param processorNode
+     * @param contextClass
+     * @param parallelExecutor
+     * @param <T>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     private static <T extends RSProcessorContext> RSProcessor<T> createProcessor(
             final Object processorNode,
             final Class<T> contextClass,
@@ -76,6 +102,15 @@ public class WorkflowFactory {
         return processor;
     }
 
+    /**
+     *
+     * @param baseProcessor
+     * @param contextClass
+     * @param parallelExecutor
+     * @param <T>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     private static <T extends RSProcessorContext> List<RSProcessor<T>> createChildProcessorList(
             final BaseProcessorType baseProcessor,
             final Class<T> contextClass,
@@ -91,6 +126,15 @@ public class WorkflowFactory {
         return processorList;
     }
 
+    /**
+     *
+     * @param serial
+     * @param contextClass
+     * @param parallelExecutor
+     * @param <T>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     private static <T extends RSProcessorContext> RSSerialController<T> createProcessor(
             final SerialType serial,
             final Class<T> contextClass,
@@ -102,6 +146,15 @@ public class WorkflowFactory {
         return controller;
     }
 
+    /**
+     *
+     * @param parallel
+     * @param contextClass
+     * @param parallelExecutor
+     * @param <T>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     private static <T extends RSProcessorContext> RSParallelController<T> createProcessor(
             final ParallelType parallel,
             final Class<T> contextClass,
@@ -113,6 +166,15 @@ public class WorkflowFactory {
         return controller;
     }
 
+    /**
+     *
+     * @param conditional
+     * @param contextClass
+     * @param parallelExecutor
+     * @param <T>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     private static <T extends RSProcessorContext> RSConditionalController<T> createProcessor(
             final ConditionalType conditional,
             final Class<T> contextClass,
@@ -125,6 +187,15 @@ public class WorkflowFactory {
         return controller;
     }
 
+    /**
+     *
+     * @param processorNode
+     * @param contextClass
+     * @param parallelExecutor
+     * @param <T>
+     * @return
+     * @throws InvalidWorkflowException
+     */
     private static <T extends RSProcessorContext> RSProcessor<T> createProcessor(
             final ProcessorType processorNode,
             final Class<T> contextClass,
@@ -139,8 +210,10 @@ public class WorkflowFactory {
      *
      * @param impl
      * @return
+     * @throws InvalidWorkflowException
      */
-    private static RSProcessor createProcessor(final String impl) throws InvalidWorkflowException {
+    private static RSProcessor createProcessor(final String impl)
+            throws InvalidWorkflowException {
         Class<?> processorClass = null;
         try {
             processorClass = Class.forName(impl);

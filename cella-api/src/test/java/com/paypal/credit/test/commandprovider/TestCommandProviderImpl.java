@@ -9,6 +9,7 @@ import com.paypal.credit.test.commands.PostAuthorizationCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;
@@ -45,6 +46,7 @@ implements CommandProvider {
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Class<?>[] parameters,
+            final Annotation[][] parameterAnnotations,
             final Class<?> resultType) {
 
         for (Class<? extends Command<?>> commandClass : availableCommands) {
@@ -64,7 +66,8 @@ implements CommandProvider {
     @Override
     public Command<?> createCommand(
             final CommandInstantiationToken commandInstantiationToken,
-            final Object[] parameters) {
+            final Object[] parameters,
+            final Annotation[][] parameterAnnotations) {
         if (commandInstantiationToken instanceof TestCommandInstantiationToken) {
             TestCommandInstantiationToken token = (TestCommandInstantiationToken)commandInstantiationToken;
             try {

@@ -15,7 +15,7 @@ import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderFactory;
 public class Application {
     private final ClassLoader classLoader;
     private final ApplicationSemantics applicationSemantics;
-    private final RootCommandProvider commandProvider;
+    private final RootCommandProvider rootCommandProvider;
     private final RootDataSourceProviderFactory serviceProviderFactory;
     private final CommandProcessor commandProcessor;
 
@@ -62,12 +62,12 @@ public class Application {
     private Application(
             final ClassLoader classLoader,
             final ApplicationSemantics applicationSemantics,
-            final RootCommandProvider commandProvider,
+            final RootCommandProvider rootCommandProvider,
             final RootDataSourceProviderFactory serviceProviderFactory,
             final CommandProcessor commandProcessor) {
         this.classLoader = classLoader;
         this.applicationSemantics = applicationSemantics;
-        this.commandProvider = commandProvider;
+        this.rootCommandProvider = rootCommandProvider;
         this.serviceProviderFactory = serviceProviderFactory;
         this.commandProcessor = commandProcessor;
     }
@@ -80,8 +80,8 @@ public class Application {
         return applicationSemantics;
     }
 
-    public RootCommandProvider getCommandProvider() {
-        return commandProvider;
+    public RootCommandProvider getRootCommandProvider() {
+        return rootCommandProvider;
     }
 
     public RootDataSourceProviderFactory getServiceProviderFactory() {

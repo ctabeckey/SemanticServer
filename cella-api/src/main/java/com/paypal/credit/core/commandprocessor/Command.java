@@ -1,5 +1,7 @@
 package com.paypal.credit.core.commandprocessor;
 
+import com.paypal.credit.core.Application;
+
 /**
  * An interface for all Command
  *
@@ -11,9 +13,9 @@ public interface Command<R>
 	/**
      * Provides environment access to the Command implementations.
 	 * 
-	 * @param commandContext
+	 * @param application
 	 */
-	public void setCommandContext(CommandContext commandContext);
+	public void setApplicationContext(Application application);
 
 	/**
 	 * A synchronous execution of this command.
