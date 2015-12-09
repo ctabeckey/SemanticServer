@@ -1,9 +1,9 @@
 package com.paypal.credit.core.semantics;
 
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
 import com.paypal.credit.core.semantics.exceptions.UnknownModelClassException;
 
+import java.util.concurrent.Callable;
 import java.util.regex.Pattern;
 
 /**
@@ -69,7 +69,7 @@ extends AbstractBaseSemantics
      * @param commandClazz
      * @return
      */
-    public boolean describes(final Class<? extends Command<?>> commandClazz) {
+    public boolean describes(final Class<? extends Callable<?>> commandClazz) {
         String clazzSimpleName = commandClazz.getSimpleName();
         try {
             CommandClassSemantics clazzSemantics = getApplicationSemantics().createCommandClassSemantic(clazzSimpleName);

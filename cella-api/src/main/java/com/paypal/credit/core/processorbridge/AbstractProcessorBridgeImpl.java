@@ -2,7 +2,6 @@ package com.paypal.credit.core.processorbridge;
 
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.CommandProcessor;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprocessor.exceptions.UnknownCommandException;
@@ -18,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.concurrent.Callable;
 
 /**
  * An abstract, base, implementation of a ProcessorBridge.
@@ -67,9 +67,11 @@ public abstract class AbstractProcessorBridgeImpl {
         CommandMapping commandMapping = method.getAnnotation(CommandMapping.class);
 
         // if the method has a CommandMapping annotation, use it to create the command class semantics
-        if (commandMapping != null && commandMapping.commandClass() != null) {
+        if (commandMapping != null) {
             try {
-                commandClassSemantics = getApplicationSemantics().createCommandClassSemantic(commandMapping.commandClass());
+                commandClassSemantics = getApplicationSemantics().createCommandClassSemantic(
+                        commandMapping.value().getName()
+                );
             } catch (CoreRouterSemanticsException crsX) {
                 throw new UnmappableCommandException(commandMapping);
             }
@@ -111,7 +113,7 @@ public abstract class AbstractProcessorBridgeImpl {
      * @return
      * @throws UnknownCommandException
      */
-    protected <R> Command<R> createCommand(
+    protected <R> Callable<R> createCommand(
             final Method method,
             final Object[] args,
             final RoutingToken routingToken,
@@ -136,7 +138,7 @@ public abstract class AbstractProcessorBridgeImpl {
 
         // find the mapped command
         try {
-            Command<R> command = getRootCommandProvider().createCommand(
+            Callable<R> command = getRootCommandProvider().createCommand(
                     routingToken,
                     commandClassSemantics,
                     commandArgs,
@@ -162,7 +164,7 @@ public abstract class AbstractProcessorBridgeImpl {
      * @throws CoreRouterSemanticsException
      * @throws UnknownCommandException
      */
-    protected <R> R executeCommand(final Command<R> command)
+    protected <R> R executeCommand(final Callable<R> command)
             throws CoreRouterSemanticsException, UnknownCommandException {
         R result;// execute the mapped command
         try {
@@ -179,12 +181,12 @@ public abstract class AbstractProcessorBridgeImpl {
     /**
      * Submit a Command for asynchronous execution.
      *
+     * @param <R>
      * @param command
      * @param callback
-     * @param <R>
      * @throws UnknownCommandException
      */
-    protected <R> void submitCommand(final Command<R> command, AsynchronousExecutionCallback<R> callback)
+    protected <R> void submitCommand(final Callable<R> command, AsynchronousExecutionCallback<R> callback)
             throws UnknownCommandException {
         try {
             getCommandProcessor().doAsynchronously(command, callback);

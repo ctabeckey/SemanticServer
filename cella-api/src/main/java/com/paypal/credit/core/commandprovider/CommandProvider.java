@@ -1,6 +1,5 @@
 package com.paypal.credit.core.commandprovider;
 
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
@@ -9,6 +8,7 @@ import com.paypal.credit.core.commandprovider.exceptions.MultipleCommandImplemen
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 
 import java.lang.annotation.Annotation;
+import java.util.concurrent.Callable;
 
 /**
  * THe definition of a CommandProvider
@@ -48,7 +48,7 @@ public interface CommandProvider {
      * @return
      * @throws CommandProviderException
      */
-    Command<?> createCommand(
+    Callable<?> createCommand(
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters,
             final Annotation[][] parameterAnnotations)

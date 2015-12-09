@@ -5,6 +5,8 @@ import com.paypal.credit.core.utility.ParameterCheckUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -47,7 +49,7 @@ implements CommandProcessor
     // Instance Members
     // ============================================================
     private Application application;
-    private final BlockingQueue<Command<?>> workQueue;
+    private final BlockingQueue<Callable<?>> workQueue;
     private final Map<Future<?>, AsynchronousExecutionCallback<?>> callbackMap;
     private final ExecutorService asynchExecutor;
     private final ExecutorCompletionService asynchCompletionService;
@@ -69,7 +71,7 @@ implements CommandProcessor
 		LOGGER.info("CommandProcessorDefaultImpl() - " + this.hashCode());
         ParameterCheckUtility.checkParameterStrictlyPositive(workQueueSize, "workQueueSize");
 
-        this.workQueue = new ArrayBlockingQueue<Command<?>>(workQueueSize);
+        this.workQueue = new ArrayBlockingQueue<Callable<?>>(workQueueSize);
         this.asynchExecutor = Executors.newCachedThreadPool(new ThreadFactory() {
             private AtomicInteger threadSerialNumber = new AtomicInteger(0);
 
@@ -133,11 +135,16 @@ implements CommandProcessor
 	 * as returned by the getAsynchronousCommandFactory().
      */
     @Override
-    public <R> void doAsynchronously(Command<R> command, AsynchronousExecutionCallback<R> callback) {
+    public <R> void doAsynchronously(Callable<R> command, AsynchronousExecutionCallback<R> callback) {
         LOGGER.info("Asynchronous execution of command of type '{}'", command.getClass().getSimpleName());
         if(isCommandAsynchronouslyExecutable(command))
         {
             LOGGER.info("Submitting '{}' for asynchronous execution.", command.getClass().getSimpleName());
+
+            if (CellaAwareCommand.class.isInstance(command)) {
+                ((CellaAwareCommand)command).setApplicationContext(this.application);
+            }
+
             Future<R> future = this.asynchCompletionService.submit(command);
             if (callback != null) {
                 this.callbackMap.put(future, callback);
@@ -153,22 +160,21 @@ implements CommandProcessor
     }
 
     /**
-     * Return true if the Command is marked as eligible for asynchronous execution.
-     * @param command
+     *
+     * @param command the commandprovider to execute
+     * @param <T>
      * @return
+     * @throws Throwable
      */
-    private boolean isCommandAsynchronouslyExecutable(Command<?> command)
-    {
-    	return command.getClass().getAnnotation(AsynchronouslyExecutable.class) != null;
-    }
-    
     @Override
-    public <T extends Object> T doSynchronously(Command<T> command)
+    public <T extends Object> T doSynchronously(Callable<T> command)
             throws Throwable
     {
         ParameterCheckUtility.checkParameterNotNull(command, "command");
 
-        command.setApplicationContext(application);
+        if (CellaAwareCommand.class.isInstance(command)) {
+            ((CellaAwareCommand)command).setApplicationContext(this.application);
+        }
 
         try {
             T result = command.call();
@@ -178,6 +184,16 @@ implements CommandProcessor
             LOGGER.error("{} caught in CommandProcessor", command.getClass().getSimpleName());
             throw t;
         }
+    }
+
+    /**
+     * Return true if the Command is marked as eligible for asynchronous execution.
+     * @param command
+     * @return
+     */
+    private boolean isCommandAsynchronouslyExecutable(Callable<?> command)
+    {
+        return command.getClass().getAnnotation(AsynchronouslyExecutable.class) != null;
     }
 
     /**

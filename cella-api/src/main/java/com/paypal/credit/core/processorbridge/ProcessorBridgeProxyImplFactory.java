@@ -1,7 +1,6 @@
 package com.paypal.credit.core.processorbridge;
 
 import com.paypal.credit.core.Application;
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.CommandProcessor;
 import com.paypal.credit.core.commandprocessor.exceptions.FacadeProcessorBridgeNotAnInterfaceException;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeDefinesUnmappableMethodException;

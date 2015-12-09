@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface CommandMapping {
-    /** the fully qualified Class name of the Command */
-    String commandClass() default "";
+    /** the Class of the Command */
+    Class<?> value();
 }

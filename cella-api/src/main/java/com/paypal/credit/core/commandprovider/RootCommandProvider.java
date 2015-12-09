@@ -1,6 +1,5 @@
 package com.paypal.credit.core.commandprovider;
 
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
@@ -16,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.ServiceLoader;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -90,12 +90,12 @@ implements CommandProvider {
     /**
      *
      */
-    public <C extends Command> C createCommand(
+    public <R, C extends Callable<R>> C createCommand(
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
             final Object[] parameters,
             final Annotation[][] parameterAnnotations,
-            final Class<?> resultType)
+            final Class<R> resultType)
             throws CommandProviderException {
         final Class<?>[] parameterTypes = TypeAndInstanceUtility.getTypes(parameters);
 
@@ -179,7 +179,7 @@ implements CommandProvider {
      * @throws CommandProviderException
      */
     @Override
-    public Command<?> createCommand(
+    public Callable<?> createCommand(
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters,
             final Annotation[][] parameterAnnotations)

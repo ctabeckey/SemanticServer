@@ -1,9 +1,11 @@
 package com.paypal.credit.core.commandprocessor;
 
+import java.util.concurrent.Callable;
+
 /**
  *
  */
-public interface AsynchronousCommandListener<C extends Command, R>
+public interface AsynchronousCommandListener<C extends Callable<R>, R>
 {
     /**
      * Called when a Command has completed normally and the result is available.

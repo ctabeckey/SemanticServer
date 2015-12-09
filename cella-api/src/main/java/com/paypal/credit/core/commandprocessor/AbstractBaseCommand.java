@@ -2,11 +2,13 @@ package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.Application;
 
+import java.util.concurrent.Callable;
+
 /**
  * Created by cbeckey on 11/11/15.
  */
 public abstract class AbstractBaseCommand<R>
-implements Command<R> {
+implements Callable<R>, CellaAwareCommand {
     private Application application;
     private RoutingToken routingToken;
 

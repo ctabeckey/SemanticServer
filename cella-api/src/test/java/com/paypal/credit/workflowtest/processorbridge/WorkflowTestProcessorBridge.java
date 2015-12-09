@@ -1,6 +1,8 @@
 package com.paypal.credit.workflowtest.processorbridge;
 
+import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.processorbridge.AsynchronousExecution;
+import com.paypal.credit.core.processorbridge.CommandMapping;
 import com.paypal.credit.core.processorbridge.ProcessorBridge;
 import com.paypal.credit.workflowcommand.WorkflowContextMapping;
 import com.paypal.credit.workflowtest.model.Authorization;
@@ -17,4 +19,11 @@ extends ProcessorBridge {
     /** delete the Authorization, running asynchronously */
     @AsynchronousExecution
     void deleteAuthorization(@WorkflowContextMapping("authorizationId") AuthorizationId authorizationId);
+
+    @AsynchronousExecution
+    Authorization getAuthorization(
+            AsynchronousExecutionCallback<Authorization> callback,
+            @WorkflowContextMapping("authorizationId") AuthorizationId authorizationId
+    );
+
 }

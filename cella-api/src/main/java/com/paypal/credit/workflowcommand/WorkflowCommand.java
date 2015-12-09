@@ -2,9 +2,11 @@ package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.AsynchronouslyExecutable;
-import com.paypal.credit.core.commandprocessor.Command;
+import com.paypal.credit.core.commandprocessor.CellaAwareCommand;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
+
+import java.util.concurrent.Callable;
 
 /**
  * The WorkflowCommand is just a container of the Workflow and the
@@ -15,7 +17,7 @@ import com.paypal.credit.workflow.RSProcessorContext;
  */
 @AsynchronouslyExecutable
 public class WorkflowCommand<C extends RSProcessorContext, R>
-implements Command<R> {
+implements Callable<R>, CellaAwareCommand {
     private final Workflow<C, R> workflow;
     private final RSProcessorContext processorContext;
     private Application application;
@@ -38,6 +40,7 @@ implements Command<R> {
      *
      * @param application
      */
+    @Override
     public void setApplicationContext(final Application application) {
         this.application = application;
     }

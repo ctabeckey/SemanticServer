@@ -1,6 +1,5 @@
 package com.paypal.credit.test.commandprovider;
 
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
@@ -13,6 +12,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.Callable;
 
 /**
  * Created by cbeckey on 11/11/15.
@@ -20,7 +20,7 @@ import java.util.Set;
 public class TestCommandProviderImpl
 implements CommandProvider {
     private final static Logger LOGGER = LoggerFactory.getLogger(TestCommandProviderImpl.class);
-    private static final Set<Class<? extends Command<?>>> availableCommands;
+    private static final Set<Class<? extends Callable<?>>> availableCommands;
 
     static {
         availableCommands = new HashSet<>();
@@ -49,7 +49,7 @@ implements CommandProvider {
             final Annotation[][] parameterAnnotations,
             final Class<?> resultType) {
 
-        for (Class<? extends Command<?>> commandClass : availableCommands) {
+        for (Class<? extends Callable<?>> commandClass : availableCommands) {
             if (commandClassSemantics.describes(commandClass)) {
                 try {
                     Constructor ctor = commandClass.getConstructor(parameters);
@@ -64,14 +64,14 @@ implements CommandProvider {
     }
 
     @Override
-    public Command<?> createCommand(
+    public Callable<?> createCommand(
             final CommandInstantiationToken commandInstantiationToken,
             final Object[] parameters,
             final Annotation[][] parameterAnnotations) {
         if (commandInstantiationToken instanceof TestCommandInstantiationToken) {
             TestCommandInstantiationToken token = (TestCommandInstantiationToken)commandInstantiationToken;
             try {
-                return (Command<?>) token.getCtor().newInstance(parameters);
+                return (Callable<?>) token.getCtor().newInstance(parameters);
             } catch (Exception x) {
                 x.printStackTrace();
                 LOGGER.error("Failed to create a Command instance from constructor, %s", x.getMessage());

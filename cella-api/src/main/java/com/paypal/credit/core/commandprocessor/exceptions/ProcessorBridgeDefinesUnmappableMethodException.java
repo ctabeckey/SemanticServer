@@ -36,7 +36,7 @@ extends ProcessorBridgeInstantiationException
     {
         return String.format(METHOD_AND_ANNOTATION_ONLY_MSG,
                 method == null ? "<unknown>" : method.getName(),
-                commandMapping == null ? "<unknown>" : commandMapping.commandClass()
+                commandMapping == null ? "<unknown>" : commandMapping.value().getName()
                 );
     }
 

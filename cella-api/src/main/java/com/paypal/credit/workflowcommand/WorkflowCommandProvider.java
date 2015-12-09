@@ -1,6 +1,5 @@
 package com.paypal.credit.workflowcommand;
 
-import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
@@ -18,6 +17,7 @@ import java.lang.annotation.Annotation;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -98,7 +98,7 @@ implements CommandProvider {
      * @throws CommandInstantiationException
      */
     @Override
-    public Command<?> createCommand(
+    public Callable<?> createCommand(
             final CommandInstantiationToken instantiationToken,
             final Object[] parameters,
             final Annotation[][] parameterAnnotations)

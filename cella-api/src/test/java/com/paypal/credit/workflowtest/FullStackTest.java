@@ -1,6 +1,7 @@
 package com.paypal.credit.workflowtest;
 
 import com.paypal.credit.core.Application;
+import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
 import com.paypal.credit.core.processorbridge.ProcessorBridgeProxyImplFactory;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
@@ -10,6 +11,8 @@ import com.paypal.credit.workflowtest.model.Authorization;
 import com.paypal.credit.workflowtest.model.AuthorizationId;
 import com.paypal.credit.workflowtest.processorbridge.WorkflowTestProcessorBridge;
 import com.paypal.credit.xactionctx.TransactionContextFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -19,6 +22,7 @@ import org.testng.annotations.Test;
  * Created by cbeckey on 12/7/15.
  */
 public class FullStackTest {
+    private Logger LOGGER = LoggerFactory.getLogger(FullStackTest.class);
     private Application application;
     private ProcessorBridgeProxyImplFactory processorBridgeFactory;
     private WorkflowTestProcessorBridge bridge;
@@ -67,5 +71,26 @@ public class FullStackTest {
         ctx.setRoutingToken(new ProductTypeRoutingToken("usains"));
         AuthorizationId id = new AuthorizationId();
         bridge.deleteAuthorization(id);
+    }
+
+    @Test
+    public void testAsynchronousCallWithCallback() {
+        FacadeTransactionContext ctx = TransactionContextFactory.get(FacadeTransactionContext.class);
+
+        ctx.setRoutingToken(new ProductTypeRoutingToken("usains"));
+        AuthorizationId id = new AuthorizationId();
+        bridge.getAuthorization(
+                new AsynchronousExecutionCallback<Authorization>() {
+                    @Override
+                    public void success(final Authorization result) {
+                        System.out.println("Asynchronous command worked");
+                    }
+
+                    @Override
+                    public void failure(final Throwable t) {
+                        System.out.println("Asynchronous command failed");
+                    }
+                },
+                id);
     }
 }

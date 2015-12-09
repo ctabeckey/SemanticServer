@@ -20,7 +20,7 @@ public class UnmappableCommandException extends Exception {
         return String.format("Method '%s' could not be mapped to a command (%s)", method.getName(), abs.toString());
     }
     private static String createMessage(final CommandMapping commandMapping) {
-        return String.format("Unable to find a command explicitly named as '%s'", commandMapping.commandClass());
+        return String.format("Unable to find a command explicitly named as '%s'", commandMapping.value().getName());
     }
 
 

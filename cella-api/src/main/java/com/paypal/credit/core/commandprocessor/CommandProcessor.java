@@ -2,6 +2,8 @@ package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.Application;
 
+import java.util.concurrent.Callable;
+
 /**
  * This interface is the definition of the VIX core API.  All processorbridge projects operate through
  * this interface exclusively.
@@ -28,8 +30,7 @@ public interface CommandProcessor {
 	 * @return the result of the commandprovider
 	 * @throws Exception if any exception occurs in executing the commandprovider
 	 */
-	<R> R doSynchronously(final Command<R> command)
-			throws Exception, Throwable;
+	<R> R doSynchronously(final Callable<R> command) throws Throwable;
 
 	/**
 	 * Submit a commandprovider for asynchronous execution.
@@ -38,7 +39,7 @@ public interface CommandProcessor {
 	 * @param callback an optional callback class
 	 * @param <R>      the result type of the command
 	 */
-	<R> void doAsynchronously(final Command<R> command, AsynchronousExecutionCallback<R> callback);
+	<R> void doAsynchronously(final Callable<R> command, AsynchronousExecutionCallback<R> callback);
 
 	void shutdown();
 
