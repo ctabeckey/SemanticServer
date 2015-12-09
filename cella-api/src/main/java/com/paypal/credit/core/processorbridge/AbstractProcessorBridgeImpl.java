@@ -1,6 +1,7 @@
 package com.paypal.credit.core.processorbridge;
 
 import com.paypal.credit.core.Application;
+import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.commandprocessor.CommandProcessor;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
@@ -93,6 +94,14 @@ public abstract class AbstractProcessorBridgeImpl {
     }
 
     /**
+     * Create a Command instance from the Method, arguments, RoutingToken,
+     * and other stuff.
+     * The Command returned will correspond to the given semantics, be capable
+     * of taking the parameter types and will return the given type.
+     *
+     * NOTE: if the Method is annotated with AsynchronousExecution and the
+     * first parameter is assignable to AsynchronousExecutionCallback then
+     * the first parameter is NOT used to match to the Command parameters.
      *
      * @param method
      * @param args
@@ -102,12 +111,12 @@ public abstract class AbstractProcessorBridgeImpl {
      * @return
      * @throws UnknownCommandException
      */
-    protected Command createCommand(
+    protected <R> Command<R> createCommand(
             final Method method,
             final Object[] args,
             final RoutingToken routingToken,
             final CommandClassSemantics commandClassSemantics,
-            final Class<?> commandResultType)
+            final Class<R> commandResultType)
             throws UnknownCommandException {
         // Note: parameterAnnotations and args MUST (and will) be the same length
         // There are no standard parameter annotations defined by the framework,
@@ -115,12 +124,22 @@ public abstract class AbstractProcessorBridgeImpl {
         // used by the command providers.
         Annotation[][] parameterAnnotations = method.getParameterAnnotations();
 
+        // if the method is marked for asynchronous execution
+        // and the first arg is a callback class
+        // then remove the callback class from the argument list for the Command
+        Object[] commandArgs = args;
+        AsynchronousExecution asynchExecution = method.getAnnotation(AsynchronousExecution.class);
+        if (asynchExecution != null && args.length >= 1 && AsynchronousExecutionCallback.class.isInstance(args[0])) {
+            commandArgs = new Object[args.length-1];
+            System.arraycopy(args, 1, commandArgs, 0, args.length-1);
+        }
+
         // find the mapped command
         try {
-            Command command = getRootCommandProvider().createCommand(
+            Command<R> command = getRootCommandProvider().createCommand(
                     routingToken,
                     commandClassSemantics,
-                    args,
+                    commandArgs,
                     parameterAnnotations,
                     commandResultType
             );
@@ -136,24 +155,42 @@ public abstract class AbstractProcessorBridgeImpl {
     }
 
     /**
+     * Execute a Command and return the result.
      *
-     * @param commandClassSemantics
      * @param command
      * @return
      * @throws CoreRouterSemanticsException
      * @throws UnknownCommandException
      */
-    protected Object executeCommand(final CommandClassSemantics commandClassSemantics, final Command command) throws CoreRouterSemanticsException, UnknownCommandException {
-        Object result;// execute the mapped command
+    protected <R> R executeCommand(final Command<R> command)
+            throws CoreRouterSemanticsException, UnknownCommandException {
+        R result;// execute the mapped command
         try {
             result = getCommandProcessor().doSynchronously(command);
         } catch (CoreRouterSemanticsException e) {
             e.printStackTrace();
             throw e;
         } catch (Throwable t) {
-            throw new UnknownCommandException(commandClassSemantics, t);
+            throw new UnknownCommandException(command.getClass(), t);
         }
         return result;
     }
 
+    /**
+     * Submit a Command for asynchronous execution.
+     *
+     * @param command
+     * @param callback
+     * @param <R>
+     * @throws UnknownCommandException
+     */
+    protected <R> void submitCommand(final Command<R> command, AsynchronousExecutionCallback<R> callback)
+            throws UnknownCommandException {
+        try {
+            getCommandProcessor().doAsynchronously(command, callback);
+        } catch (Throwable t) {
+            throw new UnknownCommandException(command.getClass(), t);
+        }
+        return;
+    }
 }

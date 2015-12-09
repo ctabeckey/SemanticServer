@@ -1,20 +1,24 @@
 package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.Application;
-import com.paypal.credit.core.commandprovider.RootCommandProvider;
-import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderFactory;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorCompletionService;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -23,10 +27,20 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CommandProcessorDefaultImpl
 implements CommandProcessor
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(CommandProcessorDefaultImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommandProcessorDefaultImpl.class);
+    public static final int DEFAULT_WORK_QUEUE_SIZE = 100;
+    private static final int DEFAULT_CORE_THREADS = 10;
+    private static final int DEFAULT_MAX_THREADS = 100;
+    private static final long DEFAULT_KEEP_ALIVE = 10L;
+    private static final TimeUnit DEFAULT_KEEP_ALIVE_UNITS = TimeUnit.SECONDS;
 
-	public static CommandProcessor create() {
-        return new CommandProcessorDefaultImpl(100);
+
+    public static CommandProcessor create() {
+        return create(DEFAULT_WORK_QUEUE_SIZE);
+    }
+
+    public static CommandProcessor create(int workQueueSize) {
+        return new CommandProcessorDefaultImpl(workQueueSize);
     }
 
     // ============================================================
@@ -34,11 +48,23 @@ implements CommandProcessor
     // ============================================================
     private Application application;
     private final BlockingQueue<Command<?>> workQueue;
-    private final Executor asynchExecutor;
+    private final Map<Future<?>, AsynchronousExecutionCallback<?>> callbackMap;
+    private final ExecutorService asynchExecutor;
     private final ExecutorCompletionService asynchCompletionService;
     private final Executor completionNotifier;
 
-	public CommandProcessorDefaultImpl(final int workQueueSize)
+    /**
+     * Create the following:
+     * 1.) A (blocking) work queue
+     * 2.) An Executor that takes its tasks from the work queue
+     *     - tasks are Command instances (Command extends Callable)
+     * 3.) An ExecutorCompletionService that wraps the Executor
+     *     - makes the Future results available on a queue
+     * 4.) An Executor that takes its tasks from the ExecutorCompletionService queue
+     *     - and notifies the callback if one was provided
+     * @param workQueueSize
+     */
+	private CommandProcessorDefaultImpl(final int workQueueSize)
 	{
 		LOGGER.info("CommandProcessorDefaultImpl() - " + this.hashCode());
         ParameterCheckUtility.checkParameterStrictlyPositive(workQueueSize, "workQueueSize");
@@ -54,9 +80,11 @@ implements CommandProcessor
                 return result;
             }
         });
+        this.callbackMap = new ConcurrentHashMap<>(workQueueSize);
 
         // A CompletionService that uses a supplied Executor to execute tasks.
-        // This class arranges that submitted tasks are, upon completion, placed on a queue accessible using take. The class is lightweight enough to be suitable for transient use when processing groups of tasks.
+        // This class arranges that submitted tasks are, upon completion, placed on a queue
+        // accessible using take.
         this.asynchCompletionService = new ExecutorCompletionService<>(this.asynchExecutor);
 
         this.completionNotifier = Executors.newCachedThreadPool(new ThreadFactory() {
@@ -70,26 +98,7 @@ implements CommandProcessor
             }
         });
 
-        this.completionNotifier.execute(new Runnable() {
-                @Override
-                public void run() {
-                    while (true) {
-                        try {
-                            Future<?> completed = asynchCompletionService.take();
-                            try {
-                                Object result = completed.get();
-                            } catch (ExecutionException e) {
-                                Throwable rootCause = e.getCause();
-
-                            }
-                        } catch (InterruptedException e) {
-                            LOGGER.error("Interrupted while waiting for completion service.");
-                            break;
-                        }
-                    }
-                }
-            }
-        );
+        this.completionNotifier.execute(new CompletionNotifier());
 	}
 
     /**
@@ -103,7 +112,17 @@ implements CommandProcessor
         this.application = application;
     }
 
-// =====================================================================================================
+    @Override
+    public void shutdown() {
+        ((ThreadPoolExecutor)this.asynchExecutor).shutdown();
+    }
+
+    @Override
+    public boolean isShutdown() {
+        return ((ThreadPoolExecutor)this.asynchExecutor).isShutdown();
+    }
+
+    // =====================================================================================================
 	// Asynchronous Processing Related Methods
 	// =====================================================================================================
 	/**
@@ -114,25 +133,33 @@ implements CommandProcessor
 	 * as returned by the getAsynchronousCommandFactory().
      */
     @Override
-    public <T> Future<T> doAsynchronously(Command<T> command) {
+    public <R> void doAsynchronously(Command<R> command, AsynchronousExecutionCallback<R> callback) {
         LOGGER.info("Asynchronous execution of command of type '{}'", command.getClass().getSimpleName());
         if(isCommandAsynchronouslyExecutable(command))
         {
             LOGGER.info("Submitting '{}' for asynchronous execution.", command.getClass().getSimpleName());
+            Future<R> future = this.asynchCompletionService.submit(command);
+            if (callback != null) {
+                this.callbackMap.put(future, callback);
+            }
         }
         else
         {
             LOGGER.warn("'{}' is not marked as eligible for asynchronous execution.", command.getClass().getSimpleName());
-            return null;
+            return;
         }
 
-        return null;
+        return;
     }
 
+    /**
+     * Return true if the Command is marked as eligible for asynchronous execution.
+     * @param command
+     * @return
+     */
     private boolean isCommandAsynchronouslyExecutable(Command<?> command)
     {
-    	CommandExecution commandExecution = command.getClass().getAnnotation(CommandExecution.class);
-    	return commandExecution != null && commandExecution.asynchronouslyExecutable();
+    	return command.getClass().getAnnotation(AsynchronouslyExecutable.class) != null;
     }
     
     @Override
@@ -144,7 +171,7 @@ implements CommandProcessor
         command.setApplicationContext(application);
 
         try {
-            T result = command.invoke();
+            T result = command.call();
             return result;
 
         } catch (Throwable t) {
@@ -152,5 +179,35 @@ implements CommandProcessor
             throw t;
         }
     }
-    
+
+    /**
+     *
+     */
+    private class CompletionNotifier implements Runnable {
+        @Override
+        public void run() {
+            while (true) {
+                try {
+                    Future<?> completed = asynchCompletionService.take();
+                    AsynchronousExecutionCallback callback = callbackMap.get(completed);
+                    callbackMap.remove(completed);
+
+                    try {
+                        Object result = completed.get();
+                        if (callback != null) {
+                            callback.success(result);
+                        }
+                    } catch (Throwable t) {
+                        Throwable rootCause = t instanceof ExecutionException ? t.getCause() : t;
+                        if (callback != null) {
+                            callback.failure(rootCause);
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    LOGGER.error("Interrupted while waiting for completion service.");
+                    break;
+                }
+            }
+        }
+    }
 }

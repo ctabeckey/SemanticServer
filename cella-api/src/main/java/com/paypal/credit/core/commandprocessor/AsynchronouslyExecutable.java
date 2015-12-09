@@ -6,11 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by cbeckey on 11/12/15.
+ * Marks the command as eligible for asynchronous execution.
+ *
+ * NOTE: a method in the processor bridge interface must also be
+ * annotated with AsynchronousExecution for it to be executed
+ * asynchronously.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface CommandExecution {
-    /** mark the command as asynchronously executable **/
-    boolean asynchronouslyExecutable() default false;
+public @interface AsynchronouslyExecutable {
 }

@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * An annotation that may be used to indicate that the Command should be
+ * An annotation that may be used on a method to indicate that the Command should be
  * executed asynchronously.
  * If the method parameters includes an implementation of CommandCallback as the first
  * parameter then that implementation will be called on completion, else no callback
@@ -16,5 +16,5 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface AsynchronousCommand {
+public @interface AsynchronousExecution {
 }

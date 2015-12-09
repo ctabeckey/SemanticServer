@@ -1,5 +1,6 @@
 com/paypal/credit/test/processorbridge/SubjectProcessorBridge.class
 com/paypal/credit/test/commands/PostAuthorizationCommand.class
+com/paypal/credit/processors/AbstractProcessor.class
 com/paypal/credit/core/semantics/LogicalNameParserTest.class
 com/paypal/credit/processors/ProcessorTwo.class
 com/paypal/credit/core/semantics/CommandClassSemanticsTest.class

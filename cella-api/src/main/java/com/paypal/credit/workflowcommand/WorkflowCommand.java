@@ -1,6 +1,7 @@
 package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.core.Application;
+import com.paypal.credit.core.commandprocessor.AsynchronouslyExecutable;
 import com.paypal.credit.core.commandprocessor.Command;
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
@@ -12,6 +13,7 @@ import com.paypal.credit.workflow.RSProcessorContext;
  * @param <C>
  * @param <R>
  */
+@AsynchronouslyExecutable
 public class WorkflowCommand<C extends RSProcessorContext, R>
 implements Command<R> {
     private final Workflow<C, R> workflow;
@@ -52,7 +54,7 @@ implements Command<R> {
      * @return
      */
     @Override
-    public R invoke() throws Throwable {
+    public R call() throws Exception {
         if (this.workflow.execute((C)this.processorContext)) {
             return extractResultFromContext(processorContext);
         }

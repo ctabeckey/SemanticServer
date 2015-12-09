@@ -1,9 +1,10 @@
-package com.paypal.credit.core.processorbridge;
+package com.paypal.credit.core.commandprocessor;
 
 /**
- * Created by cbeckey on 12/8/15.
+ * The required definition of callback class used for
+ * receiving asynchronous command execution results.
  */
-public interface AsynchronousCommandCallback<R> {
+public interface AsynchronousExecutionCallback<R> {
     /**
      * Called when the associated command completed successfully.
      * @param result the result of the Command (may be null)

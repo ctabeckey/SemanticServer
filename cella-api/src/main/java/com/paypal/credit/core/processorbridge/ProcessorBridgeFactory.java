@@ -16,5 +16,6 @@ public interface ProcessorBridgeFactory {
      * @param facadeRouterClazz
      * @return
      */
-    <T extends ProcessorBridge> T create(Class<T> facadeRouterClazz) throws ProcessorBridgeInstantiationException;
+    <T extends ProcessorBridge> T create(Class<T> facadeRouterClazz)
+            throws ProcessorBridgeInstantiationException;
 }

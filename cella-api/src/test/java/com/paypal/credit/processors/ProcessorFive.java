@@ -8,11 +8,7 @@ import com.paypal.credit.workflow.exceptions.RSWorkflowException;
  * Created by cbeckey on 11/16/15.
  */
 public class ProcessorFive
+        extends AbstractProcessor
         implements RSProcessor<RSProcessorContext> {
 
-    @Override
-    public boolean process(final RSProcessorContext rsProcessorContext) throws RSWorkflowException {
-        System.out.println("Greetings from " + this.getClass().getSimpleName() + ".process()");
-        return true;
-    }
 }

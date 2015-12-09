@@ -2,6 +2,7 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/processors/ProcessorFive.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/test/commands/PostAuthorizationCommand.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactoryTest.java
+/Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/processors/AbstractProcessor.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/processors/ProcessorTwo.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/test/datasource/SubjectAuthorizationDataProviderImpl.java
 /Users/cbeckey/src/CreditArchitecture/cella/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandInstantiationToken.java

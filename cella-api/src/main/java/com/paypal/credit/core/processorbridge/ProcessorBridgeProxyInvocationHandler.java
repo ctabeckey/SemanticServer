@@ -49,9 +49,13 @@ implements InvocationHandler {
         }
 
         CommandClassSemantics commandClassSemantics = getCommandClassSemantics(method);
-
         Command command = createCommand(method, args, routingToken, commandClassSemantics, method.getReturnType());
 
-        return executeCommand(commandClassSemantics, command);
+        if (method.getAnnotation(AsynchronousExecution.class) != null) {
+            submitCommand(command, null);
+            return null;
+        } else {
+            return executeCommand(command);
+        }
     }
 }

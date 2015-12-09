@@ -92,4 +92,10 @@ public class Application {
         return commandProcessor;
     }
 
+    public void shutdown() {
+        getCommandProcessor().shutdown();
+    }
+    public boolean isShutdown() {
+        return getCommandProcessor().isShutdown();
+    }
 }

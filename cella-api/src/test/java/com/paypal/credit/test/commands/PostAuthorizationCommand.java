@@ -27,7 +27,7 @@ public class PostAuthorizationCommand
      * @return
      */
     @Override
-    public AuthorizationId invoke() {
+    public AuthorizationId call() {
         return new AuthorizationId();
     }
 
