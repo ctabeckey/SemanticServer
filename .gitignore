@@ -1,0 +1,23 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+**/*.iml
+
+target/
+classes/
+idea/
+
+*~
+\.#*
+\#*\#
+
+.classpath
+.settings
+.project
+.idea
+
+infer-out

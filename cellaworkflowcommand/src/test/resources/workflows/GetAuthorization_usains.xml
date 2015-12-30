@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<workflow:workflow xmlns:workflow="http://credit.paypal.com/v1/schema/workflow"
+                   context-class="com.paypal.credit.workflowtest.AccountIdProcessorContext">
+    <workflow:process-list>
+        <workflow:parallel-controller id="parallel">
+            <workflow:business-processor id="One" impl="com.paypal.credit.processors.ProcessorOne"/>
+            <workflow:business-processor id="Three" impl="com.paypal.credit.processors.ProcessorThree"/>
+        </workflow:parallel-controller>
+        <workflow:business-processor id="Two" impl="com.paypal.credit.processors.ProcessorTwo"/>
+    </workflow:process-list>
+</workflow:workflow>

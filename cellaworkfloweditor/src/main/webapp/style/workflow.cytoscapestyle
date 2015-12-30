@@ -1,0 +1,90 @@
+node {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    width: 20;
+    height: 20;
+    color: #fff;
+    min-zoomed-font-size: 4;
+    font-size: 8;
+    text-color: #000;
+}
+
+node.start,
+node.end {
+    content: data(processor);
+    text-outline-color: #000;
+    text-outline-width: 1px;
+    z-index: 9999;
+}
+
+node.start,
+node.end {
+    background-color: #FC4C4C;
+    color: #FC4C4C;
+}
+
+node.business {
+    content: data(processor);
+    width: 20;
+    height: 20;
+    color: #fff;
+    text-outline-color: #000;
+    text-outline-width: 1px;
+}
+
+node:selected {
+  height: 40;
+  width: 40;
+  min-zoomed-font-size: 0;
+  font-size: 16;
+  text-outline-color: #000;
+  text-outline-width: 2px;
+  z-index: 9999;
+}
+
+edge {
+    min-zoomed-font-size: 4;
+    font-size: 8;
+    color: #fff;
+    content: data(line_name);
+    line-color: green;
+    width: 8;
+    curve-style: bezier;
+    control-point-step-size: 40;
+    opacity: 1.0;
+}
+
+edge[company_type = 0] {
+    line-color: #00FFFF;
+}
+
+edge[company_type = 1] {
+    line-color: #00FF33;
+}
+
+edge[company_type = 2] {
+    line-color: white;
+}
+
+edge[company_type = 3] {
+    line-color: red;
+}
+
+core {
+    active-bg-color: #fff;
+    active-bg-opacity: 0.333;
+}
+
+edge.not-path {
+    opacity: 0.1;
+}
+
+node.not-path {
+    opacity: 0.333;
+}
+
+edge.path {
+    opacity: 0.666;
+}
+

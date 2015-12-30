@@ -1,0 +1,15 @@
+package com.paypal.credit.processors;
+
+import com.paypal.credit.workflowcommand.workflow.annotations.RequiresGroups;
+import com.paypal.credit.workflowtest.AccountIdProcessorContext;
+
+/**
+ * Created by cbeckey on 11/16/15.
+ */
+@RequiresGroups({AccountIdProcessorContext.AccountIdValidationGroup.class,
+        AccountIdProcessorContext.AuthorizationIdValidationGroup.class})
+public class ProcessorTwo
+        extends AbstractProcessor<AccountIdProcessorContext>
+{
+
+}

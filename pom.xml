@@ -9,12 +9,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>cella-api</module>
-        <!--
-        <module>cella-common</module>
-        <module>cella-core</module>
-        <module>cella-tomcat-adapter</module>
-        -->
+        <module>cellaimpl</module>
+        <module>cellaworkflowcommand</module>
+        <module>cellaworkfloweditor</module>
     </modules>
 
     <properties>
@@ -70,8 +67,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.2</version>
                     <configuration>
-                        <source>1.7</source>
-                        <target>1.7</target>
+                        <source>8</source>
+                        <target>8</target>
                     </configuration>
                 </plugin>
 

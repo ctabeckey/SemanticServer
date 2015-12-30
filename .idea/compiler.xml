@@ -24,10 +24,40 @@
         <processorPath useClasspath="true" />
         <module name="cella-api" />
       </profile>
+      <profile default="false" name="Annotation profile for workflow-editor" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="workflow-editor" />
+      </profile>
+      <profile default="false" name="Annotation profile for cellaworkflowcommand" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="cellaworkflowcommand" />
+      </profile>
+      <profile default="false" name="Annotation profile for cellaimpl" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="cellaimpl" />
+      </profile>
+      <profile default="false" name="Annotation profile for cellaworkfloweditor" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="cellaworkfloweditor" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cella-api" target="1.7" />
       <module name="cella-parent" target="1.5" />
+      <module name="cellaimpl" target="8" />
+      <module name="cellaworkflowcommand" target="8" />
+      <module name="cellaworkfloweditor" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,32 @@
+{"elements":
+    {"nodes":[
+        {"data":
+          {"id":"N1","weight":1},
+          "position":{"x":1,"y":1},
+          "removed":false,
+          "selected":true,
+          "selectable":true,
+          "locked":true,
+          "grabbable":true,
+          "classes":""},
+        {"data":
+           {"id":"N2","weight":1},
+           "position":{"x":1,"y":1},
+           "removed":false,
+           "selected":true,
+           "selectable":true,
+           "locked":true,
+           "grabbable":true,
+           "classes":""}
+        ],
+    "edges":[
+        {"data":
+            {"id":"E1","weight":1,"source":"N1","target":"N2"},
+            "removed":false,
+            "selected":true,
+            "selectable":true,
+            "locked":true,
+            "grabbable":true,
+            "classes":""}
+    ]}
+}
