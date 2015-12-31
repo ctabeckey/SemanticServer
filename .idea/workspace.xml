@@ -2,492 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$CompletionNotifier.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/FacadeRouterUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/exceptions/FacadeProcessorBridgeNotAnInterfaceException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationCompositeException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/CommandProvider.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/RootCommandProvider.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/exceptions/InvalidTokenException.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory$DataSourceDescription.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/datasourceprovider/exceptions/UnableToCreateServiceProviderImplementation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/datasourceprovider/exceptions/UnableToFindServiceProviderImplementation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/ProductTypeRoutingToken.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/Action.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/CollectionType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/ModelVocabulary.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/Preposition.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/SemanticsUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/utility/FourMemberCompoundKey.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/utility/ThreeMemberCompoundKey.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/utility/TwoMemberCompoundKey.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/utility/URLFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/serverinterface/ServerAdapterImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/serverinterface/ServerLifecycleEvent$EventType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/commandprovider/CommandProviderTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactoryTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/CommandClassSemanticsTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemanticsTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/test/datasource/SubjectDataSourceProviderFactoryImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor.war" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/cellaworkfloweditor_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/cellaworkfloweditor_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/workflow_editor_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/workflow_editor_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_0_8_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_dep_0_8_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/CompositeExceptionDelegate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/AbstractCellaAwareCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronouslyExecutableCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/FacadeRouterUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/AbstractCachingProcessorBridgeFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeByteCodeImplFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/Utility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/package-info.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/semantics/CommandClassSemanticsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemanticsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/resources/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/ProcessorContextFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/ProcessorContextFactoryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/Utility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/Workflow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/NoContextConstructorFoundException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/UnknownWorkflowProcessorException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/annotations/ProvidesGroups.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/annotations/RemovesGroups.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/annotations/RequiresGroups.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/exceptions/CompositeWorkflowContextException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/exceptions/DeprivedWorkflowContextException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/exceptions/ProcessorProvidesAndRemovesException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/exceptions/WorkflowContextException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/resources/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/AbstractProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/ProcessorFive.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/ProcessorFour.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/ProcessorOne.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/ProcessorThree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/ProcessorTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowcommand/WorkflowBuilderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/AccountIdProcessorContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectAuthorizationDataProviderImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/model/AccountId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/model/AuthorizationId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/InvalidTwoStepWorkflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/TwoStepWorkflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/DeleteAuthorization_de_ins.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/DeleteAuthorization_usains.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/GetAuthorization_de_ins.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/GetAuthorization_usains.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/cellaworkfloweditor.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphdataschemaBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecoratorVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/WorkflowDataSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/ParallelWorkflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/TwoStepWorkflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/graphdata-test.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/jquery-2.1.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/test/java/com/paypal/credit/workflow/GraphdataschemaBuilderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/test/resources/OneStepWorkflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/test/resources/TwoStepWorkflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/maven-archiver/pom.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/cella-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronouslyExecutable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/FacadeRouterUtility.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/Workflow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowContextMapping.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/UnknownWorkflowProcessorException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/BaseProcessorType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/ConditionalType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/ObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/OptionsType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/ParallelType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/ProcessorType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/SerialType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/StartType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/WorkflowType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/workflow/package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/main/resources/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/semantics/CommandClassSemanticsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemanticsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/AbstractProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorFive.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorFour.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorOne.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorThree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/processors/ProcessorTwo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowcommand/WorkflowFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectAuthorizationDataProviderImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/model/AuthorizationId.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/TwoStepWorkflow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/workflows/DeleteAuthorization_de_ins.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/workflows/DeleteAuthorization_usains.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/workflows/GetAuthorization_usains.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/cella-api-0.0.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/AsynchronousCommandListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/AsynchronousExecutionCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/AsynchronouslyExecutable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CellaAwareCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$CompletionNotifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/FacadeRouterUtility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/RoutingToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/exceptions/FacadeProcessorBridgeNotAnInterfaceException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/exceptions/IncompatibleRoutingTokenException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeDefinesUnmappableMethodException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationCompositeException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprocessor/exceptions/UnknownCommandException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandInstantiationToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/CommandProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/RootCommandProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/exceptions/CommandInstantiationException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/exceptions/CommandProviderException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/exceptions/InvalidTokenException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/DataSourceProviderExceptionHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/DataSourceProviderInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory$DataSourceDescription.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/exceptions/UnableToCreateServiceProviderImplementation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/datasourceprovider/exceptions/UnableToFindServiceProviderImplementation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/AsynchronousExecution.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/CommandMapping.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory$ClassToInstanceCacheMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyImplFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/ProductTypeRoutingToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/exceptions/InvalidTransactionContextException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/processorbridge/exceptions/UnmappableCommandException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/AbstractBaseSemantics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/Action.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/ApplicationSemantics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CollectionType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CommandClassSemantics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/LogicalNameParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/ModelVocabulary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/Preposition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemantics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/SemanticsUtility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/exceptions/CoreRouterSemanticsException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/semantics/exceptions/UnknownModelClassException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/CompoundKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/FourMemberCompoundKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/ParameterCheckUtility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/ThreeMemberCompoundKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/TwoMemberCompoundKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/TypeAndInstanceUtility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/URLFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/utility/rsc/Handler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/serverinterface/ServerAdapterImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/serverinterface/ServerLifecycleEvent$EventType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/Workflow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowCommandProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowContextMapping.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/WorkflowReader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/exceptions/InvalidParameterCreatingWorkflowCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowDefinitionException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowProcessorException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/exceptions/UnableToInstantiateWorkflowProcessorException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/exceptions/UnknownWorkflowProcessorException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/BaseProcessorType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/ConditionalType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/ObjectFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/OptionsType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/ParallelType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/ProcessorType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/SerialType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/StartType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/WorkflowType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/workflowcommand/workflow/package-info.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/generateWorkflowClasses.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/classes/workflow.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/Command line suite/Command line test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/Command line suite/Command line test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/TEST-TestSuite.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/TestSuite.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/bullet_point.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/collapseall.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/emailable-report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/jquery-1.7.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.datasourceprovider.DataSourceProviderFactoryTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.processorbridge.ProcessorBridgeDefaultFactoryTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandFactoryMethodSemanticsTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.ProcessorBridgeMethodSemanticsTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/navigator-bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/testng-reports.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/testng-reports.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/testng-results.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/META-INF/services/com.paypal.credit.core.commandprovider.CommandProvider" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/OneStepWorkflow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/ParallelWorkflow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/TwoStepWorkflow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/commandprovider/CommandProviderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/semantics/CollectionTypeVocabularyTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/semantics/CommandClassSemanticsTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/semantics/LogicalNameParserTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemanticsTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/processors/AbstractProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/processors/ProcessorFive.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/processors/ProcessorFour.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/processors/ProcessorOne.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/processors/ProcessorThree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/processors/ProcessorTwo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/FacadeTransactionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandInstantiationToken.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/commands/PostAuthorizationCommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/datasource/SubjectAuthorizationDataProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/datasource/SubjectAuthorizationDataProviderImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/datasource/SubjectDataSourceProviderFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/model/Authorization.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/model/AuthorizationId.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowcommand/WorkflowFactoryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowcommand/WorkflowReaderTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/FacadeTransactionContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/FullStackTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/FullStackTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/datasource/SubjectAuthorizationDataProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/datasource/SubjectAuthorizationDataProviderImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/datasource/SubjectDataSourceProviderFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/model/Authorization.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/model/AuthorizationId.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/com/paypal/credit/workflowtest/processorbridge/WorkflowTestProcessorBridge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/workflow1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/workflows/DeleteAuthorization_de_ins.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/workflows/DeleteAuthorization_usains.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/workflows/GetAuthorization_de_ins.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/workflows/GetAuthorization_usains.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.workflowcommand.WorkflowFactoryTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.workflowcommand.WorkflowReaderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.workflowtest.FullStackTest.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/Application.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/ApplicationTransactionContext.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/ApplicationTransactionContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/AbstractBaseCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousCommandListener.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousCommandListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousExecutionCallback.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousExecutionCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CellaAwareCommand.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/CellaAwareCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessor.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/RoutingToken.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/RoutingToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/FacadeProcessorBridgeNotAnInterfaceException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/FacadeProcessorBridgeNotAnInterfaceException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/IncompatibleRoutingTokenException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/IncompatibleRoutingTokenException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeDefinesUnmappableMethodException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeDefinesUnmappableMethodException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationCompositeException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationCompositeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/UnknownCommandException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/exceptions/UnknownCommandException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationToken.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/CommandInstantiationToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandProviderException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/exceptions/CommandProviderException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/InvalidTokenException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/exceptions/InvalidTokenException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderExceptionHandler.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderExceptionHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactory.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderInterface.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/exceptions/UnableToCreateServiceProviderImplementation.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/exceptions/UnableToCreateServiceProviderImplementation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/datasourceprovider/exceptions/UnableToFindServiceProviderImplementation.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/exceptions/UnableToFindServiceProviderImplementation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousExecution.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/AsynchronousExecution.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/CommandMapping.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/CommandMapping.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/ProductTypeRoutingToken.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/ProductTypeRoutingToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/exceptions/InvalidTransactionContextException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/exceptions/InvalidTransactionContextException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/processorbridge/exceptions/UnmappableCommandException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/exceptions/UnmappableCommandException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/AbstractBaseSemantics.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/AbstractBaseSemantics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/Action.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/Action.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/ApplicationSemantics.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/ApplicationSemantics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/CollectionType.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/CollectionType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/CommandClassSemantics.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/CommandClassSemantics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/LogicalNameParser.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/LogicalNameParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/ModelVocabulary.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/ModelVocabulary.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/Preposition.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/Preposition.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemantics.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemantics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/SemanticsUtility.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/SemanticsUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/exceptions/CoreRouterSemanticsException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/exceptions/CoreRouterSemanticsException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/semantics/exceptions/UnknownModelClassException.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/exceptions/UnknownModelClassException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/CompoundKey.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/CompoundKey.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/FourMemberCompoundKey.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/FourMemberCompoundKey.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/ParameterCheckUtility.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/ParameterCheckUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/ThreeMemberCompoundKey.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/ThreeMemberCompoundKey.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/TwoMemberCompoundKey.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/TypeAndInstanceUtility.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/TypeAndInstanceUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/URLFactory.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/URLFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/core/utility/rsc/Handler.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/utility/rsc/Handler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/serverinterface/ServerAdapter.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/serverinterface/ServerAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/serverinterface/ServerAdapterImpl.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/serverinterface/ServerAdapterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/serverinterface/ServerLifecycleEvent.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/serverinterface/ServerLifecycleEvent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/serverinterface/ServerLifecycleListener.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/serverinterface/ServerLifecycleListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/WorkflowReader.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidParameterCreatingWorkflowCommand.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidParameterCreatingWorkflowCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowDefinitionException.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowDefinitionException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowException.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowProcessorException.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/InvalidWorkflowProcessorException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/exceptions/UnableToInstantiateWorkflowProcessorException.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/exceptions/UnableToInstantiateWorkflowProcessorException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/java/com/paypal/credit/workflowcommand/package-info.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/resources/generateWorkflowClasses.sh" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/resources/generateWorkflowClasses.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/main/resources/workflow.xsd" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/resources/workflow.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactoryTest.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderFactoryTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/semantics/CollectionTypeVocabularyTest.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/semantics/CollectionTypeVocabularyTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/core/semantics/LogicalNameParserTest.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/semantics/LogicalNameParserTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/FacadeTransactionContext.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/FacadeTransactionContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commandprovider/TestCommandInstantiationToken.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/commandprovider/TestCommandInstantiationToken.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/commands/PostAuthorizationCommand.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/commands/PostAuthorizationCommand.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/datasource/SubjectAuthorizationDataProvider.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/datasource/SubjectAuthorizationDataProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/datasource/SubjectAuthorizationDataProviderImpl.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/datasource/SubjectAuthorizationDataProviderImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/datasource/SubjectDataSourceProviderFactoryImpl.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/datasource/SubjectDataSourceProviderFactoryImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/model/Authorization.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/model/Authorization.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/test/model/AuthorizationId.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/model/AuthorizationId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowcommand/WorkflowReaderTest.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowcommand/WorkflowReaderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/FacadeTransactionContext.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FacadeTransactionContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectAuthorizationDataProvider.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectAuthorizationDataProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectDataSourceProviderFactoryImpl.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectDataSourceProviderFactoryImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/java/com/paypal/credit/workflowtest/model/Authorization.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/model/Authorization.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/META-INF/services/com.paypal.credit.core.datasourceprovider.DataSourceProviderFactory" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/META-INF/services/com.paypal.credit.core.datasourceprovider.DataSourceProviderFactory" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/OneStepWorkflow.xml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/OneStepWorkflow.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/ParallelWorkflow.xml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/ParallelWorkflow.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/workflow1.xml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflow1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/src/test/resources/workflows/GetAuthorization_de_ins.xml" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/OneStepWorkflow.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/Application.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/Application.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/core/ApplicationTransactionContext.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/ApplicationTransactionContext.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/serverinterface/ServerAdapter.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/serverinterface/ServerAdapter.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/serverinterface/ServerLifecycleEvent.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/serverinterface/ServerLifecycleEvent.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/classes/com/paypal/credit/serverinterface/ServerLifecycleListener.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/serverinterface/ServerLifecycleListener.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/failed.png" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/failed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/Command line test.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/Command line test.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/classes.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/classes.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/groups.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/groups.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/main.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/main.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/methods-not-run.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-not-run.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/reporter-output.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/reporter-output.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/testng.xml.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/testng.xml.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/Command line suite/toc.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/toc.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/old/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/passed.png" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/passed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/skipped.png" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/skipped.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/surefire-reports/testng.css" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/testng.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/cella-api/target/test-classes/META-INF/services/com.paypal.credit.core.datasourceprovider.DataSourceProviderFactory" afterPath="$PROJECT_DIR$/cellaimpl/src/test/resources/META-INF/services/com.paypal.credit.core.datasourceprovider.DataSourceProviderFactory" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_credit_workflow_1_0_1_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_credit_workflow_1_0_1_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/jquery-2.1.4.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor.war" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cella-parent.iml" afterPath="$PROJECT_DIR$/cella-parent.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphdataschema.java" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphdataschema.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor/index.html" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor/index.html" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -522,7 +61,30 @@
     <favorites_list name="cella-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cytoscape-toolbar.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51978415">
+              <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -546,8 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphschema.java" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/annotations/ProvidesGroups.java" />
         <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/schema/WorkflowType.java" />
         <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/schema/CompositeProcessorType.java" />
         <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/schema/ParallelControllerType.java" />
@@ -587,16 +147,18 @@
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/junk,json" />
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/junk.json" />
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/cytoscape-style.css" />
-        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" />
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphschemaBuilder.java" />
-        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" />
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/ParallelWorkflow.xml" />
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphdataschemaBuilder.java" />
-        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" />
-        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" />
         <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/processors/ProcessorOne.java" />
-        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/font-awesome.min.css" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" />
+        <option value="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -1434,11 +996,11 @@
       <recent name="com.paypal.credit" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources" />
+      <recent name="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style" />
       <recent name="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts" />
+      <recent name="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources" />
       <recent name="$PROJECT_DIR$/cellaworkfloweditor/src/test/resources" />
       <recent name="$PROJECT_DIR$/cella-api/target/classes/META-INF/services" />
-      <recent name="$PROJECT_DIR$/cellaworkflowcommand/src/main/resources/META-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.paypal.credit" />
@@ -2181,7 +1743,7 @@
       <workItem from="1449691288266" duration="19923000" />
       <workItem from="1449867130931" duration="2234000" />
       <workItem from="1450114307570" duration="61024000" />
-      <workItem from="1450809323727" duration="34131000" />
+      <workItem from="1450809323727" duration="46063000" />
     </task>
     <servers />
   </component>
@@ -2218,7 +1780,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292698000" />
+    <option name="totallyTimeSpent" value="304630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2231,7 +1793,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2244,7 +1806,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29638556" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25035766" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30758226" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.5061538" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2305,27 +1867,11 @@
           <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="70" />
+      <option name="time" value="71" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/annotations/ProvidesGroups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandInstantiationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/workflow/schema/ConditionalControllerType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9065934">
@@ -2550,24 +2096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphdataschema.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26705652">
-          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43274853">
-          <caret line="249" column="60" selection-start-line="249" selection-start-column="60" selection-end-line="249" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/ParallelWorkflow.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.043814432">
@@ -2594,14 +2122,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.846154">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/TwoStepWorkflow.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19245283">
@@ -2622,22 +2142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
           <caret line="1" column="152" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="152" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60943395">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/jquery-2.1.4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33453238">
-          <caret line="8292" column="4" selection-start-line="8292" selection-start-column="4" selection-end-line="8292" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -2682,33 +2186,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle">
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2531172">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.50386596">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html">
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphdataschema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4113208">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.0174564">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25810474">
+          <caret line="207" column="72" selection-start-line="207" selection-start-column="72" selection-end-line="207" selection-end-column="72" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6115108">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.42394015">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding>
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60251796">
+          <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19245283">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51978415">
+          <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -19,4 +19,7 @@ public enum GraphNodeType {
         this.displayKey = displayKey;
     }
 
+    public String getDisplayKey() {
+        return this.displayKey;
+    }
 }

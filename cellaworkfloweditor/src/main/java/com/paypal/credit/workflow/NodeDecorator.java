@@ -140,7 +140,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createSerialStart() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "SERIAL"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "SERIAL", GraphNodeType.SerialStart.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -154,7 +156,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createSerialEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "ENDSERIAL"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "ENDSERIAL", GraphNodeType.SerialEnd.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -168,7 +172,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createParallelStart() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "FORK"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "FORK", GraphNodeType.ParallelStart.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -182,7 +188,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createParallelEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "JOIN"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "JOIN", GraphNodeType.ParallelEnd.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -196,7 +204,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createConditionalStart() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "IF"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "IF", GraphNodeType.ConditionalStart.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -210,7 +220,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createConditionalEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "ENDIF"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "ENDIF", GraphNodeType.ConditionalEnd.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -224,7 +236,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createGraphStart(final String contextClassName) {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), contextClassName), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), contextClassName, GraphNodeType.Start.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -238,7 +252,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createGraphEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), "END"), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), "END", GraphNodeType.End.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -252,7 +268,9 @@ implements Iterable<NodeDecorator>{
 
         NodeDecorator createBusinessProcessor(final BusinessProcessorType processor) {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(getNextNodeIdentifier(), new Long(1), processor.getImpl()), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(), new Long(1), processor.getImpl(), GraphNodeType.Business.getDisplayKey()
+                    ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
                     Boolean.FALSE,                                      // Boolean selected,
@@ -273,7 +291,9 @@ implements Iterable<NodeDecorator>{
                 String target = node.getNode().getData().getId();
 
                 Graphdataschema.Elements.Edgetype edge = new Graphdataschema.Elements.Edgetype(
-                        new Graphdataschema.Elements.Edgetype.Data(getNextEdgeIdentifier(root), new Long(1), source, target),
+                        new Graphdataschema.Elements.Edgetype.Data(
+                                getNextEdgeIdentifier(root), new Long(1), source, target
+                        ),
                         Boolean.FALSE,      // Boolean removed,
                         Boolean.FALSE,      // Boolean selected,
                         Boolean.TRUE,       // Boolean selectable,

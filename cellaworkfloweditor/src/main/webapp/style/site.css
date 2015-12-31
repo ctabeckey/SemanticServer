@@ -4,13 +4,16 @@ body {
     font-size: 14px;
 }
 
-#cy {
-    width: 100%;
-    height: 100%;
+.cy {
+    width: 800px;
+    height: 800px;
+    left: 100px;
+    top: 100px;
     position: absolute;
-    left: 0;
-    top: 0;
+    background: lightgray;
     z-index: 999;
+    -webkit-tap-highlight-color: black;
+    display: block;
 }
 
 h1 {

@@ -21,7 +21,11 @@
           "properties": {
             "id": {"type": "string"},
             "weight": {"type": "integer"},
-            "processor": {"type": "string"}
+            "processor": {"type": "string"},
+            "type": {"type": "string"}
+          },
+          "additionalProperties": {
+            "type":"string"
           }
         },
         "position": {"$ref": "#/definitions/position"},
@@ -63,6 +67,9 @@
             "target": {
               "type": "string"
             }
+          },
+          "additionalProperties": {
+            "type":"any"
           }
         },
         "removed": {

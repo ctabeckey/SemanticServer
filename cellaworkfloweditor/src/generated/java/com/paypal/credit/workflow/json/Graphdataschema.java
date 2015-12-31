@@ -62,19 +62,22 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
     private @com.fasterxml.jackson.databind.annotation.JsonDeserialize(as=java.util.ArrayList.class) List<Nodetype> nodes;
 public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"data","position","removed","selected","selectable","locked","grabbable","classes"}) class Nodetype {
       private @javax.validation.Valid @com.fasterxml.jackson.annotation.JsonProperty("data") Data data;
-public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"id","weight","processor"}) class Data {
+public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"id","weight","processor","type"}) class Data {
         private @com.fasterxml.jackson.annotation.JsonProperty("id") String id;
         private @com.fasterxml.jackson.annotation.JsonProperty("weight") Long weight;
         private @com.fasterxml.jackson.annotation.JsonProperty("processor") String processor;
-        public Data(        String id,        Long weight,        String processor){
+        private @com.fasterxml.jackson.annotation.JsonProperty("type") String type;
+        public Data(        String id,        Long weight,        String processor,        String type){
           this.id=id;
           this.weight=weight;
           this.processor=processor;
+          this.type=type;
         }
         public Data(){
           this.id=null;
           this.weight=null;
           this.processor=null;
+          this.type=null;
         }
         public String getId(){
           return id;
@@ -85,6 +88,9 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
         public String getProcessor(){
           return processor;
         }
+        public String getType(){
+          return type;
+        }
         public void setId(        String id){
           this.id=id;
         }
@@ -93,6 +99,9 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
         }
         public void setProcessor(        String processor){
           this.processor=processor;
+        }
+        public void setType(        String type){
+          this.type=type;
         }
       }
       private @javax.validation.Valid @com.fasterxml.jackson.annotation.JsonProperty("position") Position position;

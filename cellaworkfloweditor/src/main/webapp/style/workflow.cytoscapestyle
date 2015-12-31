@@ -72,7 +72,7 @@ edge[company_type = 3] {
 }
 
 core {
-    active-bg-color: #fff;
+    active-bg-color: #040404;
     active-bg-opacity: 0.333;
 }
 
@@ -88,3 +88,8 @@ edge.path {
     opacity: 0.666;
 }
 
+.tool-node,
+{
+    font-family: FontAwesome;
+    font-size: 3em;
+}
