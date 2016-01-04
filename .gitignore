@@ -19,5 +19,6 @@ idea/
 .settings
 .project
 .idea
+.idea/workspace.xml
 
 infer-out

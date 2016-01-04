@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/jquery-2.1.4.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor.war" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphdataschema.java" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/generated/java/com/paypal/credit/workflow/json/Graphdataschema.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/GraphNodeType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/java/com/paypal/credit/workflow/NodeDecorator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/resources/graphdataschema.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" afterPath="$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/style/workflow.cytoscapestyle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor/index.html" afterPath="$PROJECT_DIR$/cellaworkfloweditor/target/workflow-editor/index.html" />
-    </list>
+    <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="" />
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/cella-common/target/" />
@@ -62,24 +36,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.51320755">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cytoscape-toolbar.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51978415">
-              <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1743,7 +1707,7 @@
       <workItem from="1449691288266" duration="19923000" />
       <workItem from="1449867130931" duration="2234000" />
       <workItem from="1450114307570" duration="61024000" />
-      <workItem from="1450809323727" duration="46063000" />
+      <workItem from="1450809323727" duration="46233000" />
     </task>
     <servers />
   </component>
@@ -1780,7 +1744,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304630000" />
+    <option name="totallyTimeSpent" value="304800000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2239,21 +2203,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67266184">
+          <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.51320755">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkfloweditor/src/main/webapp/scripts/cytoscape-toolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51978415">
-          <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
