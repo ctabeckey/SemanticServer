@@ -12,7 +12,7 @@ node {
 
 node.start,
 node.end {
-    content: data(processor);
+    content: data(name);
     text-outline-color: #000;
     text-outline-width: 1px;
     z-index: 9999;
@@ -25,7 +25,7 @@ node.end {
 }
 
 node.business {
-    content: data(processor);
+    content: data(name);
     width: 20;
     height: 20;
     color: #fff;

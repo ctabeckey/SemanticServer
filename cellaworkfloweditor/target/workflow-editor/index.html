@@ -19,6 +19,9 @@
     <div id="cy" class="cy col-md-7 col-md-offset-1">
     </div>
 
+    <div id="popup" class="popup">
+    </div>
+
 </body>
 
 <!--
@@ -123,6 +126,11 @@ other versions has been demonstrated to fail.
             });
 
             loadWorkflow('ParallelWorkflow');
+
+            cy.on('tap', 'node', { foo: 'bar' }, function(evt){
+                var node = evt.cyTarget;
+                console.log( 'tapped ' + node.id() );
+            });
         }
     });
 

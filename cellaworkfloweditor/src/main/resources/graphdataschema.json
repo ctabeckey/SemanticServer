@@ -11,6 +11,13 @@
         "y": {
           "type": "integer"
         }
+      },
+      "condition": {
+        "type": "object",
+        "properties": {
+          "contextfield": {"type": "string"},
+          "fieldvalue": {"type": "string"}
+        }
       }
     },
     "nodetype": {
@@ -20,12 +27,21 @@
           "type": "object",
           "properties": {
             "id": {"type": "string"},
-            "weight": {"type": "integer"},
             "processor": {"type": "string"},
-            "type": {"type": "string"}
-          },
-          "additionalProperties": {
-            "type":"string"
+            "name": {"type": "string"},
+            "type": {"type": "string"},
+            "conditional": {"type": "#/definitions/conditional"},
+            "configuration": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {"type": "string"},
+                  "value": {"type": "string"},
+                  "type": {"type": "string"}
+                }
+              }
+            }
           }
         },
         "position": {"$ref": "#/definitions/position"},
@@ -67,9 +83,6 @@
             "target": {
               "type": "string"
             }
-          },
-          "additionalProperties": {
-            "type":"any"
           }
         },
         "removed": {

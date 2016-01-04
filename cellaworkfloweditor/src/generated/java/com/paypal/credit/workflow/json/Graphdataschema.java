@@ -62,46 +62,88 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
     private @com.fasterxml.jackson.databind.annotation.JsonDeserialize(as=java.util.ArrayList.class) List<Nodetype> nodes;
 public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"data","position","removed","selected","selectable","locked","grabbable","classes"}) class Nodetype {
       private @javax.validation.Valid @com.fasterxml.jackson.annotation.JsonProperty("data") Data data;
-public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"id","weight","processor","type"}) class Data {
+public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"id","processor","name","type","conditional","configuration"}) class Data {
         private @com.fasterxml.jackson.annotation.JsonProperty("id") String id;
-        private @com.fasterxml.jackson.annotation.JsonProperty("weight") Long weight;
         private @com.fasterxml.jackson.annotation.JsonProperty("processor") String processor;
+        private @com.fasterxml.jackson.annotation.JsonProperty("name") String name;
         private @com.fasterxml.jackson.annotation.JsonProperty("type") String type;
-        public Data(        String id,        Long weight,        String processor,        String type){
+        private @com.fasterxml.jackson.databind.annotation.JsonDeserialize(as=java.util.ArrayList.class) List<ConfigurationItem> configuration;
+public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"key","value","type"}) class ConfigurationItem {
+          private @com.fasterxml.jackson.annotation.JsonProperty("key") String key;
+          private @com.fasterxml.jackson.annotation.JsonProperty("value") String value;
+          private @com.fasterxml.jackson.annotation.JsonProperty("type") String type;
+          public ConfigurationItem(          String key,          String value,          String type){
+            this.key=key;
+            this.value=value;
+            this.type=type;
+          }
+          public ConfigurationItem(){
+            this.key=null;
+            this.value=null;
+            this.type=null;
+          }
+          public String getKey(){
+            return key;
+          }
+          public String getValue(){
+            return value;
+          }
+          public String getType(){
+            return type;
+          }
+          public void setKey(          String key){
+            this.key=key;
+          }
+          public void setValue(          String value){
+            this.value=value;
+          }
+          public void setType(          String type){
+            this.type=type;
+          }
+        }
+        public Data(        String id,        String processor,        String name,        String type,        List<ConfigurationItem> configuration){
           this.id=id;
-          this.weight=weight;
           this.processor=processor;
+          this.name=name;
           this.type=type;
+          this.configuration=configuration;
         }
         public Data(){
           this.id=null;
-          this.weight=null;
           this.processor=null;
+          this.name=null;
           this.type=null;
+          this.configuration=null;
         }
         public String getId(){
           return id;
         }
-        public Long getWeight(){
-          return weight;
-        }
         public String getProcessor(){
           return processor;
+        }
+        public String getName(){
+          return name;
         }
         public String getType(){
           return type;
         }
+        public List<ConfigurationItem> getConfiguration(){
+          return configuration;
+        }
         public void setId(        String id){
           this.id=id;
-        }
-        public void setWeight(        Long weight){
-          this.weight=weight;
         }
         public void setProcessor(        String processor){
           this.processor=processor;
         }
+        public void setName(        String name){
+          this.name=name;
+        }
         public void setType(        String type){
           this.type=type;
+        }
+        public void setConfiguration(        List<ConfigurationItem> configuration){
+          this.configuration=configuration;
         }
       }
       private @javax.validation.Valid @com.fasterxml.jackson.annotation.JsonProperty("position") Position position;

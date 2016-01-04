@@ -2,17 +2,21 @@ package com.paypal.credit.workflow;
 
 import com.paypal.credit.workflow.json.Graphdataschema;
 import com.paypal.credit.workflowcommand.workflow.schema.BusinessProcessorType;
+import com.paypal.credit.workflowcommand.workflow.schema.OptionType;
+import com.paypal.credit.workflowcommand.workflow.schema.OptionsType;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.Spliterator;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
 /**
- * Created by cbeckey on 12/18/15.
+ *
  */
 public class NodeDecorator
 implements Iterable<NodeDecorator>{
@@ -117,38 +121,14 @@ implements Iterable<NodeDecorator>{
             return String.format("n%s", nodeIndex.getAndIncrement());
         }
 
-        public Long resetX() {
-            xIndex.set(0);
-            return new Long(0);
-        }
-        public Long getAndIncrementX() {
-            return new Long(xIndex.getAndIncrement());
-        }
-        public Long incrementAndGetX() {
-            return new Long(xIndex.incrementAndGet());
-        }
-        private Long getX() {
-            return new Long(xIndex.longValue());
-        }
-
-        public Long resetY() {
-            yIndex.set(0);
-            return new Long(0);
-        }
-        public Long getAndIncrementY() {
-            return new Long(yIndex.getAndIncrement());
-        }
-        public Long incrementAndGetY() {
-            return new Long(yIndex.incrementAndGet());
-        }
-        private Long getY() {
-            return new Long(yIndex.longValue());
-        }
-
         NodeDecorator createSerialStart() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "SERIAL", GraphNodeType.SerialStart.getDisplayKey()
+                            getNextNodeIdentifier(),    // synthetic identifier, for display only
+                            null,                       // processor
+                            "Start Serial",             // name
+                            GraphNodeType.SerialStart.getDisplayKey(),  // type
+                            null                        // configuration values
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -164,7 +144,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createSerialEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "ENDSERIAL", GraphNodeType.SerialEnd.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            "End Serial",
+                            GraphNodeType.SerialEnd.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -180,7 +164,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createParallelStart() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "FORK", GraphNodeType.ParallelStart.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            "FORK",
+                            GraphNodeType.ParallelStart.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -196,7 +184,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createParallelEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "JOIN", GraphNodeType.ParallelEnd.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            "JOIN",
+                            GraphNodeType.ParallelEnd.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -212,7 +204,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createConditionalStart() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "IF", GraphNodeType.ConditionalStart.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            "IF",
+                            GraphNodeType.ConditionalStart.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -228,7 +224,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createConditionalEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "ENDIF", GraphNodeType.ConditionalEnd.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            "ENDIF",
+                            GraphNodeType.ConditionalEnd.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -244,7 +244,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createGraphStart(final String contextClassName) {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), contextClassName, GraphNodeType.Start.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            contextClassName,
+                            GraphNodeType.Start.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -260,7 +264,11 @@ implements Iterable<NodeDecorator>{
         NodeDecorator createGraphEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), "END", GraphNodeType.End.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            null,
+                            "END",
+                            GraphNodeType.End.getDisplayKey(),
+                            null
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -273,10 +281,33 @@ implements Iterable<NodeDecorator>{
             return new NodeDecorator(node, GraphNodeType.End);
         }
 
+        /**
+         *
+         * @param processor
+         * @return
+         */
         NodeDecorator createBusinessProcessor(final BusinessProcessorType processor) {
+            OptionsType options = processor.getOptions();
+
+            List<Graphdataschema.Elements.Nodetype.Data.ConfigurationItem> configItems = null;
+            if (options != null && options.getOption() != null) {
+                configItems = new ArrayList<>();
+                for (OptionType option : options.getOption()) {
+                    Graphdataschema.Elements.Nodetype.Data.ConfigurationItem item =
+                            new Graphdataschema.Elements.Nodetype.Data.ConfigurationItem();
+                    item.setKey(option.getKey());
+                    item.setValue(option.getValue());
+                    item.setType(option.getType().value());
+                }
+            }
+
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(), new Long(1), processor.getImpl(), GraphNodeType.Business.getDisplayKey()
+                            getNextNodeIdentifier(),
+                            processor.getImpl(),
+                            "",
+                            GraphNodeType.Business.getDisplayKey(),
+                            configItems
                     ), // Data data,
                     new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
                     Boolean.FALSE,                                      // Boolean removed,
@@ -289,6 +320,11 @@ implements Iterable<NodeDecorator>{
             return new NodeDecorator(node, GraphNodeType.Business);
         }
 
+        /**
+         *
+         * @param root
+         * @return
+         */
         public Set<Graphdataschema.Elements.Edgetype> createOutgoingEdges(NodeDecorator root) {
             Set<Graphdataschema.Elements.Edgetype> edges = new HashSet<>();
 

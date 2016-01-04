@@ -115,12 +115,38 @@
     <xs:complexType name="optionsType">
         <xs:annotation>
             <xs:documentation>
-                A processsor may include one or more configuration options.
+                A processsor may include zero to many (configuration) options.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="option" type="workspace:optionType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="optionType">
+        <xs:annotation>
+            <xs:documentation>
+                An option is a key value pair and a type
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element type="xs:string" name="key" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="value" minOccurs="1" maxOccurs="1">
+                <xs:simpleType>
+                    <xs:union memberTypes="xs:boolean xs:integer xs:float xs:string" />
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="type" type="workspace:optionValueType" minOccurs="1" maxOccurs="1">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="optionValueType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="boolean"/>
+            <xs:enumeration value="integer"/>
+            <xs:enumeration value="float"/>
+            <xs:enumeration value="string"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
