@@ -30,6 +30,15 @@ public class GraphdataschemaBuilder {
     }
 
     /**
+     * TODO: replace this with an interface and external implementations
+     * @return
+     */
+    public void layout() {
+
+        ParameterCheckUtility.checkParameterNotNull(this.workflow, "workflow");
+    }
+
+    /**
      *
      * @return
      */
@@ -38,29 +47,30 @@ public class GraphdataschemaBuilder {
 
         String contextClass = workflow.getContextClass();
 
+        // Builds a graph of NodeDecorator instances from the workflow
+        // the NodeDecorators are a temporary construct that help bridge the
+        // workflow XML and the visual representation.
         NodeDecorator startNd = buildNodeDecoratorGraph(contextClass);
 
-        List<Graphdataschema.Elements.Nodetype> nodes = new ArrayList<>();
-        List<Graphdataschema.Elements.Edgetype> edges = new ArrayList<>();
-        startNd.visit(new NodeDecoratorVisitor() {
-            @Override
-            public boolean visit(final NodeDecorator nodeDecorator) {
-                Graphdataschema.Elements.Nodetype node = nodeDecorator.getNode();
+        // GraphBuilderVisitor builds the VO that will be passed to the
+        // client for display. In the process it creates suggested layout
+        // positions for the client to use.
+        GraphBuilderVisitor gbv = new GraphBuilderVisitor();
+        startNd.visit(gbv, 1, 1);
 
-                nodes.add(node);
-                edges.addAll(nodeBuilder.createOutgoingEdges(nodeDecorator));
-
-                return true;
-            }
-        });
-
-        Graphdataschema.Elements elements = new Graphdataschema.Elements(nodes, edges);
+        // Create the root VO that is sent to the client.
+        Graphdataschema.Elements elements = new Graphdataschema.Elements(gbv.getNodes(), gbv.getEdges());
         Graphdataschema result = new Graphdataschema();
         result.setElements(elements);
 
         return result;
     }
 
+    /**
+     *
+     * @param contextClass
+     * @return
+     */
     protected NodeDecorator buildNodeDecoratorGraph(final String contextClass) {
         NodeDecorator startNd = nodeBuilder.createGraphStart(contextClass);
         NodeDecorator previousNd = startNd;
@@ -230,4 +240,44 @@ public class GraphdataschemaBuilder {
         Iterator<NodeDecorator> iter = head.iterator();
         return iter.hasNext() ? findTail(iter.next()) : head;
     }
+
+    /**
+     *
+     */
+    private class GraphBuilderVisitor implements NodeDecoratorVisitor {
+        private final List<Graphdataschema.Elements.Nodetype> nodes = new ArrayList<>();
+        private final List<Graphdataschema.Elements.Edgetype> edges = new ArrayList<>();
+        private final List<NodeDecorator> visited = new ArrayList<>();
+
+        public GraphBuilderVisitor() {
+        }
+
+        public List<Graphdataschema.Elements.Nodetype> getNodes() {
+            return nodes;
+        }
+
+        public List<Graphdataschema.Elements.Edgetype> getEdges() {
+            return edges;
+        }
+
+        @Override
+        public boolean visit(final NodeDecorator nodeDecorator, int xPosition, int yPosition) {
+            // cheap and sleazy way to avoid duplicates caused by parallel
+            // operations in the graph
+            if (! visited.contains(nodeDecorator)) {
+                Graphdataschema.Elements.Nodetype node = nodeDecorator.getNode();
+
+                // set node layout positions, these are suggestions to the client
+                // layout algorithm
+                node.getPosition().setX(new Long(xPosition));
+                node.getPosition().setY(new Long(yPosition));
+
+                nodes.add(node);
+                edges.addAll(nodeBuilder.createOutgoingEdges(nodeDecorator));
+
+                visited.add(nodeDecorator);
+            }
+            return true;
+        }
+    };
 }

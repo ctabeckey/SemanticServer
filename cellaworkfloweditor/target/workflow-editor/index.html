@@ -51,7 +51,18 @@ other versions has been demonstrated to fail.
                 motionBlur: true,
                 selectionType: 'single',
                 boxSelectionEnabled: false,
-                layout: {name: 'grid'},
+                layout: {
+                    name: 'grid',
+                    fit: false,
+                    rows: 10,
+                    cols: 50,
+                    position: function(node) {
+                        var nodeX = node._private.position.x;
+                        var nodeY = node._private.position.y;
+
+                        return {row: nodeY, col: nodeX};
+                    }
+                },
                 ready: function (evt) {
                     cy.toolbar({
                         tools: [

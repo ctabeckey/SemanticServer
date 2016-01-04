@@ -10,6 +10,6 @@ public interface NodeDecoratorVisitor {
      * @param nodeDecorator the node being visited
      * @return TRUE to continue, FALSE to stop
      */
-    boolean visit(NodeDecorator nodeDecorator);
+    boolean visit(NodeDecorator nodeDecorator, int parentX, int parentY);
 
 }

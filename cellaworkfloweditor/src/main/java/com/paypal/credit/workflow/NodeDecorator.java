@@ -17,8 +17,11 @@ import java.util.function.Consumer;
 public class NodeDecorator
 implements Iterable<NodeDecorator>{
 
+    // this is the VO that is serialized and sent to the client
     private final Graphdataschema.Elements.Nodetype node;
+    // one of: business, parallel, serial, conditional
     private final GraphNodeType graphNodeType;
+    // outgoing connections to other downstream nodes
     private final Set<NodeDecorator> outgoing = new HashSet<>();
 
     private NodeDecorator(final Graphdataschema.Elements.Nodetype node, final GraphNodeType graphNodeType) {
@@ -68,14 +71,18 @@ implements Iterable<NodeDecorator>{
      * @return TRUE if the sub-tree was completely visited, FALSE if the visitor returned FALSE anywhere
      * @param visitor the current node being visited
      */
-    public boolean visit(NodeDecoratorVisitor visitor) {
-        if (!visitor.visit(this)) {
+    public boolean visit(final NodeDecoratorVisitor visitor, final int parentX, final int parentY) {
+        int childX = parentX;
+        int childY = parentY + 1;
+
+        if (!visitor.visit(this, childX, childY)) {
             return false;
         }
         if (this.outgoing != null) {
             for (NodeDecorator node : this.outgoing) {
-                if (!node.visit(visitor))
+                if (!node.visit(visitor, childX, childY))
                     return false;
+                childX++;
             }
         }
 
