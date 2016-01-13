@@ -6,7 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/cellaimpl/cellaimpl.iml" filepath="$PROJECT_DIR$/cellaimpl/cellaimpl.iml" />
       <module fileurl="file://$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" filepath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
       <module fileurl="file://$PROJECT_DIR$/cellaworkfloweditor/cellaworkfloweditor.iml" filepath="$PROJECT_DIR$/cellaworkfloweditor/cellaworkfloweditor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cellaworkfloweditor/workflow-editor.iml" filepath="$PROJECT_DIR$/cellaworkfloweditor/workflow-editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/processorprovider/processorprovider.iml" filepath="$PROJECT_DIR$/processorprovider/processorprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testprocessorprovider/testprocessorprovider.iml" filepath="$PROJECT_DIR$/testprocessorprovider/testprocessorprovider.iml" />
     </modules>
   </component>
 </project>

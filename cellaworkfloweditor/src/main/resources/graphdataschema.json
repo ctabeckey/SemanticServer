@@ -11,13 +11,20 @@
         "y": {
           "type": "integer"
         }
-      },
-      "condition": {
-        "type": "object",
-        "properties": {
-          "contextfield": {"type": "string"},
-          "fieldvalue": {"type": "string"}
-        }
+      }
+    },
+    "condition": {
+      "type": "object",
+      "properties": {
+        "contextfield": {"type": "string"},
+        "fieldvalue": {"type": "string"}
+      }
+    },
+    "property-value": {
+      "type": "object",
+      "properties": {
+        "key": {"type": "string"},
+        "value": {"type": "string"}
       }
     },
     "nodetype": {
@@ -34,12 +41,7 @@
             "configuration": {
               "type": "array",
               "items": {
-                "type": "object",
-                "properties": {
-                  "key": {"type": "string"},
-                  "value": {"type": "string"},
-                  "type": {"type": "string"}
-                }
+                "$ref": "#/definitions/property-value"
               }
             }
           }

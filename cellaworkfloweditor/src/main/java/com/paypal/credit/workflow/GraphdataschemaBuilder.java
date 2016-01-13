@@ -1,7 +1,7 @@
 package com.paypal.credit.workflow;
 
 import com.paypal.credit.core.utility.ParameterCheckUtility;
-import com.paypal.credit.workflow.json.Graphdataschema;
+import com.paypal.credit.json.Graphdataschema;
 import com.paypal.credit.workflowcommand.workflow.schema.BaseProcessorType;
 import com.paypal.credit.workflowcommand.workflow.schema.BusinessProcessorType;
 import com.paypal.credit.workflowcommand.workflow.schema.ConditionalControllerType;
@@ -18,7 +18,7 @@ import java.util.List;
  * Builds the graph for the UI from the internal workflow definition
  */
 public class GraphdataschemaBuilder {
-    private NodeDecorator.Builder nodeBuilder = new NodeDecorator.Builder();
+    private NodeDecorator.Builder nodeBuilder = NodeDecorator.builder();
     private WorkflowType workflow = null;
 
     public GraphdataschemaBuilder() {
@@ -56,7 +56,13 @@ public class GraphdataschemaBuilder {
         // client for display. In the process it creates suggested layout
         // positions for the client to use.
         GraphBuilderVisitor gbv = new GraphBuilderVisitor();
-        startNd.visit(gbv, 1, 1);
+        startNd.visit(gbv);
+
+        //
+        NodeDecorator.LayoutHint layoutSize = startNd.calculateLayoutSize();
+
+        //
+        startNd.calculateLayoutHints(new NodeDecorator.LayoutHint(layoutSize.getX()/2, 0));
 
         // Create the root VO that is sent to the client.
         Graphdataschema.Elements elements = new Graphdataschema.Elements(gbv.getNodes(), gbv.getEdges());
@@ -155,12 +161,9 @@ public class GraphdataschemaBuilder {
 
         JAXBElement<? extends BaseProcessorType> processorElement = conditionalProcessor.getProcessor();
         if (processorElement != null) {
-            startNode = nodeBuilder.createConditionalStart();
+            startNode = nodeBuilder.createConditional();
             NodeDecorator processingNode = createNodeDecorator(root, processorElement.getValue());
             startNode.addOutgoingConnection(processingNode);
-
-            NodeDecorator endNode = nodeBuilder.createConditionalEnd();
-            processingNode.addOutgoingConnection(endNode);
         }
 
         return startNode;
@@ -244,7 +247,7 @@ public class GraphdataschemaBuilder {
     /**
      *
      */
-    private class GraphBuilderVisitor implements NodeDecoratorVisitor {
+    private class GraphBuilderVisitor implements Visitor<NodeDecorator> {
         private final List<Graphdataschema.Elements.Nodetype> nodes = new ArrayList<>();
         private final List<Graphdataschema.Elements.Edgetype> edges = new ArrayList<>();
         private final List<NodeDecorator> visited = new ArrayList<>();
@@ -261,16 +264,11 @@ public class GraphdataschemaBuilder {
         }
 
         @Override
-        public boolean visit(final NodeDecorator nodeDecorator, int xPosition, int yPosition) {
+        public boolean visit(final NodeDecorator nodeDecorator) {
             // cheap and sleazy way to avoid duplicates caused by parallel
             // operations in the graph
             if (! visited.contains(nodeDecorator)) {
                 Graphdataschema.Elements.Nodetype node = nodeDecorator.getNode();
-
-                // set node layout positions, these are suggestions to the client
-                // layout algorithm
-                node.getPosition().setX(new Long(xPosition));
-                node.getPosition().setY(new Long(yPosition));
 
                 nodes.add(node);
                 edges.addAll(nodeBuilder.createOutgoingEdges(nodeDecorator));

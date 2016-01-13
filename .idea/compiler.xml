@@ -52,12 +52,35 @@
         <processorPath useClasspath="true" />
         <module name="cellaworkfloweditor" />
       </profile>
+      <profile default="false" name="Annotation profile for ProcessorProvider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ProcessorProvider" />
+      </profile>
+      <profile default="false" name="Annotation profile for testprocessorprovider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="testprocessorprovider" />
+      </profile>
+      <profile default="false" name="Annotation profile for processorprovider" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="processorprovider" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cella-parent" target="1.5" />
       <module name="cellaimpl" target="8" />
       <module name="cellaworkflowcommand" target="8" />
       <module name="cellaworkfloweditor" target="8" />
+      <module name="processorprovider" target="8" />
+      <module name="testprocessorprovider" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

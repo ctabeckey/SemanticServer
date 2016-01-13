@@ -2,15 +2,14 @@ package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.core.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.*;
+import com.paypal.credit.workflow.annotations.ProvidesGroups;
+import com.paypal.credit.workflow.annotations.RemovesGroups;
+import com.paypal.credit.workflow.annotations.RequiresGroups;
 import com.paypal.credit.workflow.exceptions.RSWorkflowException;
-import com.paypal.credit.workflowcommand.workflow.annotations.ProvidesGroups;
-import com.paypal.credit.workflowcommand.workflow.annotations.RemovesGroups;
-import com.paypal.credit.workflowcommand.workflow.annotations.RequiresGroups;
 import com.paypal.credit.workflowcommand.workflow.exceptions.CompositeWorkflowContextException;
 import com.paypal.credit.workflowcommand.workflow.exceptions.DeprivedWorkflowContextException;
 import com.paypal.credit.workflowcommand.workflow.exceptions.ProcessorProvidesAndRemovesException;
 import com.paypal.credit.workflowcommand.workflow.exceptions.WorkflowContextException;
-import com.paypal.credit.workflowcommand.workflow.schema.SerialControllerType;
 
 import java.util.ArrayList;
 import java.util.Arrays;

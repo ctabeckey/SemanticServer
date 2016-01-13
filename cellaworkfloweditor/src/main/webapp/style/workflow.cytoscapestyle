@@ -16,16 +16,21 @@ node.end {
     text-outline-color: #000;
     text-outline-width: 1px;
     z-index: 9999;
-}
-
-node.start,
-node.end {
     background-color: #FC4C4C;
     color: #FC4C4C;
 }
 
+node.start {
+    background-image: url(images/start.png);
+}
+
+node.end {
+    background-image: url(images/end.png);
+}
+
 node.business {
     content: data(name);
+    background-image: url(images/processor.png);
     width: 20;
     height: 20;
     color: #fff;

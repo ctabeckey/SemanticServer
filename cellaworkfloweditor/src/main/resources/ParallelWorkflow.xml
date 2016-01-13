@@ -6,7 +6,8 @@
         <workflow:parallel-controller id="P1">
             <workflow:business-processor id="Three" impl="com.paypal.credit.processors.ProcessorThree"/>
             <workflow:business-processor id="Four" impl="com.paypal.credit.processors.ProcessorFour"/>
+            <workflow:business-processor id="Five" impl="com.paypal.credit.processors.ProcessorFive"/>
         </workflow:parallel-controller>
-        <workflow:business-processor id="Five" impl="com.paypal.credit.processors.ProcessorFive"/>
+        <workflow:business-processor id="Six" impl="com.paypal.credit.processors.ProcessorFive"/>
     </workflow:process-list>
 </workflow:workflow>

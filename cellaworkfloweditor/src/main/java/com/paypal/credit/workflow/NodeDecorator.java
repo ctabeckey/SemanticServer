@@ -1,6 +1,6 @@
 package com.paypal.credit.workflow;
 
-import com.paypal.credit.workflow.json.Graphdataschema;
+import com.paypal.credit.json.Graphdataschema;
 import com.paypal.credit.workflowcommand.workflow.schema.BusinessProcessorType;
 import com.paypal.credit.workflowcommand.workflow.schema.OptionType;
 import com.paypal.credit.workflowcommand.workflow.schema.OptionsType;
@@ -73,24 +73,90 @@ implements Iterable<NodeDecorator>{
     /**
      *
      * @return TRUE if the sub-tree was completely visited, FALSE if the visitor returned FALSE anywhere
-     * @param visitor the current node being visited
+     * @param visitor the vistor to be applied to the node
      */
-    public boolean visit(final NodeDecoratorVisitor visitor, final int parentX, final int parentY) {
-        int childX = parentX;
-        int childY = parentY + 1;
-
-        if (!visitor.visit(this, childX, childY)) {
+    public boolean visit(final Visitor<NodeDecorator> visitor) {
+        if (!visitor.visit(this)) {
             return false;
         }
         if (this.outgoing != null) {
             for (NodeDecorator node : this.outgoing) {
-                if (!node.visit(visitor, childX, childY))
+                if (!node.visit(visitor))
                     return false;
-                childX++;
             }
         }
 
         return true;
+    }
+
+    /**
+     * A different visitor that generates hints to the client
+     * layout algorithm.
+     */
+    public void calculateLayoutHints(final LayoutHint parentLayoutHint) {
+        int childX = parentLayoutHint.getX();
+        int childY = parentLayoutHint.getY() + 1;
+
+        node.getPosition().setX(new Long(childX));
+        node.getPosition().setY(new Long(childY));
+
+
+        if (this.outgoing != null) {
+            int count = this.outgoing.size();
+            int index = -(count / 2);
+            for (NodeDecorator node : this.outgoing) {
+                childX = parentLayoutHint.getX() + index;
+                node.calculateLayoutHints(new LayoutHint(childX, childY));
+                ++index;
+            }
+        }
+    }
+
+    /**
+     *
+     * @return
+     */
+    public LayoutHint calculateLayoutSize() {
+        int maxChildDepth = 0;
+        int maxChildCount = this.childCount();
+
+        for (NodeDecorator child : this) {
+            LayoutHint childLayoutHint = child.calculateLayoutSize();
+            maxChildDepth = Math.max(maxChildDepth, childLayoutHint.getY());
+            maxChildCount = Math.max(maxChildCount, childLayoutHint.getX());
+        }
+
+        return new LayoutHint(maxChildCount, maxChildDepth + 1);
+    }
+
+    /**
+     *
+     */
+    public static class LayoutHint {
+        private final int x;
+        private final int y;
+
+        LayoutHint(final int x, final int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public int getX() {
+            return this.x;
+        }
+
+        public int getY() {
+            return this.y;
+        }
+
+        /**
+         * Add the X and Y coordinates and return a new LayoutHint with the sum.
+         * @param that
+         * @return
+         */
+        public LayoutHint add(LayoutHint that) {
+            return new LayoutHint(this.getX() + that.getX(), this.getY() + that.getY());
+        }
     }
 
     public static Builder builder() {
@@ -117,130 +183,17 @@ implements Iterable<NodeDecorator>{
         private AtomicInteger xIndex = new AtomicInteger(0);
         private AtomicInteger yIndex = new AtomicInteger(0);
 
+        private Builder() {}
+
         private String getNextNodeIdentifier() {
             return String.format("n%s", nodeIndex.getAndIncrement());
         }
 
-        NodeDecorator createSerialStart() {
-            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(),    // synthetic identifier, for display only
-                            null,                       // processor
-                            "Start Serial",             // name
-                            GraphNodeType.SerialStart.getDisplayKey(),  // type
-                            null                        // configuration values
-                    ), // Data data,
-                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
-                    Boolean.FALSE,                                      // Boolean removed,
-                    Boolean.FALSE,                                      // Boolean selected,
-                    Boolean.FALSE,                                      // Boolean selectable,
-                    Boolean.FALSE,                                      // Boolean locked,
-                    Boolean.TRUE,                                       // Boolean grabbable,
-                    "serial"                                             // String classes
-            );
-            return new NodeDecorator(node, GraphNodeType.SerialStart);
-        }
-
-        NodeDecorator createSerialEnd() {
-            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(),
-                            null,
-                            "End Serial",
-                            GraphNodeType.SerialEnd.getDisplayKey(),
-                            null
-                    ), // Data data,
-                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
-                    Boolean.FALSE,                                      // Boolean removed,
-                    Boolean.FALSE,                                      // Boolean selected,
-                    Boolean.FALSE,                                      // Boolean selectable,
-                    Boolean.FALSE,                                      // Boolean locked,
-                    Boolean.TRUE,                                       // Boolean grabbable,
-                    "endserial"                                             // String classes
-            );
-            return new NodeDecorator(node, GraphNodeType.SerialEnd);
-        }
-
-        NodeDecorator createParallelStart() {
-            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(),
-                            null,
-                            "FORK",
-                            GraphNodeType.ParallelStart.getDisplayKey(),
-                            null
-                    ), // Data data,
-                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
-                    Boolean.FALSE,                                      // Boolean removed,
-                    Boolean.FALSE,                                      // Boolean selected,
-                    Boolean.FALSE,                                      // Boolean selectable,
-                    Boolean.FALSE,                                      // Boolean locked,
-                    Boolean.TRUE,                                       // Boolean grabbable,
-                    "fork"                                              // String classes
-            );
-            return new NodeDecorator(node, GraphNodeType.ParallelStart);
-        }
-
-        NodeDecorator createParallelEnd() {
-            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(),
-                            null,
-                            "JOIN",
-                            GraphNodeType.ParallelEnd.getDisplayKey(),
-                            null
-                    ), // Data data,
-                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
-                    Boolean.FALSE,                                      // Boolean removed,
-                    Boolean.FALSE,                                      // Boolean selected,
-                    Boolean.FALSE,                                      // Boolean selectable,
-                    Boolean.FALSE,                                      // Boolean locked,
-                    Boolean.TRUE,                                       // Boolean grabbable,
-                    "join"                                              // String classes
-            );
-            return new NodeDecorator(node, GraphNodeType.ParallelEnd);
-        }
-
-        NodeDecorator createConditionalStart() {
-            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(),
-                            null,
-                            "IF",
-                            GraphNodeType.ConditionalStart.getDisplayKey(),
-                            null
-                    ), // Data data,
-                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
-                    Boolean.FALSE,                                      // Boolean removed,
-                    Boolean.FALSE,                                      // Boolean selected,
-                    Boolean.FALSE,                                      // Boolean selectable,
-                    Boolean.FALSE,                                      // Boolean locked,
-                    Boolean.TRUE,                                       // Boolean grabbable,
-                    "if"                                                // String classes
-            );
-            return new NodeDecorator(node, GraphNodeType.ConditionalStart);
-        }
-
-        NodeDecorator createConditionalEnd() {
-            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
-                    new Graphdataschema.Elements.Nodetype.Data(
-                            getNextNodeIdentifier(),
-                            null,
-                            "ENDIF",
-                            GraphNodeType.ConditionalEnd.getDisplayKey(),
-                            null
-                    ), // Data data,
-                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
-                    Boolean.FALSE,                                      // Boolean removed,
-                    Boolean.FALSE,                                      // Boolean selected,
-                    Boolean.FALSE,                                      // Boolean selectable,
-                    Boolean.FALSE,                                      // Boolean locked,
-                    Boolean.TRUE,                                       // Boolean grabbable,
-                    "endif"                                                // String classes
-            );
-            return new NodeDecorator(node, GraphNodeType.ConditionalEnd);
-        }
-
+        /**
+         *
+         * @param contextClassName
+         * @return
+         */
         NodeDecorator createGraphStart(final String contextClassName) {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
@@ -261,6 +214,10 @@ implements Iterable<NodeDecorator>{
             return new NodeDecorator(node, GraphNodeType.Start);
         }
 
+        /**
+         *
+         * @return
+         */
         NodeDecorator createGraphEnd() {
             Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
                     new Graphdataschema.Elements.Nodetype.Data(
@@ -283,21 +240,92 @@ implements Iterable<NodeDecorator>{
 
         /**
          *
+         * @return
+         */
+        NodeDecorator createParallelStart() {
+            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(),
+                            null,
+                            "FORK",
+                            GraphNodeType.ParallelStart.getDisplayKey(),
+                            null
+                    ), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
+                    Boolean.FALSE,                                      // Boolean removed,
+                    Boolean.FALSE,                                      // Boolean selected,
+                    Boolean.FALSE,                                      // Boolean selectable,
+                    Boolean.FALSE,                                      // Boolean locked,
+                    Boolean.TRUE,                                       // Boolean grabbable,
+                    "fork"                                              // String classes
+            );
+            return new NodeDecorator(node, GraphNodeType.ParallelStart);
+        }
+
+        /**
+         *
+         * @return
+         */
+        NodeDecorator createParallelEnd() {
+            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(),
+                            null,
+                            "JOIN",
+                            GraphNodeType.ParallelEnd.getDisplayKey(),
+                            null
+                    ), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
+                    Boolean.FALSE,                                      // Boolean removed,
+                    Boolean.FALSE,                                      // Boolean selected,
+                    Boolean.FALSE,                                      // Boolean selectable,
+                    Boolean.FALSE,                                      // Boolean locked,
+                    Boolean.TRUE,                                       // Boolean grabbable,
+                    "join"                                              // String classes
+            );
+            return new NodeDecorator(node, GraphNodeType.ParallelEnd);
+        }
+
+        /**
+         *
+         * @return
+         */
+        NodeDecorator createConditional() {
+            Graphdataschema.Elements.Nodetype node = new Graphdataschema.Elements.Nodetype(
+                    new Graphdataschema.Elements.Nodetype.Data(
+                            getNextNodeIdentifier(),
+                            null,
+                            "IF",
+                            GraphNodeType.ConditionalStart.getDisplayKey(),
+                            null
+                    ), // Data data,
+                    new Graphdataschema.Elements.Nodetype.Position(new Long(0), new Long(0)),   // Position position,
+                    Boolean.FALSE,                                      // Boolean removed,
+                    Boolean.FALSE,                                      // Boolean selected,
+                    Boolean.FALSE,                                      // Boolean selectable,
+                    Boolean.FALSE,                                      // Boolean locked,
+                    Boolean.TRUE,                                       // Boolean grabbable,
+                    "if"                                                // String classes
+            );
+            return new NodeDecorator(node, GraphNodeType.ConditionalStart);
+        }
+
+        /**
+         *
          * @param processor
          * @return
          */
         NodeDecorator createBusinessProcessor(final BusinessProcessorType processor) {
             OptionsType options = processor.getOptions();
 
-            List<Graphdataschema.Elements.Nodetype.Data.ConfigurationItem> configItems = null;
+            List<Graphdataschema.Elements.Nodetype.Data.PropertyValue> configItems = null;
             if (options != null && options.getOption() != null) {
                 configItems = new ArrayList<>();
                 for (OptionType option : options.getOption()) {
-                    Graphdataschema.Elements.Nodetype.Data.ConfigurationItem item =
-                            new Graphdataschema.Elements.Nodetype.Data.ConfigurationItem();
+                    Graphdataschema.Elements.Nodetype.Data.PropertyValue item =
+                            new Graphdataschema.Elements.Nodetype.Data.PropertyValue();
                     item.setKey(option.getKey());
                     item.setValue(option.getValue());
-                    item.setType(option.getType().value());
                 }
             }
 

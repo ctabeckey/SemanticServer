@@ -1,8 +1,8 @@
 package com.paypal.credit.processors;
 
+import com.paypal.credit.workflow.annotations.ProvidesGroups;
+import com.paypal.credit.workflow.annotations.RequiresGroups;
 import com.paypal.credit.workflow.exceptions.RSWorkflowException;
-import com.paypal.credit.workflowcommand.workflow.annotations.ProvidesGroups;
-import com.paypal.credit.workflowcommand.workflow.annotations.RequiresGroups;
 import com.paypal.credit.workflowtest.AccountIdProcessorContext;
 
 import javax.validation.Valid;

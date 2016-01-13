@@ -1,4 +1,4 @@
-package com.paypal.credit.workflow.json;
+package com.paypal.credit.json;
 import java.util.List;
 import java.util.Set;
 public @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"format_version","generated_by","target_cytoscapejs_version","data","elements"}) class Graphdataschema {
@@ -67,20 +67,17 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
         private @com.fasterxml.jackson.annotation.JsonProperty("processor") String processor;
         private @com.fasterxml.jackson.annotation.JsonProperty("name") String name;
         private @com.fasterxml.jackson.annotation.JsonProperty("type") String type;
-        private @com.fasterxml.jackson.databind.annotation.JsonDeserialize(as=java.util.ArrayList.class) List<ConfigurationItem> configuration;
-public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"key","value","type"}) class ConfigurationItem {
+        private @com.fasterxml.jackson.databind.annotation.JsonDeserialize(as=java.util.ArrayList.class) List<PropertyValue> configuration;
+public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL) @com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown=true) @javax.annotation.Generated("com.paypal.credit.tools.jss2j") @com.fasterxml.jackson.annotation.JsonPropertyOrder({"key","value"}) class PropertyValue {
           private @com.fasterxml.jackson.annotation.JsonProperty("key") String key;
           private @com.fasterxml.jackson.annotation.JsonProperty("value") String value;
-          private @com.fasterxml.jackson.annotation.JsonProperty("type") String type;
-          public ConfigurationItem(          String key,          String value,          String type){
+          public PropertyValue(          String key,          String value){
             this.key=key;
             this.value=value;
-            this.type=type;
           }
-          public ConfigurationItem(){
+          public PropertyValue(){
             this.key=null;
             this.value=null;
-            this.type=null;
           }
           public String getKey(){
             return key;
@@ -88,20 +85,14 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
           public String getValue(){
             return value;
           }
-          public String getType(){
-            return type;
-          }
           public void setKey(          String key){
             this.key=key;
           }
           public void setValue(          String value){
             this.value=value;
           }
-          public void setType(          String type){
-            this.type=type;
-          }
         }
-        public Data(        String id,        String processor,        String name,        String type,        List<ConfigurationItem> configuration){
+        public Data(        String id,        String processor,        String name,        String type,        List<PropertyValue> configuration){
           this.id=id;
           this.processor=processor;
           this.name=name;
@@ -127,7 +118,7 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
         public String getType(){
           return type;
         }
-        public List<ConfigurationItem> getConfiguration(){
+        public List<PropertyValue> getConfiguration(){
           return configuration;
         }
         public void setId(        String id){
@@ -142,7 +133,7 @@ public static @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackso
         public void setType(        String type){
           this.type=type;
         }
-        public void setConfiguration(        List<ConfigurationItem> configuration){
+        public void setConfiguration(        List<PropertyValue> configuration){
           this.configuration=configuration;
         }
       }

@@ -2,7 +2,7 @@ package com.paypal.credit.workflow;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.paypal.credit.workflow.json.Graphdataschema;
+import com.paypal.credit.json.Graphdataschema;
 import com.paypal.credit.workflowcommand.WorkflowReader;
 import com.paypal.credit.workflowcommand.workflow.schema.WorkflowType;
 

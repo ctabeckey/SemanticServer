@@ -18,17 +18,22 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.paypal.credit</groupId>
+            <artifactId>testprocessorprovider</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
@@ -49,11 +54,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.5.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -67,8 +67,8 @@
                         <goals><goal>generate</goal></goals>
                         <configuration>
                             <prototypeUrl>rsc:Mutable.java</prototypeUrl>
-                            <sourceDirectory>src/main/resources/graphdataschema.json</sourceDirectory>
-                            <targetPackage>com.paypal.credit.workflow.json</targetPackage>
+                            <sourceDirectory>src/main/resources</sourceDirectory>
+                            <targetPackage>com.paypal.credit.json</targetPackage>
                             <targetDirectory>src/generated/java</targetDirectory>
                         </configuration>
                     </execution>

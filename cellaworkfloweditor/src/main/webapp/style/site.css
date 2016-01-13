@@ -16,12 +16,14 @@ body {
     display: block;
 }
 
-.popup {
+#processor_popup {
+    background: #000;
     visibility: hidden;
-    display: block;
 }
 
 h1 {
     opacity: 0.5;
     font-size: 1em;
 }
+
+

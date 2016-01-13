@@ -1,6 +1,6 @@
 package com.paypal.credit.processors;
 
-import com.paypal.credit.workflowcommand.workflow.annotations.RequiresGroups;
+import com.paypal.credit.workflow.annotations.RequiresGroups;
 import com.paypal.credit.workflowtest.AccountIdProcessorContext;
 
 /**

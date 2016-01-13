@@ -1,9 +1,9 @@
 package com.paypal.credit.workflow;
 
-import com.paypal.credit.workflow.json.Graphdataschema;
+import com.paypal.credit.json.Graphdataschema;
 import com.paypal.credit.workflowcommand.WorkflowReader;
 import com.paypal.credit.workflowcommand.workflow.schema.WorkflowType;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
