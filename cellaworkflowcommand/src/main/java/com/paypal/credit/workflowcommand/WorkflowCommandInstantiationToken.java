@@ -3,7 +3,7 @@ package com.paypal.credit.workflowcommand;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
-import com.paypal.credit.workflowcommand.workflow.schema.WorkflowType;
+import com.paypal.credit.workflow.schema.WorkflowType;
 
 /**
  * Created by cbeckey on 11/17/15.

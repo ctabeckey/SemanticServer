@@ -1,6 +1,6 @@
 package com.paypal.credit.core.datasourceprovider;
 
-import com.paypal.credit.core.utility.ParameterCheckUtility;
+import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.datasourceprovider.exceptions.UnableToCreateServiceProviderImplementation;
 import com.paypal.credit.core.datasourceprovider.exceptions.UnableToFindServiceProviderImplementation;

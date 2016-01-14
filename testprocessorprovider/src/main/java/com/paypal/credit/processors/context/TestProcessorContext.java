@@ -1,6 +1,6 @@
 package com.paypal.credit.processors.context;
 
-import com.paypal.credit.core.utility.ParameterCheckUtility;
+import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.annotations.ProvidesGroups;
 

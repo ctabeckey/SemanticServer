@@ -1,9 +1,9 @@
 package com.paypal.credit.workflow;
 
 import com.paypal.credit.json.Graphdataschema;
-import com.paypal.credit.workflowcommand.workflow.schema.BusinessProcessorType;
-import com.paypal.credit.workflowcommand.workflow.schema.OptionType;
-import com.paypal.credit.workflowcommand.workflow.schema.OptionsType;
+import com.paypal.credit.workflow.schema.BusinessProcessorType;
+import com.paypal.credit.workflow.schema.OptionType;
+import com.paypal.credit.workflow.schema.OptionsType;
 
 import java.util.ArrayList;
 import java.util.Collection;

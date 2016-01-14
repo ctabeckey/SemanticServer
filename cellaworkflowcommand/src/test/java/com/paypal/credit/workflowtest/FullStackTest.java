@@ -6,7 +6,7 @@ import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstant
 import com.paypal.credit.core.processorbridge.ProcessorBridgeProxyImplFactory;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.core.utility.URLFactory;
+import com.paypal.credit.utility.URLFactory;
 import com.paypal.credit.workflowtest.model.Authorization;
 import com.paypal.credit.workflowtest.model.AuthorizationId;
 import com.paypal.credit.workflowtest.processorbridge.WorkflowTestProcessorBridge;

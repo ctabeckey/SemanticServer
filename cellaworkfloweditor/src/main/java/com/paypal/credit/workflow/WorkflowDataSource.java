@@ -3,8 +3,8 @@ package com.paypal.credit.workflow;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.paypal.credit.json.Graphdataschema;
-import com.paypal.credit.workflowcommand.WorkflowReader;
-import com.paypal.credit.workflowcommand.workflow.schema.WorkflowType;
+import com.paypal.credit.workflow.factory.WorkflowReader;
+import com.paypal.credit.workflow.schema.WorkflowType;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

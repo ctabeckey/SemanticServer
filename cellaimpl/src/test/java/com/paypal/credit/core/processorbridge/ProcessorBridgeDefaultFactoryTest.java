@@ -3,7 +3,7 @@ package com.paypal.credit.core.processorbridge;
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.core.utility.URLFactory;
+import com.paypal.credit.utility.URLFactory;
 import com.paypal.credit.test.FacadeTransactionContext;
 import com.paypal.credit.test.model.Authorization;
 import com.paypal.credit.test.model.AuthorizationId;

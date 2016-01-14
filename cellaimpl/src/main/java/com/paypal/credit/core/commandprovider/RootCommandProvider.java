@@ -1,15 +1,12 @@
 package com.paypal.credit.core.commandprovider;
 
 import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
-import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.commandprovider.exceptions.MultipleCommandImplementationsException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
-import com.paypal.credit.core.utility.ParameterCheckUtility;
-import com.paypal.credit.core.utility.TypeAndInstanceUtility;
+import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.credit.utility.TypeAndInstanceUtility;
 
-import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

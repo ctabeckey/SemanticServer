@@ -3,8 +3,9 @@ package com.paypal.credit.workflowcommand;
 import com.paypal.credit.core.commandprocessor.AbstractCellaAwareCommand;
 import com.paypal.credit.core.commandprocessor.AsynchronouslyExecutableCommand;
 import com.paypal.credit.core.commandprocessor.CellaAwareCommand;
-import com.paypal.credit.core.utility.ParameterCheckUtility;
+import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
+import com.paypal.credit.workflow.Workflow;
 
 import java.util.concurrent.Callable;
 

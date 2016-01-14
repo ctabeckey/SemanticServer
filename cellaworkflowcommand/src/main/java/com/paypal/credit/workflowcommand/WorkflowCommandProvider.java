@@ -7,10 +7,13 @@ import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationExc
 import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
-import com.paypal.credit.core.utility.ParameterCheckUtility;
-import com.paypal.credit.core.utility.ThreeMemberCompoundKey;
+import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.credit.utility.ThreeMemberCompoundKey;
 import com.paypal.credit.workflow.RSProcessorContext;
-import com.paypal.credit.workflowcommand.workflow.schema.WorkflowType;
+import com.paypal.credit.workflow.Workflow;
+import com.paypal.credit.workflow.factory.WorkflowBuilder;
+import com.paypal.credit.workflow.factory.WorkflowReader;
+import com.paypal.credit.workflow.schema.WorkflowType;
 
 import javax.xml.bind.JAXBException;
 import java.net.MalformedURLException;

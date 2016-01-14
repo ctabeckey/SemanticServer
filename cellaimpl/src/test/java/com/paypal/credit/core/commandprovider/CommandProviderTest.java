@@ -7,15 +7,13 @@ import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.semantics.ProcessorBridgeMethodSemantics;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
-import com.paypal.credit.core.utility.URLFactory;
+import com.paypal.credit.utility.URLFactory;
 import com.paypal.credit.test.model.Authorization;
 import com.paypal.credit.test.model.AuthorizationId;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.lang.annotation.Annotation;
 
 /**
  * Created by cbeckey on 11/11/15.

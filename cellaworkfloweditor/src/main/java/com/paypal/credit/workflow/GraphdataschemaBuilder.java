@@ -1,13 +1,13 @@
 package com.paypal.credit.workflow;
 
-import com.paypal.credit.core.utility.ParameterCheckUtility;
+import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.json.Graphdataschema;
-import com.paypal.credit.workflowcommand.workflow.schema.BaseProcessorType;
-import com.paypal.credit.workflowcommand.workflow.schema.BusinessProcessorType;
-import com.paypal.credit.workflowcommand.workflow.schema.ConditionalControllerType;
-import com.paypal.credit.workflowcommand.workflow.schema.ParallelControllerType;
-import com.paypal.credit.workflowcommand.workflow.schema.SerialControllerType;
-import com.paypal.credit.workflowcommand.workflow.schema.WorkflowType;
+import com.paypal.credit.workflow.schema.BaseProcessorType;
+import com.paypal.credit.workflow.schema.BusinessProcessorType;
+import com.paypal.credit.workflow.schema.ConditionalControllerType;
+import com.paypal.credit.workflow.schema.ParallelControllerType;
+import com.paypal.credit.workflow.schema.SerialControllerType;
+import com.paypal.credit.workflow.schema.WorkflowType;
 
 import javax.xml.bind.JAXBElement;
 import java.util.ArrayList;

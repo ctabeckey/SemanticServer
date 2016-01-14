@@ -73,14 +73,30 @@
         <processorPath useClasspath="true" />
         <module name="processorprovider" />
       </profile>
+      <profile default="false" name="Annotation profile for workflowfactory" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="workflowfactory" />
+      </profile>
+      <profile default="false" name="Annotation profile for cellautil" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="cellautil" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cella-parent" target="1.5" />
       <module name="cellaimpl" target="8" />
+      <module name="cellautil" target="8" />
       <module name="cellaworkflowcommand" target="8" />
       <module name="cellaworkfloweditor" target="8" />
       <module name="processorprovider" target="8" />
       <module name="testprocessorprovider" target="8" />
+      <module name="workflowfactory" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
