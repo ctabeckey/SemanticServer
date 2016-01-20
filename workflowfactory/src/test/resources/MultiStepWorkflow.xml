@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
+        <constructor-arg name="processors">
+            <list>
+                <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype"/>
+                <bean class="com.paypal.credit.processors.ProcessorTwo" scope="prototype" />
+                <bean class="com.paypal.credit.workflow.RSParallelController" scope="prototype">
+                    <constructor-arg name="processors">
+                        <list>
+                            <bean class="com.paypal.credit.processors.ProcessorThree" scope="prototype" />
+                            <bean class="com.paypal.credit.processors.ProcessorFour" scope="prototype" />
+                        </list>
+                    </constructor-arg>
+                    <constructor-arg>
+                        <ref bean="defaultParallelProcesorThreadpool"/>
+                    </constructor-arg>
+                </bean>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg name="contextClass">
+            <value>com.paypal.credit.workflow.RSProcessorContext</value>
+        </constructor-arg>
+    </bean>
+
+
+</beans>
