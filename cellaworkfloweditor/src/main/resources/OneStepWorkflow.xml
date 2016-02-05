@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<workflow:workflow xmlns:workflow="http://credit.paypal.com/v1/schema/workflow" context-class="com.paypal.credit.workflowtest.AccountIdProcessorContext">
-    <workflow:process-list>
-        <workflow:business-processor id="One" impl="com.paypal.credit.processors.ProcessorOne"/>
-    </workflow:process-list>
-</workflow:workflow>

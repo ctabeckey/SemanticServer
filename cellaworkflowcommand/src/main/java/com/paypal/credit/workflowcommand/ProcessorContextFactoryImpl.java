@@ -15,19 +15,19 @@ public class ProcessorContextFactoryImpl
 
     /**
      *
-     * @param contextClassName
+     * @param contextClass
      * @param parameters
      * @return
      * @throws CommandInstantiationException
      */
     @Override
-    public RSProcessorContext createContext(final String contextClassName, final Object[] parameters) throws CommandInstantiationException {
+    public RSProcessorContext createContext(final Class<?> contextClass, final Object[] parameters) throws CommandInstantiationException {
         RSProcessorContext result = null;
 
-        if (contextClassName != null && !contextClassName.isEmpty()) {
+        if (contextClass != null) {
             try {
                 Class<?>[] parameterTypes = Utility.getParameterTypes(parameters);
-                Class<? extends RSProcessorContext> clazz = (Class<? extends RSProcessorContext>) Class.forName(contextClassName);
+                Class<? extends RSProcessorContext> clazz = (Class<? extends RSProcessorContext>) contextClass;
 
                 if (parameters == null || parameters.length == 0) {
                     result = (RSProcessorContext) clazz.newInstance();
@@ -45,7 +45,6 @@ public class ProcessorContextFactoryImpl
             } catch (InvocationTargetException |
                     InstantiationException |
                     IllegalAccessException |
-                    ClassNotFoundException |
                     ClassCastException |
                     NoContextConstructorFoundException x) {
                 x.printStackTrace();

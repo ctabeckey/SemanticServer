@@ -3,7 +3,7 @@ package com.paypal.credit.workflowcommand;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
-import com.paypal.credit.workflow.schema.WorkflowType;
+import com.paypal.credit.workflow.Workflow;
 
 /**
  * Created by cbeckey on 11/17/15.
@@ -11,16 +11,16 @@ import com.paypal.credit.workflow.schema.WorkflowType;
 public class WorkflowCommandInstantiationToken
         implements CommandInstantiationToken {
     private final CommandProvider provider;
-    private final WorkflowType workflowType;
+    private final Workflow workflow;
     private final RoutingToken routingToken;
     private final Class<?> resultType;
 
     WorkflowCommandInstantiationToken(final CommandProvider provider,
-                                      final WorkflowType workflowType,
+                                      final Workflow workflow,
                                       final RoutingToken routingToken,
                                       final Class<?> resultType) {
         this.provider = provider;
-        this.workflowType = workflowType;
+        this.workflow = workflow;
         this.routingToken = routingToken;
         this.resultType = resultType;
     }
@@ -30,8 +30,8 @@ public class WorkflowCommandInstantiationToken
         return this.provider;
     }
 
-    public WorkflowType getWorkflowType() {
-        return workflowType;
+    public Workflow getWorkflow() {
+        return workflow;
     }
 
     public RoutingToken getRoutingToken() {

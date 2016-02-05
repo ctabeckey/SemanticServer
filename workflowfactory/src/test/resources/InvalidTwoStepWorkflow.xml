@@ -1,9 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<workflow:workflow xmlns:workflow="http://credit.paypal.com/v1/schema/workflow"
-                   context-class="com.paypal.credit.workflowtest.AccountIdProcessorContext">
-    <workflow:process-list>
-        <!-- Invalid workflow because processor two needs things that process one provides -->
-        <workflow:business-processor id="Two" impl="com.paypal.credit.processors.ProcessorTwo"/>
-        <workflow:business-processor id="One" impl="com.paypal.credit.processors.ProcessorOne"/>
-    </workflow:process-list>
-</workflow:workflow>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
+        <constructor-arg name="processors">
+            <list>
+                <!-- Invalid workflow because processor two needs things that process one provides -->
+                <bean class="com.paypal.credit.processors.ProcessorTwo" scope="prototype" />
+                <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype" />
+            </list>
+        </constructor-arg>
+
+        <constructor-arg name="contextClass">
+            <value>com.paypal.credit.workflow.RSProcessorContext</value>
+        </constructor-arg>
+    </bean>
+</beans>

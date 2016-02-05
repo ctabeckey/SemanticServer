@@ -11,11 +11,9 @@ import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.utility.ThreeMemberCompoundKey;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
-import com.paypal.credit.workflow.factory.WorkflowBuilder;
-import com.paypal.credit.workflow.factory.WorkflowReader;
-import com.paypal.credit.workflow.schema.WorkflowType;
+import com.paypal.credit.workflow.factory.WorkflowFactory;
 
-import javax.xml.bind.JAXBException;
+import javax.inject.Inject;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -28,6 +26,17 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class WorkflowCommandProvider
 implements CommandProvider {
+    /**
+     *
+     */
+    public WorkflowCommandProvider() {
+
+    }
+
+    /** Inject a factory to create Workflow instances */
+    @Inject
+    private WorkflowFactory workflowFactory;
+
     /**
      * Cache the token instances. WorkflowType instances may require a resource
      * file or network access and are therefore expensive to acquire.
@@ -79,19 +88,13 @@ implements CommandProvider {
         );
         WorkflowCommandInstantiationToken token = tokenCache.get(key);
         if (token == null) {
-            WorkflowType workflowType = null;
+            Workflow workflowType = null;
             URL workflowUrl = getWorkflowDefinitionLocation(routingToken, commandClassSemantics);
 
             if (workflowUrl != null) {
-                try {
-                    workflowType = WorkflowReader.create(workflowUrl);
-                    token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
-                    tokenCache.put(key, token);
-                } catch (JAXBException e) {
-                    e.printStackTrace();
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                }
+                workflowType = workflowFactory.getOrCreate(workflowUrl);
+                token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
+                tokenCache.put(key, token);
             }
         }
 
@@ -118,21 +121,17 @@ implements CommandProvider {
         WorkflowCommandInstantiationToken token = (WorkflowCommandInstantiationToken)instantiationToken;
         Workflow workflow = workflowCache.get(token);
 
-        String contextClassName = token.getWorkflowType().getContextClass();
-        if (contextClassName == null || contextClassName.isEmpty()) {
-            contextClassName = RSProcessorContext.class.getName();
+        Class<?> contextClass = token.getWorkflow().getContextClass();
+        if (contextClass == null) {
+            contextClass = RSProcessorContext.class;
         }
 
-        RSProcessorContext processorContext = getProcessorContextFactory().createContext(contextClassName, parameters);
+        RSProcessorContext processorContext = getProcessorContextFactory().createContext(contextClass, parameters);
 
         if (workflow == null) {
             try {
 
-                workflow = new WorkflowBuilder()
-                        .withContextClass(processorContext.getClass())
-                        .withWorkflowType(token.getWorkflowType())
-                        .build();
-
+                workflow = token.getWorkflow();
                 workflow.validate();
                 workflowCache.put(token, workflow);
             } catch (Exception e) {
@@ -163,10 +162,7 @@ implements CommandProvider {
             String workflowIdentifier = String.format("%s_%s", command, productType);
 
             try {
-                URL url = new URL("rsc:workflows/" + workflowIdentifier + ".xml");
-                if (WorkflowReader.exists(url)) {
-                    return url;
-                }
+                return new URL("rsc:workflows/" + workflowIdentifier + ".xml");
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 return null;

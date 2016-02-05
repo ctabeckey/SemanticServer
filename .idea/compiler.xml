@@ -50,7 +50,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="cellaworkfloweditor" />
       </profile>
       <profile default="false" name="Annotation profile for ProcessorProvider" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -85,18 +84,41 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="cellautil" />
+      </profile>
+      <profile default="false" name="Annotation profile for lambdacommandexecutor" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="lambdacommandexecutor" />
+      </profile>
+      <profile default="false" name="Annotation profile for restxlator" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="restxlator" />
+      </profile>
+      <profile default="false" name="Annotation profile for degeneratecontext" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="degeneratecontext" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cella-parent" target="1.5" />
-      <module name="cellaimpl" target="8" />
+      <module name="cellaimpl" target="7" />
       <module name="cellautil" target="8" />
-      <module name="cellaworkflowcommand" target="8" />
+      <module name="cellaworkflowcommand" target="7" />
       <module name="cellaworkfloweditor" target="8" />
-      <module name="processorprovider" target="8" />
-      <module name="testprocessorprovider" target="8" />
-      <module name="workflowfactory" target="8" />
+      <module name="degeneratecontext" target="7" />
+      <module name="lambdacommandexecutor" target="7" />
+      <module name="processorprovider" target="7" />
+      <module name="restxlator" target="7" />
+      <module name="testprocessorprovider" target="7" />
+      <module name="workflowfactory" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.paypal.credit.workflowtest;
 
+import com.paypal.credit.TestConfiguration;
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
@@ -7,12 +8,15 @@ import com.paypal.credit.core.processorbridge.ProcessorBridgeProxyImplFactory;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
 import com.paypal.credit.utility.URLFactory;
+import com.paypal.credit.workflow.factory.WorkflowFactory;
 import com.paypal.credit.workflowtest.model.Authorization;
 import com.paypal.credit.workflowtest.model.AuthorizationId;
 import com.paypal.credit.workflowtest.processorbridge.WorkflowTestProcessorBridge;
 import com.paypal.credit.xactionctx.TransactionContextFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -21,6 +25,7 @@ import org.testng.annotations.Test;
 /**
  * Created by cbeckey on 12/7/15.
  */
+@ContextConfiguration(classes = TestConfiguration.class)
 public class FullStackTest {
     private Logger LOGGER = LoggerFactory.getLogger(FullStackTest.class);
     private Application application;

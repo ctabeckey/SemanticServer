@@ -39,7 +39,7 @@ public final class ReflectionUtilities {
         Object[] result = new Object[mappedProperties.length];
         for (int index = 0; index < mappedProperties.length; ++index) {
             try {
-                result[index] = mappedProperties[index].getReadMethod().invoke(settings, null);
+                result[index] = mappedProperties[index].getReadMethod().invoke(settings, (Object[])null);
             } catch (IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
                 return null;

@@ -13,6 +13,19 @@ import com.paypal.credit.workflow.subjects.AccountIdProcessorContext;
 public class ProcessorOne
     extends AbstractProcessor<AccountIdProcessorContext> {
 
+    private final String configOne;
+    private final int configTwo;
+
+    public ProcessorOne() {
+        this.configOne = "Hello World";
+        this.configTwo = 42;
+    }
+
+    public ProcessorOne(final String configOne, final int configTwo) {
+        this.configOne = configOne;
+        this.configTwo = configTwo;
+    }
+
     @Override
     public boolean process(final AccountIdProcessorContext rsProcessorContext) throws RSWorkflowException {
 

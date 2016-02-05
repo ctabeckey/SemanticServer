@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by cbeckey on 1/19/16.
  */
 @Configuration
-@Service (value = "workflowFactory")
-public class WorkflowFactory implements ApplicationContextAware {
+public class WorkflowFactory
+        implements ApplicationContextAware {
     /** */
     private final Map<URL, HierarchicalBeanFactory> workflowContexts = new ConcurrentHashMap<>();
 

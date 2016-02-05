@@ -1,0 +1,1 @@
+xjc -d ../java -p com.paypal.credit.ioc ctx.xsd

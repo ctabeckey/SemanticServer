@@ -4,10 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cella-parent.iml" filepath="$PROJECT_DIR$/cella-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/cellaimpl/cellaimpl.iml" filepath="$PROJECT_DIR$/cellaimpl/cellaimpl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cellautil/cellautil.iml" filepath="$PROJECT_DIR$/cellautil/cellautil.iml" />
       <module fileurl="file://$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" filepath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cellaworkfloweditor/cellaworkfloweditor.iml" filepath="$PROJECT_DIR$/cellaworkfloweditor/cellaworkfloweditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/degeneratecontext/degeneratecontext.iml" filepath="$PROJECT_DIR$/degeneratecontext/degeneratecontext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambdacommandexecutor/lambdacommandexecutor.iml" filepath="$PROJECT_DIR$/lambdacommandexecutor/lambdacommandexecutor.iml" />
       <module fileurl="file://$PROJECT_DIR$/processorprovider/processorprovider.iml" filepath="$PROJECT_DIR$/processorprovider/processorprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restxlator/restxlator.iml" filepath="$PROJECT_DIR$/restxlator/restxlator.iml" />
       <module fileurl="file://$PROJECT_DIR$/testprocessorprovider/testprocessorprovider.iml" filepath="$PROJECT_DIR$/testprocessorprovider/testprocessorprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/workflowfactory/workflowfactory.iml" filepath="$PROJECT_DIR$/workflowfactory/workflowfactory.iml" />
     </modules>
