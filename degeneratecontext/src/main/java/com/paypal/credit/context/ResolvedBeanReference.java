@@ -15,12 +15,10 @@ public class ResolvedBeanReference<T> extends AbstractBeanReference<T> {
     }
 
     /**
-     * @param ctx
-     * @param clazz
      * @return
      */
     @Override
-    T getBeanInstance(final Context ctx, final Class<T> clazz) throws ContextInitializationException {
+    T getBeanInstance() throws ContextInitializationException {
         return bean;
     }
 }

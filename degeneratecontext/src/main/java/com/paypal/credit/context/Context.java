@@ -27,7 +27,7 @@ public class Context {
     // ================================================================================
     private enum STATE{NEW, INITIALIZING, INITIALIZED, ERROR}
     private final BeansType beans;
-    private final Map<String, AbstractBeanReference> contextObjectsNameMap = new HashMap<>();
+    private Map<String, AbstractBeanReference> contextObjectsNameMap;
 
     private STATE state = STATE.NEW;
 
@@ -42,7 +42,7 @@ public class Context {
         this.state = STATE.INITIALIZING;
 
         BeanReferenceFactory beanFactory = new BeanReferenceFactory();
-        contextObjectsNameMap.putAll(beanFactory.create(this.beans));
+        contextObjectsNameMap = beanFactory.create(this.beans);
 
         this.state = STATE.INITIALIZED;
     }
@@ -86,6 +86,7 @@ public class Context {
             );
         }
 
+        // find the most specific bean in the context by type
         int minDistance = Integer.MAX_VALUE;
         AbstractBeanReference<T> selectedBeanReference = null;
         for (AbstractBeanReference<?> beanReference : contextObjectsNameMap.values()) {
@@ -97,10 +98,10 @@ public class Context {
                 beanDistance = Derivations.distance(bfr.getClazz(), beanClass);
             } else {
                 if (beanReference instanceof SimpleBeanReference){
-                    bean = ((SimpleBeanReference) beanReference).getBeanInstance(this, beanClass);
+                    bean = ((SimpleBeanReference) beanReference).getBeanInstance();
 
                 } else if (beanReference instanceof ResolvedBeanReference){
-                    bean = ((ResolvedBeanReference) beanReference).getBeanInstance(this, beanClass);
+                    bean = ((ResolvedBeanReference) beanReference).getBeanInstance();
                 }
 
                 beanDistance = Derivations.instanceDistance(bean, beanClass);
@@ -112,7 +113,7 @@ public class Context {
             }
         }
 
-        return (T)selectedBeanReference.getBeanInstance(this, beanClass);
+        return (T)selectedBeanReference.getBeanInstance();
     }
 
     /**
@@ -131,7 +132,7 @@ public class Context {
         }
 
         AbstractBeanReference<T> beanReference = contextObjectsNameMap.get(name);
-        T bean = beanReference.getBeanInstance(this, beanClass);
+        T bean = beanReference.getBeanInstance();
         if (beanClass != null && beanClass.isInstance(bean)) {
             return bean;
         }

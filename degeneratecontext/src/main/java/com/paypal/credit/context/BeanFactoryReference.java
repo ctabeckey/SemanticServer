@@ -15,7 +15,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
 
 /**
  * The base class for bean Factory References, that is any type created from
@@ -91,11 +90,12 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
         for (ConstructorArgType argument : orderedParameters) {
             if (argument.getBean() != null) {
                 AbstractBeanReference dependency = getBeanReferenceFactory().createBeanReference(argument.getBean());
-                parameters[index] = dependency;
+                Object beanInstance = dependency.getBeanInstance();
+                parameters[index] = beanInstance;
 
             } else if (argument.getRef() != null) {
                 AbstractBeanReference ref = getBeanReferenceFactory().createBeanReference(argument.getRef());
-                parameters[index] = ref;
+                parameters[index] = ref.getBeanInstance();
 
             } else if (argument.getValue() != null) {
                 parameters[index] = ContextUtility.createInstanceFromStringValue(parameterTypes[index], argument.getValue());

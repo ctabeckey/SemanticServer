@@ -18,10 +18,8 @@ abstract class AbstractBeanReference<T> {
 
     /**
      *
-     * @param ctx
-     * @param clazz
      * @return
      */
-    abstract T getBeanInstance(Context ctx, Class<T> clazz) throws ContextInitializationException;
+    abstract T getBeanInstance() throws ContextInitializationException;
 
 }

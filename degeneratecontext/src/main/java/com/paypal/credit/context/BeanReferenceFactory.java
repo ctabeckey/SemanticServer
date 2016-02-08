@@ -76,7 +76,16 @@ class BeanReferenceFactory {
      */
     AbstractBeanReference createBeanReference(final ReferenceType reference)
             throws ContextInitializationException {
-        SimpleBeanReference beanReference = new SimpleBeanReference(reference);
+        SimpleBeanReference beanReference = new SimpleBeanReference(this, reference);
         return beanReference;
+    }
+
+    /**
+     *
+     * @param identifier
+     * @return
+     */
+    public AbstractBeanReference findBeanReference(final String identifier) {
+        return this.beanReferences.get(identifier);
     }
 }

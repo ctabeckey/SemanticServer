@@ -11,21 +11,31 @@ import com.paypal.credit.context.xml.ReferenceType;
 final class SimpleBeanReference<T> extends AbstractBeanReference<T> {
     /** */
     final private ReferenceType referenceType;
+    final private BeanReferenceFactory beanReferenceFactory;
 
     /**
+     * @param beanReferenceFactory
      * @param referenceType
      */
-    protected SimpleBeanReference(final ReferenceType referenceType) throws ContextInitializationException {
+    protected SimpleBeanReference(final BeanReferenceFactory beanReferenceFactory, final ReferenceType referenceType) throws ContextInitializationException {
+        this.beanReferenceFactory = beanReferenceFactory;
         this.referenceType = referenceType;
     }
 
     /**
-     * @param ctx
-     * @param clazz
+     *
      * @return
      */
-    @Override
-    T getBeanInstance(final Context ctx, final Class<T> clazz) throws ContextInitializationException {
-        return ctx.getBean(this.referenceType.getBean(), clazz);
+    public String getReferencedBeanIdentifier() {
+        return this.referenceType.getBean();
     }
+
+    /**
+     * @return
+     */
+    T getBeanInstance() throws ContextInitializationException {
+        AbstractBeanReference beanRef = beanReferenceFactory.findBeanReference(getReferencedBeanIdentifier());
+        return (T) beanRef.getBeanInstance();
+    }
+
 }

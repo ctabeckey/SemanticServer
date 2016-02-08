@@ -24,8 +24,12 @@ public class SingletonBeanFactoryReference<T> extends BeanFactoryReference<T> {
         super(beanReferenceFactory, beanType);
     }
 
-    @Override
-    T getBeanInstance(final Context ctx, final Class clazz) throws ContextInitializationException {
+    /**
+     *
+     * @return
+     * @throws ContextInitializationException
+     */
+    T getBeanInstance() throws ContextInitializationException {
         singletonInstantiationLock.lock();
         try {
             if (singleton == null) {

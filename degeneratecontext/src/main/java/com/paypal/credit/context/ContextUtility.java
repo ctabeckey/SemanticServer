@@ -122,6 +122,16 @@ public class ContextUtility {
                         return 2;
                     } else if (ctor2.getParameterTypes()[index].isAssignableFrom(ctor1.getParameterTypes()[index])) {
                         return -2;
+
+                    } else if (String.class.equals(ctor1.getParameterTypes()[index])
+                        && !String.class.equals(ctor2.getParameterTypes()[index])) {
+                        // one of two odd cases where a constructor may take a type that can be constructed
+                        // using a valueOf(String) method. Constructors taking a String should be sorted later
+                        // than an otherwise equivalent constructor (taking an Integer for instance)
+                        return 3;
+                    } else if (String.class.equals(ctor2.getParameterTypes()[index])
+                            && !String.class.equals(ctor1.getParameterTypes()[index])) {
+                        return -3;
                     }
                 }
                 return 0;
@@ -138,42 +148,52 @@ public class ContextUtility {
     }
 
     /**
+     * Given a constructor and an ordered list of parameters (from the context XML),
+     * determine whether the constructor could be called to instantiate the bean.
      *
      * @param ctor
-     * @param orderedParameters
+     * @param orderedArguments
      * @return
      */
-    static boolean isApplicableConstructor(final Constructor<?> ctor, final List<ConstructorArgType> orderedParameters)
+    static boolean isApplicableConstructor(final Constructor<?> ctor, final List<ConstructorArgType> orderedArguments)
             throws BeanClassNotFoundException {
-        if (ctor.getParameterTypes().length != (orderedParameters == null ? 0 : orderedParameters.size())) {
+        if (ctor.getParameterTypes().length != (orderedArguments == null ? 0 : orderedArguments.size())) {
             return false;
         }
 
+        // Iterate through each parameter in the given constructor
+        // and determine whether the correlated ordered argument can be used in that parameter
         for (int index = 0; index < ctor.getParameterTypes().length; ++index) {
-            Class<?> actualParameterType = ctor.getParameterTypes()[index];
+            // Actual parameter type is the type of the current-index parameter
+            // within the constructor.
+            Class<?> constructorParameterType = ctor.getParameterTypes()[index];
 
-            ConstructorArgType argType = orderedParameters.get(index);
-            if (argType.getBean() != null) {
-                Class<?> requiredParameterType = null;
+            ConstructorArgType actualArgType = orderedArguments.get(index);
+            if (actualArgType.getBean() != null) {
+                Class<?> actualArgumentType = null;
                 try {
-                    requiredParameterType = Class.forName(argType.getBean().getClazz());
+                    actualArgumentType = Class.forName(actualArgType.getBean().getClazz());
                 } catch (ClassNotFoundException cnfX) {
-                    throw new BeanClassNotFoundException(argType.getBean().getClazz());
+                    throw new BeanClassNotFoundException(actualArgType.getBean().getClazz());
                 }
-                if (!requiredParameterType.isAssignableFrom(actualParameterType)) {
+                if (!actualArgumentType.isAssignableFrom(constructorParameterType)) {
                     return false;
                 }
-            } else if (argType.getList() != null) {
-                if (Collection.class.isAssignableFrom(actualParameterType)) {
-                    TypeVariable<? extends Class<?>>[] actualTypeParameters = actualParameterType.getTypeParameters();
+            } else if (actualArgType.getList() != null) {
+                if (Collection.class.isAssignableFrom(constructorParameterType)) {
+                    TypeVariable<? extends Class<?>>[] actualTypeParameters = constructorParameterType.getTypeParameters();
                     // should do some validation here on the type parameters, but this is a start
-                    return true;
+                    continue;
                 } else {
                     return false;
                 }
-            } else if (argType.getValue() != null) {
+            } else if (actualArgType.getValue() != null) {
                 try {
-                    createInstanceFromStringValue(actualParameterType, argType.getValue());
+                    Object parameterValue = createInstanceFromStringValue(constructorParameterType, actualArgType.getValue());
+                    if (!constructorParameterType.isInstance(parameterValue)) {
+                        return false;
+                    }
+                    continue;
                 } catch (CannotCreateObjectFromStringException e) {
                     return false;
                 }
@@ -196,17 +216,15 @@ public class ContextUtility {
             throws CannotCreateObjectFromStringException {
         Object[] parameters = new Object[]{value};
 
+        if (String.class.equals(clazz)) {
+            return (T)value;
+        }
+
         try {
-            try {
-                // look for a 'valueOf' method
-                Method valueOfMethod = clazz.getMethod("valueOf", SINGLE_STRING_PARAMETER);
-                return (T)valueOfMethod.invoke(null, parameters);
-            } catch (NoSuchMethodException e) {
-                // ignore the exception and look for a constructor
-                Constructor<?> ctor = clazz.getDeclaredConstructor(SINGLE_STRING_PARAMETER);
-                return (T)ctor.newInstance(parameters);
-            }
-        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException x) {
+            // look for a 'valueOf' method
+            Method valueOfMethod = clazz.getMethod("valueOf", SINGLE_STRING_PARAMETER);
+            return (T)valueOfMethod.invoke(null, parameters);
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException x) {
             throw new CannotCreateObjectFromStringException(clazz, x);
         }
     }

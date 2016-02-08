@@ -1,0 +1,6 @@
+<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
+    <bean id="beanOne" class="com.paypal.credit.context.ConstructorTestSubject" scope="singleton">
+    </bean>
+    <bean id="beanTwo" class="com.paypal.credit.context.ConstructorTestSubject" scope="singleton">
+    </bean>
+</beans>

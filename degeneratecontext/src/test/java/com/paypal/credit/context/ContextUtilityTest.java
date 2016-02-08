@@ -35,7 +35,6 @@ public class ContextUtilityTest {
                 new Object[]{Integer.class, "-1", new Integer(-1)},
                 new Object[]{Integer.class, "0", new Integer(0)},
                 new Object[]{Float.class, "1.0", new Float(1.0)},
-                new Object[]{Finteger.class, "1", new Finteger("1")},
         };
     }
 
@@ -43,30 +42,6 @@ public class ContextUtilityTest {
     public void testCreateInstanceFromStringValue(final Class<?> clazz, final String value, final Object expectedValue)
             throws CannotCreateObjectFromStringException {
         Assert.assertEquals(ContextUtility.createInstanceFromStringValue(clazz, value), expectedValue);
-    }
-
-    /**
-     * A simple class to test instance creation from a constructor.
-     */
-    public static class Finteger {
-        private final Integer wrapped;
-
-        public Finteger(final String s) throws NumberFormatException {
-            wrapped = new Integer(s);
-        }
-
-        @Override
-        public boolean equals(final Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Finteger finteger = (Finteger) o;
-            return Objects.equals(wrapped, finteger.wrapped);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(wrapped);
-        }
     }
 
     // ====================================================================================
@@ -133,6 +108,13 @@ public class ContextUtilityTest {
                         ConstructorTestSubject.class,
                         Arrays.asList(TestUtility.createConstructorArgType("1", null)),
                         ConstructorTestSubject.class.getDeclaredConstructor(new Class<?>[]{Integer.class})
+                },
+                new Object[]{
+                        ConstructorTestSubject.class,
+                        Arrays.asList(TestUtility.createConstructorArgType(
+                                TestUtility.createBeanType(ConstructorTestSubject.class.getName(), null, ScopeType.SINGLETON),
+                                null)),
+                        ConstructorTestSubject.class.getDeclaredConstructor(new Class<?>[]{ConstructorTestSubject.class})
                 }
         };
     }

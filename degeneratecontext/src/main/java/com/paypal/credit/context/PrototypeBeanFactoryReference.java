@@ -28,13 +28,11 @@ public class PrototypeBeanFactoryReference<T> extends BeanFactoryReference<T> {
 
     /**
      *
-     * @param ctx
-     * @param clazz
      * @return
      * @throws ContextInitializationException
      */
     @Override
-    T getBeanInstance(final Context ctx, final Class clazz) throws ContextInitializationException {
+    T getBeanInstance() throws ContextInitializationException {
         T instance = createBeanInstance();
         return instance;
     }
