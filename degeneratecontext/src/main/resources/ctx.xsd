@@ -9,6 +9,7 @@
     <xs:element name="value" type="xs:string"/>
     <xs:element name="bean" type="workspace:BeanType"/>
     <xs:element name="list" type="workspace:ListType"/>
+    <xs:element name="ref" type="workspace:ReferenceType"/>
 
     <xs:complexType name="BeansType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -32,8 +33,13 @@
                 <xs:element ref="workspace:bean"/>
                 <xs:element ref="workspace:value"/>
                 <xs:element ref="workspace:list"/>
+                <xs:element ref="workspace:ref"/>
             </xs:choice>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReferenceType">
+        <xs:attribute name="bean" type="xs:string"/>
     </xs:complexType>
 
     <xs:complexType name="ConstructorArgType">
@@ -41,6 +47,7 @@
             <xs:element ref="workspace:bean"/>
             <xs:element ref="workspace:value"/>
             <xs:element ref="workspace:list"/>
+            <xs:element ref="workspace:ref"/>
         </xs:choice>
         <xs:attribute name="index" type="xs:int"/>
     </xs:complexType>
