@@ -2,11 +2,19 @@ package com.paypal.credit.context;
 
 import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.context.exceptions.GenericContextInitializationException;
+import com.paypal.credit.context.exceptions.InvalidElementTypeException;
+import com.paypal.credit.context.exceptions.UnknownCollectionTypeException;
 import com.paypal.credit.context.xml.BeanType;
 import com.paypal.credit.context.xml.BeansType;
+import com.paypal.credit.context.xml.ListType;
 import com.paypal.credit.context.xml.ReferenceType;
 
+import java.lang.reflect.Array;
+import java.lang.reflect.TypeVariable;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -88,4 +96,69 @@ class BeanReferenceFactory {
     public AbstractBeanReference findBeanReference(final String identifier) {
         return this.beanReferences.get(identifier);
     }
+
+    /**
+     *
+     *
+     * @param parameterType
+     * @param list
+     * @return
+     */
+    Object createListElementArguments(final Class<?> parameterType, final ListType list)
+            throws ContextInitializationException {
+
+        Class<?> componentType = Object.class;
+        if (parameterType.isArray()) {
+            componentType = parameterType.getComponentType();
+        } else if (Collection.class.isInstance(parameterType)) {
+            TypeVariable<? extends Class<?>>[] typeParameters = parameterType.getTypeParameters();
+            if (typeParameters == null || typeParameters.length == 0) {
+                componentType = Object.class;
+            } else if (typeParameters.length > 1){
+                throw new UnknownCollectionTypeException(parameterType);
+            } else {
+                componentType = typeParameters[0].getGenericDeclaration();
+            }
+        }
+        List result = new ArrayList<>();
+
+        for (Object argumentType : list.getBeanOrValueOrList()) {
+            Object argValue = null;
+
+            if (argumentType instanceof BeanType) {
+                AbstractBeanReference dependency = createBeanReference((BeanType) argumentType);
+                Object beanInstance = dependency.getBeanInstance();
+                argValue = beanInstance;
+
+            } else if (argumentType instanceof ListType) {
+                Object listElements = createListElementArguments(String.class, (ListType) argumentType);
+                argValue = listElements;
+
+            } else if (argumentType instanceof ReferenceType) {
+                AbstractBeanReference ref = createBeanReference((ReferenceType) argumentType);
+                argValue = ref.getBeanInstance();
+
+            } else {        // argumentType is String (static value)
+                argValue = argumentType.toString();
+            }
+
+            if (!componentType.isInstance(argValue)) {
+                throw new InvalidElementTypeException(componentType, argValue);
+            }
+
+            result.add(argValue);
+        }
+
+        if (parameterType.isArray()) {
+            Object arrayResult = Array.newInstance(componentType, result.size());
+            int index = 0;
+            for (Object element : result) {
+                Array.set(arrayResult, index++, element);
+            }
+            return arrayResult;
+        } else {
+            return result;
+        }
+    }
+
 }

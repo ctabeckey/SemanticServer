@@ -10,12 +10,14 @@ public class ConstructorTestSubject {
     private final Integer int1;
     private final Number num1;
     private final ConstructorTestSubject child;
+    private final String[] strings1;
 
     public ConstructorTestSubject() {
         string1 = null;
         int1 = null;
         num1 = null;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(String val1) {
@@ -23,6 +25,7 @@ public class ConstructorTestSubject {
         int1 = null;
         num1 = null;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(Number val1) {
@@ -30,6 +33,7 @@ public class ConstructorTestSubject {
         int1 = null;
         num1 = val1;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(Integer val1) {
@@ -37,6 +41,7 @@ public class ConstructorTestSubject {
         int1 = val1;
         num1 = null;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(String val1, Number val2) {
@@ -44,6 +49,7 @@ public class ConstructorTestSubject {
         int1 = null;
         num1 = val2;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(String val1, Integer val2) {
@@ -51,6 +57,7 @@ public class ConstructorTestSubject {
         int1 = val2;
         num1 = null;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(String val1, Integer val2, Number val3) {
@@ -58,6 +65,7 @@ public class ConstructorTestSubject {
         int1 = val2;
         num1 = val3;
         child = null;
+        strings1 = null;
     }
 
     public ConstructorTestSubject(ConstructorTestSubject child) {
@@ -65,6 +73,15 @@ public class ConstructorTestSubject {
         int1 = null;
         num1 = null;
         this.child = child;
+        strings1 = null;
+    }
+
+    public ConstructorTestSubject(final String[] strings) {
+        string1 = null;
+        int1 = null;
+        num1 = null;
+        this.child = null;
+        strings1 = strings;
     }
 
     public String getString1() {
@@ -81,5 +98,9 @@ public class ConstructorTestSubject {
 
     public ConstructorTestSubject getChild() {
         return child;
+    }
+
+    public String[] getStrings() {
+        return this.strings1;
     }
 }

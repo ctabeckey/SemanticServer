@@ -121,6 +121,40 @@ public class ContextConstructionTest {
         }
     }
 
+    // ================================================================================================
+    // Test contexts with child dependencies in constructor args
+    // ================================================================================================
+    @DataProvider
+    public Object[][] contextListsTestDataProvider() {
+        return new Object[][]{
+                new Object[]{
+                        "OneBeanWithListContext.xml",
+                        new BeanSpec("beanOne", com.paypal.credit.context.ConstructorTestSubject.class, ScopeType.SINGLETON),
+                        "getStrings",
+                        new String[]{"42", "655321"}
+                },
+        };
+    }
+
+    @Test(dataProvider = "contextListsTestDataProvider")
+    public void createListsTest(final String resourceName, final BeanSpec expectedTopLevelBean,
+                                final String accessorMethodName, final Object expectedValues)
+            throws JAXBException, ContextInitializationException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Context ctx = Context.create(getClass().getClassLoader().getResourceAsStream(resourceName));
+        Assert.assertNotNull(ctx);
+
+        Object topLevelBean = ctx.getBean(expectedTopLevelBean.getIdentifier(), expectedTopLevelBean.getType());
+        Assert.assertNotNull(topLevelBean);
+
+        if (expectedValues != null) {
+            Method accessorMethod = topLevelBean.getClass().getMethod(accessorMethodName, null);
+            Object values = accessorMethod.invoke(topLevelBean, null);
+            Class<?> expectedValueType = expectedValues.getClass();
+            Assert.assertTrue(expectedValueType.isInstance(values), "result and expected types are inconsistent.");
+            Assert.assertEquals(values, expectedValues);
+        }
+    }
+
     /**
      *
      */

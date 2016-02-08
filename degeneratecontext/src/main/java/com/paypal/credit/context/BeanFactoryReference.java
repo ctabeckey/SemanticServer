@@ -101,16 +101,9 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
                 parameters[index] = ContextUtility.createInstanceFromStringValue(parameterTypes[index], argument.getValue());
 
             } else if (argument.getList() != null) {
-                try {
-                    Collection<Object> list = (Collection)parameterTypes[index].newInstance();
-                    List listElements = ContextUtility.createListElementArguments(argument.getList(), Object.class);
-                    for(Object listElement : listElements) {
-                        list.add(listElement);
-                    }
-                    parameters[index] = list;
-                } catch (InstantiationException | IllegalAccessException e) {
-                    throw new FailedToCreateCollectionException(parameterTypes[index]);
-                }
+                Object listElements =
+                        getBeanReferenceFactory().createListElementArguments(parameterTypes[index], argument.getList());
+                parameters[index] = listElements;
 
             }
             ++index;

@@ -22,32 +22,6 @@ import java.util.TreeSet;
  * A collection of utility methods, usually used during context instantiation.
  */
 public class ContextUtility {
-    /**
-     *
-     * @param list
-     * @param elementType
-     * @return
-     */
-    static <T> List<T> createListElementArguments(final ListType list, final Class<T> elementType) {
-        List<T> result = new ArrayList<T>();
-
-        int index = 0;
-        for (Object argument : list.getBeanOrValueOrList()) {
-            if (argument instanceof BeanType) {
-
-            } else if (argument instanceof ListType) {
-
-            } else if (argument instanceof String) {
-
-            } else {
-                // WTF!
-            }
-            ++index;
-        }
-
-        return result;
-    }
-
 
     /**
      *
@@ -182,7 +156,11 @@ public class ContextUtility {
             } else if (actualArgType.getList() != null) {
                 if (Collection.class.isAssignableFrom(constructorParameterType)) {
                     TypeVariable<? extends Class<?>>[] actualTypeParameters = constructorParameterType.getTypeParameters();
-                    // should do some validation here on the type parameters, but this is a start
+                    // TODO: validation here on the type parameters
+                    continue;
+                } else if (constructorParameterType.isArray()){
+                    Class<?> componentClazz = constructorParameterType.getComponentType();
+                    // TODO: validation here on the type parameters
                     continue;
                 } else {
                     return false;
