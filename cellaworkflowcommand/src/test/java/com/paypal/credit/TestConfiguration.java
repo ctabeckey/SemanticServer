@@ -1,5 +1,6 @@
 package com.paypal.credit;
 
+import com.paypal.credit.workflow.factory.IocWorkflowFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TestConfiguration {
     @Bean
-    public WorkflowFactory workflowFactory() {
-        return new WorkflowFactory();
+    public IocWorkflowFactory workflowFactory() {
+        return new IocWorkflowFactory();
     }
 
 }

@@ -1,5 +1,6 @@
 package com.paypal.credit.workflowcommand;
 
+import com.paypal.credit.workflow.factory.IocWorkflowFactory;
 import com.paypal.credit.workflow.threadpool.RSThreadPoolExecutor;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -26,8 +27,8 @@ public class SpringConfiguration
     }
 
     @Bean(name="workflowFactory")
-    public WorkflowFactory workflowFactory() {
-        return new WorkflowFactory();
+    public IocWorkflowFactory workflowFactory() {
+        return new IocWorkflowFactory();
     }
 
     @Override

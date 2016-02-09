@@ -1,5 +1,6 @@
 package com.paypal.credit.workflowcommand;
 
+import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
@@ -11,7 +12,13 @@ import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.utility.ThreeMemberCompoundKey;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
+import com.paypal.credit.workflow.exceptions.WorkflowContextException;
+import com.paypal.credit.workflow.factory.IocWorkflowFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import javax.xml.bind.JAXBException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -24,6 +31,9 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class WorkflowCommandProvider
 implements CommandProvider {
+    /** */
+    private final static Logger LOGGER = LoggerFactory.getLogger(WorkflowCommandProvider.class);
+
     /**
      *
      */
@@ -32,7 +42,7 @@ implements CommandProvider {
     }
 
     /** Inject a factory to create Workflow instances */
-    private WorkflowFactory workflowFactory = new WorkflowFactory();
+    private IocWorkflowFactory workflowFactory = new IocWorkflowFactory();
 
     /**
      * Cache the token instances. WorkflowType instances may require a resource
@@ -89,9 +99,13 @@ implements CommandProvider {
             URL workflowUrl = getWorkflowDefinitionLocation(routingToken, commandClassSemantics);
 
             if (workflowUrl != null) {
-                workflowType = workflowFactory.getOrCreate(workflowUrl);
-                token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
-                tokenCache.put(key, token);
+                try {
+                    workflowType = workflowFactory.getOrCreate(workflowUrl);
+                    token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
+                    tokenCache.put(key, token);
+                } catch (IOException | JAXBException| ContextInitializationException | WorkflowContextException x) {
+                    LOGGER.error("Error when finding command", x);
+                }
             }
         }
 

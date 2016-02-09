@@ -55,17 +55,16 @@ public class FullStackTest {
      * @throws ProcessorBridgeInstantiationException
      */
     @Test
-    public void testSynchronousCall() {
+    public void testSynchronousGetCall() {
         FacadeTransactionContext ctx = TransactionContextFactory.get(FacadeTransactionContext.class);
 
         ctx.setRoutingToken(new ProductTypeRoutingToken("usains"));
         AuthorizationId id = new AuthorizationId("655321");
         Authorization authorization = bridge.getAuthorization(id);
-
     }
 
     @Test
-    public void testAsynchronousCall() {
+    public void testSynchronousDeleteCall() {
         FacadeTransactionContext ctx = TransactionContextFactory.get(FacadeTransactionContext.class);
 
         ctx.setRoutingToken(new ProductTypeRoutingToken("usains"));
@@ -74,7 +73,16 @@ public class FullStackTest {
     }
 
     @Test
-    public void testAsynchronousCallWithCallback() {
+    public void testAsynchronousDeleteCall() {
+        FacadeTransactionContext ctx = TransactionContextFactory.get(FacadeTransactionContext.class);
+
+        ctx.setRoutingToken(new ProductTypeRoutingToken("usains"));
+        AuthorizationId id = new AuthorizationId("655321");
+        bridge.deleteAuthorization(id);
+    }
+
+    @Test
+    public void testAsynchronousGetCallWithCallback() {
         FacadeTransactionContext ctx = TransactionContextFactory.get(FacadeTransactionContext.class);
 
         ctx.setRoutingToken(new ProductTypeRoutingToken("usains"));
