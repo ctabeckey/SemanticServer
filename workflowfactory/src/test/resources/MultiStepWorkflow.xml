@@ -1,8 +1,5 @@
-<beansType xmlns="http://www.springframework.org/schema/beansType"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beansType http://www.springframework.org/schema/beansType/spring-beansType-3.0.xsd">
-
-    <!--
+<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
+<!--
     For a Spring configuration to be a Workflow definition it must have:
     1.) a bean named "workflow" whose type is assignable to com.paypal.credit.workflow.Workflow
     2.) the "workflow" bean should be scoped as a singleton, only one instance will be created anyway
@@ -16,35 +13,35 @@
     a default process threadpool.
     -->
     <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
-        <constructor-arg name="processors">
+        <constructor-arg>
             <list>
                 <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype">
-                    <constructor-arg name="configOne">
+                    <constructor-arg>
                         <value>Whadever</value>
                     </constructor-arg>
-                    <constructor-arg name="configTwo">
+                    <constructor-arg>
                         <value>999</value>
                     </constructor-arg>
                 </bean>
                 <bean class="com.paypal.credit.processors.ProcessorTwo" scope="prototype" />
                 <bean class="com.paypal.credit.workflow.RSParallelController" scope="prototype">
-                    <constructor-arg name="processors">
+                    <constructor-arg>
                         <list>
                             <bean class="com.paypal.credit.processors.ProcessorThree" scope="prototype" />
                             <bean class="com.paypal.credit.processors.ProcessorFour" scope="prototype" />
                         </list>
                     </constructor-arg>
                     <constructor-arg>
-                        <ref bean="defaultParallelProcesorThreadpool"/>
+                        <ref bean="defaultThreadPool"/>
                     </constructor-arg>
                 </bean>
             </list>
         </constructor-arg>
 
-        <constructor-arg name="contextClass">
-            <value>com.paypal.credit.workflow.RSProcessorContext</value>
+        <constructor-arg>
+            <value>com.paypal.credit.workflow.subjects.AccountIdProcessorContext</value>
         </constructor-arg>
     </bean>
 
 
-</beansType>
+</beans>

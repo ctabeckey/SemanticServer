@@ -35,7 +35,7 @@ final class SimpleBeanReference<T> extends AbstractBeanReference<T> {
      */
     T getBeanInstance() throws ContextInitializationException {
         AbstractBeanReference beanRef = contextFactory.findBeanReference(getReferencedBeanIdentifier());
-        return (T) beanRef.getBeanInstance();
+        return (T) (beanRef == null ? null : beanRef.getBeanInstance());
     }
 
 }

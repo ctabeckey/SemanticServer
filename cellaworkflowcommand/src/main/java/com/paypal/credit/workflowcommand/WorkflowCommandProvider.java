@@ -11,7 +11,6 @@ import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.utility.ThreeMemberCompoundKey;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
-import com.paypal.credit.workflow.factory.WorkflowFactory;
 
 import java.net.MalformedURLException;
 import java.net.URL;

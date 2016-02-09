@@ -83,7 +83,7 @@ public class ContextFactory {
     }
 
     /**
-     * 
+     *
      * @param externalBeanDefinitions
      * @return
      * @throws ContextInitializationException

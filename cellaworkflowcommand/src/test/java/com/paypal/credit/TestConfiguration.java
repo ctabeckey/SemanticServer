@@ -1,6 +1,5 @@
 package com.paypal.credit;
 
-import com.paypal.credit.workflow.factory.WorkflowFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -8,7 +8,7 @@
         </constructor-arg>
 
         <constructor-arg index="1">
-            <value>com.paypal.credit.workflow.RSProcessorContext</value>
+            <value>com.paypal.credit.workflow.subjects.AccountIdProcessorContext</value>
         </constructor-arg>
     </bean>
 </beans>

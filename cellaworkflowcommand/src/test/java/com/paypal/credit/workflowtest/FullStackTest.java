@@ -1,6 +1,5 @@
 package com.paypal.credit.workflowtest;
 
-import com.paypal.credit.TestConfiguration;
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
@@ -8,7 +7,6 @@ import com.paypal.credit.core.processorbridge.ProcessorBridgeProxyImplFactory;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
 import com.paypal.credit.utility.URLFactory;
-import com.paypal.credit.workflow.factory.WorkflowFactory;
 import com.paypal.credit.workflowtest.model.Authorization;
 import com.paypal.credit.workflowtest.model.AuthorizationId;
 import com.paypal.credit.workflowtest.processorbridge.WorkflowTestProcessorBridge;

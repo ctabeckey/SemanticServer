@@ -1,1 +1,0 @@
-xjc -d ../java -p com.paypal.credit.workflow.schema workflow.xsd

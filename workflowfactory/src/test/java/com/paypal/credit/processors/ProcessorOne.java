@@ -21,9 +21,9 @@ public class ProcessorOne
         this.configTwo = 42;
     }
 
-    public ProcessorOne(final String configOne, final int configTwo) {
+    public ProcessorOne(final String configOne, final Integer configTwo) {
         this.configOne = configOne;
-        this.configTwo = configTwo;
+        this.configTwo = configTwo.intValue();
     }
 
     @Override
