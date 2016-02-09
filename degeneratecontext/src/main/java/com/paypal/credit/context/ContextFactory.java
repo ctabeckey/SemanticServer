@@ -70,16 +70,31 @@ public class ContextFactory {
 
     /**
      *
+     * @param externalBeanDefinition
+     * @return
+     * @throws ContextInitializationException
+     */
+    public ContextFactory withExternalBeanDefinition(final ExternalBeanDefinition<?> externalBeanDefinition)
+            throws ContextInitializationException {
+        if (externalBeanDefinition != null) {
+            withBean(externalBeanDefinition.getIdentifier(), new ResolvedBeanReference(externalBeanDefinition.getBeanInstance()));
+        }
+        return this;
+    }
+
+    /**
+     * 
      * @param externalBeanDefinitions
+     * @return
+     * @throws ContextInitializationException
      */
     public ContextFactory withExternalBeanDefinitions(final ExternalBeanDefinition<?>[] externalBeanDefinitions)
             throws ContextInitializationException {
         if (externalBeanDefinitions != null) {
             for (ExternalBeanDefinition<?> externalBeanDefinition : externalBeanDefinitions) {
-                withBean(externalBeanDefinition.getIdentifier(), new ResolvedBeanReference(externalBeanDefinition.getBeanInstance()));
+                withExternalBeanDefinition(externalBeanDefinition);
             }
         }
-
         return this;
     }
 
