@@ -1,16 +1,14 @@
-<beansType xmlns="http://www.springframework.org/schema/beansType"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beansType http://www.springframework.org/schema/beansType/spring-beansType-3.0.xsd">
+<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
 
     <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
-        <constructor-arg name="processors">
+        <constructor-arg index="0">
             <list>
                 <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype" />
             </list>
         </constructor-arg>
 
-        <constructor-arg name="contextClass">
+        <constructor-arg index="1">
             <value>com.paypal.credit.workflow.RSProcessorContext</value>
         </constructor-arg>
     </bean>
-</beansType>
+</beans>

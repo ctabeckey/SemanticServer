@@ -221,20 +221,10 @@ public class ContextFactory {
      */
     Object createListElementArguments(final Class<?> parameterType, final ListType list)
             throws ContextInitializationException {
+        // try to determine the type of the elements from the parameterType
+        // for arrays this is dependable, for Collection it depends on compiler options
+        Class<?> componentType = extractElementType(parameterType);
 
-        Class<?> componentType = Object.class;
-        if (parameterType.isArray()) {
-            componentType = parameterType.getComponentType();
-        } else if (Collection.class.isInstance(parameterType)) {
-            TypeVariable<? extends Class<?>>[] typeParameters = parameterType.getTypeParameters();
-            if (typeParameters == null || typeParameters.length == 0) {
-                componentType = Object.class;
-            } else if (typeParameters.length > 1){
-                throw new UnknownCollectionTypeException(parameterType);
-            } else {
-                componentType = typeParameters[0].getGenericDeclaration();
-            }
-        }
         List result = new ArrayList<>();
 
         for (Object argumentType : list.getBeanOrValueOrList()) {
@@ -254,7 +244,7 @@ public class ContextFactory {
                 argValue = ref.getBeanInstance();
 
             } else {        // argumentType is String (static value)
-                argValue = argumentType.toString();
+                argValue = ContextUtility.createInstanceFromStringValue(componentType, argumentType.toString());
             }
 
             if (!componentType.isInstance(argValue)) {
@@ -269,6 +259,32 @@ public class ContextFactory {
         } else {
             return result;
         }
+    }
+
+    /**
+     * Try to determine the type of the elements from the parameterType
+     * For arrays this is dependable, for Collection it depends on compiler options.
+     *
+     * @param parameterType
+     * @return
+     * @throws UnknownCollectionTypeException
+     */
+    private Class<?> extractElementType(final Class<?> parameterType) throws UnknownCollectionTypeException {
+        Class<?> componentType = Object.class;
+
+        if (parameterType.isArray()) {
+            componentType = parameterType.getComponentType();
+        } else if (Collection.class.isInstance(parameterType)) {
+            TypeVariable<? extends Class<?>>[] typeParameters = parameterType.getTypeParameters();
+            if (typeParameters == null || typeParameters.length == 0) {
+                componentType = Object.class;
+            } else if (typeParameters.length > 1){
+                throw new UnknownCollectionTypeException(parameterType);
+            } else {
+                componentType = typeParameters[0].getGenericDeclaration();
+            }
+        }
+        return componentType;
     }
 
 }

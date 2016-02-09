@@ -24,6 +24,14 @@ import java.util.TreeSet;
  * A collection of utility methods, usually used during context instantiation.
  */
 public class ContextUtility {
+    /** Should the name of the valueOf methods ever change, we're ready */
+    public static final String VALUE_OF_METHOD_NAME = "valueOf";
+
+    /** used to find valueOf(String) methods */
+    private final static Class<?>[] SINGLE_STRING_PARAMETER = new Class<?>[]{String.class};
+
+    /** Prevent instantiation */
+    private ContextUtility() {}
 
     /**
      *
@@ -269,18 +277,27 @@ public class ContextUtility {
      * @return
      * @throws CannotCreateObjectFromStringException
      */
-    private final static Class<?>[] SINGLE_STRING_PARAMETER = new Class<?>[]{String.class};
     public static <T> T createInstanceFromStringValue(final Class<T> clazz, final String value)
             throws CannotCreateObjectFromStringException {
         Object[] parameters = new Object[]{value};
 
+        // special handling for String target types
         if (String.class.equals(clazz)) {
             return (T)value;
         }
 
+        // special handling for Class target types
+        if (Class.class.equals(clazz)) {
+            try {
+                return (T)Class.forName(value);
+            } catch (ClassNotFoundException x) {
+                throw new CannotCreateObjectFromStringException(clazz, x);
+            }
+        }
+
         try {
             // look for a 'valueOf' method
-            Method valueOfMethod = clazz.getMethod("valueOf", SINGLE_STRING_PARAMETER);
+            Method valueOfMethod = clazz.getMethod(VALUE_OF_METHOD_NAME, SINGLE_STRING_PARAMETER);
             return (T)valueOfMethod.invoke(null, parameters);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException x) {
             throw new CannotCreateObjectFromStringException(clazz, x);

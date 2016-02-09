@@ -35,6 +35,8 @@ public class ContextUtilityTest {
                 new Object[]{Integer.class, "-1", new Integer(-1)},
                 new Object[]{Integer.class, "0", new Integer(0)},
                 new Object[]{Float.class, "1.0", new Float(1.0)},
+                new Object[]{Class.class, "java.lang.Object", java.lang.Object.class},
+                new Object[]{String.class, "1.0", "1.0"},
         };
     }
 
