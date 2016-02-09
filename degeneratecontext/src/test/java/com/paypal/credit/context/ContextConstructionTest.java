@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Created by cbeckey on 2/5/16.
+ * tests of Context Construction
  */
 public class ContextConstructionTest {
 
@@ -50,7 +50,9 @@ public class ContextConstructionTest {
     @Test(dataProvider = "contextNoDependenciesTestDataProvider")
     public void createContextNoDependenciesTest(final String resourceName, final BeanSpec[] expectedBeans)
             throws JAXBException, ContextInitializationException {
-        Context ctx = Context.create(getClass().getClassLoader().getResourceAsStream(resourceName));
+        Context ctx = new ContextFactory()
+                .withContextDefinition(getClass().getClassLoader().getResourceAsStream(resourceName))
+                .build();
         Assert.assertNotNull(ctx);
 
         for (int index = 0; index < expectedBeans.length; ++index) {
@@ -106,7 +108,9 @@ public class ContextConstructionTest {
     @Test(dataProvider = "contextChildDependenciesTestDataProvider")
     public void createContextChildDependenciesTest(final String resourceName, final BeanSpec expectedTopLevelBean, String[] nonNullChildMethods)
             throws JAXBException, ContextInitializationException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Context ctx = Context.create(getClass().getClassLoader().getResourceAsStream(resourceName));
+        Context ctx = new ContextFactory()
+                .withContextDefinition(getClass().getClassLoader().getResourceAsStream(resourceName))
+                .build();
         Assert.assertNotNull(ctx);
 
         Object topLevelBean = ctx.getBean(expectedTopLevelBean.getIdentifier(), expectedTopLevelBean.getType());
@@ -115,17 +119,17 @@ public class ContextConstructionTest {
         if (nonNullChildMethods != null) {
             Class<?> topLevelBeanClass = topLevelBean.getClass();
             for (String methodName : nonNullChildMethods) {
-                Method method = topLevelBeanClass.getMethod(methodName, null);
-                Assert.assertNotNull(method.invoke(topLevelBean, null));
+                Method method = topLevelBeanClass.getMethod(methodName, (Class<?>[])null);
+                Assert.assertNotNull(method.invoke(topLevelBean, (Object[])null));
             }
         }
     }
 
     // ================================================================================================
-    // Test contexts with child dependencies in constructor args
+    // Test contexts with a list of String in constructor args
     // ================================================================================================
     @DataProvider
-    public Object[][] contextListsTestDataProvider() {
+    public Object[][] simpleContextListsTestDataProvider() {
         return new Object[][]{
                 new Object[]{
                         "OneBeanWithListContext.xml",
@@ -135,23 +139,67 @@ public class ContextConstructionTest {
                 },
         };
     }
-
-    @Test(dataProvider = "contextListsTestDataProvider")
+    @Test(dataProvider = "simpleContextListsTestDataProvider")
     public void createListsTest(final String resourceName, final BeanSpec expectedTopLevelBean,
-                                final String accessorMethodName, final Object expectedValues)
+                                final String accessorMethodName, final String[] expectedValues)
             throws JAXBException, ContextInitializationException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Context ctx = Context.create(getClass().getClassLoader().getResourceAsStream(resourceName));
+        Context ctx = new ContextFactory()
+                .withContextDefinition(getClass().getClassLoader().getResourceAsStream(resourceName))
+                .build();
         Assert.assertNotNull(ctx);
 
         Object topLevelBean = ctx.getBean(expectedTopLevelBean.getIdentifier(), expectedTopLevelBean.getType());
         Assert.assertNotNull(topLevelBean);
 
         if (expectedValues != null) {
-            Method accessorMethod = topLevelBean.getClass().getMethod(accessorMethodName, null);
-            Object values = accessorMethod.invoke(topLevelBean, null);
+            Method accessorMethod = topLevelBean.getClass().getMethod(accessorMethodName, (Class<?>[])null);
+            String[] values = (String[])accessorMethod.invoke(topLevelBean, (Object[])null);
+            Assert.assertEquals(values.length, expectedValues.length);
+            for (int index = 0; index < values.length; ++index) {
+                Assert.assertTrue(expectedValues[index].equals(values[index]));
+            }
+        }
+    }
+
+    // ================================================================================================
+    // Test contexts with list of beans in constructor args
+    // ================================================================================================
+    @DataProvider
+    public Object[][] complexContextListsTestDataProvider() {
+        return new Object[][]{
+                new Object[]{
+                        "OneBeanWithListComplexContext.xml",
+                        new BeanSpec("beanOne", com.paypal.credit.context.ConstructorTestSubject.class, ScopeType.SINGLETON),
+                        "getChildren",
+                        new ConstructorTestSubject[] {
+                                new ConstructorTestSubject(1),
+                                new ConstructorTestSubject(2)
+                        }
+                },
+        };
+    }
+
+    @Test(dataProvider = "complexContextListsTestDataProvider")
+    public void createComplexListsTest(final String resourceName, final BeanSpec expectedTopLevelBean,
+                                final String accessorMethodName, final ConstructorTestSubject[] expectedValues)
+            throws JAXBException, ContextInitializationException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Context ctx = new ContextFactory()
+                .withContextDefinition(getClass().getClassLoader().getResourceAsStream(resourceName))
+                .build();
+        Assert.assertNotNull(ctx);
+
+        Object topLevelBean = ctx.getBean(expectedTopLevelBean.getIdentifier(), expectedTopLevelBean.getType());
+        Assert.assertNotNull(topLevelBean);
+
+        if (expectedValues != null) {
+            Method accessorMethod = topLevelBean.getClass().getMethod(accessorMethodName, (Class<?>[])null);
+            ConstructorTestSubject[] values = (ConstructorTestSubject[])accessorMethod.invoke(topLevelBean, (Object[])null);
             Class<?> expectedValueType = expectedValues.getClass();
             Assert.assertTrue(expectedValueType.isInstance(values), "result and expected types are inconsistent.");
-            Assert.assertEquals(values, expectedValues);
+            Assert.assertEquals(values.length, expectedValues.length);
+            for (int index = 0; index < values.length; ++index) {
+                Assert.assertTrue(expectedValues[index].equals(values[index]));
+            }
         }
     }
 

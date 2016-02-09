@@ -1,4 +1,4 @@
-<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
+<beansType xmlns="http://credit.paypal.com/v1/schema/ctx">
 
     <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
         <constructor-arg>
@@ -11,4 +11,4 @@
             <value>com.paypal.credit.workflow.RSProcessorContext</value>
         </constructor-arg>
     </bean>
-</beans>
+</beansType>

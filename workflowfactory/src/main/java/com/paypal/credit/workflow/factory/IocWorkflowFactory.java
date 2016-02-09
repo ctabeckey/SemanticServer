@@ -1,6 +1,7 @@
 package com.paypal.credit.workflow.factory;
 
 import com.paypal.credit.context.Context;
+import com.paypal.credit.context.ContextFactory;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.context.xml.BeansType;
 import com.paypal.credit.workflow.Workflow;
@@ -29,7 +30,9 @@ public class IocWorkflowFactory {
      */
     public Workflow getOrCreate(final URL contextDefinition)
             throws IOException, JAXBException, ContextInitializationException {
-        Context ctx = Context.create(contextDefinition);
+        Context ctx = new ContextFactory()
+                .withContextDefinition(contextDefinition)
+                .build();
         return ctx.getBean("workflow", Workflow.class);
     }
 }

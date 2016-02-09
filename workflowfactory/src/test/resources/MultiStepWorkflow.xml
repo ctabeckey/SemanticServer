@@ -1,6 +1,6 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
+<beansType xmlns="http://www.springframework.org/schema/beansType"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beansType http://www.springframework.org/schema/beansType/spring-beansType-3.0.xsd">
 
     <!--
     For a Spring configuration to be a Workflow definition it must have:
@@ -12,7 +12,7 @@
       b.) the context class, to be passed as the only processor.process parameter
 
     Each workflow is loaded into its own Spring context, which is a child of a single
-    parent context. The parent context provides references to shared beans such as
+    parent context. The parent context provides references to shared beansType such as
     a default process threadpool.
     -->
     <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
@@ -47,4 +47,4 @@
     </bean>
 
 
-</beans>
+</beansType>

@@ -3,7 +3,6 @@ package com.paypal.credit.context;
 import com.paypal.credit.context.exceptions.BeanClassNotFoundException;
 import com.paypal.credit.context.exceptions.CircularReferenceException;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
-import com.paypal.credit.context.exceptions.FailedToCreateCollectionException;
 import com.paypal.credit.context.exceptions.FailedToInstantiateBeanException;
 import com.paypal.credit.context.exceptions.NoApplicableConstructorException;
 import com.paypal.credit.context.xml.BeanType;
@@ -11,7 +10,6 @@ import com.paypal.credit.context.xml.ConstructorArgType;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,28 +22,25 @@ import java.util.Set;
  */
 abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
     /** */
-    private final BeanReferenceFactory beanReferenceFactory;
+    private final ContextFactory contextFactory;
 
     /** */
     private final BeanType beanType;
-
-    /** The set of references to other beans in the constructor args */
-    private final Set<CtorArgReference<?>> ctorArgs = new HashSet<>();
 
     /**
      *
      * @param beanType
      * @throws ContextInitializationException
      */
-    protected BeanFactoryReference(final BeanReferenceFactory beanReferenceFactory, final BeanType beanType)
+    protected BeanFactoryReference(final ContextFactory contextFactory, final BeanType beanType)
             throws ContextInitializationException {
         super();
-        this.beanReferenceFactory = beanReferenceFactory;
+        this.contextFactory = contextFactory;
         this.beanType = beanType;
     }
 
-    public BeanReferenceFactory getBeanReferenceFactory() {
-        return beanReferenceFactory;
+    public ContextFactory getContextFactory() {
+        return contextFactory;
     }
 
     public BeanType getBeanType() {
@@ -89,12 +84,12 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
         int index = 0;
         for (ConstructorArgType argument : orderedParameters) {
             if (argument.getBean() != null) {
-                AbstractBeanReference dependency = getBeanReferenceFactory().createBeanReference(argument.getBean());
+                AbstractBeanReference dependency = getContextFactory().createBeanReference(argument.getBean());
                 Object beanInstance = dependency.getBeanInstance();
                 parameters[index] = beanInstance;
 
             } else if (argument.getRef() != null) {
-                AbstractBeanReference ref = getBeanReferenceFactory().createBeanReference(argument.getRef());
+                AbstractBeanReference ref = getContextFactory().createBeanReference(argument.getRef());
                 parameters[index] = ref.getBeanInstance();
 
             } else if (argument.getValue() != null) {
@@ -102,7 +97,7 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
 
             } else if (argument.getList() != null) {
                 Object listElements =
-                        getBeanReferenceFactory().createListElementArguments(parameterTypes[index], argument.getList());
+                        getContextFactory().createListElementArguments(parameterTypes[index], argument.getList());
                 parameters[index] = listElements;
 
             }
@@ -128,37 +123,6 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
         return this.beanType.getClazz();
     }
 
-    boolean addCtorArg(AbstractBeanReference beanReference, Integer index) {
-        return ctorArgs.add(new CtorArgReference(beanReference, index));
-    }
-
-    public Set<CtorArgReference<?>> getCtorArgs() {
-        return ctorArgs;
-    }
-
-    /**
-     * A VO to contain references to beans that were references as constructor
-     * arguments.
-     *
-     * @param <T> the bean type
-     */
-    protected class CtorArgReference<T> {
-        private final AbstractBeanReference<T> beanReference;
-        private final Integer ctorArgIndex;
-
-        public CtorArgReference(final AbstractBeanReference<T> beanReference, final Integer ctorArgIndex) {
-            this.beanReference = beanReference;
-            this.ctorArgIndex = ctorArgIndex;
-        }
-
-        public AbstractBeanReference<T> getBeanReference() {
-            return beanReference;
-        }
-
-        public Integer getCtorArgIndex() {
-            return ctorArgIndex;
-        }
-    }
 
     // ===========================================================================================
     // Circular reference detection helpers

@@ -15,8 +15,6 @@ import com.paypal.credit.workflowtest.processorbridge.WorkflowTestProcessorBridg
 import com.paypal.credit.xactionctx.TransactionContextFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -25,7 +23,6 @@ import org.testng.annotations.Test;
 /**
  * Created by cbeckey on 12/7/15.
  */
-@ContextConfiguration(classes = TestConfiguration.class)
 public class FullStackTest {
     private Logger LOGGER = LoggerFactory.getLogger(FullStackTest.class);
     private Application application;

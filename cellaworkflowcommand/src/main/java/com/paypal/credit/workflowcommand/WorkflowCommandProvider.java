@@ -13,7 +13,6 @@ import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
 import com.paypal.credit.workflow.factory.WorkflowFactory;
 
-import javax.inject.Inject;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
@@ -34,8 +33,7 @@ implements CommandProvider {
     }
 
     /** Inject a factory to create Workflow instances */
-    @Inject
-    private WorkflowFactory workflowFactory;
+    private WorkflowFactory workflowFactory = new WorkflowFactory();
 
     /**
      * Cache the token instances. WorkflowType instances may require a resource

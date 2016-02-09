@@ -16,12 +16,12 @@ public class SingletonBeanFactoryReference<T> extends BeanFactoryReference<T> {
 
     /**
      *
-     * @param beanReferenceFactory
+     * @param contextFactory
      * @param beanType
      * @throws ContextInitializationException
      */
-    protected SingletonBeanFactoryReference(final BeanReferenceFactory beanReferenceFactory, final BeanType beanType) throws ContextInitializationException {
-        super(beanReferenceFactory, beanType);
+    protected SingletonBeanFactoryReference(final ContextFactory contextFactory, final BeanType beanType) throws ContextInitializationException {
+        super(contextFactory, beanType);
     }
 
     /**

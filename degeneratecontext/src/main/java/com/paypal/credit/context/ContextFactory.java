@@ -9,8 +9,17 @@ import com.paypal.credit.context.xml.BeansType;
 import com.paypal.credit.context.xml.ListType;
 import com.paypal.credit.context.xml.ReferenceType;
 
-import java.lang.reflect.Array;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.TypeVariable;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,25 +30,131 @@ import java.util.UUID;
 /**
  *
  */
-class BeanReferenceFactory {
+public class ContextFactory {
     /** */
-    private final Map<String, AbstractBeanReference> beanReferences = new HashMap<>();
+    private Map<String, AbstractBeanReference> contextObjectsNameMap = new HashMap<>();
+
+    /** JAXB Context is created on demand */
+    private JAXBContext jaxbContext = null;
+
+    /** */
+    private BeansType beansType;
+
+    public ContextFactory() {
+    }
 
     /**
      *
-     * @param beans
+     * @param beansType
+     * @return
+     */
+    public ContextFactory with(BeansType beansType) {
+        this.beansType = beansType;
+
+        return this;
+    }
+
+    /**
+     *
+     * @param identifier
+     * @param bean
+     */
+    public synchronized ContextFactory withBean(final String identifier, final AbstractBeanReference bean) {
+        String id = identifier == null ?
+                UUID.randomUUID().toString() :
+                identifier;
+        contextObjectsNameMap.put(id, bean);
+
+        return this;
+    }
+
+    /**
+     *
+     * @param externalBeanDefinitions
+     */
+    public ContextFactory withExternalBeanDefinitions(final ExternalBeanDefinition<?>[] externalBeanDefinitions)
+            throws ContextInitializationException {
+        if (externalBeanDefinitions != null) {
+            for (ExternalBeanDefinition<?> externalBeanDefinition : externalBeanDefinitions) {
+                withBean(externalBeanDefinition.getIdentifier(), new ResolvedBeanReference(externalBeanDefinition.getBeanInstance()));
+            }
+        }
+
+        return this;
+    }
+
+    /**
+     *
+     * @param contextDefinition
+     * @return
+     * @throws JAXBException
+     * @throws ContextInitializationException
+     * @throws FileNotFoundException
+     */
+    public ContextFactory withContextDefinition(final File contextDefinition)
+            throws JAXBException, ContextInitializationException, FileNotFoundException {
+        FileInputStream fiS = new FileInputStream(contextDefinition);
+        return withContextDefinition(fiS);
+    }
+
+    /**
+     *
+     * @param contextDefinition
+     * @return
+     * @throws JAXBException
+     * @throws ContextInitializationException
+     * @throws IOException
+     */
+    public ContextFactory withContextDefinition(final URL contextDefinition)
+            throws JAXBException, ContextInitializationException, IOException {
+        InputStream urlIS = contextDefinition.openStream();
+        return withContextDefinition(urlIS);
+    }
+
+    /**
+     *
+     * @param inputStream
+     * @return
+     * @throws JAXBException
+     * @throws ContextInitializationException
+     */
+    public ContextFactory withContextDefinition(final InputStream inputStream)
+            throws JAXBException, ContextInitializationException {
+        JAXBContext jaxbContext = getJaxbContext();
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+
+        JAXBElement<BeansType> ctx = (JAXBElement<BeansType>) unmarshaller.unmarshal(inputStream);
+        return with(ctx.getValue());
+    }
+
+    /**
+     *
+     * @return
+     * @throws JAXBException
+     */
+    private final synchronized JAXBContext getJaxbContext()
+            throws JAXBException {
+        if (jaxbContext == null) {
+            jaxbContext = JAXBContext.newInstance("com.paypal.credit.context.xml");
+        }
+        return jaxbContext;
+    }
+
+    /**
+     *
      * @return
      * @throws ContextInitializationException
      */
-    Map<String, AbstractBeanReference> create(final BeansType beans) throws ContextInitializationException {
-        // create the top-level beans (those directly under the 'beans' element)
+    public Context build()
+            throws ContextInitializationException {
+        // create the top-level beansType (those directly under the 'beansType' element)
         // AbstractBeanReference will create the dependencies under each top level
         // bean
-        for (BeanType beanType : beans.getBean()) {
+        for (BeanType beanType : beansType.getBean()) {
             createBeanReference(beanType);
         }
 
-        return beanReferences;
+        return new Context(this.contextObjectsNameMap);
     }
 
     /**
@@ -71,7 +186,7 @@ class BeanReferenceFactory {
 
         // add the bean and an ID (perhaps synthetic) to the context Set
         String id = beanType.getId() == null ? UUID.randomUUID().toString() : beanType.getId();
-        beanReferences.put(id, beanReference);
+        contextObjectsNameMap.put(id, beanReference);
 
         return beanReference;
     }
@@ -94,7 +209,7 @@ class BeanReferenceFactory {
      * @return
      */
     public AbstractBeanReference findBeanReference(final String identifier) {
-        return this.beanReferences.get(identifier);
+        return this.contextObjectsNameMap.get(identifier);
     }
 
     /**
@@ -150,12 +265,7 @@ class BeanReferenceFactory {
         }
 
         if (parameterType.isArray()) {
-            Object arrayResult = Array.newInstance(componentType, result.size());
-            int index = 0;
-            for (Object element : result) {
-                Array.set(arrayResult, index++, element);
-            }
-            return arrayResult;
+            return ContextUtility.createTypedArray(componentType, result);
         } else {
             return result;
         }

@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListComplexContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/META-INF/sun-jaxb.episode" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/META-INF/sun-jaxb.episode" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" />
@@ -16,10 +18,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanFactoryReference.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanFactoryReference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanFactoryReference.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanFactoryReference.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" afterPath="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/workflow/factory/WorkflowFactoryTest.java" afterPath="$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/workflow/factory/WorkflowFactoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/InvalidTwoStepWorkflow.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/InvalidTwoStepWorkflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/IocOneStepWorkflow.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/IocOneStepWorkflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/MultiStepWorkflow.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/MultiStepWorkflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/OneStepWorkflow.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/OneStepWorkflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/ParallelWorkflow.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/ParallelWorkflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/TwoStepWorkflow.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/TwoStepWorkflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/test/resources/spring-test-config.xml" afterPath="$PROJECT_DIR$/workflowfactory/src/test/resources/spring-test-config.xml" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,6 +68,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/cella-parent$_default_.coverage" NAME="&lt;default&gt; Coverage Results" MODIFIED="1447182622478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cella$_default_.coverage" NAME="&lt;default&gt; Coverage Results" MODIFIED="1455028015482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -62,69 +79,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OneBeanWithListContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConstructorTestSubject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="30" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="30" />
-              <folding>
-                <element signature="e#2345#2346#0" expanded="true" />
-                <element signature="e#2381#2382#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeanFactoryReference.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeanReferenceFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9525617">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextUtility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3289#5054#0" expanded="true" />
-                <element signature="e#5053#5054#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ContextConstructionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeansType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ctx.xsd" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17317487">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IocWorkflowFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkflowFactoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/workflow/factory/WorkflowFactoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkflowCommandProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FullStackTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,10 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetected.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromString.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" />
         <option value="$PROJECT_DIR$/workflowfactory/src/test/resources/IocOneStepWorkflow.xml" />
         <option value="$PROJECT_DIR$/workflowfactory/src/main/resources/ctx.xsd" />
         <option value="$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/internal/MethodInvocationHelper.class" />
@@ -165,16 +187,11 @@
         <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" />
         <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/context/Context.java" />
         <option value="$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/context/ContextTest.java" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/degeneratecontext/pom.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml" />
         <option value="$PROJECT_DIR$/workflowfactory/pom.xml" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanDefinition.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ExternalBeanDefinition.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactory.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReference.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/execptions/CircularReferenceException.java" />
@@ -185,25 +202,34 @@
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/TestUtility.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextTest.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextUtilityTest.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractBeanReference.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanFactoryReference.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ResolvedBeanReference.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanFactoryReference.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListComplexContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
+        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
+        <option value="$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/workflow/factory/WorkflowFactoryTest.java" />
+        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
+        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" />
       </list>
     </option>
   </component>
@@ -263,6 +289,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -271,10 +298,6 @@
               <option name="myItemId" value="cella" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -282,29 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,19 +315,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
+              <option name="myItemId" value="cella" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="workflowfactory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,15 +329,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+              <option name="myItemId" value="workflowfactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowfactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -352,7 +371,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,6 +398,98 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowfactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowfactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workflowfactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,6 +504,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,6 +634,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -632,7 +803,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -712,40 +882,7 @@
       <recent name="com.paypal.credit.workflowcommand.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContextConstructionTest.createListsTest">
-    <configuration default="false" name="ContextConstructionTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.paypal.credit.context.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="degeneratecontext" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
-      <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ContextConstructionTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
     <configuration default="false" name="&lt;default&gt;" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="degeneratecontext" />
@@ -858,6 +995,39 @@
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="0" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ContextConstructionTest.createListsTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.paypal.credit.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="degeneratecontext" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
+      <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ContextConstructionTest" />
+      <option name="METHOD_NAME" value="createListsTest" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="1" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
@@ -1413,19 +1583,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.clean install" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.cellaworkfloweditor" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.ContextUtilityTest.testSelectConstructor" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.ContextUtilityTest.testSelectConstructor" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createListsTest" />
       <item index="6" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createListsTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createListsTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.ContextUtilityTest.testSelectConstructor" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createListsTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createListsTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.ContextUtilityTest.testSelectConstructor" />
       </list>
     </recent_temporary>
   </component>
@@ -1469,44 +1639,45 @@
       <workItem from="1454005405997" duration="942000" />
       <workItem from="1454006828038" duration="3476000" />
       <workItem from="1454103429561" duration="11000" />
-      <workItem from="1454349804874" duration="82741000" />
+      <workItem from="1454349804874" duration="84021000" />
+      <workItem from="1455027879018" duration="6300000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 15h 43m 56s.xml">
+    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.09 at 10h 56m 57s.xml">
       <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 15h 45m 22s.xml">
+    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.09 at 10h 57m 17s.xml">
       <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 15h 50m 02s.xml">
-      <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 15h 51m 12s.xml">
-      <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 16h 17m 08s.xml">
-      <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 16h 19m 08s.xml">
-      <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 16h 32m 47s.xml">
-      <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContextConstructionTest_createListsTest - 2016.02.08 at 16h 33m 49s.xml">
-      <configuration name="ContextConstructionTest.createListsTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_default_ - 2016.02.08 at 15h 28m 07s.xml">
+    <history-entry file="_default_ - 2016.02.09 at 10h 43m 35s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_default_ - 2016.02.08 at 15h 42m 08s.xml">
+    <history-entry file="_default_ - 2016.02.09 at 10h 48m 53s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2016.02.09 at 10h 53m 39s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2016.02.09 at 10h 55m 04s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2016.02.09 at 10h 55m 38s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2016.02.09 at 10h 56m 16s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2016.02.09 at 10h 56m 20s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2016.02.09 at 11h 04m 45s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="487676000" />
+    <option name="totallyTimeSpent" value="495256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1519,21 +1690,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="29" width="1348" height="843" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14380826" sideWeight="0.49704143" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14380826" sideWeight="0.49704143" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24611399" sideWeight="0.5029586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26098534" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19174434" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39663094" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30015314" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30015314" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2663116" sideWeight="0.51849115" order="1" side_tool="false" content_ui="tabs" />
@@ -1549,7 +1721,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39718935" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.5061538" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1588,109 +1759,17 @@
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java</url>
-          <line>67</line>
+          <url>file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java</url>
+          <line>134</line>
           <properties />
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java</url>
-          <line>152</line>
-          <properties />
-          <option name="timeStamp" value="119" />
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="120" />
+      <option name="time" value="124" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/workflowfactory/src/test/resources/OneStepWorkflow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39477503">
-          <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflowfactory/src/main/resources/workflow.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7846154">
-          <caret line="589" column="48" selection-start-line="589" selection-start-column="41" selection-end-line="589" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33286715">
-          <caret line="2009" column="28" selection-start-line="2009" selection-start-column="28" selection-end-line="2009" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33286715">
-          <caret line="122" column="11" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
-          <folding>
-            <element signature="e#4697#4698#0" expanded="false" />
-            <element signature="e#4742#4743#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7132867">
-          <caret line="139" column="51" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="51" />
-          <folding>
-            <element signature="e#4697#4698#0" expanded="false" />
-            <element signature="e#4742#4743#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/credit/utility/1.0.0-SNAPSHOT/utility-1.0.0-SNAPSHOT.jar!/com/paypal/credit/utility/CompositeExceptionDelegate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14825581">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4547619">
-          <caret line="718" column="0" selection-start-line="718" selection-start-column="0" selection-end-line="718" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/internal/MethodInvocationHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51666665">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31748727">
@@ -1707,19 +1786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73170733">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/resources/generateCtxClasses.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1736,16 +1806,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17148015">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1806,38 +1866,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03794643">
-          <caret line="1" column="96" selection-start-line="1" selection-start-column="96" selection-end-line="1" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11383928">
-          <caret line="3" column="96" selection-start-line="3" selection-start-column="96" selection-end-line="3" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11383928">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1909,17 +1937,9 @@
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13572854">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1927,14 +1947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.27145708">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23752496">
-          <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -1947,68 +1959,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6451613">
-          <caret line="115" column="56" selection-start-line="115" selection-start-column="56" selection-end-line="115" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33460802">
           <caret line="111" column="23" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="27" />
           <folding>
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2907#2908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033932135">
-          <caret line="1" column="78" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="30" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="30" />
-          <folding>
-            <element signature="e#2345#2346#0" expanded="true" />
-            <element signature="e#2381#2382#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3289#5054#0" expanded="true" />
-            <element signature="e#5053#5054#0" expanded="true" />
+            <element signature="e#2880#2881#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2040,18 +1997,220 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java">
+    <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/SpringConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.16459198">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java">
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9525617">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListComplexContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24697755">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24697755">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5744186">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03074141">
+          <caret line="1" column="42" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/target/test-classes/OneBeanContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/target/test-classes/OneBeanWithListContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/target/test-classes/OneBeanWithReferencedChildContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/workflow/factory/WorkflowFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17317487">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding />
         </state>
       </provider>

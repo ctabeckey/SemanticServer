@@ -6,7 +6,9 @@ import com.paypal.credit.context.exceptions.SparseArgumentListDetectedException;
 import com.paypal.credit.context.xml.BeanType;
 import com.paypal.credit.context.xml.ConstructorArgType;
 import com.paypal.credit.context.xml.ListType;
+import com.paypal.credit.context.xml.ReferenceType;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -144,38 +146,116 @@ public class ContextUtility {
 
             ConstructorArgType actualArgType = orderedArguments.get(index);
             if (actualArgType.getBean() != null) {
-                Class<?> actualArgumentType = null;
-                try {
-                    actualArgumentType = Class.forName(actualArgType.getBean().getClazz());
-                } catch (ClassNotFoundException cnfX) {
-                    throw new BeanClassNotFoundException(actualArgType.getBean().getClazz());
-                }
-                if (!actualArgumentType.isAssignableFrom(constructorParameterType)) {
+                if (! isResolvableAs(actualArgType.getBean(), constructorParameterType)) {
                     return false;
                 }
+            } else if (actualArgType.getRef() != null) {
+                if (! isResolvableAs(actualArgType.getRef(), constructorParameterType)) {
+                    return false;
+                }
+
             } else if (actualArgType.getList() != null) {
-                if (Collection.class.isAssignableFrom(constructorParameterType)) {
-                    TypeVariable<? extends Class<?>>[] actualTypeParameters = constructorParameterType.getTypeParameters();
-                    // TODO: validation here on the type parameters
-                    continue;
-                } else if (constructorParameterType.isArray()){
-                    Class<?> componentClazz = constructorParameterType.getComponentType();
-                    // TODO: validation here on the type parameters
-                    continue;
-                } else {
+                if (! isResolvableAs(actualArgType.getList(), constructorParameterType)) {
                     return false;
                 }
+
             } else if (actualArgType.getValue() != null) {
-                try {
-                    Object parameterValue = createInstanceFromStringValue(constructorParameterType, actualArgType.getValue());
-                    if (!constructorParameterType.isInstance(parameterValue)) {
-                        return false;
-                    }
-                    continue;
-                } catch (CannotCreateObjectFromStringException e) {
+                if (! isResolvableAs((String)actualArgType.getValue(), constructorParameterType)) {
                     return false;
                 }
             }
+        }
+
+        return true;
+    }
+
+    /**
+     * Return true if all of the elements in the beanOrValueOrList can resolve to an
+     * instance of componentClazz.
+     *
+     * @param componentClazz - the class of the array elements
+     * @param beanOrValueOrList - a list of beans, references, lists and/or values
+     * @return true if the elements of the list can all be resolved as componentClazz instances
+     */
+    private static boolean isApplicableAsArray(final Class<?> componentClazz, final List<Object> beanOrValueOrList)
+            throws BeanClassNotFoundException {
+        for (Object listElement : beanOrValueOrList) {
+            if (listElement instanceof BeanType) {
+                BeanType beanType = (BeanType) listElement;
+
+                if (! isResolvableAs(beanType, componentClazz)) {
+                    return false;
+                }
+            } else if (listElement instanceof ReferenceType) {
+                ReferenceType referenceType = (ReferenceType) listElement;
+
+                if (! isResolvableAs(referenceType, componentClazz)) {
+                    return false;
+                }
+            } else if (listElement instanceof ListType) {
+                ListType listType = (ListType) listElement;
+
+                if (! isResolvableAs(listType, componentClazz)) {
+                    return false;
+                }
+            } else if (listElement instanceof String) {
+                String valueType = (String) listElement;
+
+                if (! isResolvableAs(valueType, componentClazz)) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    private static boolean isResolvableAs(final BeanType beanType, final Class<?> clazz)
+            throws BeanClassNotFoundException {
+        Class<?> actualArgumentType = null;
+        try {
+            actualArgumentType = Class.forName(beanType.getClazz());
+        } catch (ClassNotFoundException cnfX) {
+            throw new BeanClassNotFoundException(beanType.getClazz());
+        }
+        if (!actualArgumentType.isAssignableFrom(clazz)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean isResolvableAs(final ReferenceType referenceType, final Class<?> clazz) {
+        referenceType.getBean();
+        return true;
+    }
+
+    private static boolean isResolvableAs(final ListType listType, final Class<?> clazz)
+            throws BeanClassNotFoundException {
+        if (Collection.class.isAssignableFrom(clazz)) {
+            TypeVariable<? extends Class<?>>[] actualTypeParameters = clazz.getTypeParameters();
+            // TODO: validation here on the type parameters
+            return true;
+        } else if (clazz.isArray()){
+            Class<?> componentClazz = clazz.getComponentType();
+            if (isApplicableAsArray(componentClazz, listType.getBeanOrValueOrList())) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    private static boolean isResolvableAs(final String valueType, final Class<?> clazz) {
+        try {
+            Object parameterValue = createInstanceFromStringValue(clazz, valueType);
+            if (!clazz.isInstance(parameterValue)) {
+                return false;
+            }
+        } catch (CannotCreateObjectFromStringException e) {
+            return false;
         }
 
         return true;
@@ -206,4 +286,20 @@ public class ContextUtility {
             throw new CannotCreateObjectFromStringException(clazz, x);
         }
     }
+
+    /**
+     *
+     * @param componentType
+     * @param result
+     * @return
+     */
+    public static Object createTypedArray(final Class<?> componentType, final List result) {
+        Object arrayResult = Array.newInstance(componentType, result.size());
+        int index = 0;
+        for (Object element : result) {
+            Array.set(arrayResult, index++, element);
+        }
+        return arrayResult;
+    }
+
 }

@@ -4,13 +4,10 @@ import com.paypal.credit.utility.URLFactory;
 import com.paypal.credit.workflow.Workflow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import javax.inject.Inject;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -18,12 +15,10 @@ import java.net.URL;
  * Created by cbeckey on 1/19/16.
  */
 
-@ContextConfiguration(locations = { "classpath:spring-test-config.xml" })
-public class WorkflowFactoryTest extends AbstractTestNGSpringContextTests {
+public class WorkflowFactoryTest {
     private final Logger LOGGER = LoggerFactory.getLogger(WorkflowFactoryTest.class);
 
-    @Inject
-    WorkflowFactory workflowFactory;
+    private WorkflowFactory workflowFactory = new WorkflowFactory();
 
     @DataProvider
     public Object[][] testWorkflowCreationDataProvider() throws MalformedURLException {
