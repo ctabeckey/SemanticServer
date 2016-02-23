@@ -224,7 +224,7 @@ public class ContextUtility {
         try {
             actualArgumentType = Class.forName(beanType.getClazz());
         } catch (ClassNotFoundException cnfX) {
-            throw new BeanClassNotFoundException(beanType.getClazz());
+            throw new BeanClassNotFoundException(beanType.getClazz(), cnfX);
         }
         if (!actualArgumentType.isAssignableFrom(clazz)) {
             return false;
@@ -259,7 +259,19 @@ public class ContextUtility {
     private static boolean isResolvableAs(final String valueType, final Class<?> clazz) {
         try {
             Object parameterValue = createInstanceFromStringValue(clazz, valueType);
-            if (!clazz.isInstance(parameterValue)) {
+            if (clazz.isPrimitive()) {
+                if (byte.class.equals(clazz) && Byte.class.equals(parameterValue.getClass())
+                        || short.class.equals(clazz) && Short.class.equals(parameterValue.getClass())
+                        || int.class.equals(clazz) && Integer.class.equals(parameterValue.getClass())
+                        || long.class.equals(clazz) && Long.class.equals(parameterValue.getClass())
+                        || float.class.equals(clazz) && Float.class.equals(parameterValue.getClass())
+                        || double.class.equals(clazz) && Double.class.equals(parameterValue.getClass())
+                        || char.class.equals(clazz) && Character.class.equals(parameterValue.getClass())) {
+                    // continue checking parameters, this parameter will get autoboxed
+                } else {
+                    return false;
+                }
+            } else if (!clazz.isInstance(parameterValue)) {
                 return false;
             }
         } catch (CannotCreateObjectFromStringException e) {
@@ -284,6 +296,25 @@ public class ContextUtility {
         // special handling for String target types
         if (String.class.equals(clazz)) {
             return (T)value;
+        }
+
+        // special handling for primitive types
+        if (clazz.isPrimitive()) {
+            if (byte.class.equals(clazz)) {
+                return (T) (new Byte(value));
+            } else if (short.class.equals(clazz)) {
+                return (T) (new Short(value));
+            } else if (int.class.equals(clazz)) {
+                return (T) (new Integer(value));
+            } else if (long.class.equals(clazz)) {
+                return (T) (new Long(value));
+            } else if (float.class.equals(clazz)) {
+                return (T) (new Float(value));
+            } else if (double.class.equals(clazz)) {
+                return (T) (new Double(value));
+            } else if (char.class.equals(clazz)) {
+                return (T) new Character(value.charAt(0));
+            }
         }
 
         // special handling for Class target types

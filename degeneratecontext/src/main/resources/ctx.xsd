@@ -10,11 +10,28 @@
     <xs:element name="bean" type="workspace:BeanType"/>
     <xs:element name="list" type="workspace:ListType"/>
     <xs:element name="ref" type="workspace:ReferenceType"/>
+    <xs:element name="artifact" type="workspace:ArtifactType"/>
 
     <xs:complexType name="BeansType">
-        <xs:sequence minOccurs="0" maxOccurs="unbounded">
-            <xs:element ref="workspace:bean"/>
+        <xs:sequence>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="workspace:artifact"/>
+            </xs:sequence>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="workspace:bean"/>
+            </xs:sequence>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ArtifactType">
+        <xs:choice>
+            <xs:element name="classpath">
+                <xs:complexType>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="resource" type="xs:anyURI"/>
+        </xs:choice>
+        <xs:attribute name="id" type="xs:string" use="required" />
     </xs:complexType>
 
     <xs:complexType name="BeanType">
@@ -25,6 +42,7 @@
         <xs:attribute name="id" type="xs:string" use="optional"/>
         <xs:attribute name="class" type="xs:string" use="required"/>
         <xs:attribute name="scope" type="workspace:ScopeType" use="optional"/>
+        <xs:attribute name="artifact" type="xs:string" use="optional" />
     </xs:complexType>
 
     <xs:complexType name="ListType">

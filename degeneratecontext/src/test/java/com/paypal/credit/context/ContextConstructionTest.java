@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import javax.xml.bind.JAXBException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.security.ProtectionDomain;
 
 /**
  * tests of Context Construction
@@ -44,6 +45,12 @@ public class ContextConstructionTest {
                                 new BeanSpec("beanTwo", com.paypal.credit.context.ConstructorTestSubject.class, ScopeType.SINGLETON)
                         }
                 },
+                new Object[]{
+                        "OneRemoteBeanContext.xml",
+                        new BeanSpec[]{
+                                new BeanSpec("nullInStream", null, ScopeType.SINGLETON)
+                        }
+                },
         };
     }
 
@@ -63,7 +70,12 @@ public class ContextConstructionTest {
                 beanInstance = ctx.getBean(expectedBeans[index].getType());
             }
             Assert.assertNotNull( beanInstance );
-            Assert.assertTrue(expectedBeans[index].getType().isAssignableFrom(beanInstance.getClass()));
+            ProtectionDomain pd = beanInstance.getClass().getProtectionDomain();
+            Assert.assertNotNull(pd);
+
+            if (expectedBeans[index].getType() != null) {
+                Assert.assertTrue(expectedBeans[index].getType().isAssignableFrom(beanInstance.getClass()));
+            }
 
             Object secondBeanInstance = null;
             if (expectedBeans[index].getIdentifier() != null) {

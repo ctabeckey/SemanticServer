@@ -5,11 +5,14 @@ import com.paypal.credit.context.exceptions.CircularReferenceException;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.context.exceptions.FailedToInstantiateBeanException;
 import com.paypal.credit.context.exceptions.NoApplicableConstructorException;
+import com.paypal.credit.context.xml.ArtifactType;
 import com.paypal.credit.context.xml.BeanType;
 import com.paypal.credit.context.xml.ConstructorArgType;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URLClassLoader;
+import java.security.SecureClassLoader;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,6 +22,12 @@ import java.util.Set;
  * a 'bean' element in the context definition XML.
  * NOTE: creating a BeanFactoryReference also creates references to
  * any beans referenced as constructor arguments in the context definition XML.
+ *
+ * @see com.paypal.credit.context.AbstractBeanReference
+ *
+ * Known Derivations
+ * @see com.paypal.credit.context.PrototypeBeanFactoryReference
+ * @see com.paypal.credit.context.PrototypeBeanFactoryReference
  */
 abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
     /** */
@@ -26,6 +35,11 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
 
     /** */
     private final BeanType beanType;
+
+    /** */
+    private final Object beanClassMonitor = new Object();
+    /** */
+    private Class<T> beanClass;
 
     /**
      *
@@ -50,6 +64,22 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
     /**
      *
      * @return
+     */
+    private URLClassLoader getArtifactClassLoader() {
+        // get the identifier of the Artifact
+        String artifactReference = getArtifactReference();
+        if (artifactReference != null && artifactReference.length() > 0) {
+            // get the ArtifactType (maps the artifact reference to the artifact URI)
+            ContextFactory.ArtifactHolder holder = getContextFactory().getArtifactType(artifactReference);
+            // if there is a Holder for the artifact reference (created previously) then get its class loader
+            return holder == null ? null : holder.getClassLoader();
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @return
      * @throws ContextInitializationException
      */
     protected T createBeanInstance() throws ContextInitializationException {
@@ -68,7 +98,6 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
             throw new NoApplicableConstructorException(getClazz(), orderedParameters);
         }
     }
-
 
     /**
      *
@@ -108,11 +137,23 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
 
     /** Get the class of the referenced bean */
     public Class<T> getClazz() throws BeanClassNotFoundException {
-        try {
-            return (Class<T>)Class.forName(getClazzName());
-        } catch (ClassCastException | ClassNotFoundException x) {
-            throw new BeanClassNotFoundException(this.beanType.getClazz());
+        synchronized (beanClassMonitor) {
+            if (beanClass == null) {
+                ClassLoader artifactClassLoader = getArtifactClassLoader();
+
+                try {
+                    if (artifactClassLoader != null) {
+                        beanClass = (Class<T>) artifactClassLoader.loadClass(getClazzName());
+                    } else {
+                        beanClass = (Class<T>) Class.forName(getClazzName());
+                    }
+                } catch (ClassCastException | ClassNotFoundException x) {
+                    throw new BeanClassNotFoundException(this.beanType.getClazz(), x);
+                }
+            }
         }
+
+        return beanClass;
     }
 
     public String getIdentifier() {
@@ -123,6 +164,9 @@ abstract class BeanFactoryReference<T> extends AbstractBeanReference<T> {
         return this.beanType.getClazz();
     }
 
+    public String getArtifactReference() {
+        return this.beanType.getArtifact();
+    }
 
     // ===========================================================================================
     // Circular reference detection helpers

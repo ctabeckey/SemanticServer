@@ -11,4 +11,8 @@ public class BeanClassNotFoundException extends ContextInitializationException {
     public BeanClassNotFoundException(String clazzName) {
         super(createMessage(clazzName));
     }
+
+    public BeanClassNotFoundException(String clazzName, Throwable cause) {
+        super(createMessage(clazzName), cause);
+    }
 }

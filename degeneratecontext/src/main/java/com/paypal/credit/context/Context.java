@@ -90,7 +90,7 @@ public class Context {
             throws ContextInitializationException {
         AbstractBeanReference<T> beanReference = contextObjectsNameMap.get(name);
         T bean = beanReference.getBeanInstance();
-        if (beanClass != null && beanClass.isInstance(bean)) {
+        if (beanClass == null || beanClass.isInstance(bean)) {
             return bean;
         }
 
