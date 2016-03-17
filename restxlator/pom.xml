@@ -31,10 +31,6 @@
             <artifactId>resteasy-undertow</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-sns</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

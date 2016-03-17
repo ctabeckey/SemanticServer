@@ -9,15 +9,15 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>degeneratecontext</module>
+        <module>nanocontext</module>
         <module>cellaimpl</module>
         <module>cellaworkflowcommand</module>
         <!-- <module>cellaworkfloweditor</module> -->
         <module>processorprovider</module>
         <module>testprocessorprovider</module>
         <module>workflowfactory</module>
-        <module>lambdacommandexecutor</module>
-        <module>restxlator</module>
+        <module>omegaexecutor</module>
+        <!-- <module>restxlator</module> -->
     </modules>
 
     <properties>
@@ -123,23 +123,6 @@
                 <groupId>org.jboss.resteasy</groupId>
                 <artifactId>resteasy-undertow</artifactId>
                 <version>3.0.14.Final</version>
-            </dependency>
-
-            <!-- Amazon AWS Dependencies -->
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-sns</artifactId>
-                <version>1.10.50</version>
-            </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-lambda-java-core</artifactId>
-                <version>1.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-lambda-java-events</artifactId>
-                <version>1.1.0</version>
             </dependency>
 
         </dependencies>

@@ -2,9 +2,7 @@ package com.paypal.credit.workflow.factory;
 
 import com.paypal.credit.context.Context;
 import com.paypal.credit.context.ContextFactory;
-import com.paypal.credit.context.ExternalBeanDefinition;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
-import com.paypal.credit.context.xml.BeansType;
 import com.paypal.credit.workflow.Workflow;
 import com.paypal.credit.workflow.exceptions.WorkflowContextException;
 import com.paypal.credit.workflow.threadpool.RSThreadPoolExecutor;
@@ -33,9 +31,9 @@ public class IocWorkflowFactory {
     public Workflow getOrCreate(final URL contextDefinition)
             throws IOException, JAXBException, ContextInitializationException, WorkflowContextException {
         Context ctx = new ContextFactory()
-                .withContextDefinition(contextDefinition)
+                .with(contextDefinition)
                 .withExternalBeanDefinition(
-                        new ExternalBeanDefinition<Object>("defaultThreadPool", getDefaultThreadPool())
+                        "defaultThreadPool", getDefaultThreadPool()
                 )
                 .build();
 

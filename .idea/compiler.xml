@@ -106,6 +106,13 @@
         <processorPath useClasspath="true" />
         <module name="degeneratecontext" />
       </profile>
+      <profile default="false" name="Annotation profile for omegaexecutor" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="omegaexecutor" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cella-parent" target="1.5" />
@@ -115,6 +122,8 @@
       <module name="cellaworkfloweditor" target="8" />
       <module name="degeneratecontext" target="7" />
       <module name="lambdacommandexecutor" target="7" />
+      <module name="nanocontext" target="7" />
+      <module name="omegaexecutor" target="7" />
       <module name="processorprovider" target="7" />
       <module name="restxlator" target="7" />
       <module name="testprocessorprovider" target="7" />

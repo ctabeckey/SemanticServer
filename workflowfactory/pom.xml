@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>com.paypal.credit</groupId>
-            <artifactId>degeneratecontext</artifactId>
+            <artifactId>nanocontext</artifactId>
             <version>${project.version}</version>
         </dependency>
 

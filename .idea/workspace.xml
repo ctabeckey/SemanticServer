@@ -2,50 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/HashMapQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/java/ClassLoaderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneRemoteBeanContext.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/failed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/Command line test.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/classes.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/groups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-not-run.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/reporter-output.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/testng.xml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/passed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/skipped.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/testng.css" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractProperty.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractReferencableProperty.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ArtifactHolder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/BeanReference.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/CircularReferenceDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ConstantProperty.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/Context.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/InstantiationUtility.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ListProperty.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PreresolvedBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/SingletonBeanInstanceFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/AbstractPropertyClassDoesNotProperlyImplementMorph.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidMorphTargetException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/AbstractBeanInstanceFactoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ClassMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/GenericBeanInstance.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ListPropertyTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omegaexecutor/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_dep_0_8_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_findbugs_annotations_1_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LambdaCommandExecutor/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LambdaCommandExecutor/src/main/java/com/paypal/credit/lambda/XactionFunction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/HashMapQuestion.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractBeanReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ExternalBeanDefinition.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanFactoryReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ResolvedBeanReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanFactoryReference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/nanocontext/dependency-reduced-pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/pom.xml" afterPath="$PROJECT_DIR$/nanocontext/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/META-INF/sun-jaxb.episode" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/META-INF/sun-jaxb.episode" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CircularReferenceException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CircularReferenceException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/FailedToInstantiateBeanException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/FailedToInstantiateBeanException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" afterPath="$PROJECT_DIR$/nanocontext/src/main/resources/ctx.xsd" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/resources/generateCtxClasses.sh" afterPath="$PROJECT_DIR$/nanocontext/src/main/resources/generateCtxClasses.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/ClassLoaderTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/ClassLoaderTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/InstantiationUtilityTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextUtilityTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/TestUtility.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/TestUtility.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanContextWithCtorArg.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithChildContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListComplexContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListComplexContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithReferencedChildContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OnePrototypeBeanContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneRemoteBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneRemoteBeanContext.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/TwoBeanContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_credit_xactionctx_1_0_1_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_credit_xactionctx_1_0_1_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_0_8_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_0_8_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_21.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/pom.xml" afterPath="$PROJECT_DIR$/degeneratecontext/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/META-INF/sun-jaxb.episode" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/META-INF/sun-jaxb.episode" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" afterPath="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" afterPath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restxlator/pom.xml" afterPath="$PROJECT_DIR$/restxlator/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/pom.xml" afterPath="$PROJECT_DIR$/workflowfactory/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" afterPath="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,6 +136,8 @@
     <ignored path="$PROJECT_DIR$/lambdacommandexecutor/target/" />
     <ignored path="$PROJECT_DIR$/restxlator/target/" />
     <ignored path="$PROJECT_DIR$/degeneratecontext/target/" />
+    <ignored path="$PROJECT_DIR$/omegaexecutor/target/" />
+    <ignored path="$PROJECT_DIR$/nanocontext/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +147,11 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/cella$BeanFactoryReferenceTest.coverage" NAME="BeanFactoryReferenceTest Coverage Results" MODIFIED="1457988415880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.paypal.credit.context.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/cella-parent$_default_.coverage" NAME="&lt;default&gt; Coverage Results" MODIFIED="1447182622478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/cella$_default_.coverage" NAME="&lt;default&gt; Coverage Results" MODIFIED="1455028015482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/cella$_default_.coverage" NAME="&lt;default&gt; Coverage Results" MODIFIED="1458050857022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -90,21 +163,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ContextFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
+        <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+              <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OneRemoteBeanContext.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneRemoteBeanContext.xml">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1325536">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5883424">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PropertyFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="234" column="12" selection-start-line="234" selection-start-column="12" selection-end-line="234" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,9 +200,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="AnnotationType" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -133,57 +218,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReferenceFactory.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListComplexContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextUtilityTest.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/processors/ProcessorOne.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/java/com/paypal/credit/workflow/factory/WorkflowFactoryTest.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
-        <option value="$MAVEN_REPOSITORY$/com/paypal/credit/workflow/2.0.0-SNAPSHOT/workflow-2.0.0-SNAPSHOT-sources.jar!/com/paypal/credit/workflow/Workflow.java" />
-        <option value="$MAVEN_REPOSITORY$/com/paypal/credit/workflow/2.0.0-SNAPSHOT/workflow-2.0.0-SNAPSHOT-sources.jar!/com/paypal/credit/workflow/RSProcessorContext.java" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/resources/MultiStepWorkflow.xml" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/resources/OneStepWorkflow.xml" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/resources/TwoStepWorkflow.xml" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/resources/IocOneStepWorkflow.xml" />
-        <option value="$PROJECT_DIR$/workflowfactory/src/test/resources/ParallelWorkflow.xml" />
-        <option value="$PROJECT_DIR$/workflowfactory/pom.xml" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/SpringConfiguration.java" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/TestConfiguration.java" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/DeleteAuthorization_de_ins.xml" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/DeleteAuthorization_usains.xml" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/GetAuthorization_de_ins.xml" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
-        <option value="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/workflows/GetAuthorization_usains.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/Set.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/concurrent/Executor.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/Condition.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/io/LineNumberReader.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/HashMapQuestion.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/pom.xml" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/ClassLoaderTest.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/BeanFactoryReferenceTest.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PropertyOrConstructorArg.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Property.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/AbstractProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractBeanReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanFactoryReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanFactoryReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractBeanReferenceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractPropertyFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ResolvedBeanReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PreresolvedBeanReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/factory/ContextFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeAbstractBeanInstanceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ArtifactHolder.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/CircularReferenceDetector.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/ReferencableProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ReferencableProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PreresolvedBean.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonAbstractBeanInstanceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanInstanceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractReferencableProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PropertyFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextTest.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/AbstractBeanInstanceFactoryTest.java" />
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
-        <option value="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneRemoteBeanContext.xml" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ListPropertyTest.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ListProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/InstantiationUtility.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ConstantProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/InstantiationUtilityTest.java" />
+        <option value="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/AbstractPropertyClassDoesNotProperlyImplementMorph.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractProperty.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidMorphTargetException.java" />
+        <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReference.java" />
+        <option value="$PROJECT_DIR$/workflowfactory/pom.xml" />
+        <option value="$PROJECT_DIR$/restxlator/pom.xml" />
+        <option value="$PROJECT_DIR$/nanocontext/pom.xml" />
+        <option value="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java" />
+        <option value="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -241,8 +326,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -251,498 +336,6 @@
               <option name="myItemId" value="cella" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logging" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sun" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="misc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logging" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -764,7 +357,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemId" value="nanocontext" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -778,21 +371,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemId" value="nanocontext" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -804,75 +389,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paypal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="credit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="context" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemId" value="nanocontext" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -894,33 +411,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
+              <option name="myItemId" value="nanocontext" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -949,82 +440,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="context" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="degeneratecontext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paypal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="credit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="context" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+        <option name="show-excluded-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -1077,11 +497,11 @@
       <recent name="com.paypal.credit.core.utility.TypeAndInstanceUtility" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.paypal.credit.context" />
       <recent name="com.paypal.credit" />
       <recent name="com.paypal.credit.workflow.factory" />
       <recent name="com.paypal.credit.workflow" />
       <recent name="com.paypal.credit.workflowcommand" />
-      <recent name="com.paypal.credit.core.processorbridge" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/degeneratecontext/src/test/resources" />
@@ -1106,39 +526,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.&lt;default&gt;">
-    <configuration default="false" name="ContextConstructionTest.createContextNoDependenciesTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.paypal.credit.context.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="degeneratecontext" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
-      <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ContextConstructionTest" />
-      <option name="METHOD_NAME" value="createContextNoDependenciesTest" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="4" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="false" name="&lt;default&gt;" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="degeneratecontext" />
@@ -1167,7 +554,73 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="ContextConstructionTest.createContextNoDependenciesTest (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ListPropertyTest.testIsApplicableAsArray (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.paypal.credit.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="degeneratecontext" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
+      <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ListPropertyTest" />
+      <option name="METHOD_NAME" value="testIsApplicableAsArray" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListPropertyTest.testPositiveIsApplicableAsArray" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.paypal.credit.context.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="degeneratecontext" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
+      <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ListPropertyTest" />
+      <option name="METHOD_NAME" value="testPositiveIsApplicableAsArray" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="0" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ContextConstructionTest.createComplexListsTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.paypal.credit.context.*" />
@@ -1180,7 +633,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
       <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ContextConstructionTest" />
-      <option name="METHOD_NAME" value="createContextNoDependenciesTest" />
+      <option name="METHOD_NAME" value="createComplexListsTest" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1213,34 +666,6 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.paypal.credit.context" />
       <option name="MAIN_CLASS_NAME" value="com.paypal.credit.context.ContextConstructionTest" />
-      <option name="METHOD_NAME" value="createContextNoDependenciesTest" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="0" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="ClassLoaderTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="degeneratecontext" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ClassLoaderTest" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -1812,19 +1237,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.clean install" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.cellaworkfloweditor" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest (1)" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
-      <item index="6" class="java.lang.String" itemvalue="TestNG.ClassLoaderTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.ListPropertyTest.testIsApplicableAsArray (1)" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.ListPropertyTest.testPositiveIsApplicableAsArray" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createComplexListsTest" />
+      <item index="6" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createContextNoDependenciesTest (1)" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.ClassLoaderTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest.createComplexListsTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ListPropertyTest.testPositiveIsApplicableAsArray" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.ListPropertyTest.testIsApplicableAsArray (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -1872,44 +1297,49 @@
       <workItem from="1455027879018" duration="26541000" />
       <workItem from="1455914217985" duration="116000" />
       <workItem from="1455914347182" duration="173000" />
-      <workItem from="1455914776964" duration="16620000" />
+      <workItem from="1455914776964" duration="16737000" />
+      <workItem from="1456241422641" duration="511000" />
+      <workItem from="1456326199952" duration="399000" />
+      <workItem from="1456417923599" duration="460000" />
+      <workItem from="1457984516462" duration="151000" />
+      <workItem from="1457984737983" duration="60029000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 15h 15m 41s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 08h 27m 52s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 15h 20m 24s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 08h 35m 21s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 15h 25m 12s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 08h 39m 48s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 17h 12m 48s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 09h 11m 51s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 17h 15m 29s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 09h 12m 49s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 17h 22m 56s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 09h 25m 08s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.22 at 17h 26m 53s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="ContextConstructionTest_createComplexListsTest - 2016.03.17 at 09h 35m 46s.xml">
+      <configuration name="ContextConstructionTest.createComplexListsTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.23 at 09h 28m 46s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="_default_ - 2016.03.17 at 09h 39m 41s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContextConstructionTest_createContextNoDependenciesTest - 2016.02.23 at 09h 32m 33s.xml">
-      <configuration name="ContextConstructionTest.createContextNoDependenciesTest" configurationId="TestNG" />
+    <history-entry file="_default_ - 2016.03.17 at 09h 48m 15s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_default_ - 2016.02.23 at 10h 04m 49s.xml">
+    <history-entry file="_default_ - 2016.03.17 at 10h 08m 00s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532406000" />
+    <option name="totallyTimeSpent" value="594073000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1922,7 +1352,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1932,18 +1362,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24611399" sideWeight="0.5029586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31686747" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27349398" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3962804" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819743" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30686694" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26626506" sideWeight="0.51849115" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3626506" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27710843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1952,7 +1383,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39663094" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.5061538" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1973,20 +1403,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <condition expression="path.equals(&quot;org/apache/commons/io/input/NullInputStream.class&quot;)" language="JAVA" custom="" />
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java</url>
-          <line>363</line>
-          <properties />
-          <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="var3 instanceof JarLoader &amp;&amp; ((JarLoader)var3).csu.getProtocol().startsWith(&quot;http&quot;)" language="JAVA" custom="java.net.URLClassLoader" />
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class</url>
-          <line>153</line>
-          <properties />
-          <option name="timeStamp" value="207" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class</url>
           <line>839</line>
           <properties />
@@ -2006,12 +1422,6 @@
           <option name="timeStamp" value="230" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class</url>
-          <line>562</line>
-          <properties />
-          <option name="timeStamp" value="234" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/jar/URLJarFile.class</url>
           <line>171</line>
           <properties />
@@ -2023,479 +1433,516 @@
           <properties />
           <option name="timeStamp" value="236" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ListPropertyTest.java</url>
+          <line>127</line>
+          <properties />
+          <option name="timeStamp" value="248" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java</url>
+          <line>222</line>
+          <properties />
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="256" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/InstantiationUtility.java</url>
+          <line>240</line>
+          <properties />
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="237" />
+      <option name="time" value="267" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="TestNG">
-        <watch expression="this.jar" language="JAVA" custom="" />
-        <watch expression="JarLoader.this.jar" language="JAVA" custom="" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.0.43-beta/mockito-core-2.0.43-beta.jar!/org/mockito/internal/creation/bytebuddy/InterceptedInvocation.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0243902">
-          <caret line="224" column="12" selection-start-line="224" selection-start-column="12" selection-end-line="224" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5300813">
-          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.30642202">
+          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4377#4378#0" expanded="true" />
+            <element signature="e#4433#4434#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/Condition.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33272395">
-          <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.3321859">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/Condition.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8628886">
-          <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.32702237">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42168674">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321859">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30464715">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/TestUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321859">
+          <caret line="39" column="97" selection-start-line="39" selection-start-column="97" selection-end-line="39" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1222031">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/CircularReferenceDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14629948">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PreresolvedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53184164">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractReferencableProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23407917">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2717#2718#0" expanded="false" />
-            <element signature="e#2747#2748#0" expanded="false" />
-            <element signature="e#2779#2780#0" expanded="false" />
-            <element signature="e#2806#2807#0" expanded="false" />
-            <element signature="e#2837#2838#0" expanded="false" />
-            <element signature="e#2864#2865#0" expanded="false" />
-            <element signature="e#2912#2913#0" expanded="false" />
-            <element signature="e#2940#2941#0" expanded="false" />
-            <element signature="e#2976#2977#0" expanded="false" />
-            <element signature="e#3012#3013#0" expanded="false" />
-            <element signature="e#3065#3066#0" expanded="false" />
-            <element signature="e#3096#3097#0" expanded="false" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ArtifactHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="142" column="11" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48801744">
-          <caret line="168" column="18" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58419245">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/io/LineNumberReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="198" column="18" selection-start-line="198" selection-start-column="18" selection-end-line="198" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/io/LineNumberReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.975945">
-          <caret line="198" column="18" selection-start-line="198" selection-start-column="18" selection-end-line="198" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4473684">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#0#25868#0" expanded="false" />
-            <element signature="e#5748#5749#0" expanded="false" />
-            <element signature="e#5784#5785#0" expanded="false" />
-            <element signature="e#10065#10066#0" expanded="false" />
-            <element signature="e#10148#10149#0" expanded="false" />
+            <element signature="e#2045#2046#0" expanded="false" />
+            <element signature="e#2078#2079#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/HashMapQuestion.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#421#422#0" expanded="false" />
-            <element signature="e#459#460#0" expanded="false" />
-            <element signature="e#493#494#0" expanded="false" />
-            <element signature="e#532#533#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3933162">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <caret line="32" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29305914">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042288557">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/ClassLoaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#2460#2461#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2623967">
-          <caret line="583" column="7" selection-start-line="583" selection-start-column="7" selection-end-line="583" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.33216783">
+          <caret line="478" column="26" selection-start-line="478" selection-start-column="26" selection-end-line="478" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/reflect/TypeVariable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.657487">
-          <caret line="459" column="11" selection-start-line="459" selection-start-column="11" selection-end-line="459" selection-end-column="11" />
+        <state vertical-scroll-proportion="1.2452108">
+          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/reflect/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68390805">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
           <folding>
-            <element signature="e#15480#15481#0" expanded="true" />
-            <element signature="e#15546#15547#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/internal/MethodInvocationHelper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8188034">
-          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.296296">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/http/HttpURLConnection.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/internal/Invoker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8530466">
+        <state vertical-scroll-proportion="0.03119266">
+          <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/AbstractBeanInstanceFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.347902">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2972028">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <element signature="e#418#419#0" expanded="false" />
+            <element signature="e#469#470#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/reflect/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5996503">
+          <caret line="312" column="30" selection-start-line="312" selection-start-column="30" selection-end-line="312" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ListPropertyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListComplexContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/util/logging/PlatformLogger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#7362#7363#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/util/logging/LoggingSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34946236">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/logging/LoggingProxyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4940171">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/logging/LogManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/logging/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="575" column="0" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/ResourceBundle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="1081" column="0" selection-start-line="1081" selection-start-column="0" selection-end-line="1081" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="528" column="23" selection-start-line="528" selection-start-column="23" selection-end-line="528" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/jar/JarFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16367266">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="e#7363#7364#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ListProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="e#1985#1986#0" expanded="true" />
-            <element signature="e#2022#2023#0" expanded="true" />
-            <element signature="e#6088#6089#0" expanded="true" />
-            <element signature="e#6135#6136#0" expanded="true" />
-            <element signature="e#6179#6180#0" expanded="true" />
-            <element signature="e#6229#6230#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/security/PrivilegedExceptionAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/security/AccessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="526" column="8" selection-start-line="526" selection-start-column="8" selection-end-line="526" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/JarIndex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38818565">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/jar/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.185185">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/URL.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/SingletonBeanInstanceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="971" column="0" selection-start-line="971" selection-start-column="0" selection-end-line="971" selection-end-column="0" />
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/jar/JarURLConnection.class">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.851852">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="220" column="24" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding>
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5926#5927#0" expanded="true" />
+            <element signature="e#2907#2908#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/jar/JarFileFactory.class">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.814815">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="e#3203#3204#0" expanded="true" />
+            <element signature="e#3228#3229#0" expanded="true" />
+            <element signature="e#3665#3666#0" expanded="true" />
+            <element signature="e#4547#4548#0" expanded="true" />
+            <element signature="e#4578#4579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4921739">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/URLConnection.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35664335">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#16412#16413#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/JarURLConnection.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/InstantiationUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5944056">
+          <caret line="108" column="67" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
           <folding>
-            <element signature="e#4959#4960#0" expanded="true" />
-            <element signature="e#5266#5267#0" expanded="true" />
-            <element signature="e#5298#5299#0" expanded="true" />
+            <element signature="e#7592#9361#0" expanded="true" />
+            <element signature="e#9360#9361#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/jar/URLJarFile.class">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/Context.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.296296">
-          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29043478">
+          <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8573913">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/InstantiationUtilityTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="363" column="0" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
-          <folding>
-            <element signature="e#30047#30048#0" expanded="true" />
-            <element signature="e#30079#30080#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="500" column="0" selection-start-line="500" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
-          <folding>
-            <element signature="e#16156#16157#0" expanded="true" />
-            <element signature="e#16220#16221#0" expanded="true" />
-            <element signature="e#27661#27662#0" expanded="true" />
-            <element signature="e#27701#27702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="424" column="0" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39652175">
+          <caret line="35" column="98" selection-start-line="35" selection-start-column="98" selection-end-line="35" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/degeneratecontext/src/test/resources/OneRemoteBeanContext.xml">
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ConstantProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1325536">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.2121739">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45043477">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26608697">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/AbstractPropertyClassDoesNotProperlyImplementMorph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14782609">
+          <caret line="5" column="63" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8521739">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidMorphTargetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5026087">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflowfactory/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6193078">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restxlator/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5883424">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/BeanReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40869564">
+          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/nanocontext.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3406193">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/credit/workflow/2.0.0-SNAPSHOT/workflow-2.0.0-SNAPSHOT-sources.jar!/com/paypal/credit/workflow/RSParallelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029565217">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="234" column="12" selection-start-line="234" selection-start-column="12" selection-end-line="234" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5883424">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding />
         </state>
       </provider>
