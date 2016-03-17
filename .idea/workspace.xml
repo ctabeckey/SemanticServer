@@ -2,118 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractProperty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractReferencableProperty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ArtifactHolder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/BeanReference.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/CircularReferenceDetector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ConstantProperty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/Context.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/InstantiationUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ListProperty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PreresolvedBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/SingletonBeanInstanceFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/AbstractPropertyClassDoesNotProperlyImplementMorph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidMorphTargetException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/AbstractBeanInstanceFactoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ClassMatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/GenericBeanInstance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ListPropertyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/omegaexecutor/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_dep_0_8_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_findbugs_annotations_1_3_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LambdaCommandExecutor/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LambdaCommandExecutor/src/main/java/com/paypal/credit/lambda/XactionFunction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/HashMapQuestion.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/AbstractBeanReference.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanFactoryReference.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/Context.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ContextUtility.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ExternalBeanDefinition.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/PrototypeBeanFactoryReference.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/ResolvedBeanReference.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SimpleBeanReference.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/SingletonBeanFactoryReference.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/nanocontext/dependency-reduced-pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/pom.xml" afterPath="$PROJECT_DIR$/nanocontext/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/META-INF/sun-jaxb.episode" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/META-INF/sun-jaxb.episode" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CircularReferenceException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CircularReferenceException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/FailedToInstantiateBeanException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/FailedToInstantiateBeanException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/resources/ctx.xsd" afterPath="$PROJECT_DIR$/nanocontext/src/main/resources/ctx.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/main/resources/generateCtxClasses.sh" afterPath="$PROJECT_DIR$/nanocontext/src/main/resources/generateCtxClasses.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/ClassLoaderTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/ClassLoaderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/InstantiationUtilityTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/ContextUtilityTest.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/java/com/paypal/credit/context/TestUtility.java" afterPath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/TestUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanContextWithCtorArg.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanContextWithCtorArg.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithChildContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithChildContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListComplexContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListComplexContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithListContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneBeanWithReferencedChildContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithReferencedChildContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OnePrototypeBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OnePrototypeBeanContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/OneRemoteBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/OneRemoteBeanContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/degeneratecontext/src/test/resources/TwoBeanContext.xml" afterPath="$PROJECT_DIR$/nanocontext/src/test/resources/TwoBeanContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_credit_xactionctx_1_0_1_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_paypal_credit_xactionctx_1_0_1_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_0_8_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_0_8_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restxlator/pom.xml" afterPath="$PROJECT_DIR$/restxlator/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/pom.xml" afterPath="$PROJECT_DIR$/workflowfactory/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" afterPath="$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/pom.xml" afterPath="$PROJECT_DIR$/nanocontext/pom.xml" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -162,34 +52,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContextFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/nanocontext/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5883424">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="234" column="12" selection-start-line="234" selection-start-column="12" selection-end-line="234" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -265,10 +133,10 @@
         <option value="$PROJECT_DIR$/degeneratecontext/src/main/java/com/paypal/credit/context/BeanReference.java" />
         <option value="$PROJECT_DIR$/workflowfactory/pom.xml" />
         <option value="$PROJECT_DIR$/restxlator/pom.xml" />
-        <option value="$PROJECT_DIR$/nanocontext/pom.xml" />
         <option value="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java" />
         <option value="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/nanocontext/pom.xml" />
       </list>
     </option>
   </component>
@@ -1302,7 +1170,7 @@
       <workItem from="1456326199952" duration="399000" />
       <workItem from="1456417923599" duration="460000" />
       <workItem from="1457984516462" duration="151000" />
-      <workItem from="1457984737983" duration="60029000" />
+      <workItem from="1457984737983" duration="60145000" />
     </task>
     <servers />
   </component>
@@ -1339,7 +1207,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="594073000" />
+    <option name="totallyTimeSpent" value="594189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1905,14 +1773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nanocontext/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3406193">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/paypal/credit/workflow/2.0.0-SNAPSHOT/workflow-2.0.0-SNAPSHOT-sources.jar!/com/paypal/credit/workflow/RSParallelController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029565217">
@@ -1931,18 +1791,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5883424">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.3547826">
           <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/nanocontext/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5883424">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
