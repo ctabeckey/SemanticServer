@@ -1,0 +1,15 @@
+<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
+
+    <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
+        <constructor-arg>
+            <list>
+                <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype" />
+                <bean class="com.paypal.credit.processors.ProcessorTwo" scope="prototype" />
+            </list>
+        </constructor-arg>
+
+        <constructor-arg>
+            <value>com.paypal.credit.workflowtest.AccountIdProcessorContext</value>
+        </constructor-arg>
+    </bean>
+</beans>
