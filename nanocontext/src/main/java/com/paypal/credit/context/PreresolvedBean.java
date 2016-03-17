@@ -1,6 +1,7 @@
 package com.paypal.credit.context;
 
 import com.paypal.credit.context.exceptions.ContextInitializationException;
+import com.paypal.credit.context.exceptions.InvalidMorphTargetException;
 
 /**
  * The degenerate case of an AbstractBeanReference, where the bean is extant and its
@@ -51,6 +52,24 @@ public final class PreresolvedBean<T>
     }
 
     /**
+     * Only works if the target class is a superclass result of a getValueType() call.
+     *
+     * @param targetClazz the target type
+     * @param <S>
+     * @return a cast of the getValue() result
+     * @throws ContextInitializationException - if the target type is not the type or a super-type
+     */
+    @Override
+    public <S> S getValue(final Class<S> targetClazz)
+            throws ContextInitializationException {
+        if (isResolvableAs(targetClazz)) {
+            return targetClazz.cast(getValue());
+        } else {
+            throw new InvalidMorphTargetException(this, getValueType(), targetClazz);
+        }
+    }
+
+    /**
      * Returns the currently resolved type of the property
      */
     @Override
@@ -66,20 +85,6 @@ public final class PreresolvedBean<T>
     @Override
     public boolean isResolvableAs(Class<?> clazz) throws ContextInitializationException {
         return clazz.isAssignableFrom(getValueType());
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public <S> PreresolvedBean<S> morph(Class<S> targetValueType) throws ContextInitializationException {
-        if (this.getValueType().equals(targetValueType)) {
-            return (PreresolvedBean<S>) this;
-        }
-
-        isResolvableAs(targetValueType);
-
-        return new PreresolvedBean(this.getContext(), this.getIdentifier(), this.bean, targetValueType);
     }
 
     @Override

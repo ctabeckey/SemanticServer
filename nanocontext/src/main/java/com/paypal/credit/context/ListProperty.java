@@ -2,6 +2,7 @@ package com.paypal.credit.context;
 
 import com.paypal.credit.context.exceptions.BeanClassNotFoundException;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
+import com.paypal.credit.context.exceptions.InvalidMorphTargetException;
 import com.paypal.credit.context.exceptions.UnknownCollectionTypeException;
 
 import java.lang.reflect.Array;
@@ -39,8 +40,7 @@ public class ListProperty<C> extends AbstractProperty<C> {
             List value = new ArrayList<>(properties.size());
 
             for (AbstractProperty property : properties) {
-                AbstractProperty morphedProperty = property.morph(getElementType());
-                value.add(morphedProperty.getValue());
+                value.add(property.getValue(getElementType()));
             }
 
             return (C) value;
@@ -48,13 +48,73 @@ public class ListProperty<C> extends AbstractProperty<C> {
             Object value = Array.newInstance(elementType, properties.size());
             int index = 0;
             for (AbstractProperty property : properties) {
-                AbstractProperty morphedProperty = property.morph(getElementType());
-                Array.set(value, index++, morphedProperty.getValue());
+                Array.set(value, index++, property.getValue(getElementType()));
             }
 
             return (C) value;
         } else {
             return null;
+        }
+
+    }
+
+    /**
+     * Get the List as an instance of the target type.
+     * It is strongly suggested that the List specific
+     * @see #getValue(Class, Class) be used if the target class is
+     * a collection.
+     * This method is reliable if the targetClazz is an instance of an array.
+     * The element types of Collection types are not reliably determinable at runtime.
+     *
+     * @param targetClazz the target type
+     * @param <S> the target class Type
+     * @return the list as a targetClazz type
+     * @throws ContextInitializationException - if the target type is not the type or a super-type
+     */
+    @Override
+    public <S> S getValue(final Class<S> targetClazz)
+            throws ContextInitializationException {
+        if (isResolvableAs(targetClazz)) {
+            Class<?> targetElementClazz = InstantiationUtility.extractElementType(targetClazz);
+            return getValue(targetClazz, targetElementClazz);
+        } else {
+            throw new InvalidMorphTargetException(this, getValueType(), targetClazz);
+        }
+    }
+
+    /**
+     *
+     * @param targetClazz the class of the target type
+     * @param targetElementClazz the class of the target element type
+     * @param <S> the target class Type
+     * @param <E> the target element Type
+     * @return the list as a targetClazz type
+     * @throws ContextInitializationException - if the target type is not the type or a super-type
+     */
+    public <S, E> S getValue(final Class<S> targetClazz, final Class<E> targetElementClazz)
+            throws ContextInitializationException {
+        // assure that the target element class is not null
+        Class<?> fixedTargetElementClazz = targetElementClazz == null ?
+                getElementType() : targetElementClazz;
+
+        if (List.class.equals(targetClazz)) {
+            List value = new ArrayList<>(properties.size());
+
+            for (AbstractProperty property : properties) {
+                value.add(property.getValue(fixedTargetElementClazz));
+            }
+
+            return (S) value;
+        } else if (targetClazz.isArray()) {
+            Object value = Array.newInstance(targetElementClazz, properties.size());
+            int index = 0;
+            for (AbstractProperty property : properties) {
+                Array.set(value, index++, property.getValue(fixedTargetElementClazz));
+            }
+
+            return (S) value;
+        } else {
+            throw new InvalidMorphTargetException(this, getValueType(), targetClazz);
         }
 
     }
@@ -111,17 +171,6 @@ public class ListProperty<C> extends AbstractProperty<C> {
         }
 
         return true;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public <S> AbstractProperty<S> morph(Class<S> valueType) throws ContextInitializationException {
-        if (valueType.isArray()) {
-            return morph(valueType, valueType.getComponentType());
-        }
-        return (AbstractProperty<S>) this;
     }
 
     /**

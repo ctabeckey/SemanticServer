@@ -68,11 +68,29 @@ final class BeanReference<T> extends AbstractProperty<T> {
         AbstractReferencableProperty beanRef = getReferencedBean();
         if (beanRef != null) {
             if (this.valueType != null) {
-                return (T)beanRef.morph(this.valueType).getValue();
+                return (T)beanRef.getValue(this.valueType);
             }
             return (T) beanRef.getValue();
         }
         return null;
+    }
+
+    /**
+     * Get the value as the given type.
+     * This method should do conversion, valueOf, instantiation, etc as it needs to.
+     *
+     * @param targetClazz the target type
+     * @return an instance of the constant value as the given type
+     * @throws ContextInitializationException - usually if the conversion cannot be done
+     * @see #isResolvableAs(Class)
+     */
+    @Override
+    public <S> S getValue(Class<S> targetClazz) throws ContextInitializationException {
+        if (isResolvableAs(targetClazz)) {
+            return targetClazz.cast(getValue());
+        } else {
+            throw new InvalidMorphTargetException(this, getValueType(), targetClazz);
+        }
     }
 
     /**
@@ -102,23 +120,4 @@ final class BeanReference<T> extends AbstractProperty<T> {
         return beanRef == null ? false : beanRef.isResolvableAs(clazz);
     }
 
-    /**
-     * Return an instance of the same class where the target resolution type is the
-     * given type.
-     * Derivations of this method MUST return <code>this</code> if the targetValueType is
-     * exactly the same as the result of getValueType().
-     *
-     * @param targetValueType
-     * @return
-     * @see #isResolvableAs(Class) may be called to determine whether the morph will be
-     * successful before calling this method.
-     */
-    @Override
-    public <S> AbstractProperty<S> morph(Class<S> targetValueType) throws ContextInitializationException {
-        if (getReferencedBean().isResolvableAs(targetValueType)) {
-            return new BeanReference<>(getContext(), getReferencedBeanIdentifier(), targetValueType);
-        } else {
-            throw new InvalidMorphTargetException(this, getReferencedBean().getValueType(), targetValueType);
-        }
-    }
 }

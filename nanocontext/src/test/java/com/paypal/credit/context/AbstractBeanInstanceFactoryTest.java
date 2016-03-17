@@ -100,11 +100,6 @@ public class AbstractBeanInstanceFactoryTest {
         }
 
         @Override
-        public AbstractProperty morph(Class targetValueType) throws ContextInitializationException {
-            return this;
-        }
-
-        @Override
         protected Context getContext() {
             return super.getContext();
         }
@@ -115,6 +110,18 @@ public class AbstractBeanInstanceFactoryTest {
         @Override
         public Object getValue() throws ContextInitializationException {
             return createBeanInstance();
+        }
+
+        /**
+         * Only works if the target class is a superclass result of a getValueType() call.
+         *
+         * @param targetClazz the target type
+         * @return a cast of the getValue() result
+         * @throws ContextInitializationException - if the target type is not the type or a super-type
+         */
+        @Override
+        public Object getValue(Class targetClazz) throws ContextInitializationException {
+            return super.getValue(targetClazz);
         }
     }
 

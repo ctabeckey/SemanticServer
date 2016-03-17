@@ -2,6 +2,7 @@ package com.paypal.credit.context;
 
 import com.paypal.credit.context.exceptions.CannotCreateObjectFromStringException;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
+import com.paypal.credit.context.exceptions.InvalidMorphTargetException;
 
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -47,7 +48,37 @@ public class ConstantProperty<T> extends AbstractProperty<T> {
         return value;
     }
 
-    /** */
+    /**
+     * Get the value as the given type.
+     * This method will do conversion, valueOf, instantiation, etc as it needs to.
+     * NOTE: unlike isResolvableAs(), which is restricted to primitive and java.lang.*
+     * classes, this method will try to convert to whatever class is given. Exceptions
+     * may be thrown if the conversion cannot be accomplished. In practice the target class
+     * must have a static valueOf(String) method or a constructor expecting a single String
+     * parameter.
+     *
+     * @see #isResolvableAs(Class)
+     *
+     * @param targetClazz the target type
+     * @param <S> the Type of the target type
+     * @return an instance of the constant value as the given type
+     * @throws ContextInitializationException - usually if the conversion cannot be done
+     */
+    public <S> S getValue(final Class<S> targetClazz)
+            throws ContextInitializationException {
+        if (targetClazz == null || targetClazz.equals(getValueType())) {
+            return (S)getValue();
+        } else {
+            if (isResolvableAs(targetClazz)) {
+                return InstantiationUtility.createInstanceFromStringValue(targetClazz, this.rawValue, false);
+            }
+            throw new InvalidMorphTargetException(this, getValueType(), targetClazz);
+        }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Class<T> getValueType() {
         return this.valueType;
@@ -57,6 +88,11 @@ public class ConstantProperty<T> extends AbstractProperty<T> {
      * Because of the order of execution, all constants are created as String values.
      * When the constructor of a Bean is called, the type may be morphed to make a compatible value
      * with a constructor argument.
+     *
+     * NOTE: the targetValueType must be either a primitive, Class, or a class that is part of
+     * the java.lang package. This class explicitly restricts its getValue() result to one
+     * of those types.
+     *
      * @param targetValueType
      * @return
      */
@@ -71,22 +107,6 @@ public class ConstantProperty<T> extends AbstractProperty<T> {
         } catch(CannotCreateObjectFromStringException ccofsX) {
             return false;
         }
-    }
-
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public ConstantProperty morph(Class targetValueType) throws ContextInitializationException {
-        // return this if the type is the same
-        if (this.getValueType().equals(targetValueType)) {
-            return (ConstantProperty<T>) this;
-        }
-
-        // this call will generate an exception if the morph cannot succeed.
-        Object value = InstantiationUtility.createInstanceFromStringValue(targetValueType, this.rawValue, true);
-        return new ConstantProperty(getContext(), this.rawValue, targetValueType, value);
     }
 
     /**

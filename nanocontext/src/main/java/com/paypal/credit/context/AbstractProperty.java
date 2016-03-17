@@ -44,23 +44,16 @@ public abstract class AbstractProperty<T> {
     public abstract boolean isResolvableAs(final Class<?> clazz) throws ContextInitializationException;
 
     /**
-     * Return an instance of the same class where the target resolution type is the
-     * given type.
-     * Derivations of this method SHOULD return <code>this</code> if the targetValueType is
-     * exactly the same as the result of getValueType().
+     * Get the value as the given type.
+     * This method should do conversion, valueOf, instantiation, etc as it needs to.
      *
-     * @see #isResolvableAs(Class) may be called to determine whether the morph will be
-     * successful before calling this method
+     * @see #isResolvableAs(Class)
      *
-     * @param targetValueType
-     * @param <S>
-     * @return
+     * @param targetClazz the target type
+     * @param <S> the Type of the target type
+     * @return an instance of the constant value as the given type
+     * @throws ContextInitializationException - usually if the conversion cannot be done
      */
-    public <S> AbstractProperty<S> morph(Class<S> targetValueType)
-            throws ContextInitializationException {
-        if (targetValueType != null && targetValueType.equals(getValueType())) {
-            return (AbstractProperty<S>) this;
-        }
-        throw new AbstractPropertyClassDoesNotProperlyImplementMorph(this.getClass());
-    }
+    public abstract <S> S getValue(final Class<S> targetClazz)
+            throws ContextInitializationException;
 }

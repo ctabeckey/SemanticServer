@@ -40,11 +40,4 @@ public class PrototypeBeanInstanceFactory<T>
         return instance;
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public <S> AbstractProperty<S> morph(Class<S> targetValueType) throws ContextInitializationException {
-        return (AbstractProperty<S>) this;
-    }
 }

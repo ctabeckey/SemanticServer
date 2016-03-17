@@ -8,7 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/nanocontext/nanocontext.iml" filepath="$PROJECT_DIR$/nanocontext/nanocontext.iml" />
       <module fileurl="file://$PROJECT_DIR$/omegaexecutor/omegaexecutor.iml" filepath="$PROJECT_DIR$/omegaexecutor/omegaexecutor.iml" />
       <module fileurl="file://$PROJECT_DIR$/processorprovider/processorprovider.iml" filepath="$PROJECT_DIR$/processorprovider/processorprovider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/restxlator/restxlator.iml" filepath="$PROJECT_DIR$/restxlator/restxlator.iml" />
       <module fileurl="file://$PROJECT_DIR$/testprocessorprovider/testprocessorprovider.iml" filepath="$PROJECT_DIR$/testprocessorprovider/testprocessorprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/workflowfactory/workflowfactory.iml" filepath="$PROJECT_DIR$/workflowfactory/workflowfactory.iml" />
     </modules>

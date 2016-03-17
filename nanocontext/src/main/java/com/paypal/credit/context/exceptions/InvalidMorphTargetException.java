@@ -8,7 +8,7 @@ import com.paypal.credit.context.AbstractProperty;
  */
 public class InvalidMorphTargetException extends ContextInitializationException {
     private final static String createMessage(final AbstractProperty property, final Class<?> baseType, final Class<?> targetType) {
-        return String.format("Property %s, unable to morph from &s to %s", property.getClass(), baseType.getName(), targetType.getName());
+        return String.format("Property %s, unable to morph from %s to %s", property.getClass(), baseType.getName(), targetType.getName());
     }
 
     /**

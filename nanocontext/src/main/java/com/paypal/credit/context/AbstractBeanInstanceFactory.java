@@ -3,6 +3,7 @@ package com.paypal.credit.context;
 import com.paypal.credit.context.exceptions.BeanClassNotFoundException;
 import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.context.exceptions.FailedToInstantiateBeanException;
+import com.paypal.credit.context.exceptions.InvalidMorphTargetException;
 import com.paypal.credit.context.exceptions.NoApplicableConstructorException;
 
 import java.lang.reflect.Constructor;
@@ -127,9 +128,7 @@ abstract class AbstractBeanInstanceFactory<T>
         for (AbstractProperty argument : orderedParameters) {
             Class<?> parameterType = parameterTypes[index];
 
-            AbstractProperty morphedProperty = argument.morph(parameterType);
-
-            parameters[index] = morphedProperty.getValue();
+            parameters[index] = argument.getValue(parameterType);
 
             ++index;
         }
@@ -158,6 +157,24 @@ abstract class AbstractBeanInstanceFactory<T>
         }
 
         return beanClass;
+    }
+
+    /**
+     * Only works if the target class is a superclass result of a getValueType() call.
+     *
+     * @param targetClazz the target type
+     * @param <S>
+     * @return a cast of the getValue() result
+     * @throws ContextInitializationException - if the target type is not the type or a super-type
+     */
+    @Override
+    public <S> S getValue(final Class<S> targetClazz)
+            throws ContextInitializationException {
+        if (isResolvableAs(targetClazz)) {
+            return targetClazz.cast(getValue());
+        } else {
+            throw new InvalidMorphTargetException(this, getValueType(), targetClazz);
+        }
     }
 
     /**

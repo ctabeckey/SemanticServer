@@ -43,19 +43,4 @@ public class SingletonBeanInstanceFactory<T> extends AbstractBeanInstanceFactory
         return singleton;
     }
 
-    /**
-     * Return an instance of the same class where the target resolution type is the
-     * given type.
-     * Derivations of this method MUST return <code>this</code> if the targetValueType is
-     * exactly the same as the result of getValueType().
-     *
-     * @param targetValueType
-     * @return
-     * @see #isResolvableAs(Class) may be called to determine whether the morph will be
-     * successful before calling this method.
-     */
-    @Override
-    public <S> AbstractProperty<S> morph(Class<S> targetValueType) throws ContextInitializationException {
-        return (AbstractProperty<S>) this;
-    }
 }
