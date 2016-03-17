@@ -3,7 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/pom.xml" afterPath="$PROJECT_DIR$/nanocontext/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/META-INF/sun-jaxb.episode" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/META-INF/sun-jaxb.episode" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" afterPath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +73,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nanocontext/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5883424">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0775076">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -212,6 +230,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restxlator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restxlator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restxlator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paypal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xlator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1170,7 +1266,7 @@
       <workItem from="1456326199952" duration="399000" />
       <workItem from="1456417923599" duration="460000" />
       <workItem from="1457984516462" duration="151000" />
-      <workItem from="1457984737983" duration="60145000" />
+      <workItem from="1457984737983" duration="60384000" />
     </task>
     <servers />
   </component>
@@ -1207,7 +1303,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="594189000" />
+    <option name="totallyTimeSpent" value="594428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1224,13 +1320,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14216867" sideWeight="0.49704143" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14216867" sideWeight="0.49704143" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24611399" sideWeight="0.5029586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27349398" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27349398" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3962804" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1358,17 +1454,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.0.43-beta/mockito-core-2.0.43-beta.jar!/org/mockito/internal/creation/bytebuddy/InterceptedInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30642202">
-          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
-          <folding>
-            <element signature="e#4377#4378#0" expanded="true" />
-            <element signature="e#4433#4434#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321859">
@@ -1659,16 +1744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29043478">
-          <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workflowfactory/src/main/java/com/paypal/credit/workflow/factory/IocWorkflowFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8573913">
@@ -1791,14 +1866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5883424">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3547826">
@@ -1807,10 +1874,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.838261">
+          <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restxlator/src/main/java/com/paypal/credit/xlator/StatementXlatorApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.049707603">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49088147">
+          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nanocontext/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5883424">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.0775076">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
