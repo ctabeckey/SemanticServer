@@ -98,19 +98,19 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for degeneratecontext" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="degeneratecontext" />
-      </profile>
       <profile default="false" name="Annotation profile for omegaexecutor" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="omegaexecutor" />
+      </profile>
+      <profile default="false" name="Annotation profile for nanocontext" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="nanocontext" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -119,7 +119,6 @@
       <module name="cellautil" target="8" />
       <module name="cellaworkflowcommand" target="7" />
       <module name="cellaworkfloweditor" target="8" />
-      <module name="degeneratecontext" target="7" />
       <module name="lambdacommandexecutor" target="7" />
       <module name="nanocontext" target="7" />
       <module name="omegaexecutor" target="7" />

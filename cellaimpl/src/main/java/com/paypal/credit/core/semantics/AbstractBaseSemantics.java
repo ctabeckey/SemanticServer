@@ -1,7 +1,8 @@
 package com.paypal.credit.core.semantics;
 
-import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * Most Important:
@@ -102,13 +103,10 @@ public abstract class AbstractBaseSemantics
      * @throws CoreRouterSemanticsException
      */
     protected AbstractBaseSemantics(
-            final ApplicationSemantics applicationSemantics,
-            final String logicalCommandName)
-            throws CoreRouterSemanticsException
+			@NotNull final ApplicationSemantics applicationSemantics,
+			@NotNull final String logicalCommandName)
+    throws CoreRouterSemanticsException
     {
-        ParameterCheckUtility.checkParameterNotNull(applicationSemantics, "applicationSemantics");
-        ParameterCheckUtility.checkParameterNotNull(logicalCommandName, "logicalCommandName");
-
         LogicalNameParser parser = new LogicalNameParser(logicalCommandName);
 
         this.applicationSemantics = applicationSemantics;
@@ -132,17 +130,13 @@ public abstract class AbstractBaseSemantics
 	 * @param object
 	 */
 	protected AbstractBaseSemantics(
-            final ApplicationSemantics applicationSemantics,
-            final Action action,
-            final String subject,
+			@NotNull final ApplicationSemantics applicationSemantics,
+			@NotNull final Action action,
+			@NotNull final String subject,
             final CollectionType collectionType,
             final Preposition preposition,
             final String object)
 	{
-        ParameterCheckUtility.checkParameterNotNull(applicationSemantics, "applicationSemantics");
-        ParameterCheckUtility.checkParameterNotNull(action, "action");
-        ParameterCheckUtility.checkParameterNotNull(subject, "subject");
-
         this.applicationSemantics = applicationSemantics;
         this.action = action;
         this.subject = subject;

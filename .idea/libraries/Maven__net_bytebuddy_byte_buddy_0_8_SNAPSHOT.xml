@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: net.bytebuddy:byte-buddy:0.8-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.m2/raptor2/net/bytebuddy/byte-buddy/0.8-SNAPSHOT/byte-buddy-0.8-SNAPSHOT.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/0.8-SNAPSHOT/byte-buddy-0.8-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/raptor2/net/bytebuddy/byte-buddy/0.8-SNAPSHOT/byte-buddy-0.8-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/0.8-SNAPSHOT/byte-buddy-0.8-SNAPSHOT-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/raptor2/net/bytebuddy/byte-buddy/0.8-SNAPSHOT/byte-buddy-0.8-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/0.8-SNAPSHOT/byte-buddy-0.8-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

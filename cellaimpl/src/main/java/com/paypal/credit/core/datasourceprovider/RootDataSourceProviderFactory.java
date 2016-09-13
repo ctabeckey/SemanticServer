@@ -1,10 +1,11 @@
 package com.paypal.credit.core.datasourceprovider;
 
-import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.datasourceprovider.exceptions.UnableToCreateServiceProviderImplementation;
 import com.paypal.credit.core.datasourceprovider.exceptions.UnableToFindServiceProviderImplementation;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.util.Map;
 import java.util.Objects;
 import java.util.ServiceLoader;
@@ -279,19 +280,11 @@ public class RootDataSourceProviderFactory
          * @param implementingClass
          */
         public DataSourceDescription(
-                final String publisher,
-                final int version,
-                final Class<S> serviceInterface,
-                final RoutingToken routingToken,
-                final Class<?> implementingClass) {
-            ParameterCheckUtility.checkParameterNotNull(publisher, "publisher");
-            if (version < 0) {
-                throw new IllegalArgumentException("'version' is less than zero and must not be.");
-            }
-            ParameterCheckUtility.checkParameterNotNull(serviceInterface, "serviceInterface");
-            ParameterCheckUtility.checkParameterNotNull(routingToken, "routingToken");
-            ParameterCheckUtility.checkParameterNotNull(implementingClass, "implementingClass");
-
+                @NotNull final String publisher,
+                @Min(0) final int version,
+                @NotNull final Class<S> serviceInterface,
+                @NotNull final RoutingToken routingToken,
+                @NotNull final Class<?> implementingClass) {
             this.publisher = publisher;
             this.version = version;
             this.serviceInterface = serviceInterface;

@@ -38,6 +38,9 @@ public class InstantiationUtility {
             java.lang.Class.class.getPackage(),
     };
 
+    /** Prevent instantiation */
+    private InstantiationUtility() {}
+
     /**
      * Return true if the class is in the core (java.lang) package
      * @param clazz the class to evaluate
@@ -54,9 +57,6 @@ public class InstantiationUtility {
         }
         return false;
     }
-
-    /** Prevent instantiation */
-    private InstantiationUtility() {}
 
     /**
      *
