@@ -6,6 +6,7 @@ import com.paypal.credit.context.xml.BeansType;
 import com.paypal.credit.context.xml.ScopeType;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
@@ -33,6 +34,13 @@ public class AbstractBeanInstanceFactoryTest {
         bean.setArtifact(null);
         bean.setClazz(GenericBeanInstance.class.getName());
         bean.setScope(ScopeType.PROTOTYPE);
+        ctxFactory.with(bean);
+
+        bean = new BeanType();
+        bean.setId("genericBeanFactory");
+        bean.setArtifact(null);
+        bean.setClazz(GenericBeanFactory.class.getName());
+        bean.setScope(ScopeType.SINGLETON);
         ctxFactory.with(bean);
 
         ctx = ctxFactory
@@ -65,38 +73,82 @@ public class AbstractBeanInstanceFactoryTest {
         MockAbstractBeanInstanceFactory ref = new MockAbstractBeanInstanceFactory(ctx, beanType);
     }
 
-    @Test
-    public void testValidClassName() throws ContextInitializationException {
-        BeanType beanType = new BeanType();
-        beanType.setId("id");
-        beanType.setArtifact(null);
-        beanType.setClazz(GenericBeanInstance.class.getName());
-        beanType.setScope(ScopeType.PROTOTYPE);
+    @DataProvider
+    public Object[][] validBeanDataProvider() {
+        return new Object[][] {
+                new Object[]{ctx,
+                        BeanTypeFactory.create("id", GenericBeanInstance.class.getName(), ScopeType.PROTOTYPE, null,
+                                null, null, null,
+                                Boolean.FALSE,
+                                null)
+                },
+                new Object[]{ctx,
+                        BeanTypeFactory.create("id", GenericBeanInstance.class.getName(), ScopeType.PROTOTYPE, null,
+                                null, null, "createBean",
+                                Boolean.FALSE,
+                                null)
+                },
+                new Object[]{ctx,
+                        BeanTypeFactory.create("id", GenericBeanInstance.class.getName(), ScopeType.PROTOTYPE, null,
+                                null, GenericBeanInstance.class.getName(), "createBean",
+                                Boolean.FALSE,
+                                null)
+                },
+                new Object[]{ctx,
+                        BeanTypeFactory.create("id", GenericBeanInstance.class.getName(), ScopeType.PROTOTYPE, null,
+                                null, GenericBeanFactory.class.getName(), "createBean",
+                                Boolean.FALSE,
+                                null)
+                },
+                new Object[]{ctx,
+                        BeanTypeFactory.create("id", GenericBeanInstance.class.getName(), ScopeType.PROTOTYPE, null,
+                                "genericBeanFactory", null, "createBeanInstance",
+                                Boolean.FALSE,
+                                null)
+                }
+        };
+    }
 
+    @Test(dataProvider = "validBeanDataProvider")
+    public void testValidClassName(final Context ctx, final BeanType beanType) throws ContextInitializationException {
         AbstractBeanInstanceFactory ref = new MockAbstractBeanInstanceFactory(ctx, beanType);
 
         Assert.assertNotNull(ref);
         Assert.assertNotNull(ref.createBeanInstance());
     }
 
-    @Test(expectedExceptions = {ContextInitializationException.class})
-    public void testInvalidClassName() throws ContextInitializationException {
-        BeanType beanType = new BeanType();
-        beanType.setId("id");
-        beanType.setArtifact(null);
-        beanType.setClazz("com.junk.invalid.ClassName");
-        beanType.setScope(ScopeType.PROTOTYPE);
+    @DataProvider
+    public Object[][] invalidBeanDataProvider() {
+        return new Object[][] {
+                new Object[]{ctx,
+                        BeanTypeFactory.create("id", "com.paypal.invalid.ClazzName", ScopeType.PROTOTYPE, null,
+                                null, null, null,
+                                Boolean.FALSE,
+                                null)
+                }
+        };
+    }
 
+    @Test(dataProvider = "invalidBeanDataProvider", expectedExceptions = {ContextInitializationException.class})
+    public void testInvalidClassName(final Context ctx, final BeanType beanType) throws ContextInitializationException {
         AbstractBeanInstanceFactory ref = new MockAbstractBeanInstanceFactory(ctx, beanType);
 
         ref.createBeanInstance();
     }
 
+    /**
+     *
+     */
     private static class MockAbstractBeanInstanceFactory
             extends AbstractBeanInstanceFactory {
 
         public MockAbstractBeanInstanceFactory(Context context, BeanType beanType) throws ContextInitializationException {
-            super(context, beanType.getId(), beanType.getArtifact(), beanType.getClazz(), null);
+            super(context,
+                    beanType.getId(), beanType.getArtifact(), beanType.getClazz(),
+                    beanType.getFactory(), beanType.getFactoryClass(), beanType.getFactoryMethod(),
+                    beanType.getActive(),
+                    null
+            );
         }
 
         @Override

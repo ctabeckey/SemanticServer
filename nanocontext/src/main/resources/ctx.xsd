@@ -43,6 +43,10 @@
         <xs:attribute name="class" type="xs:string" use="required"/>
         <xs:attribute name="scope" type="workspace:ScopeType" use="optional"/>
         <xs:attribute name="artifact" type="xs:string" use="optional" />
+        <xs:attribute name="factory" type="xs:string" use="optional" />
+        <xs:attribute name="factory-class" type="xs:string" use="optional" />
+        <xs:attribute name="factory-method" type="xs:string" use="optional" />
+        <xs:attribute name="active" type="xs:boolean" use="optional" default="false"/>
     </xs:complexType>
 
     <xs:complexType name="ListType">

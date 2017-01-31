@@ -5,9 +5,9 @@ import java.util.Set;
 /**
  * Created by cbeckey on 11/10/15.
  */
-public interface DataSourceProviderFactory {
+public interface DataSourceProvider {
 
     String getPublisher();
 
-    Set<RootDataSourceProviderFactory.DataSourceDescription<?>> getInstalledProviders();
+    Set<RootDataSourceProvider.DataSourceDescription<?>> getInstalledProviders();
 }

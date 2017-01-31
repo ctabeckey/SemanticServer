@@ -63,26 +63,10 @@ public class ContextConstructionTest {
         Assert.assertNotNull(ctx);
 
         for (int index = 0; index < expectedBeans.length; ++index) {
-            Object beanInstance = null;
-            if (expectedBeans[index].getIdentifier() != null) {
-                beanInstance = ctx.getBean(expectedBeans[index].getIdentifier(), expectedBeans[index].getType());
-            } else {
-                beanInstance = ctx.getBean(expectedBeans[index].getType());
-            }
-            Assert.assertNotNull( beanInstance );
-            ProtectionDomain pd = beanInstance.getClass().getProtectionDomain();
-            Assert.assertNotNull(pd);
+            BeanSpec beanSpec = expectedBeans[index];
 
-            if (expectedBeans[index].getType() != null) {
-                Assert.assertTrue(expectedBeans[index].getType().isAssignableFrom(beanInstance.getClass()));
-            }
-
-            Object secondBeanInstance = null;
-            if (expectedBeans[index].getIdentifier() != null) {
-                secondBeanInstance = ctx.getBean(expectedBeans[index].getIdentifier(), expectedBeans[index].getType());
-            } else {
-                secondBeanInstance = ctx.getBean(expectedBeans[index].getType());
-            }
+            Object beanInstance = validateBeanExistenceAndType(ctx, beanSpec);
+            Object secondBeanInstance = validateBeanExistenceAndType(ctx, beanSpec);
 
             // validate that the SINGLETON/PROTOTYPE scope is working correctly
             switch(expectedBeans[index].getScope()) {
@@ -224,6 +208,80 @@ public class ContextConstructionTest {
             }
         }
     }
+
+    // ===========================
+    @DataProvider
+    public Object[][] contextHierarchyTestDataProvider() {
+        return new Object[][] {
+                new Object[]{
+                        new String[]{"OneBeanContext.xml", "OneRemoteBeanContext.xml"},
+                        new BeanSpec[]{
+                                new BeanSpec("beanOne", com.paypal.credit.context.ConstructorTestSubject.class, ScopeType.SINGLETON)
+                        }
+                },
+                new Object[]{
+                        new String[]{"OneBeanContext.xml", "TwoBeanContext.xml"},
+                        new BeanSpec[]{
+                                new BeanSpec("beanOne", com.paypal.credit.context.ConstructorTestSubject.class, ScopeType.SINGLETON),
+                                new BeanSpec("beanTwo", com.paypal.credit.context.ConstructorTestSubject.class, ScopeType.SINGLETON)
+                        }
+                }
+        };
+    }
+
+    @Test(dataProvider = "contextHierarchyTestDataProvider")
+    public void createContextHierarchiesTest(final String[] resourceNames, final BeanSpec[] expectedBeans)
+            throws JAXBException, ContextInitializationException {
+
+        // build a hierarchy of context, maintaining a reference to only the last one
+        Context currentContext = null;
+        for (String resourceName : resourceNames) {
+            ContextFactory ctxFactory = new ContextFactory()
+                    .with(getClass().getClassLoader().getResourceAsStream(resourceName));
+            if (currentContext != null) {
+                ctxFactory.withParentContext(currentContext);
+            }
+            currentContext = ctxFactory.build();
+
+            Assert.assertNotNull(currentContext);
+        }
+
+        for (BeanSpec beanSpec : expectedBeans) {
+            validateBeanExistenceAndType(currentContext, beanSpec);
+        }
+    }
+
+    /**
+     * Validates that a bean exists in gthe context and that its type is compatible with the
+     * expected type.
+     *
+     * @param currentContext
+     * @param beanSpec
+     * @return the bean instance or null
+     *
+     * @throws ContextInitializationException
+     */
+    private Object validateBeanExistenceAndType(Context currentContext, BeanSpec beanSpec) throws ContextInitializationException {
+        Object beanInstance = null;
+
+        if (beanSpec.getIdentifier() != null) {
+            beanInstance = currentContext.getBean(beanSpec.getIdentifier(), beanSpec.getType());
+        } else {
+            beanInstance = currentContext.getBean(beanSpec.getType());
+        }
+        Assert.assertNotNull( beanInstance );
+        ProtectionDomain pd = beanInstance.getClass().getProtectionDomain();
+        Assert.assertNotNull(pd);
+
+        if (beanSpec.getType() != null) {
+            Assert.assertTrue(beanSpec.getType().isAssignableFrom(beanInstance.getClass()));
+        }
+
+        return beanInstance;
+    }
+
+
+    // ===========================
 
     /**
      *

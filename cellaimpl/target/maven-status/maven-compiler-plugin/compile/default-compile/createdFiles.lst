@@ -5,14 +5,13 @@ com/paypal/credit/core/processorbridge/ProcessorBridgeByteCodeImplFactory.class
 com/paypal/credit/core/commandprovider/RootCommandProvider.class
 com/paypal/credit/core/semantics/ModelVocabulary.class
 com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class
-com/paypal/credit/core/datasourceprovider/DataSourceProviderInterface.class
 com/paypal/credit/core/commandprocessor/exceptions/FacadeProcessorBridgeNotAnInterfaceException.class
 com/paypal/credit/core/processorbridge/ProcessorBridgeProxyInvocationHandler.class
+com/paypal/credit/core/datasourceprovider/RootDataSourceProvider$DataSourceDescription.class
 com/paypal/credit/core/semantics/Action.class
 com/paypal/credit/core/semantics/ProcessorBridgeMethodSemantics.class
 com/paypal/credit/core/semantics/ApplicationSemantics.class
 com/paypal/credit/core/processorbridge/CommandMapping.class
-com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory.class
 com/paypal/credit/core/commandprocessor/exceptions/IncompatibleRoutingTokenException.class
 com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.class
 com/paypal/credit/core/processorbridge/ProcessorBridgeByteCodeImplFactory$PrototypeProcessorBridge.class
@@ -22,7 +21,7 @@ com/paypal/credit/core/processorbridge/ProductTypeRoutingToken.class
 com/paypal/credit/core/semantics/CommandFactoryMethodSemantics.class
 com/paypal/credit/core/commandprocessor/AsynchronousExecutionCallback.class
 com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationCompositeException.class
-com/paypal/credit/core/datasourceprovider/DataSourceProviderFactory.class
+com/paypal/credit/core/datasourceprovider/DataSourceProvider.class
 com/paypal/credit/core/processorbridge/Utility.class
 com/paypal/credit/core/commandprocessor/exceptions/UnknownCommandException.class
 com/paypal/credit/core/semantics/AbstractBaseSemantics.class
@@ -46,6 +45,7 @@ com/paypal/credit/core/commandprocessor/CellaAwareCommand.class
 com/paypal/credit/core/processorbridge/AbstractCachingProcessorBridgeFactory$1.class
 com/paypal/credit/core/Application.class
 com/paypal/credit/core/semantics/SemanticsUtility.class
+com/paypal/credit/core/datasourceprovider/RootDataSourceProvider.class
 com/paypal/credit/core/commandprocessor/CommandProcessor.class
 com/paypal/credit/core/commandprocessor/exceptions/ProcessorBridgeInstantiationException.class
 com/paypal/credit/serverinterface/ServerLifecycleListener.class
@@ -53,7 +53,6 @@ com/paypal/credit/core/commandprovider/CommandInstantiationToken.class
 com/paypal/credit/core/datasourceprovider/exceptions/UnableToCreateServiceProviderImplementation.class
 com/paypal/credit/core/commandprovider/CommandProvider.class
 com/paypal/credit/core/semantics/Preposition.class
-com/paypal/credit/core/datasourceprovider/RootDataSourceProviderFactory$DataSourceDescription.class
 com/paypal/credit/serverinterface/ServerLifecycleEvent.class
 com/paypal/credit/core/processorbridge/AbstractCachingProcessorBridgeFactory$ClassToInstanceCacheMap.class
 com/paypal/credit/core/commandprovider/exceptions/CommandProviderException.class

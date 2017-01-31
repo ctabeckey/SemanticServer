@@ -24,9 +24,13 @@ public class PrototypeBeanInstanceFactory<T>
             final String id,
             final String artifactIdentifier,
             final String clazzName,
+            final String factoryId,
+            final String factoryClassName,
+            final String factoryMethodName,
+            final boolean active,
             final List<AbstractProperty> ctorArgs)
             throws ContextInitializationException {
-        super(context, id, artifactIdentifier, clazzName, ctorArgs);
+        super(context, id, artifactIdentifier, clazzName, factoryId, factoryClassName, factoryMethodName, active, ctorArgs);
     }
 
     /**

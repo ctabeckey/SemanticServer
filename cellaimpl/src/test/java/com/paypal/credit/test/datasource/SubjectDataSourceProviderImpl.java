@@ -1,7 +1,7 @@
 package com.paypal.credit.test.datasource;
 
-import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderFactory;
-import com.paypal.credit.core.datasourceprovider.DataSourceProviderFactory;
+import com.paypal.credit.core.datasourceprovider.RootDataSourceProvider;
+import com.paypal.credit.core.datasourceprovider.DataSourceProvider;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 
 import java.util.HashSet;
@@ -10,8 +10,8 @@ import java.util.Set;
 /**
  * Created by cbeckey on 11/10/15.
  */
-public class SubjectDataSourceProviderFactoryImpl
-implements DataSourceProviderFactory {
+public class SubjectDataSourceProviderImpl
+implements DataSourceProvider {
 
     /**
      * The publisher of the service providers.
@@ -24,12 +24,12 @@ implements DataSourceProviderFactory {
     }
 
     @Override
-    public Set<RootDataSourceProviderFactory.DataSourceDescription<?>> getInstalledProviders() {
-        Set<RootDataSourceProviderFactory.DataSourceDescription<?>> result =
+    public Set<RootDataSourceProvider.DataSourceDescription<?>> getInstalledProviders() {
+        Set<RootDataSourceProvider.DataSourceDescription<?>> result =
                 new HashSet<>();
 
-        RootDataSourceProviderFactory.DataSourceDescription<SubjectAuthorizationDataProvider> dataProviderDataSourceDescription =
-            new RootDataSourceProviderFactory.DataSourceDescription<SubjectAuthorizationDataProvider>(
+        RootDataSourceProvider.DataSourceDescription<SubjectAuthorizationDataProvider> dataProviderDataSourceDescription =
+            new RootDataSourceProvider.DataSourceDescription<SubjectAuthorizationDataProvider>(
                 getPublisher(), 1, SubjectAuthorizationDataProvider.class, new ProductTypeRoutingToken("USAINS"),
                 SubjectAuthorizationDataProviderImpl.class);
 

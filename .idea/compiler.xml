@@ -1,131 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
-    <wildcardResourcePatterns>
-      <entry name="!?*.java" />
-      <entry name="!?*.form" />
-      <entry name="!?*.class" />
-      <entry name="!?*.groovy" />
-      <entry name="!?*.scala" />
-      <entry name="!?*.flex" />
-      <entry name="!?*.kt" />
-      <entry name="!?*.clj" />
-      <entry name="!?*.aj" />
-    </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for cella-api" enabled="true">
+      <profile name="Annotation profile for cella-api" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="cella-api" />
       </profile>
-      <profile default="false" name="Annotation profile for workflow-editor" enabled="true">
+      <profile name="Annotation profile for workflow-editor" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="workflow-editor" />
       </profile>
-      <profile default="false" name="Annotation profile for cellaworkflowcommand" enabled="true">
+      <profile name="Annotation profile for ProcessorProvider" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="cellaworkflowcommand" />
-      </profile>
-      <profile default="false" name="Annotation profile for cellaimpl" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="cellaimpl" />
-      </profile>
-      <profile default="false" name="Annotation profile for cellaworkfloweditor" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for ProcessorProvider" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="ProcessorProvider" />
       </profile>
-      <profile default="false" name="Annotation profile for testprocessorprovider" enabled="true">
+      <profile name="Annotation profile for lambdacommandexecutor" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="testprocessorprovider" />
-      </profile>
-      <profile default="false" name="Annotation profile for processorprovider" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="processorprovider" />
-      </profile>
-      <profile default="false" name="Annotation profile for workflowfactory" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="workflowfactory" />
-      </profile>
-      <profile default="false" name="Annotation profile for cellautil" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for lambdacommandexecutor" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="lambdacommandexecutor" />
       </profile>
-      <profile default="false" name="Annotation profile for restxlator" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for omegaexecutor" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="omegaexecutor" />
-      </profile>
-      <profile default="false" name="Annotation profile for nanocontext" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+        <module name="cellaimpl" />
+        <module name="cellaworkflowcommand" />
         <module name="nanocontext" />
+        <module name="omegaexecutor" />
+        <module name="processorprovider" />
+        <module name="testprocessorprovider" />
+        <module name="workflowfactory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cella-parent" target="1.5" />
-      <module name="cellaimpl" target="7" />
-      <module name="cellautil" target="8" />
-      <module name="cellaworkflowcommand" target="7" />
-      <module name="cellaworkfloweditor" target="8" />
-      <module name="lambdacommandexecutor" target="7" />
-      <module name="nanocontext" target="7" />
-      <module name="omegaexecutor" target="7" />
-      <module name="processorprovider" target="7" />
-      <module name="restxlator" target="7" />
-      <module name="testprocessorprovider" target="7" />
-      <module name="workflowfactory" target="7" />
+      <module name="cellaimpl" target="8" />
+      <module name="cellaworkflowcommand" target="8" />
+      <module name="nanocontext" target="8" />
+      <module name="omegaexecutor" target="8" />
+      <module name="processorprovider" target="8" />
+      <module name="testprocessorprovider" target="8" />
+      <module name="workflowfactory" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,12 +1,14 @@
 package com.paypal.credit.context;
 
 import com.paypal.credit.context.exceptions.ContextInitializationException;
+import com.paypal.credit.context.exceptions.GenericContextInitializationException;
 import com.paypal.credit.context.exceptions.InvalidArtifactSyntaxException;
 import com.paypal.credit.context.exceptions.SparseArgumentListDetectedException;
 import com.paypal.credit.context.xml.ArtifactType;
 import com.paypal.credit.context.xml.BeanType;
 import com.paypal.credit.context.xml.BeansType;
 import com.paypal.credit.context.xml.ConstructorArgType;
+import com.paypal.credit.context.xml.ScopeType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,8 +44,17 @@ public class ContextFactory {
     /** JAXB Context is created on demand */
     private JAXBContext jaxbContext = null;
 
-    /** */
+    /**
+     * The class loader to use for loading the context beans from
+     */
     private ClassLoader classLoader;
+
+    /**
+     * The parent of the context to create.
+     * A parent is delegated to if a bean cannot be found in the
+     * current context.
+     */
+    private Context parent;
 
     // ========================================================================================
     // The components of the ContextFactory that populate the Context
@@ -94,6 +105,11 @@ public class ContextFactory {
      */
     public ContextFactory with(final BeansType beansType) {
         for (BeanType beanType : beansType.getBean()) {
+            // default the scope to prototype
+            if (beanType.getScope() == null) {
+                beanType.setScope(ScopeType.PROTOTYPE);
+            }
+
             with(beanType);
         }
 
@@ -135,6 +151,11 @@ public class ContextFactory {
         return this;
     }
 
+    /**
+     *
+     * @param xBeanDef
+     * @return
+     */
     private ContextFactory withExternalBeanDefinition(ExternalBeanDefinition xBeanDef) {
         if (xBeanDef != null) {
             if (xBeanDef.getIdentifier() == null) {
@@ -145,6 +166,21 @@ public class ContextFactory {
 
         return this;
     }
+
+    /**
+     * Set the context to delegate to when an ID cannot be found in the current
+     * context.
+     *
+     * @param parent
+     * @return
+     * @throws ContextInitializationException
+     */
+    public ContextFactory withParentContext(final Context parent)
+            throws ContextInitializationException {
+        this.parent = parent;
+        return this;
+    }
+
 
     // ========================================================================================
     // Methods to read the context from an XML resource
@@ -205,7 +241,7 @@ public class ContextFactory {
      */
     public Context build()
             throws ContextInitializationException {
-        Context ctx = new Context();
+        Context ctx = new Context(this.parent);
         PropertyFactory propertyFactory = new PropertyFactory(ctx);
 
         Set<ArtifactHolder> artifactHolders = extractArtifactReferences();
@@ -226,6 +262,11 @@ public class ContextFactory {
         for (BeanType beanType : this.beanTypes) {
             // every bean has an identifier
             String id = beanType.getId();
+
+            // default the scope to prototype
+            if (beanType.getScope() == null) {
+                beanType.setScope(ScopeType.PROTOTYPE);
+            }
 
             AbstractBeanInstanceFactory beanReference = propertyFactory.createBeanInstanceFactory(beanType);
             // add the bean and an ID (perhaps synthetic) to the context Set

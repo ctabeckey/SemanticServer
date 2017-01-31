@@ -144,7 +144,12 @@ public final class PropertyFactory {
                 if (beanType.getConstructorArg() != null && beanType.getConstructorArg().size() > 0) {
                     ctorArgs = create(createOrderedParameterList(beanType));
                 }
-                beanReference = new PrototypeBeanInstanceFactory(context, beanType.getId(), beanType.getArtifact(), beanType.getClazz(), ctorArgs);
+                beanReference = new PrototypeBeanInstanceFactory(
+                        context,
+                        beanType.getId(), beanType.getArtifact(), beanType.getClazz(),
+                        beanType.getFactory(), beanType.getFactoryClass(), beanType.getFactoryMethod(),
+                        beanType.getActive(),
+                        ctorArgs);
                 break;
             }
             case SINGLETON: {
@@ -152,7 +157,12 @@ public final class PropertyFactory {
                 if (beanType.getConstructorArg() != null && beanType.getConstructorArg().size() > 0) {
                     ctorArgs = create(createOrderedParameterList(beanType));
                 }
-                beanReference = new SingletonBeanInstanceFactory(context, beanType.getId(), beanType.getArtifact(), beanType.getClazz(), ctorArgs);
+                beanReference = new SingletonBeanInstanceFactory(
+                        context,
+                        beanType.getId(), beanType.getArtifact(), beanType.getClazz(),
+                        beanType.getFactory(), beanType.getFactoryClass(), beanType.getFactoryMethod(),
+                        beanType.getActive(),
+                        ctorArgs);
                 break;
             }
             default: {

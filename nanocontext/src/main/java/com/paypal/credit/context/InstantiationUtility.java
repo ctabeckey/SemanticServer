@@ -9,6 +9,7 @@ import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.util.Collection;
@@ -188,40 +189,79 @@ public class InstantiationUtility {
      */
     public static <T> Constructor<T> selectConstructor(final Class<T> beanClazz, final List<AbstractProperty> orderedParameters)
             throws ContextInitializationException {
-        SortedSet<Constructor<T>> sortedCtor = new TreeSet<>(new Comparator<Constructor<?>>(){
-            @Override
-            public int compare(final Constructor<?> ctor1, final Constructor<?> ctor2) {
-                if (ctor1.getParameterTypes().length < ctor2.getParameterTypes().length) {
-                    return -1;
-                } else if (ctor1.getParameterTypes().length < ctor2.getParameterTypes().length) {
-                    return 1;
-                }
-                for (int index = 0; index < ctor1.getParameterTypes().length; ++index) {
-                    if (ctor1.getParameterTypes()[index].equals(ctor2.getParameterTypes()[index])) {
-                        continue;
-                    } else if (ctor1.getParameterTypes()[index].isAssignableFrom(ctor2.getParameterTypes()[index])) {
-                        return 2;
-                    } else if (ctor2.getParameterTypes()[index].isAssignableFrom(ctor1.getParameterTypes()[index])) {
-                        return -2;
-
-                    } else if (String.class.equals(ctor1.getParameterTypes()[index])
-                            && !String.class.equals(ctor2.getParameterTypes()[index])) {
-                        // one of two odd cases where a constructor may take a type that can be constructed
-                        // using a valueOf(String) method. Constructors taking a String should be sorted later
-                        // than an otherwise equivalent constructor (taking an Integer for instance)
-                        return 3;
-                    } else if (String.class.equals(ctor2.getParameterTypes()[index])
-                            && !String.class.equals(ctor1.getParameterTypes()[index])) {
-                        return -3;
-                    }
-                }
-                return 0;
-            }
-        });
+        SortedSet<Constructor<T>> sortedCtor =
+                new TreeSet<Constructor<T>>(new ConstructorSpecificityComparator<T>());
 
         for (Constructor<?> ctor : beanClazz.getConstructors()) {
             if (isApplicableConstructor(ctor, orderedParameters)) {
                 sortedCtor.add((Constructor<T>) ctor);
+            }
+        }
+
+        return sortedCtor.size() > 0 ? sortedCtor.first() : null;
+    }
+
+    /**
+     *
+     * @param factoryClass
+     * @param factoryMethodName
+     * @param ctorParameters
+     * @param valueType
+     * @param <T>
+     * @return
+     * @throws ContextInitializationException
+     */
+    public static <T> Method selectStaticFactoryMethod(
+            final Class<?> factoryClass,
+            final String factoryMethodName,
+            final List<AbstractProperty> ctorParameters,
+            final Class<T> valueType) throws ContextInitializationException {
+        return selectFactoryMethod(factoryClass, Modifier.PUBLIC + Modifier.STATIC, factoryMethodName, ctorParameters, valueType);
+    }
+
+    /**
+     *
+     * @param factory
+     * @param factoryMethodName
+     * @param ctorParameters
+     * @param valueType
+     * @param <T>
+     * @return
+     * @throws ContextInitializationException
+     */
+    public static <T> Method selectFactoryMethod(
+            final Object factory,
+            final String factoryMethodName,
+            final List<AbstractProperty> ctorParameters,
+            final Class<T> valueType) throws ContextInitializationException {
+        return selectFactoryMethod(factory.getClass(), Modifier.PUBLIC, factoryMethodName, ctorParameters, valueType);
+    }
+
+    /**
+     *
+     * @param clazz
+     * @param modifiers
+     * @param methodName
+     * @param orderedParameters
+     * @param valueType
+     * @param <T>
+     * @return
+     * @throws ContextInitializationException
+     */
+    private static <T> Method selectFactoryMethod(
+            final Class<?> clazz,
+            final int modifiers,
+            final String methodName,
+            final List<AbstractProperty> orderedParameters,
+            final Class<T> valueType) throws ContextInitializationException {
+        SortedSet<Method> sortedCtor =
+                new TreeSet<Method>(new MethodSpecificityComparator());
+
+        for (Method method : clazz.getMethods()) {
+            if (methodName.equals(method.getName())
+                    && isApplicableFactoryMethod(method, orderedParameters, valueType)
+                    && (method.getModifiers() & modifiers) == modifiers) {
+                sortedCtor.add((Method) method);
             }
         }
 
@@ -238,16 +278,49 @@ public class InstantiationUtility {
      */
     public static boolean isApplicableConstructor(final Constructor<?> ctor, final List<AbstractProperty> parameters)
             throws ContextInitializationException {
-        if (ctor.getParameterTypes().length != (parameters == null ? 0 : parameters.size())) {
+        // Iterate through each parameter in the given constructor
+        // and determine whether the correlated ordered argument can be used in that parameter
+        return isApplicableParameters(parameters, ctor.getParameterTypes());
+    }
+
+    /**
+     * Given a method, an ordered list of parameters (from the context XML), and an expected return type,
+     * determine whether the method could be called to instantiate the bean.
+     *
+     * @param method
+     * @param parameters
+     * @param returnType
+     * @return
+     */
+    public static boolean isApplicableFactoryMethod(final Method method, final List<AbstractProperty> parameters, final Class<?> returnType)
+            throws ContextInitializationException {
+        if (method.getReturnType() == null && returnType == null
+                || returnType.isAssignableFrom(method.getReturnType()) ) {
+
+            // Iterate through each parameter in the given method
+            // and determine whether the correlated ordered argument can be used in that parameter
+            return isApplicableParameters(parameters, method.getParameterTypes());
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isApplicableParameters(List<AbstractProperty> parameters, Class<?>[] parameterTypes) throws ContextInitializationException {
+        if ( parameters == null && parameterTypes == null) {
+            return true;
+        }
+
+        int parameterCount = parameters == null ? 0 : parameters.size();
+        int parameterTypeCount = parameterTypes == null ? 0 : parameterTypes.length;
+
+        if ( parameterCount != parameterTypeCount) {
             return false;
         }
 
-        // Iterate through each parameter in the given constructor
-        // and determine whether the correlated ordered argument can be used in that parameter
-        for (int index = 0; index < ctor.getParameterTypes().length; ++index) {
+        for (int index = 0; index < parameterTypes.length; ++index) {
             // Actual parameter type is the type of the current-index parameter
             // within the constructor.
-            Class<?> constructorParameterType = ctor.getParameterTypes()[index];
+            Class<?> constructorParameterType = parameterTypes[index];
 
             AbstractProperty parameter = parameters.get(index);
 
@@ -258,4 +331,5 @@ public class InstantiationUtility {
 
         return true;
     }
+
 }

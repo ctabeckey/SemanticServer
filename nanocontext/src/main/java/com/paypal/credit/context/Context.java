@@ -6,9 +6,12 @@ import com.paypal.credit.utility.references.Derivations;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 /**
  * A very small and limited function IoC Context.
+ * Implements simple hierarchical delegation, whereas if a bean cannot be found
+ * within this context it will delegate to a parent context.
  */
 public class Context {
     /**
@@ -17,12 +20,33 @@ public class Context {
      */
     private Map<String, AbstractReferencableProperty> contextObjectsNameMap;
     private Set<ArtifactHolder> artifacts;
+    private final ThreadGroup contextThreadGroup;
+    private final Context parent;
 
     /**
      * Package level scope is intentional, only the ContextFactory should
      * construct instances of this Class.
      */
     Context() {
+        this(null);
+    }
+
+    /**
+     * Package level scope is intentional, only the ContextFactory should
+     * construct instances of this Class.
+     */
+    Context(final Context parent) {
+        this.contextThreadGroup = new ThreadGroup("ContextThreadGroup");
+        this.parent = parent;
+    }
+
+    /**
+     * Returns the ThreadGroup under which Threads for Active beans will be
+     * members of.
+     * @return
+     */
+    public ThreadGroup getContextThreadGroup() {
+        return contextThreadGroup;
     }
 
     /**
@@ -85,33 +109,67 @@ public class Context {
             }
         }
 
-        return (T) selectedBeanReference.getValue();
+        T bean = selectedBeanReference == null ? null : (T) selectedBeanReference.getValue();
+
+        // delegate to the parent if the bean was not found
+        if (bean == null && this.parent != null) {
+            bean = this.parent.getBean(beanClass);
+        }
+
+        return bean;
     }
 
     /**
-     * @param name
+     * @param id
      * @param beanClass
      * @param <T>
      * @return
      */
-    public <T> T getBean(final String name, final Class<T> beanClass)
+    public <T> T getBean(final String id, final Class<T> beanClass)
             throws ContextInitializationException {
-        AbstractProperty<T> beanReference = getBeanReference(name);
+        AbstractProperty<T> beanReference = getBeanReference(id);
         T bean = beanReference.getValue();
-        if (beanClass == null || beanClass.isInstance(bean)) {
-            return bean;
+
+        // validate that the bean is of the expected class or that the class was not specified
+        bean = beanClass == null || beanClass.isInstance(bean) ? bean : null;
+
+        // delegate to the parent if the bean was not found
+        if (bean == null && this.parent != null) {
+            bean = this.parent.getBean(beanClass);
         }
 
-        return null;
+        return bean;
     }
 
     /**
-     * @param name
+     * @param id
      * @return
      * @throws ContextInitializationException
      */
-    public AbstractProperty getBeanReference(final String name)
+    public AbstractProperty getBeanReference(final String id)
             throws ContextInitializationException {
-        return contextObjectsNameMap.get(name);
+        AbstractProperty ap = contextObjectsNameMap.get(id);
+
+        if (ap == null && this.parent != null) {
+            ap = this.parent.getBeanReference(id);
+        }
+
+        return ap;
     }
+
+    // ========================================================================================
+    // A simple mechanism for managing ActiveBean instances.
+    // ========================================================================================
+    private Set<ActiveBean> activeBeans = new ConcurrentSkipListSet<>();
+
+    void registerActiveBean(ActiveBean activeBean) {
+        activeBeans.add(activeBean);
+    }
+
+    public void shutdown() {
+        for (ActiveBean activeBean : activeBeans) {
+            activeBean.shutdown();
+        }
+    }
+
 }

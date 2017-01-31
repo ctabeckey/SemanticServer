@@ -1,7 +1,7 @@
 package com.paypal.credit.context;
 
 /**
- * The abstract super-class for all AbstractProperty classes that are refencable by name.
+ * The abstract super-class for all AbstractProperty classes that are referencable by name.
  * The known derivations are:
  * @see AbstractBeanInstanceFactory
  * @see PrototypeBeanInstanceFactory

@@ -13,12 +13,12 @@ import org.testng.annotations.Test;
 /**
  * Created by cbeckey on 11/10/15.
  */
-public class DataSourceProviderFactoryTest {
+public class DataSourceProviderTest {
     @Test
     public void testFindDataSource() {
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
-        RootDataSourceProviderFactory spf = RootDataSourceProviderFactory.getOrCreate();
-        RootDataSourceProviderFactory.DataSourceDescription description =
+        RootDataSourceProvider spf = RootDataSourceProvider.getOrCreate();
+        RootDataSourceProvider.DataSourceDescription description =
                 spf.findDataSource(SubjectAuthorizationDataProvider.class, rt);
 
         Assert.assertNotNull(description);
@@ -28,7 +28,7 @@ public class DataSourceProviderFactoryTest {
     public void testCreateDataSource()
             throws UnableToFindServiceProviderImplementation, UnableToCreateServiceProviderImplementation {
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
-        RootDataSourceProviderFactory spf = RootDataSourceProviderFactory.getOrCreate();
+        RootDataSourceProvider spf = RootDataSourceProvider.getOrCreate();
         SubjectAuthorizationDataProvider dataSource = spf.createDataSource(SubjectAuthorizationDataProvider.class, rt);
 
         Assert.assertNotNull(dataSource);

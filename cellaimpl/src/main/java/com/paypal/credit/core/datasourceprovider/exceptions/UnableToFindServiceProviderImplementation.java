@@ -1,7 +1,6 @@
 package com.paypal.credit.core.datasourceprovider.exceptions;
 
 import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.core.datasourceprovider.DataSourceProviderInterface;
 
 /**
  *
@@ -14,7 +13,7 @@ public class UnableToFindServiceProviderImplementation extends Exception {
      * @param routingToken
      * @return
      */
-    private static String createMessage(final Class<? extends DataSourceProviderInterface> dataSourceApi, final RoutingToken routingToken) {
+    private static String createMessage(final Class<?> dataSourceApi, final RoutingToken routingToken) {
         return String.format("Unable to find a data source provider for API(%s) to %s",
                 dataSourceApi == null ? "<null>" : dataSourceApi.getName(),
                 routingToken.toString());
@@ -26,7 +25,7 @@ public class UnableToFindServiceProviderImplementation extends Exception {
      * @param routingToken
      * @param <S>
      */
-    public <S extends DataSourceProviderInterface> UnableToFindServiceProviderImplementation(
+    public <S> UnableToFindServiceProviderImplementation(
             final Class<S> dataSourceApi,
             final RoutingToken routingToken) {
         super(createMessage(dataSourceApi, routingToken));
@@ -39,7 +38,7 @@ public class UnableToFindServiceProviderImplementation extends Exception {
      * @param cause
      * @param <S>
      */
-    public <S extends DataSourceProviderInterface> UnableToFindServiceProviderImplementation(
+    public <S> UnableToFindServiceProviderImplementation(
             final Class<S> dataSourceApi,
             final RoutingToken routingToken,
             Throwable cause) {

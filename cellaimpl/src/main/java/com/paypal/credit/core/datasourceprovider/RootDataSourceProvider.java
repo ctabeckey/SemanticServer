@@ -17,27 +17,27 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  *
  */
-public class RootDataSourceProviderFactory
-    implements DataSourceProviderFactory
+public class RootDataSourceProvider
+    implements DataSourceProvider
 {
     /**  */
     private final static String LINE_SEPARATOR = System.getProperty("line.separator");
 
     /** The ONLY ServiceLoader for the ServiceProviderFactory type */
-    private final ServiceLoader<DataSourceProviderFactory> serviceLoader;
+    private final ServiceLoader<DataSourceProvider> serviceLoader;
 
     /** The Set of DataSourceDescription provided by all available factories */
     private final SortedSet<DataSourceDescription<?>> dataSourceDescriptions = new TreeSet<>();
 
     /** A cache of class instances mapped to the ClassLoader that they load from */
-    private static final Map<ClassLoader, RootDataSourceProviderFactory> rootServiceProviderFactoryCache =
+    private static final Map<ClassLoader, RootDataSourceProvider> rootServiceProviderFactoryCache =
             new ConcurrentHashMap<>();
 
     /**
      *
      * @return
      */
-    public static RootDataSourceProviderFactory getOrCreate() {
+    public static RootDataSourceProvider getOrCreate() {
         return getOrCreate(Thread.currentThread().getContextClassLoader());
     }
 
@@ -46,14 +46,14 @@ public class RootDataSourceProviderFactory
      * @param classLoader
      * @return
      */
-    public static RootDataSourceProviderFactory getOrCreate(ClassLoader classLoader) {
-        RootDataSourceProviderFactory serviceFactory = null;
+    public static RootDataSourceProvider getOrCreate(ClassLoader classLoader) {
+        RootDataSourceProvider serviceFactory = null;
         serviceFactory = rootServiceProviderFactoryCache.get(classLoader);
         if (serviceFactory == null) {
             // Note that there is a small chance that a service factory will get created
             // multiple times. The first copy will get dropped after the second copy
             // is inserted in the Map
-            serviceFactory = new RootDataSourceProviderFactory(classLoader);
+            serviceFactory = new RootDataSourceProvider(classLoader);
             rootServiceProviderFactoryCache.put(classLoader, serviceFactory);
         }
 
@@ -65,7 +65,7 @@ public class RootDataSourceProviderFactory
     // ============================================================================
 
     /**  */
-    private final static String PUBLISHER = RootDataSourceProviderFactory.class.getName();
+    private final static String PUBLISHER = RootDataSourceProvider.class.getName();
 
     /**
      * The publisher of the service providers.
@@ -87,7 +87,7 @@ public class RootDataSourceProviderFactory
     public final Set<DataSourceDescription<?>> getInstalledProviders() {
         synchronized (this.dataSourceDescriptions) {
             if (this.dataSourceDescriptions.isEmpty()) {
-                for (DataSourceProviderFactory providerFactory : this.serviceLoader) {
+                for (DataSourceProvider providerFactory : this.serviceLoader) {
                     this.dataSourceDescriptions.addAll(providerFactory.getInstalledProviders());
                 }
             }
@@ -102,8 +102,8 @@ public class RootDataSourceProviderFactory
     /**
      * Private constructor, use factory methods
      */
-    private RootDataSourceProviderFactory(ClassLoader cl) {
-        this.serviceLoader = ServiceLoader.load(DataSourceProviderFactory.class, cl);
+    private RootDataSourceProvider(ClassLoader cl) {
+        this.serviceLoader = ServiceLoader.load(DataSourceProvider.class, cl);
     }
 
     /**
@@ -158,7 +158,7 @@ public class RootDataSourceProviderFactory
 	 * @param <S>
 	 * @return
 	 */
-	public final <S extends DataSourceProviderInterface> S createDataSource(
+	public final <S> S createDataSource(
 			Class<S> dataSourceApi,
             RoutingToken routingToken,
 			DataSourceProviderExceptionHandler... dataSourceProviderExceptionHandlers)
@@ -183,10 +183,10 @@ public class RootDataSourceProviderFactory
     // ===============================================================================================
     // Service Cache Implementation
     // ===============================================================================================
-    private final Map<Class<?>, DataSourceProviderInterface> serviceInstanceCache = new ConcurrentHashMap<>();
-    private <S extends DataSourceProviderInterface> S getOrCreateService(final DataSourceDescription<S> dsd)
+    private final Map<Class<?>, Object> serviceInstanceCache = new ConcurrentHashMap<>();
+    private <S> S getOrCreateService(final DataSourceDescription<S> dsd)
             throws IllegalAccessException, InstantiationException {
-        DataSourceProviderInterface result = null;
+        Object result = null;
 
         result = serviceInstanceCache.get(dsd.getImplementingClass());
         if (result == null) {
@@ -198,7 +198,7 @@ public class RootDataSourceProviderFactory
     }
 
     public final DataSourceDescription findDataSource(
-            Class<? extends DataSourceProviderInterface> dataSourceApi,
+            Class<?> dataSourceApi,
             RoutingToken routingToken) {
         for (DataSourceDescription dsd : getInstalledProviders()) {
             if (dsd.isApplicable(dataSourceApi, routingToken)) {
@@ -210,7 +210,7 @@ public class RootDataSourceProviderFactory
     }
 
     public final DataSourceDescription findDataSource(
-            Class<? extends DataSourceProviderInterface> dataSourceApi,
+            Class<?> dataSourceApi,
             RoutingToken routingToken,
             int version) {
         for (DataSourceDescription dsd : getInstalledProviders()) {
@@ -223,7 +223,7 @@ public class RootDataSourceProviderFactory
     }
 
     public final DataSourceDescription findDataSource(
-            Class<? extends DataSourceProviderInterface> dataSourceApi,
+            Class<?> dataSourceApi,
             RoutingToken routingToken,
             String publisher) {
         for (DataSourceDescription dsd : getInstalledProviders()) {
@@ -236,7 +236,7 @@ public class RootDataSourceProviderFactory
     }
 
     public final DataSourceDescription findDataSource(
-            Class<? extends DataSourceProviderInterface> dataSourceApi,
+            Class<?> dataSourceApi,
             RoutingToken routingToken,
             String publisher,
             int version) {
@@ -256,7 +256,7 @@ public class RootDataSourceProviderFactory
      * If a single Service services multiple Service interfaces or Routing Token
      * then it will have multiple DataSourceDescription instances.
      */
-    public final static class DataSourceDescription<S extends DataSourceProviderInterface>
+    public final static class DataSourceDescription<S>
     implements Comparable<DataSourceDescription>{
         /** the publisher, in case a client wants a specific implementation */
         private final String publisher;
