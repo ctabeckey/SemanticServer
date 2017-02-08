@@ -33,6 +33,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -142,8 +143,9 @@ public class AnnotationProcessor implements Processor {
                     }
                 }
             }
-            // sort the beans here
 
+            // sort the beans here
+            Collections.sort(beans, new DependencyComparator());
             beansType.getBean().addAll(beans);
 
             // write the configuration file to the generated resources
@@ -169,6 +171,44 @@ public class AnnotationProcessor implements Processor {
             }
         }
         return false;
+    }
+
+    private class DependencyComparator implements Comparator<BeanType> {
+
+        @Override
+        public int compare(BeanType beanOne, BeanType beanTwo) {
+            if(beanOne == null) {
+                return 1;
+            }
+            if(beanTwo == null) {
+                return -1;
+            }
+
+            final String beanOneIdentifier = beanOne.getId();
+            final String beanTwoIdentifier = beanTwo.getId();
+
+            // if the constructor args for bean one include a reference to bean two then
+            // bean two must come before bean one (i.e. return 1)
+            for (ConstructorArgType ctorArg : beanOne.getConstructorArg()) {
+                if (ctorArg.getRef() != null) {
+                    if (beanTwoIdentifier.equals(ctorArg.getRef().getBean())) {
+                        return 1;
+                    }
+                }
+            }
+
+            // if the constructor args for bean one include a reference to bean two then
+            // bean two must come before bean one (i.e. return 1)
+            for (ConstructorArgType ctorArg : beanTwo.getConstructorArg()) {
+                if (ctorArg.getRef() != null) {
+                    if (beanOneIdentifier.equals(ctorArg.getRef().getBean())) {
+                        return -1;
+                    }
+                }
+            }
+
+            return 0;
+        }
     }
 
     /**

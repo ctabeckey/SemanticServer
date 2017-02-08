@@ -2,146 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5463d5aa-dcc5-4635-950e-54280a34710c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/AbstractCommandProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/main/resources/baseapplication.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/ApplicationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/resources/FullStackTestContext.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/readme.MD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/src/test/java/com/paypal/credit/context/annotations/AnnotationProcessorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/src/test/resources/TestSubject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/src/test/resources/TestSubjectTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotations/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotations/src/main/java/com/paypal/credit/context/annotations/NanoBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotations/src/main/java/com/paypal/credit/context/annotations/NanoInject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoAnnotations/src/main/java/com/paypal/credit/context/annotations/NanoSingleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nanoXmlBeans/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/META-INF/sun-jaxb.episode" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ArtifactType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeanType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/BeansType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ConstructorArgType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ListType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ReferenceType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/ScopeType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nanocontext/src/main/generated-java/com/paypal/credit/context/xml/package-info.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/nanoContext/dependency-reduced-pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/pom.xml" afterPath="$PROJECT_DIR$/nanoContext/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/AbstractBeanInstanceFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractProperty.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/AbstractProperty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/AbstractReferencableProperty.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/AbstractReferencableProperty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ActiveBean.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ActiveBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ArtifactHolder.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ArtifactHolder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/BeanReference.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/BeanReference.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/CircularReferenceDetector.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/CircularReferenceDetector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ConstantProperty.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ConstantProperty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ConstructorSpecificityComparator.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ConstructorSpecificityComparator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/Context.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/Context.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ContextFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/InstantiationUtility.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/InstantiationUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/ListProperty.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ListProperty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/MethodSpecificityComparator.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/MethodSpecificityComparator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PreresolvedBean.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/PreresolvedBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PropertyFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/PropertyFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/PrototypeBeanInstanceFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/SingletonBeanInstanceFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/SingletonBeanInstanceFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/AbstractPropertyClassDoesNotProperlyImplementMorph.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/AbstractPropertyClassDoesNotProperlyImplementMorph.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/BeanClassNotFoundException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/CannotCreateObjectFromStringException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CircularReferenceException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/CircularReferenceException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/CompositeContextInitializationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/ContextInitializationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/FailedToCreateCollectionException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/FailedToInstantiateBeanException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/FailedToInstantiateBeanException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/GenericContextInitializationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidActiveClassAttributionException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidActiveClassAttributionException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidArtifactSyntaxException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidBeanFactoryConfigurationException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidBeanFactoryConfigurationException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidElementTypeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidFactoryIdentifierException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidFactoryIdentifierException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidMorphTargetException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidMorphTargetException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/InvalidStaticFactoryException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/InvalidStaticFactoryException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/NoApplicableConstructorException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/SparseArgumentListDetectedException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" afterPath="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/exceptions/UnknownCollectionTypeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/resources/ctx.xsd" afterPath="$PROJECT_DIR$/nanoXmlBeans/src/main/resources/ctx.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/main/resources/generateCtxClasses.sh" afterPath="$PROJECT_DIR$/nanoXmlBeans/src/main/resources/generateCtxClasses.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/ClassLoaderTest.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/ClassLoaderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/AbstractBeanInstanceFactoryTest.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/AbstractBeanInstanceFactoryTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/BeanTypeFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/BeanTypeFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ClassMatcher.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/ClassMatcher.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/ConstructorTestSubject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ContextTest.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/ContextTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/GenericBeanFactory.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/GenericBeanFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/GenericBeanInstance.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/GenericBeanInstance.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/InstantiationUtilityTest.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/InstantiationUtilityTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/ListPropertyTest.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/ListPropertyTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/java/com/paypal/credit/context/TestUtility.java" afterPath="$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/TestUtility.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanContextWithCtorArg.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanContextWithCtorArg.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithChildContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanWithChildContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListComplexContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanWithListComplexContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithListContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanWithListContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneBeanWithReferencedChildContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanWithReferencedChildContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OnePrototypeBeanContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OnePrototypeBeanContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/OneRemoteBeanContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/OneRemoteBeanContext.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nanocontext/src/test/resources/TwoBeanContext.xml" afterPath="$PROJECT_DIR$/nanoContext/src/test/resources/TwoBeanContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/Application.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$2.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$CompletionNotifier.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl$CompletionNotifier.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/CommandProvider.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/CommandProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/RootCommandProvider.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/commandprovider/RootCommandProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/processorbridge/AbstractProcessorBridgeImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/ModelVocabulary.class" afterPath="$PROJECT_DIR$/cellaimpl/target/classes/com/paypal/credit/core/semantics/ModelVocabulary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/commandprovider/CommandProviderTest.class" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/commandprovider/CommandProviderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.class" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/CommandClassSemanticsTest.class" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/CommandClassSemanticsTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.class" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemanticsTest.class" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemanticsTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.class" afterPath="$PROJECT_DIR$/cellaimpl/target/test-classes/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/pom.xml" afterPath="$PROJECT_DIR$/cellaimpl/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/Application.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/CommandProcessorDefaultImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/CommandProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/RootCommandProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProvider.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/DataSourceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProvider.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/ApplicationSemantics.java" afterPath="$PROJECT_DIR$/cellaimpl/src/main/java/com/paypal/credit/core/semantics/ApplicationSemantics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderTest.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/datasourceprovider/DataSourceProviderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/core/processorbridge/ProcessorBridgeDefaultFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/commandprovider/TestCommandProviderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/datasource/SubjectDataSourceProviderImpl.java" afterPath="$PROJECT_DIR$/cellaimpl/src/test/java/com/paypal/credit/test/datasource/SubjectDataSourceProviderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/cellaimpl/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.commandprovider.CommandProviderTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CollectionTypeVocabularyTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.CommandClassSemanticsTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/junitreports/TEST-com.paypal.credit.core.semantics.LogicalNameParserTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/classes.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/testng.xml.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/testng.xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/toc.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/Command line suite/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/index.html" afterPath="$PROJECT_DIR$/cellaimpl/target/surefire-reports/old/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" afterPath="$PROJECT_DIR$/cellaworkflowcommand/cellaworkflowcommand.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/main/java/com/paypal/credit/workflowcommand/WorkflowCommandProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/FullStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectDataSourceProviderImpl.java" afterPath="$PROJECT_DIR$/cellaworkflowcommand/src/test/java/com/paypal/credit/workflowtest/datasource/SubjectDataSourceProviderImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflowfactory/pom.xml" afterPath="$PROJECT_DIR$/workflowfactory/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanoAnnotationProcessor/doubleBeanContext.xml" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/doubleBeanContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java" afterPath="$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java" />
     </list>
     <ignored path="cella-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -191,48 +53,7 @@
     <favorites_list name="cella-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ContextConstructionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nanoContext/src/test/java/com/paypal/credit/context/ContextConstructionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ContextFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="237" column="23" lean-forward="false" selection-start-line="237" selection-start-column="23" selection-end-line="237" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Beans.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nanoXmlBeans/src/main/generated-java/com/paypal/credit/context/xml/Beans.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OneBeanContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -307,11 +128,11 @@
         <option value="$PROJECT_DIR$/nanoAnnotationProcessor/context.xml" />
         <option value="$PROJECT_DIR$/context.xml" />
         <option value="$PROJECT_DIR$/nanoAnnotationProcessor/src/test/java/com/paypal/credit/context/annotations/AnnotationProcessorTest.java" />
-        <option value="$PROJECT_DIR$/nanoAnnotationProcessor/doubleBeanContext.xml" />
-        <option value="$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java" />
         <option value="$PROJECT_DIR$/nanoAnnotationProcessor/singleBeanContext.xml" />
         <option value="$PROJECT_DIR$/nanoContext/src/test/resources/OneBeanContext.xml" />
         <option value="$PROJECT_DIR$/nanoContext/src/main/java/com/paypal/credit/context/ContextFactory.java" />
+        <option value="$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java" />
+        <option value="$PROJECT_DIR$/nanoAnnotationProcessor/doubleBeanContext.xml" />
       </list>
     </option>
   </component>
@@ -381,229 +202,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nanoXmlBeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoXmlBeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoXmlBeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoXmlBeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoXmlBeans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated-java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoContext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoContext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoContext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoContext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="context" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nanoContext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="context" />
+              <option name="myItemId" value="nanoAnnotationProcessor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -618,6 +217,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="nanoAnnotationProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nanoAnnotationProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nanoAnnotationProcessor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -708,7 +363,7 @@
       <recent name="com.paypal.credit.workflowcommand.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContextConstructionTest">
+  <component name="RunManager" selected="TestNG.AnnotationProcessorTest">
     <configuration default="false" name="&lt;default&gt; (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="cellaworkflowcommand" />
@@ -1368,8 +1023,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.AnnotationProcessorTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.AnnotationProcessorTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ContextConstructionTest" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.FullStackTest" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.&lt;default&gt; (1)" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.ApplicationTest" />
@@ -1447,14 +1102,11 @@
       <workItem from="1485798712196" duration="78000" />
       <workItem from="1485798904491" duration="4381000" />
       <workItem from="1485874667237" duration="23000" />
-      <workItem from="1485874709916" duration="56545000" />
+      <workItem from="1485874709916" duration="56981000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AnnotationProcessorTest - 2017.02.07 at 17h 11m 28s.xml">
-      <configuration name="AnnotationProcessorTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="AnnotationProcessorTest - 2017.02.07 at 17h 16m 15s.xml">
       <configuration name="AnnotationProcessorTest" configurationId="TestNG" />
     </history-entry>
@@ -1476,6 +1128,9 @@
     <history-entry file="AnnotationProcessorTest - 2017.02.07 at 17h 27m 58s.xml">
       <configuration name="AnnotationProcessorTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="AnnotationProcessorTest - 2017.02.08 at 09h 25m 56s.xml">
+      <configuration name="AnnotationProcessorTest" configurationId="TestNG" />
+    </history-entry>
     <history-entry file="ContextConstructionTest - 2017.02.08 at 09h 16m 16s.xml">
       <configuration name="ContextConstructionTest" configurationId="TestNG" />
     </history-entry>
@@ -1484,7 +1139,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="702711000" />
+    <option name="totallyTimeSpent" value="703147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1497,7 +1152,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1507,11 +1162,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24611399" sideWeight="0.5029586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34819278" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34819278" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31616595" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31616595" sideWeight="0.49384615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26626506" sideWeight="0.51849115" order="1" side_tool="false" content_ui="tabs" />
@@ -1632,19 +1287,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java</url>
-          <line>229</line>
+          <line>269</line>
           <properties />
           <option name="timeStamp" value="317" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java</url>
-          <line>135</line>
+          <line>136</line>
           <properties />
           <option name="timeStamp" value="318" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java</url>
-          <line>118</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="319" />
         </line-breakpoint>
@@ -2007,26 +1662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nanoAnnotationProcessor/doubleBeanContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="145" column="12" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10579#10580#0" expanded="true" />
-            <element signature="e#10616#10617#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/context/xml.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2080,6 +1715,24 @@
         <state relative-caret-position="218">
           <caret line="237" column="23" lean-forward="false" selection-start-line="237" selection-start-column="23" selection-end-line="237" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanoAnnotationProcessor/doubleBeanContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nanoAnnotationProcessor/src/main/java/com/paypal/credit/context/annotations/AnnotationProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1090">
+          <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
