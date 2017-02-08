@@ -9,15 +9,16 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>nanocontext</module>
+        <module>nanoXmlBeans</module>
+        <module>nanoAnnotations</module>
+        <module>nanoAnnotationProcessor</module>
+        <module>nanoContext</module>
         <module>cellaimpl</module>
         <module>cellaworkflowcommand</module>
-        <!-- <module>cellaworkfloweditor</module> -->
         <module>processorprovider</module>
         <module>testprocessorprovider</module>
         <module>workflowfactory</module>
         <module>omegaexecutor</module>
-        <!-- <module>restxlator</module> -->
     </modules>
 
     <properties>
@@ -114,6 +115,24 @@
                     <groupId>com.ning.maven.plugins</groupId>
                     <artifactId>maven-duplicate-finder-plugin</artifactId>
                     <version>1.0.9</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>jaxb2-maven-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.7</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>2.4.3</version>
                 </plugin>
             </plugins>
         </pluginManagement>

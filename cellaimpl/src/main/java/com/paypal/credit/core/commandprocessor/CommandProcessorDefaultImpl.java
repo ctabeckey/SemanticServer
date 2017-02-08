@@ -34,12 +34,11 @@ implements CommandProcessor
     private static final long DEFAULT_KEEP_ALIVE = 10L;
     private static final TimeUnit DEFAULT_KEEP_ALIVE_UNITS = TimeUnit.SECONDS;
 
-
-    public static CommandProcessor create() {
+    public static CommandProcessorDefaultImpl create() {
         return create(DEFAULT_WORK_QUEUE_SIZE);
     }
 
-    public static CommandProcessor create(int workQueueSize) {
+    public static CommandProcessorDefaultImpl create(int workQueueSize) {
         return new CommandProcessorDefaultImpl(workQueueSize);
     }
 

@@ -13,6 +13,7 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/core/commandprovider/CommandProviderTest.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/test/datasource/SubjectAuthorizationDataProviderImpl.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/core/semantics/CommandFactoryMethodSemanticsTest.java
+/Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/core/ApplicationTest.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/core/semantics/LogicalNameParserTest.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/test/model/AuthorizationId.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/test/java/com/paypal/credit/test/processorbridge/SubjectProcessorBridge.java

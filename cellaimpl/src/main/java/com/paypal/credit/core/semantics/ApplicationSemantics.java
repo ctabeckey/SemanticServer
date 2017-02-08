@@ -18,7 +18,12 @@ public class ApplicationSemantics {
     private final ModelVocabulary subjectVocabulary;
     private final ModelVocabulary objectVocabulary;
 
-    public ApplicationSemantics(String... packageNames)
+    public ApplicationSemantics(String packageName)
+            throws CoreRouterSemanticsException {
+        this(null, new String[]{packageName});
+    }
+
+    public ApplicationSemantics(String[] packageNames)
             throws CoreRouterSemanticsException {
         this(null, packageNames);
     }

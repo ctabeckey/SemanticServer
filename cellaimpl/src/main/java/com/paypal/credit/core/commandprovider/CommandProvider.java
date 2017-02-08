@@ -21,6 +21,13 @@ public interface CommandProvider {
      */
     String getPublisher();
 
+    <R, C extends Callable<R>> C createCommand(
+            RoutingToken routingToken,
+            CommandClassSemantics commandClassSemantics,
+            Object[] parameters,
+            Class<R> resultType)
+            throws CommandProviderException;
+
     /**
      * Find a Command meeting the semantics, that can be instantiated with the
      * parameter types and whose invoke method returns the resultType.

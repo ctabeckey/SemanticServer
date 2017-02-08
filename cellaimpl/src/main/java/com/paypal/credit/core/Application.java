@@ -1,75 +1,79 @@
 package com.paypal.credit.core;
 
+import com.paypal.credit.context.Context;
+import com.paypal.credit.context.ContextFactory;
+import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.core.commandprocessor.CommandProcessor;
-import com.paypal.credit.core.commandprocessor.CommandProcessorDefaultImpl;
-import com.paypal.credit.core.commandprovider.RootCommandProvider;
-import com.paypal.credit.core.semantics.ApplicationSemantics;
-import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
+import com.paypal.credit.core.commandprovider.CommandProvider;
+import com.paypal.credit.core.datasourceprovider.DataSourceProvider;
 import com.paypal.credit.core.datasourceprovider.RootDataSourceProvider;
+import com.paypal.credit.core.semantics.ApplicationSemantics;
+
+import javax.xml.bind.JAXBException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 /**
  * The container for all application components.
  *
- *
  */
 public class Application {
+    public final static String ROOT_CLASS_LOADER_BEAN = "root-class-loader";
+    public final static String SEMANTICS_BEAN = "semantics";
+    public final static String COMMAND_PROVIDER_BEAN = "command-provider";
+    public final static String DATA_SOURCE_PROVIDER_BEAN = "data-source-provider";
+    public final static String COMMAND_PROCESSOR_BEAN = "command-processor";
+
+    /**
+     *
+     * @param includeDefaultBase
+     * @param configurationResources
+     * @return
+     */
+    public static Application create(final boolean includeDefaultBase, final String... configurationResources)
+            throws FileNotFoundException, JAXBException, ContextInitializationException {
+        Context context = null;
+        if (includeDefaultBase) {
+            InputStream defaultIn = Thread.currentThread().getContextClassLoader().getResourceAsStream("baseapplication.xml");
+            context = (new ContextFactory()).with(defaultIn).build();
+        }
+
+        if(configurationResources != null) {
+            for (String configurationResource : configurationResources) {
+                ContextFactory childContextFactory = new ContextFactory();
+
+                InputStream configIn = Thread.currentThread().getContextClassLoader().getResourceAsStream(configurationResource);
+
+                childContextFactory.with(configIn);
+                if (context != null) {
+                    childContextFactory.withParentContext(context);
+                }
+                context = childContextFactory.build();
+            }
+        }
+
+        return new Application(context);
+    }
+
+    // ================================================================================================
+    // Instance Members
+    // ================================================================================================
+
+    private final Context context;
     private final ClassLoader classLoader;
     private final ApplicationSemantics applicationSemantics;
-    private final RootCommandProvider rootCommandProvider;
-    private final RootDataSourceProvider serviceProviderFactory;
+    private final CommandProvider rootCommandProvider;
+    private final RootDataSourceProvider serviceProvider;
     private final CommandProcessor commandProcessor;
 
-    /**
-     *
-     * using the thread context class loader.
-     * @param rootPackageName the name of the Package that contains all of the application
-     *                        components. The structure under this package is expected to be:
-     *                        - root.model, where the domain model resides
-     * @return
-     * @throws CoreRouterSemanticsException
-     */
-    public static Application create(final String rootPackageName)
-            throws CoreRouterSemanticsException {
-        return create(Thread.currentThread().getContextClassLoader(), rootPackageName);
-    }
-
-    /**
-     *
-     * @param classLoader - the class loader to use to load application components
-     * @param rootPackageName the name of the Package that contains all of the application
-     *                        components. The structure under this package is expected to be:
-     *                        - root.model, where the domain model resides
-     * @return
-     * @throws CoreRouterSemanticsException
-     */
-    public static Application create(final ClassLoader classLoader, final String rootPackageName)
-            throws CoreRouterSemanticsException {
-        String modelPackage = rootPackageName == null ? "model" : rootPackageName + ".model";
-
-        ApplicationSemantics semantics = new ApplicationSemantics(classLoader, modelPackage);
-        RootCommandProvider commandProvider = new RootCommandProvider(classLoader);
-        RootDataSourceProvider serviceProviderFactory = RootDataSourceProvider.getOrCreate(classLoader);
-        CommandProcessor commandProcessor = CommandProcessorDefaultImpl.create();
-
-        Application application = new Application(classLoader, semantics, commandProvider, serviceProviderFactory, commandProcessor);
-
-        // required wiring between application components
-        commandProcessor.setApplication(application);
-
-        return application;
-    }
-
-    private Application(
-            final ClassLoader classLoader,
-            final ApplicationSemantics applicationSemantics,
-            final RootCommandProvider rootCommandProvider,
-            final RootDataSourceProvider serviceProviderFactory,
-            final CommandProcessor commandProcessor) {
-        this.classLoader = classLoader;
-        this.applicationSemantics = applicationSemantics;
-        this.rootCommandProvider = rootCommandProvider;
-        this.serviceProviderFactory = serviceProviderFactory;
-        this.commandProcessor = commandProcessor;
+    private Application(final Context context) throws ContextInitializationException {
+        this.context = context;
+        this.classLoader = context.getBean(ROOT_CLASS_LOADER_BEAN, ClassLoader.class);
+        this.applicationSemantics = context.getBean(SEMANTICS_BEAN, ApplicationSemantics.class);
+        this.rootCommandProvider = context.getBean(COMMAND_PROVIDER_BEAN, CommandProvider.class);
+        this.serviceProvider = context.getBean(DATA_SOURCE_PROVIDER_BEAN, RootDataSourceProvider.class);
+        this.commandProcessor = context.getBean(COMMAND_PROCESSOR_BEAN, CommandProcessor.class);
     }
 
     public ClassLoader getClassLoader() {
@@ -80,16 +84,20 @@ public class Application {
         return applicationSemantics;
     }
 
-    public RootCommandProvider getRootCommandProvider() {
+    public CommandProvider getRootCommandProvider() {
         return rootCommandProvider;
     }
 
-    public RootDataSourceProvider getServiceProviderFactory() {
-        return serviceProviderFactory;
+    public RootDataSourceProvider getServiceProvider() {
+        return serviceProvider;
     }
 
     public CommandProcessor getCommandProcessor() {
         return commandProcessor;
+    }
+
+    public Context getContext() {
+        return this.context;
     }
 
     public void shutdown() {

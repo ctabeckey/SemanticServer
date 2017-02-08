@@ -2,9 +2,11 @@ package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
+import com.paypal.credit.core.commandprovider.AbstractCommandProvider;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
+import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
@@ -30,7 +32,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * implementation.
  */
 public class WorkflowCommandProvider
-implements CommandProvider {
+    extends AbstractCommandProvider
+    implements CommandProvider {
     /** */
     private final static Logger LOGGER = LoggerFactory.getLogger(WorkflowCommandProvider.class);
 

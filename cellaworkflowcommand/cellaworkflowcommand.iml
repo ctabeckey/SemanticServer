@@ -13,6 +13,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="cellaimpl" />
+    <orderEntry type="module" module-name="nanoXmlBeans" />
+    <orderEntry type="module" module-name="nanoContext" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
     <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:0.8-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy-dep:0.8-SNAPSHOT" level="project" />
@@ -22,7 +24,7 @@
     <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.6" level="project" />
     <orderEntry type="module" module-name="workflowfactory" />
     <orderEntry type="library" name="Maven: com.paypal.credit:utility:1.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="module" module-name="nanocontext" />
+    <orderEntry type="library" name="Maven: com.paypal.credit:nanocontext:0.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.paypal.credit:xactionctx:1.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.findbugs:annotations:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: com.paypal.credit:workflow:2.0.0-SNAPSHOT" level="project" />

@@ -1,0 +1,34 @@
+<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
+    <bean id="current-thread" class="java.lang.Thread" factory-method="currentThread" scope="singleton">
+    </bean>
+    <bean id="root-class-loader" class="java.lang.ClassLoader" factory="current-thread" factory-method="getContextClassLoader" scope="singleton">
+    </bean>
+
+    <bean id="application" class="com.paypal.credit.core.Application" scope="singleton">
+        <constructor-arg>
+            <bean id="semantics" class="com.paypal.credit.core.semantics.ApplicationSemantics" scope="singleton">
+                <constructor-arg>
+                    <value>com.paypal.credit.workflowtest.model</value>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+        <constructor-arg>
+            <bean id="command-provider" class="com.paypal.credit.core.commandprovider.RootCommandProvider" scope="singleton">
+                <constructor-arg>
+                    <ref bean="root-class-loader"/>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+        <constructor-arg>
+            <bean id= "data-source-provider" class="com.paypal.credit.core.datasourceprovider.RootDataSourceProviderImpl" factory-method="getOrCreate" scope="singleton">
+                <constructor-arg>
+                    <ref bean="root-class-loader"/>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+        <constructor-arg>
+            <bean id="command-processor" class="com.paypal.credit.core.commandprocessor.CommandProcessorDefaultImpl" factory-method="create" scope="singleton">
+            </bean>
+        </constructor-arg>
+    </bean>
+</beans>

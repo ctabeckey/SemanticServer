@@ -1,5 +1,6 @@
 package com.paypal.credit.workflowtest;
 
+import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
@@ -18,6 +19,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import javax.xml.bind.JAXBException;
+import java.io.FileNotFoundException;
+
 /**
  * Created by cbeckey on 12/7/15.
  */
@@ -33,8 +37,8 @@ public class FullStackTest {
     }
 
     @BeforeTest
-    public void b4Test() throws CoreRouterSemanticsException, ProcessorBridgeInstantiationException {
-        application = Application.create("com.paypal.credit.workflowtest");
+    public void b4Test() throws CoreRouterSemanticsException, ProcessorBridgeInstantiationException, FileNotFoundException, JAXBException, ContextInitializationException {
+        application = Application.create(true, "FullStackTestContext.xml");
         processorBridgeFactory = new ProcessorBridgeProxyImplFactory(application);
         bridge = processorBridgeFactory.create(WorkflowTestProcessorBridge.class);
     }

@@ -17,8 +17,8 @@ public class DataSourceProviderTest {
     @Test
     public void testFindDataSource() {
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
-        RootDataSourceProvider spf = RootDataSourceProvider.getOrCreate();
-        RootDataSourceProvider.DataSourceDescription description =
+        RootDataSourceProviderImpl spf = RootDataSourceProviderImpl.getOrCreate();
+        RootDataSourceProviderImpl.DataSourceDescription description =
                 spf.findDataSource(SubjectAuthorizationDataProvider.class, rt);
 
         Assert.assertNotNull(description);
@@ -28,7 +28,7 @@ public class DataSourceProviderTest {
     public void testCreateDataSource()
             throws UnableToFindServiceProviderImplementation, UnableToCreateServiceProviderImplementation {
         RoutingToken rt = new ProductTypeRoutingToken("USAINS");
-        RootDataSourceProvider spf = RootDataSourceProvider.getOrCreate();
+        RootDataSourceProviderImpl spf = RootDataSourceProviderImpl.getOrCreate();
         SubjectAuthorizationDataProvider dataSource = spf.createDataSource(SubjectAuthorizationDataProvider.class, rt);
 
         Assert.assertNotNull(dataSource);

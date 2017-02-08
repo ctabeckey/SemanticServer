@@ -24,6 +24,12 @@
 
         <dependency>
             <groupId>com.paypal.credit</groupId>
+            <artifactId>nanoXmlBeans</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.paypal.credit</groupId>
             <artifactId>nanocontext</artifactId>
             <version>${project.version}</version>
         </dependency>

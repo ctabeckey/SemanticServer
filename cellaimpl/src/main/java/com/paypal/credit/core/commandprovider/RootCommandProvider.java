@@ -19,7 +19,8 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  */
 public class RootCommandProvider
-implements CommandProvider {
+    extends AbstractCommandProvider
+    implements CommandProvider {
 
     // ============================================================================
     // Static Methods to manage instances of this class
@@ -81,26 +82,6 @@ implements CommandProvider {
      */
     @Override
     public String getPublisher() {
-        return null;
-    }
-
-    /**
-     *
-     */
-    public <R, C extends Callable<R>> C createCommand(
-            final RoutingToken routingToken,
-            final CommandClassSemantics commandClassSemantics,
-            final Object[] parameters,
-            final Class<R> resultType)
-            throws CommandProviderException {
-        final Class<?>[] parameterTypes = TypeAndInstanceUtility.getTypes(parameters);
-
-        CommandInstantiationToken commandInstantiationToken =
-                findCommand(routingToken, commandClassSemantics, parameterTypes, resultType);
-        if (commandInstantiationToken != null) {
-            return (C) createCommand(commandInstantiationToken, parameters);
-        }
-
         return null;
     }
 

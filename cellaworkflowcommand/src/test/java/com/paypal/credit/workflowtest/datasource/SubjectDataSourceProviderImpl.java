@@ -1,7 +1,7 @@
 package com.paypal.credit.workflowtest.datasource;
 
 import com.paypal.credit.core.datasourceprovider.DataSourceProvider;
-import com.paypal.credit.core.datasourceprovider.RootDataSourceProvider;
+import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderImpl;
 import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
 
 import java.util.HashSet;
@@ -24,12 +24,12 @@ implements DataSourceProvider {
     }
 
     @Override
-    public Set<RootDataSourceProvider.DataSourceDescription<?>> getInstalledProviders() {
-        Set<RootDataSourceProvider.DataSourceDescription<?>> result =
+    public Set<RootDataSourceProviderImpl.DataSourceDescription<?>> getInstalledProviders() {
+        Set<RootDataSourceProviderImpl.DataSourceDescription<?>> result =
                 new HashSet<>();
 
-        RootDataSourceProvider.DataSourceDescription<SubjectAuthorizationDataProvider> dataProviderDataSourceDescription =
-            new RootDataSourceProvider.DataSourceDescription<SubjectAuthorizationDataProvider>(
+        RootDataSourceProviderImpl.DataSourceDescription<SubjectAuthorizationDataProvider> dataProviderDataSourceDescription =
+            new RootDataSourceProviderImpl.DataSourceDescription<SubjectAuthorizationDataProvider>(
                 getPublisher(), 1, SubjectAuthorizationDataProvider.class, new ProductTypeRoutingToken("USAINS"),
                 SubjectAuthorizationDataProviderImpl.class);
 

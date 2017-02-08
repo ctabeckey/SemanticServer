@@ -3,6 +3,7 @@ package com.paypal.credit.test.commandprovider;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
+import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.test.commands.PostAuthorizationCommand;
 import org.slf4j.Logger;
@@ -79,6 +80,11 @@ implements CommandProvider {
             return null;
         }
 
+        return null;
+    }
+
+    @Override
+    public <R, C extends Callable<R>> C createCommand(RoutingToken routingToken, CommandClassSemantics commandClassSemantics, Object[] parameters, Class<R> resultType) throws CommandProviderException {
         return null;
     }
 }

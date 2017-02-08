@@ -1,5 +1,6 @@
 package com.paypal.credit.core.processorbridge;
 
+import com.paypal.credit.context.exceptions.ContextInitializationException;
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
@@ -14,6 +15,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import javax.xml.bind.JAXBException;
+import java.io.FileNotFoundException;
+
 /**
  * Created by cbeckey on 11/12/15.
  */
@@ -27,9 +31,9 @@ public class ProcessorBridgeDefaultFactoryTest {
     }
 
     @BeforeTest
-    public void b4Test() throws CoreRouterSemanticsException {
+    public void b4Test() throws CoreRouterSemanticsException, FileNotFoundException, JAXBException, ContextInitializationException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        application = Application.create(classLoader, "com.paypal.credit.testValidWorkflow");
+        application = Application.create(true);
 
         this.processorBridgeFactory = new ProcessorBridgeProxyImplFactory(application);
     }

@@ -53,6 +53,8 @@
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/ProcessorBridgeFactory.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/commandprocessor/AsynchronousCommandListener.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/processorbridge/package-info.java
+/Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/datasourceprovider/RootDataSourceProviderImpl.java
+/Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/AbstractCommandProvider.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/commandprovider/exceptions/MultipleCommandImplementationsException.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/semantics/ProcessorBridgeMethodSemantics.java
 /Users/cbeckey/src/CreditArchitecture/cella/cellaimpl/src/main/java/com/paypal/credit/core/semantics/CommandClassSemantics.java
