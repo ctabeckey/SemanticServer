@@ -3,18 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.paypal.credit</groupId>
-    <artifactId>cella-parent</artifactId>
+    <artifactId>semantic-server-parent</artifactId>
     <name>${project.artifactId}</name>
-    <version>0.0.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>nanoXmlBeans</module>
-        <module>nanoAnnotations</module>
-        <module>nanoAnnotationProcessor</module>
-        <module>nanoContext</module>
-        <module>cellaimpl</module>
-        <module>cellaworkflowcommand</module>
+        <module>semantic-server-impl</module>
+        <module>semantic-server-workflow-command</module>
         <module>processorprovider</module>
         <module>testprocessorprovider</module>
         <module>workflowfactory</module>
@@ -27,6 +23,7 @@
         <spring.version>4.2.2.RELEASE</spring.version>
         <!-- Sonar -->
         <sonar.skippedModules/>
+        <nanocontext.version>1.0.0-SNAPSHOT</nanocontext.version>
     </properties>
 
     <scm>
@@ -39,6 +36,29 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- PayPal Credit NanoContext Dependencies -->
+            <dependency>
+                <groupId>com.paypal.credit</groupId>
+                <artifactId>nanoContext</artifactId>
+                <version>${nanocontext.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.paypal.credit</groupId>
+                <artifactId>nanoAnnotationProcessor</artifactId>
+                <version>${nanocontext.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.paypal.credit</groupId>
+                <artifactId>nanoAnnotations</artifactId>
+                <version>${nanocontext.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.paypal.credit</groupId>
+                <artifactId>nanoXmlBeans</artifactId>
+                <version>${nanocontext.version}</version>
+            </dependency>
+
+            <!-- PayPal Credit Library Dependencies -->
             <dependency>
                 <groupId>com.paypal.credit</groupId>
                 <artifactId>xactionctx</artifactId>
@@ -60,6 +80,7 @@
                 <version>2.0.0-SNAPSHOT</version>
             </dependency>
 
+            <!-- SLF4J Logging Dependencies -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -71,12 +92,38 @@
                 <version>1.7.5</version>
             </dependency>
 
+            <!-- Validation Dependencies -->
             <dependency>
-                <groupId>javax.inject</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>1</version>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>1.1.0.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>5.2.1.Final</version>
             </dependency>
 
+            <!-- Byte Code Manipulation Dependencies -->
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>0.8-SNAPSHOT</version>
+            </dependency>
+
+            <!-- JAXB Dependencies -->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>2.2.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>2.2.6</version>
+            </dependency>
+
+            <!-- Test scope dependencies -->
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
@@ -89,6 +136,7 @@
                 <version>1.10.19</version>
                 <scope>test</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

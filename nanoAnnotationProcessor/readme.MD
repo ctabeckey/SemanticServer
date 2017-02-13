@@ -1,2 +1,0 @@
-Rather than support runtime scanning for annotations, which tends to be slow, nanoAnnotationProcessor builds a context XML file from annotations at compilation time.
-While the original intent was to provide compatability with the javax.inject annotations this would have required support for field injection, which noncontext does not support. Alternatively, nanocontext specific annotations are provided that may be used to provide constructor arguments.

@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><beans xmlns="http://credit.paypal.com/v1/schema/ctx"><bean id="ts2" class="TestSubjectTwo" scope="singleton"/><bean id="ts1" class="TestSubject" scope="prototype"><constructor-arg><ref bean="ts2"/></constructor-arg></bean></beans>

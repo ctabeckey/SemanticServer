@@ -9,37 +9,57 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>processorprovider</artifactId>
+    <artifactId>semantic-server-workflow-command</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.paypal.credit</groupId>
-            <artifactId>semantic-server-workflow-command</artifactId>
+            <artifactId>semantic-server-impl</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.paypal.credit</groupId>
-            <artifactId>workflow</artifactId>
+            <artifactId>workflowfactory</artifactId>
+            <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.paypal.credit</groupId>
+            <artifactId>nanoXmlBeans</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.paypal.credit</groupId>
             <artifactId>xactionctx</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.paypal.credit</groupId>
-            <artifactId>credit-settings-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.paypal.credit</groupId>
-            <artifactId>nanoContext</artifactId>
+            <artifactId>workflow</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.2.1.Final</version>
+        </dependency>
+
+        <!-- Test Scope Dependencies -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
 
 </project>

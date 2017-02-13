@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>cella-parent</artifactId>
+        <artifactId>semantic-server-parent</artifactId>
         <groupId>com.paypal.credit</groupId>
-        <version>0.0.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>omegaexecutor</artifactId>
