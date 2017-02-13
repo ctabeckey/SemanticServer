@@ -20,5 +20,8 @@ idea/
 .project
 .idea
 .idea/workspace.xml
+.DS_Store
 
 infer-out
+/.idea/
+.idea/*
