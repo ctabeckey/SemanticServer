@@ -4,8 +4,8 @@ import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.commandprovider.exceptions.MultipleCommandImplementationsException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
+import com.paypal.credit.core.semantics.CommandClassSemanticsImpl;
 import com.paypal.credit.utility.ParameterCheckUtility;
-import com.paypal.credit.utility.TypeAndInstanceUtility;
 
 import java.util.ArrayList;
 import java.util.Iterator;

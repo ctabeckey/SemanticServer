@@ -19,7 +19,7 @@ public class CommandFactoryMethodSemanticsTest
 
     @BeforeTest
     public void beforeTest() throws CoreRouterSemanticsException {
-        this.applicationSemantics = new ApplicationSemantics("com.paypal.credit.testValidWorkflow.model");
+        this.applicationSemantics = ApplicationSemanticsImpl.create("com.paypal.credit.testValidWorkflow.model");
     }
 
     /**
@@ -34,20 +34,24 @@ public class CommandFactoryMethodSemanticsTest
      */
     @DataProvider
     public Object[][] validElementsData() {
+        VocabularyWord get = this.applicationSemantics.getActionVocabulary().find("Get");
+        VocabularyWord post = this.applicationSemantics.getActionVocabulary().find("Post");
+
+
         return new Object[][]{
-                new Object[]{"createGetAccountCommand", Action.GET, "Account", null, null, null},
-                new Object[]{"createGetAccountListCommand", Action.GET, "Account", CollectionType.LIST, null, null},
-                new Object[]{"createPostAuthorizationCommand", Action.POST, "Authorization", null, null, null},
+                new Object[]{"createGetAccountCommand", get, "Account", null, null, null},
+                new Object[]{"createGetAccountListCommand", get, "Account", CollectionType.LIST, null, null},
+                new Object[]{"createPostAuthorizationCommand", post, "Authorization", null, null, null},
         };
     };
 
     @Test(dataProvider = "validElementsData")
 	public void testKnownValidElements(
             String methodName,
-            Action action,
+            VocabularyWord action,
             String subject,
             CollectionType subjectCollectionType,
-            Preposition preposition,
+            VocabularyWord preposition,
             String objectOfPreposition)
 	throws CoreRouterSemanticsException
 	{

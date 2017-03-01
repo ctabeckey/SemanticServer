@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * Utility class to provide access to commandprocessor facades without having to know the
- * commandprocessor processorbridge implementation name.
+ * commandprocessor applicationbridge implementation name.
  */
 public class FacadeRouterUtility
 {
@@ -56,16 +56,16 @@ public class FacadeRouterUtility
 			{
 				Method singletonAccessor = implementationClass.getMethod("getSingleton", (Class<?>[])null);
 				
-				// return the singleton accessor result (should be the singleton commandprocessor processorbridge
+				// return the singleton accessor result (should be the singleton commandprocessor applicationbridge
 				return (R) singletonAccessor.invoke(null, (Object[])null);
 			} 
 			catch (SecurityException x)
 			{
-				LOGGER.error("The processorbridge commandprocessor implementation '{}' singleton accessor method is inaccessible.", implementationClassName);
+				LOGGER.error("The applicationbridge commandprocessor implementation '{}' singleton accessor method is inaccessible.", implementationClassName);
 				throw x;
 			} 
 			catch (NoSuchMethodException x) {
-				LOGGER.warn("The implementation for processorbridge commandprocessor '{}' has no singleton accessor method, i.e. public static getSingleton(), returning new instance", implementationClassName);
+				LOGGER.warn("The implementation for applicationbridge commandprocessor '{}' has no singleton accessor method, i.e. public static getSingleton(), returning new instance", implementationClassName);
 				return implementationClass.newInstance();
 			}
 		}

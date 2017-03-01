@@ -1,0 +1,24 @@
+<beans xmlns="http://credit.paypal.com/v1/schema/ctx">
+
+<bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
+        <constructor-arg>
+            <list>
+                <bean class="com.paypal.credit.workflow.RSParallelController" scope="prototype">
+                    <constructor-arg>
+                        <list>
+                            <bean class="com.paypal.credit.workflowcommand.processors.ProcessorOne" scope="prototype" />
+                            <bean class="com.paypal.credit.workflowcommand.processors.ProcessorThree" scope="prototype" />
+                        </list>
+                    </constructor-arg>
+                    <constructor-arg>
+                        <ref bean="defaultThreadPool"/>
+                    </constructor-arg>
+                </bean>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg>
+            <value>com.paypal.credit.workflowcommand.model.AccountIdProcessorContext</value>
+        </constructor-arg>
+    </bean>
+</beans>

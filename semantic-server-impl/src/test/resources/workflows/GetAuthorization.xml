@@ -3,7 +3,7 @@
     <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
         <constructor-arg>
             <list>
-                <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype" />
+                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorOne" scope="prototype" />
             </list>
         </constructor-arg>
 

@@ -8,7 +8,7 @@ import com.paypal.credit.core.datasourceprovider.exceptions.UnableToFindServiceP
  * The interface made available to the application components from the data source provider
  * hierarchy.
  */
-public interface RootDataSourceProvider {
+public interface RootDataSourceProvider extends DataSourceProvider{
     /**
      *
      * @param dataSourceApi

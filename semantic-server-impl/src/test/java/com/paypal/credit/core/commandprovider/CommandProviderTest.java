@@ -3,10 +3,11 @@ package com.paypal.credit.core.commandprovider;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.semantics.ApplicationSemantics;
+import com.paypal.credit.core.semantics.ApplicationSemanticsImpl;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.semantics.ProcessorBridgeMethodSemantics;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
+import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
 import com.paypal.credit.utility.URLFactory;
 import com.paypal.credit.test.model.Authorization;
 import com.paypal.credit.test.model.AuthorizationId;
@@ -30,7 +31,7 @@ public class CommandProviderTest {
     @BeforeTest
     public void b4Test() throws CoreRouterSemanticsException {
         rootCommandProvider = RootCommandProvider.getOrCreate();
-        applicationSemantics = new ApplicationSemantics("com.paypal.credit.test.model");
+        applicationSemantics = ApplicationSemanticsImpl.create("com.paypal.credit.test.model");
     }
 
     @Test
@@ -38,11 +39,12 @@ public class CommandProviderTest {
         ProcessorBridgeMethodSemantics rms = applicationSemantics.createProcessorBridgeMethodSemantics("postAuthorization");
         CommandClassSemantics ccs = applicationSemantics.createCommandClassSemantic(rms);
 
-        RoutingToken rt = new ProductTypeRoutingToken("USAINS");
+        RoutingToken rt = new ProductTypeRoutingToken("USACON");
 
         CommandInstantiationToken commandRank =
                 rootCommandProvider.findCommand(rt, ccs, new Class[]{Authorization.class}, AuthorizationId.class);
         Assert.assertNotNull(commandRank);
         Assert.assertNotNull(commandRank.getCommandProvider());
+
     }
 }

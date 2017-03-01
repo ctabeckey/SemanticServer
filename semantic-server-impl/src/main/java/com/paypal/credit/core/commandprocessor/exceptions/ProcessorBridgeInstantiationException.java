@@ -3,7 +3,7 @@ package com.paypal.credit.core.commandprocessor.exceptions;
 /**
  *
  * The superclass of all exceptions thrown when instantiating a 
- * commandprocessor (or processorbridge-specific commandprocessor).
+ * commandprocessor (or applicationbridge-specific commandprocessor).
  *
  */
 public class ProcessorBridgeInstantiationException

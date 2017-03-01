@@ -6,21 +6,21 @@
                 <bean class="com.paypal.credit.workflow.RSParallelController" scope="prototype">
                     <constructor-arg>
                         <list>
-                            <bean class="com.paypal.credit.processors.ProcessorOne" scope="prototype" />
-                            <bean class="com.paypal.credit.processors.ProcessorThree" scope="prototype" />
+                            <bean class="com.paypal.credit.workflowcommand.processors.ProcessorOneSSWC" scope="prototype" />
+                            <bean class="com.paypal.credit.workflowcommand.processors.ProcessorThreeSSWC" scope="prototype" />
                         </list>
                     </constructor-arg>
                     <constructor-arg>
                         <ref bean="defaultThreadPool"/>
                     </constructor-arg>
                 </bean>
-                <bean class="com.paypal.credit.processors.ProcessorTwo" scope="prototype">
+                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorTwoSSWC" scope="prototype">
                 </bean>
             </list>
         </constructor-arg>
 
         <constructor-arg>
-            <value>com.paypal.credit.workflowtest.AccountIdProcessorContext</value>
+            <value>com.paypal.credit.workflowcommand.SSWCAccountIdProcessorContext</value>
         </constructor-arg>
     </bean>
 </beans>

@@ -7,9 +7,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * The central gateway of the server agnostic mechanism.  Components of Visa
+ * The central gateway of the server agnostic mechanism.  Components of the semantic server
  * register interest in events here.  Server-specific lifecycle classes send messages 
  * to this singleton.
+ *
  * This class also provides access to authentication/authorization services.
  * 
  */

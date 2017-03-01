@@ -6,16 +6,15 @@ import com.paypal.credit.core.commandprovider.AbstractCommandProvider;
 import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
 import com.paypal.credit.core.commandprovider.CommandProvider;
 import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
-import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
-import com.paypal.credit.core.processorbridge.ProductTypeRoutingToken;
+import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.utility.ThreeMemberCompoundKey;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
 import com.paypal.credit.workflow.exceptions.WorkflowContextException;
-import com.paypal.credit.workflow.factory.IocWorkflowFactory;
+import com.paypal.credit.workflowcommand.factory.IocWorkflowFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -104,10 +103,14 @@ public class WorkflowCommandProvider
             if (workflowUrl != null) {
                 try {
                     workflowType = workflowFactory.getOrCreate(workflowUrl);
-                    token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
-                    tokenCache.put(key, token);
+                    if (workflowType != null) {
+                        token = new WorkflowCommandInstantiationToken(this, workflowType, routingToken, resultType);
+                        tokenCache.put(key, token);
+                    } else {
+                        LOGGER.error(String.format("Error creating workflow [%s]", workflowUrl.toString()));
+                    }
                 } catch (IOException | JAXBException| ContextInitializationException | WorkflowContextException x) {
-                    LOGGER.error("Error when finding command", x);
+                    LOGGER.error(String.format("Error when finding command [%s] %s @ %s (%s)", resultType, workflowType, workflowUrl.toString(), routingToken), x);
                 }
             }
         }

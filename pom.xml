@@ -9,11 +9,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>semantic-server-api</module>
         <module>semantic-server-impl</module>
         <module>semantic-server-workflow-command</module>
         <module>processorprovider</module>
         <module>testprocessorprovider</module>
-        <module>workflowfactory</module>
         <module>omegaexecutor</module>
     </modules>
 
@@ -102,13 +102,6 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>5.2.1.Final</version>
-            </dependency>
-
-            <!-- Byte Code Manipulation Dependencies -->
-            <dependency>
-                <groupId>net.bytebuddy</groupId>
-                <artifactId>byte-buddy</artifactId>
-                <version>0.8-SNAPSHOT</version>
             </dependency>
 
             <!-- JAXB Dependencies -->

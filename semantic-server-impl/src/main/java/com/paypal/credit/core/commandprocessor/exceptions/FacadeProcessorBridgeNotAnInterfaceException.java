@@ -11,7 +11,7 @@ extends ProcessorBridgeInstantiationException
 	 */
 	private static final long serialVersionUID = 1L;
 	public final static String intfNameToken = "%1";
-	public final static String msg = "The class '%1' is not an interface and cannot be use to instantiate a commandprocessor processorbridge.";
+	public final static String msg = "The class '%1' is not an interface and cannot be use to instantiate a commandprocessor applicationbridge.";
 
 	/**
 	 * 

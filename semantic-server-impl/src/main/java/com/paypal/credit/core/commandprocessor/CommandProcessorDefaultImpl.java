@@ -1,6 +1,7 @@
 package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.Application;
+import com.paypal.credit.core.ApplicationImpl;
 import com.paypal.credit.utility.ParameterCheckUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +46,7 @@ implements CommandProcessor
     // ============================================================
     // Instance Members
     // ============================================================
-    private Application application;
+    private ApplicationImpl application;
     private final BlockingQueue<Callable<?>> workQueue;
     private final Map<Future<?>, AsynchronousExecutionCallback<?>> callbackMap;
     private final ExecutorService asynchExecutor;
@@ -106,9 +107,8 @@ implements CommandProcessor
      *
      * @param application the "owning" application
      */
-    @Override
     public void setApplication(final Application application) {
-        this.application = application;
+        this.application = this.application;
     }
 
     @Override
@@ -138,8 +138,8 @@ implements CommandProcessor
         {
             LOGGER.info("Submitting '{}' for asynchronous execution.", command.getClass().getSimpleName());
 
-            if (CellaAwareCommand.class.isInstance(command)) {
-                ((CellaAwareCommand)command).setApplicationContext(this.application);
+            if (ApplicationAwareCommand.class.isInstance(command)) {
+                ((ApplicationAwareCommand)command).setApplicationContext(this.application);
             }
 
             Future<R> future = this.asynchCompletionService.submit(command);
@@ -169,8 +169,8 @@ implements CommandProcessor
     {
         ParameterCheckUtility.checkParameterNotNull(command, "command");
 
-        if (CellaAwareCommand.class.isInstance(command)) {
-            ((CellaAwareCommand)command).setApplicationContext(this.application);
+        if (ApplicationAwareCommand.class.isInstance(command)) {
+            ((ApplicationAwareCommand)command).setApplicationContext(this.application);
         }
 
         try {

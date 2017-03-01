@@ -1,6 +1,6 @@
 package com.paypal.credit.core.commandprocessor.exceptions;
 
-import com.paypal.credit.core.processorbridge.CommandMapping;
+import com.paypal.credit.core.applicationbridge.CommandMapping;
 
 import java.lang.reflect.Method;
 

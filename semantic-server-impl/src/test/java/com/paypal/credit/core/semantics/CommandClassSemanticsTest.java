@@ -6,8 +6,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertEqualsNoOrder;
-import static org.testng.Assert.fail;
 
 /**
  *
@@ -18,30 +16,33 @@ public class CommandClassSemanticsTest
 
     @BeforeTest
     public void beforeTest() throws CoreRouterSemanticsException {
-        this.applicationSemantics = new ApplicationSemantics("com.paypal.credit.testValidWorkflow.model");
+        this.applicationSemantics = ApplicationSemanticsImpl.create("com.paypal.credit.testValidWorkflow.model");
     }
 
     @DataProvider
     public Object[][] validCommandClassData() {
+        VocabularyWord get = this.applicationSemantics.getActionVocabulary().find("Get");
+        VocabularyWord by = this.applicationSemantics.getPrepositionVocabulary().find("By");
+
         return new Object[][] {
-                new Object[]{"GetAuthorizationCommand", Action.GET, "Authorization", null, null, null},
-                new Object[]{"GetAuthorizationByAuthorizationIdCommand", Action.GET, "Authorization", null, Preposition.BY, "AuthorizationId"}
+                new Object[]{"GetAuthorizationCommand", get, "Authorization", null, null, null},
+                new Object[]{"GetAuthorizationByAuthorizationIdCommand", get, "Authorization", null, by, "AuthorizationId"}
         };
     }
 
     @Test(dataProvider = "validCommandClassData")
 	public void testValidCommandClassName(
 			final String stimulus,
-            final Action expectedAction,
-            final String expectedClass,
+            final VocabularyWord expectedAction,
+            final String expectedSubject,
             final CollectionType expectedCollectionType,
-            final Preposition expectedPreposition,
+            final VocabularyWord expectedPreposition,
             final String expectedObject)
 	throws CoreRouterSemanticsException
 	{
         CommandClassSemantics commandSemantics = this.applicationSemantics.createCommandClassSemantic(stimulus);
 		assertEquals(commandSemantics.getAction(), expectedAction);
-        assertEquals(commandSemantics.getSubject(), expectedClass);
+        assertEquals(commandSemantics.getSubject(), expectedSubject);
         assertEquals(commandSemantics.getCollectionType(), expectedCollectionType);
         assertEquals(commandSemantics.getPreposition(), expectedPreposition);
         assertEquals(commandSemantics.getObject(), expectedObject);
@@ -49,18 +50,21 @@ public class CommandClassSemanticsTest
 
     @DataProvider
     public Object[][] invalidCommandClassData() {
+        VocabularyWord get = this.applicationSemantics.getActionVocabulary().find("Get");
+        VocabularyWord by = this.applicationSemantics.getPrepositionVocabulary().find("By");
+
         return new Object[][] {
-                new Object[]{"GetAuthorizationBy", Action.GET, "Authorization", null, Preposition.BY, null}
+                new Object[]{"GetAuthorizationBy", get, "Authorization", null, by, null}
         };
     }
 
     @Test(dataProvider = "invalidCommandClassData", expectedExceptions = {CoreRouterSemanticsException.class})
     public void testInvalidCommandClassName(
             final String stimulus,
-            final Action expectedAction,
+            final VocabularyWord expectedAction,
             final String expectedClass,
             final CollectionType expectedCollectionType,
-            final Preposition expectedPreposition,
+            final VocabularyWord expectedPreposition,
             final String expectedObject)
             throws CoreRouterSemanticsException
     {

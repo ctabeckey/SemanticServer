@@ -17,24 +17,28 @@ public class ProcessorBridgeMethodSemanticsTest
 
     @BeforeTest
     public void beforeTest() throws CoreRouterSemanticsException {
-        this.applicationSemantics = new ApplicationSemantics("com.paypal.credit.testValidWorkflow.model");
+        this.applicationSemantics = ApplicationSemanticsImpl.create("com.paypal.credit.testValidWorkflow.model");
     }
 
     @DataProvider
     public Object[][] validRouterMethodData() {
+        VocabularyWord get = this.applicationSemantics.getActionVocabulary().find("Get");
+        VocabularyWord post = this.applicationSemantics.getActionVocabulary().find("Post");
+        VocabularyWord by = this.applicationSemantics.getPrepositionVocabulary().find("By");
+
         return new Object[][] {
-                new Object[]{"postAuthorization", Action.POST, "Authorization", null, null, null, "PostAuthorizationCommand", "createPostAuthorizationCommand"},
-                new Object[]{"getAuthorizationByAuthorizationId", Action.GET, "Authorization", null, Preposition.BY, "AuthorizationId", "GetAuthorizationByAuthorizationIdCommand", "createGetAuthorizationByAuthorizationIdCommand"}
+                new Object[]{"postAuthorization", post, "Authorization", null, null, null, "PostAuthorizationCommand", "createPostAuthorizationCommand"},
+                new Object[]{"getAuthorizationByAuthorizationId", get, "Authorization", null, by, "AuthorizationId", "GetAuthorizationByAuthorizationIdCommand", "createGetAuthorizationByAuthorizationIdCommand"}
         };
     }
 
     @Test(dataProvider = "validRouterMethodData")
     public void testValidRouterMethodName(
             final String stimulus,
-            final Action expectedAction,
+            final VocabularyWord expectedAction,
             final String expectedClass,
             final CollectionType expectedCollectionType,
-            final Preposition expectedPreposition,
+            final VocabularyWord expectedPreposition,
             final String expectedObject,
             final String expectedCommandName,
             final String expectedCommandFactoryMethodName)

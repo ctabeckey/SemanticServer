@@ -9,7 +9,6 @@ import com.paypal.credit.test.commands.PostAuthorizationCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;

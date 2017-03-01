@@ -1,0 +1,6 @@
+GET, [gG]et|[rR]ead,
+POST, [pP]ost|[cC]reate,
+PUT, [pP]ut|[uU]pdate,
+PATCH, [pP]atch,
+DELETE, [dD]elete,
+SUBMIT, [sS]ubmit,

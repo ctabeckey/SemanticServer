@@ -1,8 +1,8 @@
 package com.paypal.credit.workflowcommand;
 
-import com.paypal.credit.core.commandprocessor.AbstractCellaAwareCommand;
+import com.paypal.credit.core.commandprocessor.AbstractApplicationAwareCommand;
 import com.paypal.credit.core.commandprocessor.AsynchronouslyExecutableCommand;
-import com.paypal.credit.core.commandprocessor.CellaAwareCommand;
+import com.paypal.credit.core.commandprocessor.ApplicationAwareCommand;
 import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
@@ -22,8 +22,8 @@ import java.util.concurrent.Callable;
  */
 @AsynchronouslyExecutableCommand
 public class WorkflowCommand<C extends RSProcessorContext, R>
-    extends AbstractCellaAwareCommand
-    implements Callable<R>, CellaAwareCommand {
+    extends AbstractApplicationAwareCommand
+    implements Callable<R>, ApplicationAwareCommand {
 
     private final Workflow<C, R> workflow;
     private final RSProcessorContext processorContext;

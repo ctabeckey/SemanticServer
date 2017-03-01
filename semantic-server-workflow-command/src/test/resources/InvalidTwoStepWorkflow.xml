@@ -1,0 +1,18 @@
+<beansType xmlns="http://www.springframework.org/schema/beansType"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beansType http://www.springframework.org/schema/beansType/spring-beansType-3.0.xsd">
+
+    <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
+        <constructor-arg name="processors">
+            <list>
+                <!-- Invalid workflow because processor two needs things that process one provides -->
+                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorTwo" scope="prototype" />
+                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorOne" scope="prototype" />
+            </list>
+        </constructor-arg>
+
+        <constructor-arg name="contextClass">
+            <value>com.paypal.credit.workflow.RSProcessorContext</value>
+        </constructor-arg>
+    </bean>
+</beansType>

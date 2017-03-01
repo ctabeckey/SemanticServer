@@ -24,6 +24,11 @@
         </dependency>
         <dependency>
             <groupId>com.paypal.credit</groupId>
+            <artifactId>semantic-server-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.paypal.credit</groupId>
             <artifactId>xactionctx</artifactId>
         </dependency>
         <dependency>
@@ -36,12 +41,7 @@
             <artifactId>slf4j-api</artifactId>
         </dependency>
 
-        <!-- ByteBuddy is a byte code generation library used by one of the ProcessorBridge implementations -->
-        <dependency>
-            <groupId>net.bytebuddy</groupId>
-            <artifactId>byte-buddy</artifactId>
-        </dependency>
-
+        <!-- JSR Standard Validation -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -50,6 +50,16 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <!-- JAXB Java-XML binding-->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
         </dependency>
 
         <!-- Test Scope Dependencies -->
@@ -61,17 +71,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
-            <version>1.10.19</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
         </dependency>
 
     </dependencies>
