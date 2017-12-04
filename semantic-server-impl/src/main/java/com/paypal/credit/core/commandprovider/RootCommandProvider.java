@@ -5,7 +5,7 @@ import com.paypal.credit.core.commandprovider.exceptions.CommandProviderExceptio
 import com.paypal.credit.core.commandprovider.exceptions.MultipleCommandImplementationsException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.core.semantics.CommandClassSemanticsImpl;
-import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.utility.ParameterCheckUtility;
 
 import java.util.ArrayList;
 import java.util.Iterator;

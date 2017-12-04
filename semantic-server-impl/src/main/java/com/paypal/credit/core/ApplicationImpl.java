@@ -100,7 +100,7 @@ public class ApplicationImpl implements Application {
     }
 
     @Override
-    public DataSourceProvider getServiceProvider() {
+    public RootDataSourceProvider getServiceProvider() {
         return serviceProvider;
     }
 

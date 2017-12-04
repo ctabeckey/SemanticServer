@@ -3,7 +3,7 @@ package com.paypal.credit.core.commandprovider;
 import com.paypal.credit.core.commandprocessor.RoutingToken;
 import com.paypal.credit.core.commandprovider.exceptions.CommandProviderException;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
-import com.paypal.credit.utility.TypeAndInstanceUtility;
+import com.paypal.utility.TypeAndInstanceUtility;
 
 import java.util.concurrent.Callable;
 

@@ -1,6 +1,6 @@
 package com.paypal.credit.core.semantics;
 
-import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.utility.ParameterCheckUtility;
 
 import java.util.regex.Pattern;
 

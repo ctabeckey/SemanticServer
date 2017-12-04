@@ -1,7 +1,7 @@
 package com.paypal.credit.core.semantics;
 
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.utility.URLFactory;
+import com.paypal.utility.URLFactory;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

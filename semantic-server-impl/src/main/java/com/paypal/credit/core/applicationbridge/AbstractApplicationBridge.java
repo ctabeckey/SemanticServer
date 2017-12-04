@@ -4,7 +4,7 @@ import com.paypal.credit.core.Application;
 import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
 import com.paypal.credit.core.commandprocessor.exceptions.UnknownCommandException;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.utility.ParameterCheckUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

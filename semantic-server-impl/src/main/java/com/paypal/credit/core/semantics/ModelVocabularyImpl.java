@@ -1,7 +1,7 @@
 package com.paypal.credit.core.semantics;
 
-import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
+import com.paypal.utility.ParameterCheckUtility;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;

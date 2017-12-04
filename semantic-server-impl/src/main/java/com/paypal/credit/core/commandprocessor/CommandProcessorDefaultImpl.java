@@ -2,7 +2,7 @@ package com.paypal.credit.core.commandprocessor;
 
 import com.paypal.credit.core.Application;
 import com.paypal.credit.core.ApplicationImpl;
-import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.utility.ParameterCheckUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

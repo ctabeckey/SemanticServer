@@ -1,7 +1,7 @@
 package com.paypal.credit.core.applicationbridge;
 
 import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.utility.ParameterCheckUtility;
+import com.paypal.utility.ParameterCheckUtility;
 
 import java.util.Objects;
 
