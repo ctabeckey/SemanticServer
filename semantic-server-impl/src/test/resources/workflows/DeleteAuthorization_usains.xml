@@ -3,12 +3,13 @@
     <bean id="workflow" class="com.paypal.credit.workflow.Workflow" scope="singleton">
         <constructor-arg>
             <list>
-                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorOneSSWC" scope="prototype" />
+                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorOne" scope="prototype" />
+                <bean class="com.paypal.credit.workflowcommand.processors.ProcessorTwo" scope="prototype" />
             </list>
         </constructor-arg>
 
         <constructor-arg>
-            <value>com.paypal.credit.workflowcommand.SSWCAccountIdProcessorContext</value>
+            <value>com.paypal.credit.workflowtest.AccountIdProcessorContext</value>
         </constructor-arg>
     </bean>
 </beans>

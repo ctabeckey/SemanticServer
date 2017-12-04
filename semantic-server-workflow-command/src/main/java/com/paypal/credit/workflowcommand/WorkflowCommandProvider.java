@@ -10,6 +10,8 @@ import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
 import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.CommandClassSemantics;
 import com.paypal.credit.workflow.RSProcessorContext;
+import com.paypal.credit.workflow.Workflow;
+import com.paypal.credit.workflow.exceptions.WorkflowContextException;
 import com.paypal.credit.workflowcommand.factory.IocWorkflowFactory;
 import com.paypal.utility.ParameterCheckUtility;
 import com.paypal.utility.ThreeMemberCompoundKey;

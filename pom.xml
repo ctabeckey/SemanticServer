@@ -11,10 +11,10 @@
     <modules>
         <module>semantic-server-api</module>
         <module>semantic-server-impl</module>
-        <module>semantic-server-workflow-command</module>
-        <module>processorprovider</module>
-        <module>testprocessorprovider</module>
-        <module>omegaexecutor</module>
+        <!-- <module>semantic-server-workflow-command</module> -->
+        <!-- <module>processorprovider</module> -->
+        <!-- <module>testprocessorprovider</module> -->
+        <!-- <module>omegaexecutor</module> -->
     </modules>
 
     <properties>

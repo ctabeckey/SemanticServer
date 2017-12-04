@@ -1,6 +1,5 @@
 package com.paypal.credit.workflowcommand;
 
-import com.paypal.credit.utility.ParameterCheckUtility;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.annotations.ProvidesGroups;
 import com.paypal.credit.workflowcommand.model.AccountId;
@@ -24,7 +23,6 @@ public class SSWCAccountIdProcessorContext extends RSProcessorContext {
      * @param authorizationId
      */
     public SSWCAccountIdProcessorContext(AuthorizationId authorizationId) {
-        ParameterCheckUtility.checkParameterNotNull(authorizationId, "authorizationId");
         this.put("authorizationId", authorizationId);
         this.authorizationId = authorizationId;
     }

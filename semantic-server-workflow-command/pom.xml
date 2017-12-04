@@ -29,7 +29,7 @@
 
         <dependency>
             <groupId>com.paypal.credit</groupId>
-            <artifactId>workflow</artifactId>
+            <artifactId>utility</artifactId>
         </dependency>
 
         <dependency>

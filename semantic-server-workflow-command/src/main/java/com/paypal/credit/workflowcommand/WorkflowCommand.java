@@ -4,6 +4,7 @@ import com.paypal.credit.core.commandprocessor.AbstractApplicationAwareCommand;
 import com.paypal.credit.core.commandprocessor.AsynchronouslyExecutableCommand;
 import com.paypal.credit.core.commandprocessor.ApplicationAwareCommand;
 import com.paypal.credit.workflow.RSProcessorContext;
+import com.paypal.credit.workflow.Workflow;
 import com.paypal.utility.ParameterCheckUtility;
 
 import java.util.concurrent.Callable;

@@ -4,89 +4,79 @@
     <bean id="root-class-loader" class="java.lang.ClassLoader" factory="current-thread" factory-method="getContextClassLoader" scope="singleton">
     </bean>
 
-    <bean id="application" class="com.paypal.credit.core.ApplicationImpl" scope="singleton">
+    <!--
+    Create the singleton that defines the semantics of the application.
+    The class must implement the com.paypal.credit.core.semantics.ApplicationSemantics interface.
+
+    The semantic server defines its capabilities as commands, which must follow the naming convention
+    defined by this class.
+    For example: "getPersonBySSN" is the name of a method (a capability) made available by the application.
+    "get" is the name of an action. An action is a verb, typically CRUD or HTTP semantic actions.
+    "Person" is the Subject, a class in the application model.
+    "by" is the preposition and establishes that that the Person will be retrieved using the social security number.
+    "SSN" is the Object, usually a class in the application model but objects could be segregated.
+    In this application, the command "getPersonBySSN" must be available through the command provider.
+
+    The default implemention of ApplicationSemantics delegates semantics to implementations of:
+      com.paypal.credit.core.semantics.Vocabulary - for actions (verbs)
+      com.paypal.credit.core.semantics.ModelVocabulary - for subjects (nouns) that comprise the application model
+      com.paypal.credit.core.semantics.Vocabulary - for prepositions, standard prepositions to establish the relation of the objects
+      com.paypal.credit.core.semantics.ModelVocabulary - for objects (nouns), usually the same as the application model
+    -->
+    <bean id="semantics" class="com.paypal.credit.core.semantics.ApplicationSemanticsImpl" scope="singleton">
         <constructor-arg>
-            <!--
-            Create the singleton that defines the semantics of the application.
-            The class must implement the com.paypal.credit.core.semantics.ApplicationSemantics interface.
-
-            The semantic server defines its capabilities as commands, which must follow the naming convention
-            defined by this class.
-            For example: "getPersonBySSN" is the name of a method (a capability) made available by the application.
-            "get" is the name of an action. An action is a verb, typically CRUD or HTTP semantic actions.
-            "Person" is the Subject, a class in the application model.
-            "by" is the preposition and establishes that that the Person will be retrieved using the social security number.
-            "SSN" is the Object, usually a class in the application model but objects could be segregated.
-            In this application, the command "getPersonBySSN" must be available through the command provider.
-
-            The default implemention of ApplicationSemantics delegates semantics to implementations of:
-              com.paypal.credit.core.semantics.Vocabulary - for actions (verbs)
-              com.paypal.credit.core.semantics.ModelVocabulary - for subjects (nouns) that comprise the application model
-              com.paypal.credit.core.semantics.Vocabulary - for prepositions, standard prepositions to establish the relation of the objects
-              com.paypal.credit.core.semantics.ModelVocabulary - for objects (nouns), usually the same as the application model
-            -->
-            <bean id="semantics" class="com.paypal.credit.core.semantics.ApplicationSemanticsImpl" scope="singleton">
+            <ref bean="root-class-loader"/>
+        </constructor-arg>
+        <!-- The actions that can be applied to ythe subjects in the data model, usually get, put, delete, etc... -->
+        <constructor-arg>
+            <bean id="actions" class="com.paypal.credit.core.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultActionsVocabulary"/>
+        </constructor-arg>
+        <!-- The subjects in the data model. These are the entities that can be acted on. -->
+        <constructor-arg>
+            <bean id="model" class="com.paypal.credit.core.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
                 <constructor-arg>
-                    <ref bean="root-class-loader"/>
-                </constructor-arg>
-                <!-- The actions that can be applied to ythe subjects in the data model, usually get, put, delete, etc... -->
-                <constructor-arg>
-                    <bean id="actions" class="com.paypal.credit.core.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultActionsVocabulary"/>
-                </constructor-arg>
-                <!-- The subjects in the data model. These are the entities that can be acted on. -->
-                <constructor-arg>
-                    <bean id="model" class="com.paypal.credit.core.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
-                        <constructor-arg>
-                            <value>com.paypal.credit.test.model</value>
-                        </constructor-arg>
-                    </bean>
-                </constructor-arg>
-                <!--
-                Prepositions establish a relationship from the object to the subject in the context of an action.
-                e.g. "getPersonBySSN", "by" is the preposition and establishes that that the Person will be retrieved
-                using the social security number.
-                -->
-                <constructor-arg>
-                    <bean id="preposition" class="com.paypal.credit.core.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultPrepositionVocabulary"/>
-                </constructor-arg>
-                <!--
-                Objects are usually defined with the model (the objects) but could be a separate package
-                -->
-                <constructor-arg>
-                    <bean id="object" class="com.paypal.credit.core.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
-                        <constructor-arg>
-                            <value>com.paypal.credit.test.model</value>
-                        </constructor-arg>
-                    </bean>
+                    <value>com.paypal.credit.test.model</value>
                 </constructor-arg>
             </bean>
         </constructor-arg>
-
         <!--
+        Prepositions establish a relationship from the object to the subject in the context of an action.
+        e.g. "getPersonBySSN", "by" is the preposition and establishes that that the Person will be retrieved
+        using the social security number.
         -->
         <constructor-arg>
-            <bean id="command-provider" class="com.paypal.credit.core.commandprovider.RootCommandProvider" scope="singleton">
+            <bean id="preposition" class="com.paypal.credit.core.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultPrepositionVocabulary"/>
+        </constructor-arg>
+        <!--
+        Objects are usually defined with the model (the objects) but could be a separate package
+        -->
+        <constructor-arg>
+            <bean id="object" class="com.paypal.credit.core.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
                 <constructor-arg>
-                    <ref bean="root-class-loader"/>
+                    <value>com.paypal.credit.test.model</value>
                 </constructor-arg>
             </bean>
         </constructor-arg>
+    </bean>
 
-        <!--
-        -->
+    <!--
+    -->
+    <bean id="command-provider" class="com.paypal.credit.core.commandprovider.RootCommandProvider" scope="singleton">
         <constructor-arg>
-            <bean id= "data-source-provider" class="com.paypal.credit.core.datasourceprovider.RootDataSourceProviderImpl" factory-method="getOrCreate" scope="singleton">
-                <constructor-arg>
-                    <ref bean="root-class-loader"/>
-                </constructor-arg>
-            </bean>
+            <ref bean="root-class-loader"/>
         </constructor-arg>
+    </bean>
 
-        <!--
-        -->
+    <!--
+    -->
+    <bean id= "data-source-provider" class="com.paypal.credit.core.datasourceprovider.RootDataSourceProviderImpl" factory-method="getOrCreate" scope="singleton">
         <constructor-arg>
-            <bean id="command-processor" class="com.paypal.credit.core.commandprocessor.CommandProcessorDefaultImpl" factory-method="create" scope="singleton">
-            </bean>
+            <ref bean="root-class-loader"/>
         </constructor-arg>
+    </bean>
+
+    <!--
+    -->
+    <bean id="command-processor" class="com.paypal.credit.core.commandprocessor.CommandProcessorDefaultImpl" factory-method="create" scope="singleton">
     </bean>
 </beans>

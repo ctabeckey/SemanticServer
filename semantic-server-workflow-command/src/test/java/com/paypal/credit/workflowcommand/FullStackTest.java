@@ -8,11 +8,11 @@ import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstant
 import com.paypal.credit.core.applicationbridge.ApplicationBridgeProxyImplFactory;
 import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
 import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
-import com.paypal.credit.utility.URLFactory;
 import com.paypal.credit.workflowcommand.model.Authorization;
 import com.paypal.credit.workflowcommand.model.AuthorizationId;
 import com.paypal.credit.workflowcommand.processorbridge.WorkflowTestProcessorBridge;
 import com.paypal.credit.xactionctx.TransactionContextFactory;
+import com.paypal.utility.URLFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterTest;
