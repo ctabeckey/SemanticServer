@@ -1,6 +1,5 @@
 package com.paypal.credit.processors;
 
-import com.paypal.credit.processors.exceptions.InvalidProcessorException;
 import com.paypal.credit.workflow.RSProcessor;
 import com.paypal.credit.workflow.RSProcessorContext;
 import org.slf4j.Logger;

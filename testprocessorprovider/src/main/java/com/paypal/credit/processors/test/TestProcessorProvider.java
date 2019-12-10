@@ -1,15 +1,7 @@
 package com.paypal.credit.processors.test;
 
-import com.paypal.credit.processors.ProcessorInfo;
-import com.paypal.credit.processors.ProcessorProviderImpl;
-import com.paypal.credit.processors.exceptions.InvalidProcessorException;
-import com.paypal.credit.processors.exceptions.ProcessorProviderException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by cbeckey on 1/11/16.
@@ -24,11 +16,11 @@ extends ProcessorProviderImpl {
         Set<ProcessorInfo> tempProcessorInfoSet = new HashSet<>();
 
         try {
-            tempProcessorInfoSet.add(ProcessorInfo.create(ProcessorOne.class));
-            tempProcessorInfoSet.add(ProcessorInfo.create(ProcessorTwo.class));
-            tempProcessorInfoSet.add(ProcessorInfo.create(ProcessorThree.class));
-            tempProcessorInfoSet.add(ProcessorInfo.create(ProcessorFour.class));
-            tempProcessorInfoSet.add(ProcessorInfo.create(ProcessorFive.class));
+            tempProcessorInfoSet.add(ProcessorInfo.create(com.paypal.credit.processors.test.ProcessorOne.class));
+            tempProcessorInfoSet.add(ProcessorInfo.create(com.paypal.credit.processors.test.ProcessorTwo.class));
+            tempProcessorInfoSet.add(ProcessorInfo.create(com.paypal.credit.processors.test.ProcessorThree.class));
+            tempProcessorInfoSet.add(ProcessorInfo.create(com.paypal.credit.processors.test.ProcessorFour.class));
+            tempProcessorInfoSet.add(ProcessorInfo.create(com.paypal.credit.processors.test.ProcessorFive.class));
 
             processorInfoSet = Collections.unmodifiableSet(tempProcessorInfoSet);
         } catch (InvalidProcessorException e) {
