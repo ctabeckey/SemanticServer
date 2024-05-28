@@ -4,17 +4,17 @@
     <bean id="root-class-loader" class="java.lang.ClassLoader" factory="current-thread" factory-method="getContextClassLoader" scope="singleton">
     </bean>
 
-    <bean id="semantics" class="com.paypal.credit.core.semantics.ApplicationSemanticsImpl" scope="singleton">
+    <bean id="semantics" class="org.nanocontext.semanticserver.semanticserver.semantics.ApplicationSemanticsImpl" scope="singleton">
         <constructor-arg>
             <ref bean="root-class-loader"/>
         </constructor-arg>
         <!-- The actions that can be applied to ythe subjects in the data model, usually get, put, delete, etc... -->
         <constructor-arg>
-            <bean id="actions" class="com.paypal.credit.core.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultActionsVocabulary"/>
+            <bean id="actions" class="org.nanocontext.semanticserver.semanticserver.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultActionsVocabulary"/>
         </constructor-arg>
         <!-- The subjects in the data model. These are the entities that can be acted on. -->
         <constructor-arg>
-            <bean id="model" class="com.paypal.credit.core.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
+            <bean id="model" class="org.nanocontext.semanticserver.semanticserver.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
                 <constructor-arg>
                     <value>com.paypal.credit.test.model</value>
                 </constructor-arg>
@@ -26,29 +26,29 @@
         using the social security number.
         -->
         <constructor-arg>
-            <bean id="preposition" class="com.paypal.credit.core.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultPrepositionVocabulary"/>
+            <bean id="preposition" class="org.nanocontext.semanticserver.semanticserver.semantics.VocabularyImpl" scope="singleton" factory-method="createDefaultPrepositionVocabulary"/>
         </constructor-arg>
         <!--
         Objects are usually defined with the model (the objects) but could be a separate package
         -->
         <constructor-arg>
-            <bean id="object" class="com.paypal.credit.core.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
+            <bean id="object" class="org.nanocontext.semanticserver.semanticserver.semantics.ModelVocabularyImpl" scope="singleton" factory-method="create">
                 <constructor-arg>
                     <value>com.paypal.credit.test.model</value>
                 </constructor-arg>
             </bean>
         </constructor-arg>
     </bean>
-    <bean id="command-provider" class="com.paypal.credit.core.commandprovider.RootCommandProvider" scope="singleton">
+    <bean id="command-provider" class="org.nanocontext.semanticserver.semanticserver.commandprovider.RootCommandProvider" scope="singleton">
         <constructor-arg>
             <ref bean="root-class-loader"/>
         </constructor-arg>
     </bean>
-    <bean id= "data-source-provider" class="com.paypal.credit.core.datasourceprovider.RootDataSourceProviderImpl" factory-method="getOrCreate" scope="singleton">
+    <bean id= "data-source-provider" class="org.nanocontext.semanticserver.semanticserver.datasourceprovider.RootDataSourceProviderImpl" factory-method="getOrCreate" scope="singleton">
         <constructor-arg>
             <ref bean="root-class-loader"/>
         </constructor-arg>
     </bean>
-    <bean id="command-processor" class="com.paypal.credit.core.commandprocessor.CommandProcessorDefaultImpl" factory-method="create" scope="singleton">
+    <bean id="command-processor" class="org.nanocontext.semanticserver.semanticserver.commandprocessor.CommandProcessorDefaultImpl" factory-method="create" scope="singleton">
     </bean>
 </beans>

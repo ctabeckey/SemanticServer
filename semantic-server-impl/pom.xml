@@ -90,7 +90,7 @@
                     <enableIntrospection>true</enableIntrospection>
                     <target>2.1</target>
                     <outputDirectory>src/main/generated-java</outputDirectory>
-                    <packageName>com.paypal.credit.application.xml</packageName>
+                    <packageName>com.paypal.semanticserver.application.xml</packageName>
                     <verbose>true</verbose>
                 </configuration>
 

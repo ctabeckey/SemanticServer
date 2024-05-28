@@ -1,14 +1,14 @@
 package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.context.exceptions.ContextInitializationException;
-import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.core.commandprovider.AbstractCommandProvider;
-import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
-import com.paypal.credit.core.commandprovider.CommandProvider;
-import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
-import com.paypal.credit.core.commandprovider.exceptions.InvalidTokenException;
-import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
-import com.paypal.credit.core.semantics.CommandClassSemantics;
+import org.nanocontext.semanticserverapi.core.commandprocessor.RoutingToken;
+import org.nanocontext.semanticserverapi.core.commandprovider.AbstractCommandProvider;
+import org.nanocontext.semanticserverapi.core.commandprovider.CommandInstantiationToken;
+import org.nanocontext.semanticserverapi.core.commandprovider.CommandProvider;
+import org.nanocontext.semanticserverapi.core.commandprovider.exceptions.CommandInstantiationException;
+import org.nanocontext.semanticserverapi.core.commandprovider.exceptions.InvalidTokenException;
+import org.nanocontext.semanticserver.semanticserver.applicationbridge.ProductTypeRoutingToken;
+import org.nanocontext.semanticserverapi.core.semantics.CommandClassSemantics;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
 import com.paypal.credit.workflow.exceptions.WorkflowContextException;

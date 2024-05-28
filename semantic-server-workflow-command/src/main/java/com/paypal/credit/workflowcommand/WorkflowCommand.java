@@ -1,8 +1,8 @@
 package com.paypal.credit.workflowcommand;
 
-import com.paypal.credit.core.commandprocessor.AbstractApplicationAwareCommand;
-import com.paypal.credit.core.commandprocessor.AsynchronouslyExecutableCommand;
-import com.paypal.credit.core.commandprocessor.ApplicationAwareCommand;
+import org.nanocontext.semanticserverapi.core.commandprocessor.AbstractApplicationAwareCommand;
+import org.nanocontext.semanticserverapi.core.commandprocessor.AsynchronouslyExecutableCommand;
+import org.nanocontext.semanticserverapi.core.commandprocessor.ApplicationAwareCommand;
 import com.paypal.credit.workflow.RSProcessorContext;
 import com.paypal.credit.workflow.Workflow;
 import com.paypal.utility.ParameterCheckUtility;

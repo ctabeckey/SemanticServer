@@ -1,7 +1,7 @@
 <beans xmlns="http://credit.paypal.com/v1/schema/ctx">
 <!--
     For a Spring configuration to be a Workflow definition it must have:
-    1.) a bean named "workflow" whose type is assignable to com.paypal.credit.workflow.Workflow
+    1.) a bean named "workflow" whose type is assignable to com.paypal.semanticserver.workflow.Workflow
     2.) the "workflow" bean should be scoped as a singleton, only one instance will be created anyway
     3.) processor instances within the workflow should be scoped as prototype
     4.) the "workflow" bean has two constructor arguments:

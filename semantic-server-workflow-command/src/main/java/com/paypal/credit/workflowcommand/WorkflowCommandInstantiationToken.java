@@ -1,8 +1,8 @@
 package com.paypal.credit.workflowcommand;
 
-import com.paypal.credit.core.commandprocessor.RoutingToken;
-import com.paypal.credit.core.commandprovider.CommandInstantiationToken;
-import com.paypal.credit.core.commandprovider.CommandProvider;
+import org.nanocontext.semanticserverapi.core.commandprocessor.RoutingToken;
+import org.nanocontext.semanticserverapi.core.commandprovider.CommandInstantiationToken;
+import org.nanocontext.semanticserverapi.core.commandprovider.CommandProvider;
 import com.paypal.credit.workflow.Workflow;
 
 /**

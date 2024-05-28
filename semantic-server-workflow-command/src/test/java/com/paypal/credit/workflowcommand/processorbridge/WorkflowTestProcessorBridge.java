@@ -1,7 +1,7 @@
 package com.paypal.credit.workflowcommand.processorbridge;
 
-import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
-import com.paypal.credit.core.applicationbridge.AsynchronousExecution;
+import org.nanocontext.semanticserverapi.core.commandprocessor.AsynchronousExecutionCallback;
+import org.nanocontext.semanticserver.semanticserver.applicationbridge.AsynchronousExecution;
 import com.paypal.credit.workflowcommand.model.Authorization;
 import com.paypal.credit.workflowcommand.model.AuthorizationId;
 

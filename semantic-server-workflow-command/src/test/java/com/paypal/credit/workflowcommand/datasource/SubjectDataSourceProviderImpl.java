@@ -1,8 +1,8 @@
 package com.paypal.credit.workflowcommand.datasource;
 
-import com.paypal.credit.core.datasourceprovider.DataSourceProvider;
-import com.paypal.credit.core.datasourceprovider.RootDataSourceProviderImpl;
-import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
+import org.nanocontext.semanticserverapi.core.datasourceprovider.DataSourceProvider;
+import org.nanocontext.semanticserver.semanticserver.datasourceprovider.RootDataSourceProviderImpl;
+import org.nanocontext.semanticserver.semanticserver.applicationbridge.ProductTypeRoutingToken;
 
 import java.util.HashSet;
 import java.util.Set;

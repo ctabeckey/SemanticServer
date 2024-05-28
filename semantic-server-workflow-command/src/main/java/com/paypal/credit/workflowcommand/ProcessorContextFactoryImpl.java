@@ -1,7 +1,7 @@
 package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.workflow.RSProcessorContext;
-import com.paypal.credit.core.commandprovider.exceptions.CommandInstantiationException;
+import org.nanocontext.semanticserverapi.core.commandprovider.exceptions.CommandInstantiationException;
 import com.paypal.credit.workflowcommand.exceptions.NoContextConstructorFoundException;
 
 import java.lang.reflect.Constructor;

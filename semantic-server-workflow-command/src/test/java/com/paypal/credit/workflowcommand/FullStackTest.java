@@ -1,13 +1,13 @@
 package com.paypal.credit.workflowcommand;
 
 import com.paypal.credit.context.exceptions.ContextInitializationException;
-import com.paypal.credit.core.Application;
-import com.paypal.credit.core.ApplicationImpl;
-import com.paypal.credit.core.commandprocessor.AsynchronousExecutionCallback;
-import com.paypal.credit.core.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
-import com.paypal.credit.core.applicationbridge.ApplicationBridgeProxyImplFactory;
-import com.paypal.credit.core.applicationbridge.ProductTypeRoutingToken;
-import com.paypal.credit.core.semantics.exceptions.CoreRouterSemanticsException;
+import org.nanocontext.semanticserverapi.core.Application;
+import org.nanocontext.semanticserver.semanticserver.ApplicationImpl;
+import org.nanocontext.semanticserverapi.core.commandprocessor.AsynchronousExecutionCallback;
+import org.nanocontext.semanticserver.semanticserver.commandprocessor.exceptions.ProcessorBridgeInstantiationException;
+import org.nanocontext.semanticserver.semanticserver.applicationbridge.ApplicationBridgeProxyImplFactory;
+import org.nanocontext.semanticserver.semanticserver.applicationbridge.ProductTypeRoutingToken;
+import org.nanocontext.semanticserverapi.core.semantics.exceptions.CoreRouterSemanticsException;
 import com.paypal.credit.workflowcommand.model.Authorization;
 import com.paypal.credit.workflowcommand.model.AuthorizationId;
 import com.paypal.credit.workflowcommand.processorbridge.WorkflowTestProcessorBridge;
